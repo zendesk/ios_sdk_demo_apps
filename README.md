@@ -1,6 +1,6 @@
 :warning: *Use of this software is subject to important terms and conditions as set forth in the License file* :warning:
 
-# Zendesk Sample Apps for Android
+# Zendesk Sample Apps for iOS
 
 ## Description
 This repository provides you with sample Apps to help learn how to use the Zendesk Apps framework and APIs.
