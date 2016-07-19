@@ -26,22 +26,29 @@ class ChatViewController: UIViewController {
   @IBOutlet weak var sendButton: UIButton!
   @IBOutlet var loadingView: UIView!
   
-  var delegate: ChatViewControllerDelegate?
-  var dataSource: ChatViewControllerDataSource?
+  var delegate: ChatViewControllerDelegate!
+  var dataSource: ChatViewControllerDataSource!
+  var apiClient: APIClient!
+  //: ChatDelegateDateSource!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.estimatedRowHeight = 44.0
     tableView.rowHeight = UITableViewAutomaticDimension
+    apiClient = APIClient()
+    // Create a chat delegate and datasouce object
+    let delegateDatasource = ChatDelegateDateSource(withChatView: self, apiClient: apiClient)
     
-    // Create a chaat delegate and datasouce object
-    let delegateDatasource = ChatDelegateDateSource(withChatView: self)
-    
-    self.delegate = delegateDatasource
-    self.dataSource = delegateDatasource
+    delegate = delegateDatasource
+    dataSource = delegateDatasource
+    delegateDatasource.resumeChat()
     
     setupKeyboardEvents()
     updateSendButtonState()
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    
   }
   
   func setupKeyboardEvents() {
@@ -78,7 +85,7 @@ extension ChatViewController {
     pickerController.didSelectAssets = { (assets: [DKAsset]) in
       
       assets[0].fetchOriginalImage(false) { (image, info) in
-        self.delegate?.chatController(self, didSelectImage: image!)
+        self.delegate.chatController(self, didSelectImage: image!)
       }
     }
     
@@ -94,7 +101,7 @@ extension ChatViewController {
       return
     }
     
-    self.delegate?.chatController(self, sendMessage: messageTextField.text!)
+    self.delegate.chatController(self, sendMessage: messageTextField.text!)
     messageTextField.text = ""
     updateSendButtonState()
   }
@@ -128,14 +135,14 @@ extension ChatViewController: UITextFieldDelegate {
 extension ChatViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return (self.dataSource?.chatLog.count)!
+    return dataSource.chatLog.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     return TableCellFactory.constructCell(
       forTableView: tableView,
       indexPath: indexPath,
-      event: (self.dataSource?.chatLog[indexPath.row])!)
+      event: dataSource.chatLog[indexPath.row])
   }
 }
 

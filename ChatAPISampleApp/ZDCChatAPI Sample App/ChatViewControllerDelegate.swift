@@ -46,7 +46,7 @@ protocol ChatViewControllerDataSource {
   
   /// The list of chat events to display in the chat controller
   var chatLog: [ChatUIEvent] { get set }
-  init(withChatView chatView: ChatView)
+  init(withChatView chatView: ChatView, apiClient: APIClient)
 }
 
 

@@ -31,20 +31,16 @@ final class ChatDelegateDateSource: ChatViewControllerDataSource, ChatViewContro
     }
   }
   
-  required init (withChatView chatView: ChatView) {
+  required init (withChatView chatView: ChatView, apiClient: APIClient) {
     self.chatLog = [ChatUIEvent]()
     self.chatView = chatView
-    self.client = APIClient(withDelegate: self)
+    self.client = apiClient
+    apiClient.delegate = self
   }
   
-  private func updateCell(withId id: String, updateBlock: (inout ChatUIEvent) -> ()) {
-    guard let (index, item) = chatLog.enumerate().filter({ $1.id == id }).first else { return }
-    
-    var retItem = item
-    updateBlock(&retItem)
-    chatLog[index] = retItem
+  func resumeChat() {
+    client.resumeChat()
   }
-
   
   func chatController(chatController: ChatViewController, sendMessage message: String) {
     client.sendMessage(message)
@@ -64,6 +60,14 @@ final class ChatDelegateDateSource: ChatViewControllerDataSource, ChatViewContro
     updateCell(withId: updatedEvent.id, updateBlock: { (inout event: ChatUIEvent) in
       event = updatedEvent
     })
+  }
+  
+  private func updateCell(withId id: String, updateBlock: (inout ChatUIEvent) -> ()) {
+    guard let (index, item) = chatLog.enumerate().filter({ $1.id == id }).first else { return }
+    
+    var retItem = item
+    updateBlock(&retItem)
+    chatLog[index] = retItem
   }
   
   func updateChatState(state: Bool) {

@@ -54,8 +54,15 @@ protocol APIClientProtocol {
  */
 final class APIClient {
   private let chat: ZDCChatAPI
-  private let eventProcessor: ChatEventsProcessor
-  private let delegate: APIClientProtocol
+  private var eventProcessor: ChatEventsProcessor?
+  
+  var delegate: APIClientProtocol? {
+    didSet {
+      guard let newValue = delegate else { return }
+      self.eventProcessor = ChatEventsProcessor(newEventCallback: newValue.newEvent,
+                                                eventUpdateCallback: newValue.updateEvent)
+    }
+  }
   
   /**
    Init APIClient.
@@ -64,28 +71,25 @@ final class APIClient {
    
    - returns: self
    */
-  init(withDelegate delegate: APIClientProtocol) {
+  init() {
     
     ZDCLog.enable(true)
     ZDCLog.setLogLevel(ZDCLogLevel.Verbose)
-    self.chat = ZDCChatAPI.instance()
-    self.delegate = delegate
-    
-    self.eventProcessor = ChatEventsProcessor(newEventCallback: delegate.newEvent,
-                                 eventUpdateCallback: delegate.updateEvent)
-    
+    chat = ZDCChatAPI.instance()
+
     setupListeners()
     
     let config = ZDCAPIConfig()
     chat.startChatWithAccountKey("2PT4TD5ox8d19nrLoBAGpMk87L4r4VQQ", config: config)
+    
   }
   
   /**
    Setup ZDCChatAPI event listners
    */
   private func setupListeners() {
-    chat.addObserver(self, forChatLogEvents: #selector(self.chatLogEvent(_:)))
-    chat.addObserver(self, forConnectionEvents: #selector(self.chatConnectionStateUpdate(_:)))
+    chat.addObserver(self, forChatLogEvents: #selector(chatLogEvent(_:)))
+    chat.addObserver(self, forConnectionEvents: #selector(chatConnectionStateUpdate(_:)))
   }
   
   /**
@@ -93,6 +97,14 @@ final class APIClient {
    */
   func endChat() {
     chat.endChat()
+  }
+  /**
+   Replay all received chat events. Needed as the chat is a singleton but the UI is not.
+   */
+  func resumeChat() {
+    for event in chat.livechatLog {
+      handleChatEvent(event)
+    }
   }
   
   
@@ -122,7 +134,7 @@ final class APIClient {
     if (event.timestamp == nil) {
       return
     }
-    self.eventProcessor.handleEvent(event)
+    eventProcessor?.handleEvent(event)
   }
   
   /**
@@ -136,10 +148,10 @@ final class APIClient {
     
     switch status {
     case ZDCConnectionStatus.Connected:
-      self.delegate.updateChatState(true)
+      delegate?.updateChatState(true)
       break
     default:
-      self.delegate.updateChatState(false)
+      delegate?.updateChatState(false)
       break
     }
     
