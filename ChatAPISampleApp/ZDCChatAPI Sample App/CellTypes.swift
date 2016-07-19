@@ -1,0 +1,84 @@
+/*
+ *
+ *  TextCell.swift
+ *  ZDCChatAPI Sample App
+ *
+ *  Created by Zendesk on 07/07/2016.
+ *
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
+ *
+ *  By downloading or using the Zopim Chat SDK, You agree to the Zendesk Terms
+ *  of Service https://www.zendesk.com/company/terms and Application Developer and API License
+ *  Agreement https://www.zendesk.com/company/application-developer-and-api-license-agreement and
+ *  acknowledge that such terms govern Your use of and access to the Chat SDK.
+ *
+ */
+
+import UIKit
+
+
+/**
+ Protocol that represents a generic chat cell type
+ */
+protocol ChatCellType {
+  /// The bubble state
+  var bubbleState: BubbleState { get set }
+  
+  /// The chat event linked to this cell
+  var chatEvent: ChatUIEvent! { get set }
+}
+
+/**
+ Protocol that represents a textual chat cell type
+ */
+protocol TextCellType: ChatCellType {
+  
+  /// The text content linekd to this cell
+  var textContent: String? { get set }
+}
+
+/**
+ Protocol that represents a image chat cell type
+ */
+protocol ImageCellType: ChatCellType {
+  
+  /// the image content linked to this cell
+  var imageContent: UIImage? { get set }
+  
+  /**
+   Sets the image URL to display in the cell
+   
+   - parameter url: The image url to display
+   */
+  func setImageURL(url: NSURL?)
+}
+
+/**
+ Protocol that represents an agent chat cell type
+ */
+protocol AgentCellType: ChatCellType {
+  
+  /// The agent thumbnail image
+  var agentImage: UIImageView! { get }
+  
+  /**
+   Sets the agent avatar URL to display in the cell
+   
+   - parameter url: The avatar url to display
+   */
+  func setAgentAvatar(url: NSURL?)
+}
+
+//MARK: - Extensions
+
+extension AgentCellType {
+  
+  func setAgentAvatar(url: NSURL?) {
+    
+    self.agentImage.contentMode = .ScaleAspectFit
+    self.agentImage.backgroundColor = agentBackgroundColor
+    self.agentImage.sd_setImageWithURL(url, placeholderImage: UIImage(named: "user"))
+    { (image, error, cache, url) in
+    }
+  }
+}
