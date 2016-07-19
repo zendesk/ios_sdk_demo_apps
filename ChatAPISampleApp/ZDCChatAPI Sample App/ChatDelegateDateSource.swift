@@ -15,51 +15,59 @@
  */
 
 import UIKit
+import ZDCChatAPI
 
+
+struct ChatControllerDelegate: ChatViewControllerDelegate {
+  weak var client: APIClient?
+  
+  func chatController(chatController: ChatViewController, sendMessage message: String) {
+    client?.sendMessage(message)
+  }
+  
+  func chatController(chatController: ChatViewController, didSelectImage image: UIImage) {
+    client?.uploadImage(image)
+  }
+}
 
 /**
  ChatDelegateDateSource connects the ChatViewController to Zopim using an APIClient
  */
-final class ChatDelegateDateSource: ChatViewControllerDataSource, ChatViewControllerDelegate, APIClientProtocol {
+final class ChatControllerDataSource: ChatViewControllerDataSource {
   
-  private let chatView: ChatView
-  private var client: APIClient!
+  private weak var chatView: ChatView?
+  private weak var client: APIClient?
   
   var chatLog: [ChatUIEvent] {
     didSet {
-      chatView.updateChatLog()
+      chatView?.updateChatLog()
     }
   }
   
-  required init (withChatView chatView: ChatView, apiClient: APIClient) {
-    self.chatLog = [ChatUIEvent]()
+  required init (withChatView chatView: ChatView, client: APIClient) {
     self.chatView = chatView
-    self.client = apiClient
-    apiClient.delegate = self
-  }
-  
-  func resumeChat() {
-    client.resumeChat()
-  }
-  
-  func chatController(chatController: ChatViewController, sendMessage message: String) {
-    client.sendMessage(message)
-  }
-  
-  func chatController(chatController: ChatViewController, didSelectImage image: UIImage) {
-    client.uploadImage(image)
+    self.client = client
+    
+    chatLog = [ChatUIEvent]()
+    
+    client.chatConnectedStatusUpdated = chatConnectedStatusUpdated
+    
+    client.eventReceived = { [weak self] event in
+      self?.chatLog.append(event)
+    }
+    
+    client.eventUpdated = { [weak self] event in
+      
+      self?.updateCell(withId: event.id, updateBlock: { (inout updatedEvent: ChatUIEvent) in
+        updatedEvent = event
+      })
+    }
   }
   
   //MARK: APIClient delegate
   
-  func newEvent(event: ChatUIEvent) {
-    chatLog.append(event)
-  }
-  
-  func updateEvent(updatedEvent: ChatUIEvent) {
-    updateCell(withId: updatedEvent.id, updateBlock: { (inout event: ChatUIEvent) in
-      event = updatedEvent
-    })
+  private func chatConnectedStatusUpdated(state: Bool) {
+    chatView?.isChatConnected = state
   }
   
   private func updateCell(withId id: String, updateBlock: (inout ChatUIEvent) -> ()) {
@@ -68,10 +76,6 @@ final class ChatDelegateDateSource: ChatViewControllerDataSource, ChatViewContro
     var retItem = item
     updateBlock(&retItem)
     chatLog[index] = retItem
-  }
-  
-  func updateChatState(state: Bool) {
-    chatView.updateConnectionState(state)
   }
   
 }

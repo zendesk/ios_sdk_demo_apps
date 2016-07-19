@@ -26,8 +26,11 @@ In order to install the CocoaPods used in the sample app, run `pod install`.
 * [ChatEventsProcessor.swift](ZDCChatAPI%20Sample%20App/ChatEventsProcessor.swift)
   This file is responsible for filterring events, determining if events are new and updates and converts them to UI chat events.
   <br/>
-* [ChatDelegateDateSource.swift](ZDCChatAPI%20Sample%20App/ChatDelegateDateSource.swift)
-  This class provides the data required for the UI (TableView) and handles sending messages from the UI.
+* [ChatControllerDelegate.swift](ZDCChatAPI%20Sample%20App/ChatControllerDelegate.swift)
+  This class handles the events generated from the chat controller, such as sending messages and uploading images.
+  <br/>
+* [ChatControllerDataSource.swift](ZDCChatAPI%20Sample%20App/ChatControllerDataSource.swift)
+  This class provides the data required for the UI (TableView).
   <br/>
 * [ChatUIEvent.swift](ZDCChatAPI%20Sample%20App/ChatUIEvent.swift)
   This file contains the protocols and structs that represents the different type of chat messages the demo deals with.

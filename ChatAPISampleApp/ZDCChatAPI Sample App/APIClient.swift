@@ -19,58 +19,38 @@ import ZDCChatAPI
 
 
 /**
- API connector delegate
- */
-protocol APIClientProtocol {
-  
-  /**
-   New event received
-   
-   - parameter event: the event received
-   */
-  func newEvent(event: ChatUIEvent)
-  
-  /**
-   Chat event updated
-   
-   - parameter event: the updated event
-   */
-  func updateEvent(event: ChatUIEvent)
-  
-  /**
-   Chat session state updated
-   
-   - parameter state: the new state
-   */
-  func updateChatState(state: Bool)
-}
-
-
-/**
  Responsible for handling incoming events from the ChatAPI SDK.
  - Listens for Chat Events and sends them to the event store
  - Listens for Connection Events and updates the UI accordingly
  - Sends messages and uploads images to Zopim
  */
 final class APIClient {
-  private let chat: ZDCChatAPI
-  private var eventProcessor: ChatEventsProcessor?
   
-  var delegate: APIClientProtocol? {
-    didSet {
-      guard let newValue = delegate else { return }
-      self.eventProcessor = ChatEventsProcessor(newEventCallback: newValue.newEvent,
-                                                eventUpdateCallback: newValue.updateEvent)
-    }
+  private let chat: ZDCChatAPI
+  private let eventProcessor: ChatEventsProcessor = ChatEventsProcessor()
+  
+  /// Returns true of the current chat session is in connected status
+  var isChatConnected: Bool {
+    return chat.connectionStatus == .Connected
   }
   
   /**
-   Init APIClient.
-   
-   - parameter delegate: APIClient delegate
-   
-   - returns: self
+   Callback that happens when a new event is received
    */
+  var eventReceived: ((ChatUIEvent) -> ())?
+  
+  
+  /**
+   Callback that happens when an event is updated
+   */
+  var eventUpdated: ((ChatUIEvent) -> ())?
+  
+  /**
+   Callback that happens when chat connected status is updated
+   */
+  var chatConnectedStatusUpdated: ((Bool) -> ())?
+  
+  
   init() {
     
     ZDCLog.enable(true)
@@ -98,10 +78,11 @@ final class APIClient {
   func endChat() {
     chat.endChat()
   }
+  
   /**
-   Replay all received chat events. Needed as the chat is a singleton but the UI is not.
+   Replay all received chat events if any are available.
    */
-  func resumeChat() {
+  func resumeChatIfNeeded() {
     for event in chat.livechatLog {
       handleChatEvent(event)
     }
@@ -109,6 +90,7 @@ final class APIClient {
   
   
   // MARK : Receiving
+  
   /**
    Listens for Chat Log events. These events make up a chat.
    
@@ -134,7 +116,21 @@ final class APIClient {
     if (event.timestamp == nil) {
       return
     }
-    eventProcessor?.handleEvent(event)
+    
+    newEventReceived(event)
+  }
+  
+  func newEventReceived(event: ZDCChatEvent) {
+    switch eventProcessor.handleEvent(event) {
+    case let .New(event):
+      eventReceived?(event)
+      break
+    case let .Update(event):
+      eventUpdated?(event)
+      break
+    case .None:
+      break
+    }
   }
   
   /**
@@ -143,18 +139,10 @@ final class APIClient {
    - parameter note: NSNotification object. Unused.
    */
   @objc func chatConnectionStateUpdate(note: NSNotification) {
-    let status = chat.connectionStatus
-    NSLog("Chat connection status updated \(status.rawValue)")
+  
+    NSLog("Chat connection status updated \(isChatConnected)")
     
-    switch status {
-    case ZDCConnectionStatus.Connected:
-      delegate?.updateChatState(true)
-      break
-    default:
-      delegate?.updateChatState(false)
-      break
-    }
-    
+    chatConnectedStatusUpdated?(isChatConnected)
   }
   
   

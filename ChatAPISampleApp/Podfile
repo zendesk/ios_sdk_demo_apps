@@ -8,5 +8,6 @@ target 'ZDCChatAPI Sample App' do
   pod 'DKImagePickerController'
   pod 'NSDate+TimeAgo'
   pod 'ZDCChat/API', '1.3.0.1'
+  pod 'JLToast', '~> 1.4'
 end
 

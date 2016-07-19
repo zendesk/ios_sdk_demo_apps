@@ -16,7 +16,7 @@
 
 import UIKit
 import DKImagePickerController
-
+import JLToast
 
 class ChatViewController: UIViewController {
   
@@ -24,24 +24,22 @@ class ChatViewController: UIViewController {
   @IBOutlet var bottomConstraint: NSLayoutConstraint!
   @IBOutlet weak var messageTextField: UITextField!
   @IBOutlet weak var sendButton: UIButton!
-  @IBOutlet var loadingView: UIView!
   
   var delegate: ChatViewControllerDelegate!
   var dataSource: ChatViewControllerDataSource!
-  var apiClient: APIClient!
-  //: ChatDelegateDateSource!
+  var toast: JLToast?
+  private let client = APIClient()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.estimatedRowHeight = 44.0
     tableView.rowHeight = UITableViewAutomaticDimension
-    apiClient = APIClient()
-    // Create a chat delegate and datasouce object
-    let delegateDatasource = ChatDelegateDateSource(withChatView: self, apiClient: apiClient)
     
-    delegate = delegateDatasource
-    dataSource = delegateDatasource
-    delegateDatasource.resumeChat()
+    delegate = ChatControllerDelegate(client: client)
+    dataSource = ChatControllerDataSource(withChatView: self, client: client)
+    
+    client.resumeChatIfNeeded()
+    isChatConnected = client.isChatConnected
     
     setupKeyboardEvents()
     updateSendButtonState()
@@ -149,22 +147,28 @@ extension ChatViewController: UITableViewDataSource {
 extension ChatViewController: ChatView {
   
   // Update the connection state with a new connection value
-  func updateConnectionState(state: Bool) {
-    NSLog("Chat state updated to \(state)")
-    
-    let view = state ? nil : self.loadingView
-    dispatch_async(dispatch_get_main_queue()) {
+  var isChatConnected: Bool {
+    set {
+      if newValue == isChatConnected {
+        return
+      }
       
-      UIView.transitionWithView(self.loadingView,
-                                duration: 0.3,
-                                options: UIViewAnimationOptions.CurveLinear,
-                                animations: {
-                                  self.tableView.tableHeaderView = view
-        },
-                                completion: { (Bool) in
-                                  self.tableView.tableHeaderView?.hidden = state
-                                  self.view.layoutIfNeeded()
-      })
+      if newValue {
+        toast?.cancel()
+        JLToast.makeText("Connected").show()
+      } else {
+        toast = JLToast.makeText("Chat is connecting...")
+        toast?.duration = 9999 //Very long
+        toast?.show()
+      }
+    }
+    
+    get {
+      guard let toast = toast else {
+        return true
+      }
+      
+      return toast.view.hidden
     }
   }
   

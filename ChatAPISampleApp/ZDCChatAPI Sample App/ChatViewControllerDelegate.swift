@@ -46,21 +46,18 @@ protocol ChatViewControllerDataSource {
   
   /// The list of chat events to display in the chat controller
   var chatLog: [ChatUIEvent] { get set }
-  init(withChatView chatView: ChatView, apiClient: APIClient)
 }
 
 
 /**
  Chat View represents an abstraction over a chat view
  */
-protocol ChatView {
+@objc protocol ChatView {
   
   /**
-   Update the connection state
-   
-   - parameter state: the new state, true for connected, false for not connected
+   Is chat connected
    */
-  func updateConnectionState(state: Bool)
+  var isChatConnected: Bool { get set }
   
   /**
    Update the view chat log

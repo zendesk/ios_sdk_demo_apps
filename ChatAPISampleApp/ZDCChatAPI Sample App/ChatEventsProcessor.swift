@@ -18,30 +18,29 @@ import ZDCChatAPI
 
 
 /**
+ Chat UI Event Status
+ 
+ - New:    The event received is a new event
+ - Update: The event received is an update on a previous event
+ - None:   The event received should be ignored
+ */
+enum ChatUIEventState {
+  case New(ChatUIEvent)
+  case Update(ChatUIEvent)
+  case None
+}
+
+/**
  ChatEventsProcessor takes ZDCChatEvents emmited from the ChatAPI SDK and creates ChatEvent objects.
  - Filters unwanted events
  - Determins if an event is new or an update to a previous event
  */
 final class ChatEventsProcessor {
   
-  private var newEventCallback: (ChatUIEvent) -> ()
-  private var eventUpdateCallback: (ChatUIEvent) -> ()
-  
   private var events: [String: ChatUIEvent]
   private var duplicateUpload: [String: String]
   
-  /**
-   Init event store
-   
-   - parameter newEventCallback:    Callback for a new chat event
-   - parameter eventUpdateCallback: Callback for an event update
-   
-   - returns: self
-   */
-  init(newEventCallback: (ChatUIEvent) -> (),
-       eventUpdateCallback: (ChatUIEvent) -> ()) {
-    self.newEventCallback = newEventCallback
-    self.eventUpdateCallback = eventUpdateCallback
+  init() {
     self.events = [:]
     self.duplicateUpload = [:]
   }
@@ -53,20 +52,22 @@ final class ChatEventsProcessor {
    
    - parameter event: ZDCChatEvent
    */
-  func handleEvent(event: ZDCChatEvent) {
+  func handleEvent(event: ZDCChatEvent) -> ChatUIEventState {
     guard let filteredEvent = filterEvents(event) else {
-      return
+      return .None
     }
     
     let chatItem = filteredEvent.chatItem
     
-    if events.keys.contains(chatItem.id) {
-      self.eventUpdateCallback(chatItem)
-    } else {
-      self.newEventCallback(chatItem)
+    defer {
+      self.events[chatItem.id] = chatItem
     }
     
-    self.events[chatItem.id] = chatItem
+    if events.keys.contains(chatItem.id) {
+      return .Update(chatItem)
+    } else {
+      return .New(chatItem)
+    }
   }
   
   /**
@@ -76,7 +77,7 @@ final class ChatEventsProcessor {
    
    - returns: the filtered event
    */
-  func filterEvents(event: ZDCChatEvent) -> ZDCChatEvent? {
+  private func filterEvents(event: ZDCChatEvent) -> ZDCChatEvent? {
     if (filterUnwantedEvents(event) == nil) {
       return nil
     }

@@ -10,7 +10,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -37,6 +36,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="beX-tL-4lx"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="925" y="121"/>
         </scene>
@@ -113,26 +113,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pAS-ii-SS8">
                                 <rect key="frame" x="0.0" y="64" width="600" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="dd0-hi-gya">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Connecting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Def-xq-wSm">
-                                            <rect key="frame" x="257" y="11" width="88" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstItem="Def-xq-wSm" firstAttribute="centerX" secondItem="dd0-hi-gya" secondAttribute="centerX" id="hJ4-iA-Jsr"/>
-                                        <constraint firstItem="Def-xq-wSm" firstAttribute="top" secondItem="dd0-hi-gya" secondAttribute="top" constant="11" id="phO-b2-MBH"/>
-                                    </constraints>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="agentCell" rowHeight="90" id="k4g-Ms-BgL" customClass="AgentMessageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="90"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k4g-Ms-BgL" id="8xd-T9-wmf">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
@@ -185,7 +168,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="visitorCell" rowHeight="90" id="iTo-Q7-HdP" userLabel="visitorCell" customClass="VisitorMessageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="162" width="600" height="90"/>
+                                        <rect key="frame" x="0.0" y="118" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTo-Q7-HdP" id="Pvw-nw-vdl">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
@@ -228,7 +211,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="visitorImageCell" rowHeight="281" id="OVN-E6-wgx" customClass="VisitorImageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="252" width="600" height="281"/>
+                                        <rect key="frame" x="0.0" y="208" width="600" height="281"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OVN-E6-wgx" id="dKg-8F-26h">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="281"/>
@@ -275,7 +258,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="agentImageCell" rowHeight="281" id="iKY-Tv-Rxi" customClass="AgentImageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="533" width="600" height="281"/>
+                                        <rect key="frame" x="0.0" y="489" width="600" height="281"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iKY-Tv-Rxi" id="yGa-cY-G4T">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="281"/>
@@ -352,7 +335,6 @@
                     <navigationItem key="navigationItem" title="Chat" id="9DQ-uR-JMC"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="Syu-MM-IIG" id="98O-s0-3Ga"/>
-                        <outlet property="loadingView" destination="dd0-hi-gya" id="RzB-zF-UVM"/>
                         <outlet property="messageTextField" destination="zCQ-7x-tkp" id="SMn-pW-iPT"/>
                         <outlet property="sendButton" destination="clg-Sh-4LS" id="R53-8U-QRa"/>
                         <outlet property="tableView" destination="pAS-ii-SS8" id="0Dh-qb-Fvj"/>
