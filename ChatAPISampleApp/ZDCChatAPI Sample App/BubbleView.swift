@@ -15,28 +15,28 @@
  */
 
 import UIKit
-import NSDate_TimeAgo
+import DateToolsSwift
 
 
 /// Bubble View State
 enum BubbleState {
   
   /// Confirmed: happens when the message is confirmed
-  case Confirmed
+  case confirmed
   
   /// Confirmed: the message is sent but not yet confirmed
-  case NotConfirmed
+  case notConfirmed
   
   /// Confirmed: the bubble is an agent bubble
-  case Hidden
+  case hidden
   
   var image: UIImage {
     switch self {
-    case .Confirmed:
+    case .confirmed:
       return UIImage(named: "check-mark")!
-    case .Hidden:
+    case .hidden:
       return UIImage()
-    case .NotConfirmed:
+    case .notConfirmed:
       return UIImage(named: "refresh")!
     }
   }
@@ -51,8 +51,8 @@ final class BubbleView: UIView {
   }
   
   @IBOutlet var contentView: UIView!
-  private var timeStampLabel: UILabel!
-  private var verifiedImage: UIImageView!
+  fileprivate var timeStampLabel: UILabel!
+  fileprivate var verifiedImage: UIImageView!
   
   @IBInspectable var typeString: String? {
     didSet {
@@ -64,22 +64,23 @@ final class BubbleView: UIView {
     didSet {
       let isAgent = type == .Agent
       
-      verifiedImage?.hidden = isAgent
+      verifiedImage?.isHidden = isAgent
       backgroundColor = type.cellBackgroundColor
       timeStampLabel?.textColor = type.timestampTextColor
       additionalViewUpdate()
     }
   }
   
-  var bubbleState: BubbleState = .Confirmed {
+  var bubbleState: BubbleState = .confirmed {
     didSet {
       verifiedImage.image = bubbleState.image
     }
   }
   
-  var timestamp: NSDate = NSDate.init(timeIntervalSinceNow: -1000) {
+  
+  var timestamp: Date = Date.init(timeIntervalSinceNow: -1000) {
     didSet {
-      timeStampLabel.text = timestamp.dateTimeAgo()
+      timeStampLabel.text = timestamp.timeAgoSinceNow
     }
   }
   
@@ -104,12 +105,12 @@ final class BubbleView: UIView {
   func createViews() {
     timeStampLabel = UILabel()
     timeStampLabel.translatesAutoresizingMaskIntoConstraints = false
-    timeStampLabel.font = UIFont.systemFontOfSize(11)
+    timeStampLabel.font = UIFont.systemFont(ofSize: 11)
     timeStampLabel.text = "Some time ago"
     self.addSubview(timeStampLabel)
     
     verifiedImage = UIImageView(image: UIImage.init(named: "check-mark"))
-    verifiedImage.contentMode = .ScaleAspectFit
+    verifiedImage.contentMode = .scaleAspectFit
     verifiedImage.translatesAutoresizingMaskIntoConstraints = false
     self.addSubview(verifiedImage)
     
@@ -117,23 +118,23 @@ final class BubbleView: UIView {
   }
   
   func setupConstraints() {
-    timeStampLabel.topAnchor.constraintEqualToAnchor(contentView.bottomAnchor, constant: 8).active = true
-    timeStampLabel.bottomAnchor.constraintEqualToAnchor(bottomAnchor, constant: -4).active = true
-    timeStampLabel.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-    timeStampLabel.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Horizontal)
+    timeStampLabel.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8).isActive = true
+    timeStampLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4).isActive = true
+    timeStampLabel.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+    timeStampLabel.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
     
-    verifiedImage.widthAnchor.constraintEqualToConstant(10).active = true
-    verifiedImage.heightAnchor.constraintEqualToConstant(10).active = true
-    verifiedImage.centerYAnchor.constraintEqualToAnchor(timeStampLabel.centerYAnchor, constant: 0).active = true
+    verifiedImage.widthAnchor.constraint(equalToConstant: 10).isActive = true
+    verifiedImage.heightAnchor.constraint(equalToConstant: 10).isActive = true
+    verifiedImage.centerYAnchor.constraint(equalTo: timeStampLabel.centerYAnchor, constant: 0).isActive = true
     
-    verifiedImage.leadingAnchor.constraintEqualToAnchor(timeStampLabel.trailingAnchor, constant: 4).active = true
+    verifiedImage.leadingAnchor.constraint(equalTo: timeStampLabel.trailingAnchor, constant: 4).isActive = true
     
     if type == .Agent {
-      timeStampLabel.leadingAnchor.constraintEqualToAnchor(contentView.leadingAnchor).active = true
-      trailingAnchor.constraintGreaterThanOrEqualToAnchor(verifiedImage.trailingAnchor, constant: 10).active = true
+      timeStampLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+      trailingAnchor.constraint(greaterThanOrEqualTo: verifiedImage.trailingAnchor, constant: 10).isActive = true
     } else {
-      timeStampLabel.leadingAnchor.constraintGreaterThanOrEqualToAnchor(leadingAnchor, constant: 10).active = true
-      trailingAnchor.constraintEqualToAnchor(verifiedImage.trailingAnchor, constant: 8).active = true
+      timeStampLabel.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 10).isActive = true
+      trailingAnchor.constraint(equalTo: verifiedImage.trailingAnchor, constant: 8).isActive = true
     }
   }
   

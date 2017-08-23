@@ -21,11 +21,11 @@ import ZDCChatAPI
 struct ChatControllerDelegate: ChatViewControllerDelegate {
   weak var client: APIClient?
   
-  func chatController(chatController: ChatViewController, sendMessage message: String) {
+  func chatController(_ chatController: ChatViewController, sendMessage message: String) {
     client?.sendMessage(message)
   }
   
-  func chatController(chatController: ChatViewController, didSelectImage image: UIImage) {
+  func chatController(_ chatController: ChatViewController, didSelectImage image: UIImage) {
     client?.uploadImage(image)
   }
 }
@@ -35,8 +35,8 @@ struct ChatControllerDelegate: ChatViewControllerDelegate {
  */
 final class ChatControllerDataSource: ChatViewControllerDataSource {
   
-  private weak var chatView: ChatView?
-  private weak var client: APIClient?
+  fileprivate weak var chatView: ChatView?
+  fileprivate weak var client: APIClient?
   
   var chatLog: [ChatUIEvent] {
     didSet {
@@ -58,7 +58,7 @@ final class ChatControllerDataSource: ChatViewControllerDataSource {
     
     client.eventUpdated = { [weak self] event in
       
-      self?.updateCell(withId: event.id, updateBlock: { (inout updatedEvent: ChatUIEvent) in
+      self?.updateCell(withId: event.id, updateBlock: { (updatedEvent: inout ChatUIEvent) in
         updatedEvent = event
       })
     }
@@ -66,12 +66,12 @@ final class ChatControllerDataSource: ChatViewControllerDataSource {
   
   //MARK: APIClient delegate
   
-  private func chatConnectedStatusUpdated(state: Bool) {
+  fileprivate func chatConnectedStatusUpdated(_ state: Bool) {
     chatView?.isChatConnected = state
   }
   
-  private func updateCell(withId id: String, updateBlock: (inout ChatUIEvent) -> ()) {
-    guard let (index, item) = chatLog.enumerate().filter({ $1.id == id }).first else { return }
+  fileprivate func updateCell(withId id: String, updateBlock: (inout ChatUIEvent) -> ()) {
+    guard let (index, item) = chatLog.enumerated().filter({ $1.id == id }).first else { return }
     
     var retItem = item
     updateBlock(&retItem)

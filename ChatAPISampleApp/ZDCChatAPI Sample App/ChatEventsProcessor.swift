@@ -25,9 +25,9 @@ import ZDCChatAPI
  - None:   The event received should be ignored
  */
 enum ChatUIEventState {
-  case New(ChatUIEvent)
-  case Update(ChatUIEvent)
-  case None
+  case new(ChatUIEvent)
+  case update(ChatUIEvent)
+  case none
 }
 
 /**
@@ -37,8 +37,8 @@ enum ChatUIEventState {
  */
 final class ChatEventsProcessor {
   
-  private var events: [String: ChatUIEvent]
-  private var duplicateUpload: [String: String]
+  fileprivate var events: [String: ChatUIEvent]
+  fileprivate var duplicateUpload: [String: String]
   
   init() {
     self.events = [:]
@@ -52,9 +52,9 @@ final class ChatEventsProcessor {
    
    - parameter event: ZDCChatEvent
    */
-  func handleEvent(event: ZDCChatEvent) -> ChatUIEventState {
+  func handleEvent(_ event: ZDCChatEvent) -> ChatUIEventState {
     guard let filteredEvent = filterEvents(event) else {
-      return .None
+      return .none
     }
     
     let chatItem = filteredEvent.chatItem
@@ -64,9 +64,9 @@ final class ChatEventsProcessor {
     }
     
     if events.keys.contains(chatItem.id) {
-      return .Update(chatItem)
+      return .update(chatItem)
     } else {
-      return .New(chatItem)
+      return .new(chatItem)
     }
   }
   
@@ -77,7 +77,7 @@ final class ChatEventsProcessor {
    
    - returns: the filtered event
    */
-  private func filterEvents(event: ZDCChatEvent) -> ZDCChatEvent? {
+  fileprivate func filterEvents(_ event: ZDCChatEvent) -> ZDCChatEvent? {
     if (filterUnwantedEvents(event) == nil) {
       return nil
     }
@@ -92,14 +92,14 @@ final class ChatEventsProcessor {
    
    - returns: ZDCChatEvent if it is supported, else nil
    */
-  private func filterUnwantedEvents(event: ZDCChatEvent) -> ZDCChatEvent? {
-    if   event.type == .Unknown
-      || event.type == .Rating
-      || event.type == .RatingComment
-      || event.type == .TriggerMessage
-      || event.type == .SystemMessage
-      || event.type == .MemberLeave
-      || event.type == .MemberJoin {
+  fileprivate func filterUnwantedEvents(_ event: ZDCChatEvent) -> ZDCChatEvent? {
+    if   event.type == .unknown
+      || event.type == .rating
+      || event.type == .ratingComment
+      || event.type == .triggerMessage
+      || event.type == .systemMessage
+      || event.type == .memberLeave
+      || event.type == .memberJoin {
       return nil
     }
     return event
@@ -114,11 +114,11 @@ final class ChatEventsProcessor {
    
    - returns: Filtered ZDCChatEvent
    */
-  private func filterDuplicateUploads(event: ZDCChatEvent) -> ZDCChatEvent! {
+  fileprivate func filterDuplicateUploads(_ event: ZDCChatEvent) -> ZDCChatEvent! {
     //If a VisitorUpload with this id already exists, set new (duplicate) event ID to be the
     //same as the old one, effectifly turning it into an update.
 
-    if event.type != .VisitorUpload {
+    if event.type != .visitorUpload {
       return event
     }
     

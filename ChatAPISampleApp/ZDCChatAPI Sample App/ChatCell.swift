@@ -26,7 +26,7 @@ class ChatCell: UITableViewCell{
   /// List of chat events received
   var chatEvent: ChatUIEvent! {
     didSet {
-      bubbleState = chatEvent.confirmed ? .Confirmed : .NotConfirmed
+      bubbleState = chatEvent.confirmed ? .confirmed : .notConfirmed
       bubbleView.timestamp = chatEvent.timeStamp
     }
   }
@@ -94,7 +94,7 @@ class ImageChatCell: ChatCell {
           imageContent = image
         }
         if let url = chatImageCell.imageURL {
-          setImageURL(url)
+          setImageURL(url as URL)
         }
       }
     }
@@ -113,21 +113,21 @@ extension ImageChatCell: ImageCellType {
     }
   }
   
-  func setImageURL(url: NSURL?) {
-    self.imageContentView.sd_setImageWithURL(url)
+  func setImageURL(_ url: URL?) {
+    self.imageContentView.sd_setImage(with: url)
     
-    self.imageContentView.contentMode = .Center
+    self.imageContentView.contentMode = .center
     setPlaceholderHeight()
     
     self.imageContentView.image = UIImage(named: "placeholder")
-    self.imageContentView.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placeholder"))
-    { (image, error, cache, url) in
-      
-      if image != nil {
-        self.imageContentView.contentMode = .ScaleAspectFit
+        
+    self.imageContentView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"), options: .retryFailed ){ (_, _, _, _) in
+      if self.imageContentView != nil {
+        self.imageContentView.contentMode = .scaleAspectFit
         self.updateHeight()
       }
     }
+    
   }
   
   override func prepareForReuse() {

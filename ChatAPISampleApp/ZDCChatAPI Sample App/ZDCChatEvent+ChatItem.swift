@@ -22,30 +22,30 @@ import ZDCChatAPI
 extension ZDCChatEvent {
   
   var chatItem: ChatUIEvent {
-    let date = NSDate.init(timeIntervalSince1970: self.timestamp.doubleValue / 1000.0)
-    let url = self.attachment?.url == nil ? nil : NSURL(string: self.attachment.url)
+    let date = Date.init(timeIntervalSince1970: self.timestamp.doubleValue / 1000.0)
+    let url = self.attachment?.url == nil ? nil : URL(string: self.attachment.url)
     let image = self.fileUpload?.image
     
     switch self.type {
-    case .AgentMessage:
+    case .agentMessage:
       return ChatAgentMessageEvent(id: self.eventId,
                                    confirmed: self.verified,
                                    timeStamp: date,
                                    text: self.message,
                                    avatarURL: nil)
-    case .VisitorMessage:
+    case .visitorMessage:
       return ChatVisitorMessageEvent(id: self.eventId,
                                      confirmed: self.verified,
                                      timeStamp: date,
                                      text: self.message)
-    case .VisitorUpload:
-      let confirmed = self.fileUpload.status == .Complete
+    case .visitorUpload:
+      let confirmed = self.fileUpload.status == .complete
       return ChatVisitorImageEvent(id: self.eventId,
                                    confirmed: confirmed,
                                    timeStamp: date,
                                    image: image,
                                    imageURL: url)
-    case .AgentUpload:
+    case .agentUpload:
       return ChatAgentImageEvent(id: self.eventId,
                                  confirmed: true,
                                  timeStamp: date,

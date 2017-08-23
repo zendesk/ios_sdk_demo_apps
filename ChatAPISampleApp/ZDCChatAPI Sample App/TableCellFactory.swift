@@ -30,9 +30,9 @@ final class TableCellFactory {
    - returns: a UITableViewCell instance
    */
   static func constructCell(forTableView tableView: UITableView,
-                                         indexPath: NSIndexPath,
+                                         indexPath: IndexPath,
                                          event: ChatUIEvent) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(event.type.tableIdentifier, forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: event.type.tableIdentifier, for: indexPath)
     
     if var th = cell as? ChatCellType {
       th.chatEvent = event
@@ -51,19 +51,19 @@ final class TableCellFactory {
  - VisitorImage:   visitor image message event
  */
 enum EventType {
-  case AgentMessage, AgentImage, VisitorMessage, VisitorImage
+  case agentMessage, agentImage, visitorMessage, visitorImage
 }
 
 extension EventType {
   var tableIdentifier: String {
     switch self {
-    case AgentMessage:
+    case .agentMessage:
       return "agentCell"
-    case VisitorMessage:
+    case .visitorMessage:
       return "visitorCell"
-    case VisitorImage:
+    case .visitorImage:
       return "visitorImageCell"
-    case AgentImage:
+    case .agentImage:
       return "agentImageCell"
     }
   }

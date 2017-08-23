@@ -45,7 +45,7 @@ class FirstViewController: UIViewController, UITabBarControllerDelegate {
         When this appears we assume that the chat has been hidden. We then start to listen
         for any incoming messages.
     */
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         currentMessageCount = ZDCChat.instance().session.dataSource().agentMessageCount()
         
@@ -59,21 +59,21 @@ class FirstViewController: UIViewController, UITabBarControllerDelegate {
         When this disappears we assume that we're going back to the chat, so we can 
         assume that we have read all of the unread messages
     */
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         
         // Reset the unread count and set the badge to nil so it stops showing
         currentMessageCount = 0
         badgeTabBarItem.badgeValue = nil
         
         // Removes the observer because we don't need it
-        ZDCChat.instance().session.dataSource().removeObserverForChatLogEvents(self)
+        ZDCChat.instance().session.dataSource().removeObserver(forChatLogEvents: self)
     }
     
     
-    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         
         // Don't allow the chat to be 'popped under'
-        if (tabBarController.selectedIndex == 1 && viewController.isKindOfClass(UINavigationController)) {
+        if (tabBarController.selectedIndex == 1 && viewController.isKind(of: UINavigationController.self)) {
             return false
         }
         

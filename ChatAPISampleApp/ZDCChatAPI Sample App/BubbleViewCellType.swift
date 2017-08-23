@@ -19,11 +19,11 @@ import UIKit
 let agentBackgroundColor = UIColor(red:0.95, green:0.94, blue:0.94, alpha:1.0)
 let visitorBackgroundColor = UIColor(red:0.91, green:0.42, blue:0.39, alpha:1.0)
 
-let agentMessageTextColor = UIColor.blackColor()
-let visitorMessageTextColor = UIColor.whiteColor()
+let agentMessageTextColor = UIColor.black
+let visitorMessageTextColor = UIColor.white
 
-let agentTimestampTextColor = UIColor.darkGrayColor()
-let visitorTimestampTextColor = UIColor.whiteColor()
+let agentTimestampTextColor = UIColor.darkGray
+let visitorTimestampTextColor = UIColor.white
 
 /// BubbleView Color Extension
 extension BubbleView.CellType {

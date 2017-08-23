@@ -50,7 +50,7 @@ protocol ImageCellType: ChatCellType {
    
    - parameter url: The image url to display
    */
-  func setImageURL(url: NSURL?)
+  func setImageURL(_ url: URL?)
 }
 
 /**
@@ -66,19 +66,18 @@ protocol AgentCellType: ChatCellType {
    
    - parameter url: The avatar url to display
    */
-  func setAgentAvatar(url: NSURL?)
+  func setAgentAvatar(_ url: URL?)
 }
 
 //MARK: - Extensions
 
 extension AgentCellType {
   
-  func setAgentAvatar(url: NSURL?) {
+  func setAgentAvatar(_ url: URL?) {
     
-    self.agentImage.contentMode = .ScaleAspectFit
+    self.agentImage.contentMode = .scaleAspectFit
     self.agentImage.backgroundColor = agentBackgroundColor
-    self.agentImage.sd_setImageWithURL(url, placeholderImage: UIImage(named: "user"))
-    { (image, error, cache, url) in
-    }
+    self.agentImage.sd_setImage(with: url, placeholderImage: UIImage(named: "user"))
+    
   }
 }

@@ -26,12 +26,12 @@ import ZDCChatAPI
  */
 final class APIClient {
   
-  private let chat: ZDCChatAPI
-  private let eventProcessor: ChatEventsProcessor = ChatEventsProcessor()
+  fileprivate let chat: ZDCChatAPI
+  fileprivate let eventProcessor: ChatEventsProcessor = ChatEventsProcessor()
   
   /// Returns true of the current chat session is in connected status
   var isChatConnected: Bool {
-    return chat.connectionStatus == .Connected
+    return chat.connectionStatus == .connected
   }
   
   /**
@@ -54,20 +54,20 @@ final class APIClient {
   init() {
     
     ZDCLog.enable(true)
-    ZDCLog.setLogLevel(ZDCLogLevel.Verbose)
+    ZDCLog.setLogLevel(ZDCLogLevel.verbose)
     chat = ZDCChatAPI.instance()
 
     setupListeners()
     
     let config = ZDCAPIConfig()
-    chat.startChatWithAccountKey("2PT4TD5ox8d19nrLoBAGpMk87L4r4VQQ", config: config)
+    chat.startChat(withAccountKey: "2PT4TD5ox8d19nrLoBAGpMk87L4r4VQQ", config: config)
     
   }
   
   /**
    Setup ZDCChatAPI event listners
    */
-  private func setupListeners() {
+  fileprivate func setupListeners() {
     chat.addObserver(self, forChatLogEvents: #selector(chatLogEvent(_:)))
     chat.addObserver(self, forConnectionEvents: #selector(chatConnectionStateUpdate(_:)))
   }
@@ -96,9 +96,9 @@ final class APIClient {
    
    - parameter note: NSNotification object. Unused.
    */
-  @objc func chatLogEvent(note: NSNotification) {
+  @objc func chatLogEvent(_ note: Notification) {
     let events = chat.livechatLog
-    if let lastEvent = events.last {
+    if let lastEvent = events?.last {
       handleChatEvent(lastEvent)
     }
     
@@ -109,7 +109,7 @@ final class APIClient {
    
    - parameter event: ZDCChatEvent
    */
-  private func handleChatEvent(event: ZDCChatEvent) {
+  fileprivate func handleChatEvent(_ event: ZDCChatEvent) {
     NSLog("Received chat event \(event.eventId) of type \(event.type.rawValue) with: \(event.message)")
     
     //Throw away events without timestamps
@@ -120,15 +120,15 @@ final class APIClient {
     newEventReceived(event)
   }
   
-  func newEventReceived(event: ZDCChatEvent) {
+  func newEventReceived(_ event: ZDCChatEvent) {
     switch eventProcessor.handleEvent(event) {
-    case let .New(event):
+    case let .new(event):
       eventReceived?(event)
       break
-    case let .Update(event):
+    case let .update(event):
       eventUpdated?(event)
       break
-    case .None:
+    case .none:
       break
     }
   }
@@ -138,7 +138,7 @@ final class APIClient {
    
    - parameter note: NSNotification object. Unused.
    */
-  @objc func chatConnectionStateUpdate(note: NSNotification) {
+  @objc func chatConnectionStateUpdate(_ note: Notification) {
   
     NSLog("Chat connection status updated \(isChatConnected)")
     
@@ -152,8 +152,8 @@ final class APIClient {
    
    - parameter text: the text to send
    */
-  func sendMessage(text: String) {
-    if (self.chat.connectionStatus == ZDCConnectionStatus.Connected) {
+  func sendMessage(_ text: String) {
+    if (self.chat.connectionStatus == ZDCConnectionStatus.connected) {
       chat.sendChatMessage(text)
     } else {
       NSLog("Cannot send message to unconnected chat")
@@ -165,8 +165,8 @@ final class APIClient {
    
    - parameter image: the image
    */
-  func uploadImage(image: UIImage) {
-    if (self.chat.connectionStatus == ZDCConnectionStatus.Connected) {
+  func uploadImage(_ image: UIImage) {
+    if (self.chat.connectionStatus == ZDCConnectionStatus.connected) {
       chat.uploadImage(image, name: "attachment.jpg")
     } else {
       NSLog("Cannot send message to unconnected chat")
@@ -174,7 +174,7 @@ final class APIClient {
   }
   
   deinit {
-    chat.removeObserverForChatLogEvents(self)
-    chat.removeObserverForConnectionEvents(self)
+    chat.removeObserver(forChatLogEvents: self)
+    chat.removeObserver(forConnectionEvents: self)
   }
 }
