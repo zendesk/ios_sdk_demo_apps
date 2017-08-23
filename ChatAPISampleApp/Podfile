@@ -5,9 +5,8 @@ use_frameworks!
 
 target 'ZDCChatAPI Sample App' do
   pod 'SDWebImage', '~>3.8'
-  pod 'DKImagePickerController'
-  pod 'DateToolsSwift'
+  pod 'DKImagePickerController', '~> 3.5.7'
+  pod 'DateToolsSwift', '~> 2.0.3'
   pod 'ZDCChat/API', '1.3.5.1'
   pod 'Toaster', '~> 2.0.4'
 end
-

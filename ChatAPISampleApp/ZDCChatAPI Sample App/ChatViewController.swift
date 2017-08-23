@@ -79,7 +79,7 @@ extension ChatViewController {
   @IBAction func pickImage(_ sender: AnyObject) {
     let pickerController = DKImagePickerController()
     
-    pickerController.singleSelect = false
+    pickerController.singleSelect = true
     pickerController.didSelectAssets = { (assets: [DKAsset]) in
       
       assets[0].fetchOriginalImage(false) { (image, info) in
