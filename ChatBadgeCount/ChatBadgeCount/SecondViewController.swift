@@ -11,10 +11,10 @@ import ZDCChat
 
 class SecondViewController: UIViewController {
 
-    @IBAction func pushChat(sender: AnyObject) {
+    @IBAction func pushChat(_ sender: AnyObject) {
         
         // Pushes the chat widget onto the navigation controller
-        ZDCChat.startChatIn(navigationController, withConfig: nil)
+        ZDCChat.start(in: navigationController, withConfig: nil)
         
         // Hides the back button because we are in a tab controller
         ZDCChat.instance().chatViewController.navigationItem.hidesBackButton = true

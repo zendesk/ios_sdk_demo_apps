@@ -16,7 +16,7 @@
 
 import UIKit
 import DKImagePickerController
-import JLToast
+import Toaster
 
 class ChatViewController: UIViewController {
   
@@ -27,8 +27,8 @@ class ChatViewController: UIViewController {
   
   var delegate: ChatViewControllerDelegate!
   var dataSource: ChatViewControllerDataSource!
-  var toast: JLToast?
-  private let client = APIClient()
+  var toast: Toast?
+  fileprivate let client = APIClient()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,28 +45,28 @@ class ChatViewController: UIViewController {
     updateSendButtonState()
   }
   
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     
   }
   
   func setupKeyboardEvents() {
-    NSNotificationCenter.defaultCenter().addObserverForName(
-      UIKeyboardDidShowNotification,
+    NotificationCenter.default.addObserver(
+      forName: NSNotification.Name.UIKeyboardDidShow,
       object: nil,
-      queue: NSOperationQueue.mainQueue()) { [weak self] notification in
+      queue: OperationQueue.main) { [weak self] notification in
         let info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
-        UIView.animateWithDuration(0.2) {
+        UIView.animate(withDuration: 0.2, animations: {
           self?.bottomConstraint.constant = keyboardFrame.size.height
           self?.view.layoutIfNeeded()
-        }
+        }) 
     }
     
-    NSNotificationCenter.defaultCenter().addObserverForName(
-      UIKeyboardDidHideNotification,
+    NotificationCenter.default.addObserver(
+      forName: NSNotification.Name.UIKeyboardDidHide,
       object: nil,
-      queue: NSOperationQueue.mainQueue()) { [weak self] notificaiton in
+      queue: OperationQueue.main) { [weak self] notificaiton in
         self?.bottomConstraint.constant = 0
     }
   }
@@ -76,10 +76,10 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController {
   
-  @IBAction func pickImage(sender: AnyObject) {
+  @IBAction func pickImage(_ sender: AnyObject) {
     let pickerController = DKImagePickerController()
     
-    pickerController.singleSelect = true
+    pickerController.singleSelect = false
     pickerController.didSelectAssets = { (assets: [DKAsset]) in
       
       assets[0].fetchOriginalImage(false) { (image, info) in
@@ -87,10 +87,10 @@ extension ChatViewController {
       }
     }
     
-    self.presentViewController(pickerController, animated: true) {}
+    self.present(pickerController, animated: true) {}
   }
   
-  @IBAction func sendMessage(sender: AnyObject) {
+  @IBAction func sendMessage(_ sender: AnyObject) {
     sendMessage()
   }
   
@@ -112,17 +112,17 @@ extension ChatViewController {
 
 extension ChatViewController: UITextFieldDelegate {
   
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     sendMessage()
     return true
   }
   
-  @IBAction func textFieldEditingChanged(sender: AnyObject) {
+  @IBAction func textFieldEditingChanged(_ sender: AnyObject) {
     updateSendButtonState()
   }
   
   func updateSendButtonState() {
-    sendButton.enabled = !(messageTextField.text ?? "").isEmpty
+    sendButton.isEnabled = !(messageTextField.text ?? "").isEmpty
   }
 }
 
@@ -132,11 +132,11 @@ extension ChatViewController: UITextFieldDelegate {
 
 extension ChatViewController: UITableViewDataSource {
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return dataSource.chatLog.count
   }
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     return TableCellFactory.constructCell(
       forTableView: tableView,
       indexPath: indexPath,
@@ -155,9 +155,9 @@ extension ChatViewController: ChatView {
       
       if newValue {
         toast?.cancel()
-        JLToast.makeText("Connected").show()
+        Toast.init(text: "Connected").show()
       } else {
-        toast = JLToast.makeText("Chat is connecting...")
+        toast = Toast.init(text: "Chat is connecting...")
         toast?.duration = 9999 //Very long
         toast?.show()
       }
@@ -168,7 +168,7 @@ extension ChatViewController: ChatView {
         return true
       }
       
-      return toast.view.hidden
+      return toast.view.isHidden
     }
   }
   
@@ -177,8 +177,8 @@ extension ChatViewController: ChatView {
     self.tableView.setNeedsLayout()
     self.tableView.layoutIfNeeded()
     
-    let last = self.tableView.numberOfRowsInSection(0) - 1
-    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: last, inSection: 0),
-                                          atScrollPosition: .Middle, animated: true)
+    let last = self.tableView.numberOfRows(inSection: 0) - 1
+    self.tableView.scrollToRow(at: IndexPath(row: last, section: 0),
+                                          at: .middle, animated: true)
   }
 }

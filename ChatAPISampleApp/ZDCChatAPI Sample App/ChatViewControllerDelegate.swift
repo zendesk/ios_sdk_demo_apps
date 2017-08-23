@@ -28,7 +28,7 @@ protocol ChatViewControllerDelegate {
    - parameter chatController: the chat controller
    - parameter image:          the image selected
    */
-  func chatController(chatController: ChatViewController, didSelectImage image: UIImage)
+  func chatController(_ chatController: ChatViewController, didSelectImage image: UIImage)
   
   /**
    Method called when the user wants to send a message
@@ -36,7 +36,7 @@ protocol ChatViewControllerDelegate {
    - parameter chatController: the chat controller
    - parameter message:        the message to send
    */
-  func chatController(chatController: ChatViewController, sendMessage message: String)
+  func chatController(_ chatController: ChatViewController, sendMessage message: String)
 }
 
 /**

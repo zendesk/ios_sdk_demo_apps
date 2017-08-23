@@ -32,7 +32,7 @@ protocol ChatUIEvent {
   var type: EventType  { get }
   
   /// Event creation timestamp
-  var timeStamp: NSDate { get }
+  var timeStamp: Date { get }
 }
 
 
@@ -42,7 +42,7 @@ protocol ChatUIEvent {
 protocol AgentEventType {
   
   /// Agent Avatar URL
-  var avatarURL: NSURL? { get }
+  var avatarURL: URL? { get }
 }
 
 
@@ -65,7 +65,7 @@ protocol ChatImageEventType: ChatUIEvent {
   var image: UIImage?  { get }
   
   /// Event Image URL
-  var imageURL: NSURL? { get }
+  var imageURL: URL? { get }
 }
 
 
@@ -75,8 +75,8 @@ protocol ChatImageEventType: ChatUIEvent {
 struct ChatVisitorMessageEvent: ChatMessageEventType {
   let id: String
   var confirmed: Bool
-  let type: EventType = .VisitorMessage
-  let timeStamp: NSDate
+  let type: EventType = .visitorMessage
+  let timeStamp: Date
   let text: String
 }
 
@@ -87,10 +87,10 @@ struct ChatVisitorMessageEvent: ChatMessageEventType {
 struct ChatAgentMessageEvent: ChatMessageEventType, AgentEventType {
   let id: String
   var confirmed: Bool
-  let type: EventType = .AgentMessage
-  let timeStamp: NSDate
+  let type: EventType = .agentMessage
+  let timeStamp: Date
   let text: String
-  var avatarURL: NSURL? = nil
+  var avatarURL: URL? = nil
 }
 
 
@@ -100,10 +100,10 @@ struct ChatAgentMessageEvent: ChatMessageEventType, AgentEventType {
 struct ChatVisitorImageEvent: ChatImageEventType {
   let id: String
   var confirmed: Bool
-  let type: EventType = .VisitorImage
-  let timeStamp: NSDate
+  let type: EventType = .visitorImage
+  let timeStamp: Date
   let image: UIImage?
-  let imageURL: NSURL?
+  let imageURL: URL?
 }
 
 
@@ -113,9 +113,9 @@ struct ChatVisitorImageEvent: ChatImageEventType {
 struct ChatAgentImageEvent: ChatImageEventType, AgentEventType {
   let id: String
   var confirmed: Bool
-  let type: EventType = .AgentImage
-  let timeStamp: NSDate
+  let type: EventType = .agentImage
+  let timeStamp: Date
   let image: UIImage?
-  let imageURL: NSURL?
-  var avatarURL: NSURL? = nil
+  let imageURL: URL?
+  var avatarURL: URL? = nil
 }
