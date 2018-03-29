@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43EC46212056E72E0079953F /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461D2056E71C0079953F /* ZendeskCoreSDK.framework */; };
+		43EC46222056E72E0079953F /* ZendeskProviderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461E2056E71C0079953F /* ZendeskProviderSDK.framework */; };
+		43EC46232056E72E0079953F /* ZendeskSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461F2056E71C0079953F /* ZendeskSDK.framework */; };
+		43EC462A2056E87E0079953F /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461D2056E71C0079953F /* ZendeskCoreSDK.framework */; };
+		43EC462B2056E87E0079953F /* ZendeskProviderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461E2056E71C0079953F /* ZendeskProviderSDK.framework */; };
+		43EC462C2056E87E0079953F /* ZendeskSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461F2056E71C0079953F /* ZendeskSDK.framework */; };
+		43EC463C2056E8A60079953F /* RequestUpdateAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC46032056E4400079953F /* RequestUpdateAppDelegate.swift */; };
+		43EC463D2056E8A60079953F /* RequestUpdatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC460A2056E4400079953F /* RequestUpdatesVC.swift */; };
+		43EC463E2056E8BC0079953F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EC46042056E4400079953F /* Assets.xcassets */; };
+		43EC463F2056E8BC0079953F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EC46052056E4400079953F /* LaunchScreen.storyboard */; };
+		43EC46402056E8BC0079953F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EC46072056E4400079953F /* Main.storyboard */; };
+		43EC46472056E96C0079953F /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461D2056E71C0079953F /* ZendeskCoreSDK.framework */; };
+		43EC46482056E96C0079953F /* ZendeskProviderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461E2056E71C0079953F /* ZendeskProviderSDK.framework */; };
+		43EC46492056E96C0079953F /* ZendeskSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461F2056E71C0079953F /* ZendeskSDK.framework */; };
+		43EC46592056E98F0079953F /* UploadAttachmentAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC45F42056E39A0079953F /* UploadAttachmentAppDelegate.swift */; };
+		43EC465A2056E98F0079953F /* UploadAttachmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EC45FB2056E39A0079953F /* UploadAttachmentVC.swift */; };
+		43EC465B2056E99E0079953F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EC45F52056E39A0079953F /* Assets.xcassets */; };
+		43EC465C2056E99E0079953F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EC45F62056E39A0079953F /* LaunchScreen.storyboard */; };
+		43EC465D2056E99E0079953F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EC45F82056E39A0079953F /* Main.storyboard */; };
+		43EC465F2057D9C20079953F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FD90D8204D78E100960AE3 /* Main.storyboard */; };
+		43EC46602057D9C20079953F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43FD90DB204D78E100960AE3 /* Assets.xcassets */; };
+		43EC46612057D9C20079953F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FD90DD204D78E100960AE3 /* LaunchScreen.storyboard */; };
+		43EC46632057D9CD0079953F /* CustomFieldsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD90D4204D78E100960AE3 /* CustomFieldsAppDelegate.swift */; };
+		43EC46642057D9CD0079953F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD90D6204D78E100960AE3 /* ViewController.swift */; };
+		483351FA206D171800A07D8D /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; };
+		483351FB206D171800A07D8D /* ZendeskSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; };
+		483351FC206D171800A07D8D /* ZendeskSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 483351F8206D171800A07D8D /* ZendeskSDKStrings.bundle */; };
+		483351FD206D171800A07D8D /* ZendeskProviderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; };
+		483351FE206D187900A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		483351FF206D187900A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48335200206D187900A07D8D /* ZendeskSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48335201206D188000A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48335202206D188000A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48335203206D188000A07D8D /* ZendeskSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48335204206D188500A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48335205206D188500A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48335206206D188500A07D8D /* ZendeskSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43EC461B2056E6930079953F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				483351FE206D187900A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */,
+				483351FF206D187900A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */,
+				48335200206D187900A07D8D /* ZendeskSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EC46332056E87E0079953F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				48335201206D188000A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */,
+				48335202206D188000A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */,
+				48335203206D188000A07D8D /* ZendeskSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EC46502056E96C0079953F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				48335204206D188500A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */,
+				48335205206D188500A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */,
+				48335206206D188500A07D8D /* ZendeskSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		43EC45F42056E39A0079953F /* UploadAttachmentAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadAttachmentAppDelegate.swift; sourceTree = "<group>"; };
+		43EC45F52056E39A0079953F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43EC45F72056E39A0079953F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43EC45F92056E39A0079953F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43EC45FA2056E39A0079953F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EC45FB2056E39A0079953F /* UploadAttachmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadAttachmentVC.swift; sourceTree = "<group>"; };
+		43EC46032056E4400079953F /* RequestUpdateAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUpdateAppDelegate.swift; sourceTree = "<group>"; };
+		43EC46042056E4400079953F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43EC46062056E4400079953F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43EC46082056E4400079953F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43EC46092056E4400079953F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EC460A2056E4400079953F /* RequestUpdatesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUpdatesVC.swift; sourceTree = "<group>"; };
+		43EC461D2056E71C0079953F /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskCoreSDK.framework; sourceTree = "<group>"; };
+		43EC461E2056E71C0079953F /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskProviderSDK.framework; sourceTree = "<group>"; };
+		43EC461F2056E71C0079953F /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskSDK.framework; sourceTree = "<group>"; };
+		43EC46202056E71C0079953F /* ZendeskSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZendeskSDKStrings.bundle; sourceTree = "<group>"; };
+		43EC463A2056E87E0079953F /* support_request_updates_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = support_request_updates_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43EC46572056E96C0079953F /* support_upload_attachment_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = support_upload_attachment_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FD90D1204D78E100960AE3 /* support_custom_fields_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = support_custom_fields_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FD90D4204D78E100960AE3 /* CustomFieldsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldsAppDelegate.swift; sourceTree = "<group>"; };
+		43FD90D6204D78E100960AE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43FD90D9204D78E100960AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43FD90DB204D78E100960AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43FD90DE204D78E100960AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43FD90E0204D78E100960AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskCoreSDK.framework; path = "swift-4.0.2/ZendeskCoreSDK.framework"; sourceTree = "<group>"; };
+		483351F7206D171800A07D8D /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskSDK.framework; path = "swift-4.0.2/ZendeskSDK.framework"; sourceTree = "<group>"; };
+		483351F8206D171800A07D8D /* ZendeskSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ZendeskSDKStrings.bundle; path = "swift-4.0.2/ZendeskSDKStrings.bundle"; sourceTree = "<group>"; };
+		483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskProviderSDK.framework; path = "swift-4.0.2/ZendeskProviderSDK.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43EC46292056E87E0079953F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EC462A2056E87E0079953F /* ZendeskCoreSDK.framework in Frameworks */,
+				43EC462B2056E87E0079953F /* ZendeskProviderSDK.framework in Frameworks */,
+				43EC462C2056E87E0079953F /* ZendeskSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EC46462056E96C0079953F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EC46472056E96C0079953F /* ZendeskCoreSDK.framework in Frameworks */,
+				43EC46482056E96C0079953F /* ZendeskProviderSDK.framework in Frameworks */,
+				43EC46492056E96C0079953F /* ZendeskSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43FD90CE204D78E100960AE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				483351FB206D171800A07D8D /* ZendeskSDK.framework in Frameworks */,
+				483351FD206D171800A07D8D /* ZendeskProviderSDK.framework in Frameworks */,
+				43EC46212056E72E0079953F /* ZendeskCoreSDK.framework in Frameworks */,
+				43EC46222056E72E0079953F /* ZendeskProviderSDK.framework in Frameworks */,
+				43EC46232056E72E0079953F /* ZendeskSDK.framework in Frameworks */,
+				483351FA206D171800A07D8D /* ZendeskCoreSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		436D6FF12051482700A6F1BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43EC461C2056E71C0079953F /* ZDKFrameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43EC45F32056E39A0079953F /* support_upload_attachment_sample */ = {
+			isa = PBXGroup;
+			children = (
+				43EC45F42056E39A0079953F /* UploadAttachmentAppDelegate.swift */,
+				43EC45FB2056E39A0079953F /* UploadAttachmentVC.swift */,
+				43EC45F52056E39A0079953F /* Assets.xcassets */,
+				43EC45F62056E39A0079953F /* LaunchScreen.storyboard */,
+				43EC45F82056E39A0079953F /* Main.storyboard */,
+				43EC45FA2056E39A0079953F /* Info.plist */,
+			);
+			path = support_upload_attachment_sample;
+			sourceTree = "<group>";
+		};
+		43EC46022056E4400079953F /* support_request_updates_sample */ = {
+			isa = PBXGroup;
+			children = (
+				43EC46032056E4400079953F /* RequestUpdateAppDelegate.swift */,
+				43EC460A2056E4400079953F /* RequestUpdatesVC.swift */,
+				43EC46042056E4400079953F /* Assets.xcassets */,
+				43EC46052056E4400079953F /* LaunchScreen.storyboard */,
+				43EC46072056E4400079953F /* Main.storyboard */,
+				43EC46092056E4400079953F /* Info.plist */,
+			);
+			path = support_request_updates_sample;
+			sourceTree = "<group>";
+		};
+		43EC461C2056E71C0079953F /* ZDKFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43EC461D2056E71C0079953F /* ZendeskCoreSDK.framework */,
+				43EC461E2056E71C0079953F /* ZendeskProviderSDK.framework */,
+				43EC461F2056E71C0079953F /* ZendeskSDK.framework */,
+				43EC46202056E71C0079953F /* ZendeskSDKStrings.bundle */,
+			);
+			path = ZDKFrameworks;
+			sourceTree = "<group>";
+		};
+		43FA8DB0205152F200ED55DC /* ZDKFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */,
+				483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */,
+				483351F7206D171800A07D8D /* ZendeskSDK.framework */,
+				483351F8206D171800A07D8D /* ZendeskSDKStrings.bundle */,
+			);
+			path = ZDKFrameworks;
+			sourceTree = "<group>";
+		};
+		43FD90C8204D78E100960AE3 = {
+			isa = PBXGroup;
+			children = (
+				43FA8DB0205152F200ED55DC /* ZDKFrameworks */,
+				43EC46022056E4400079953F /* support_request_updates_sample */,
+				43EC45F32056E39A0079953F /* support_upload_attachment_sample */,
+				43FD90D3204D78E100960AE3 /* support_custom_fields_sample */,
+				43FD90D2204D78E100960AE3 /* Products */,
+				436D6FF12051482700A6F1BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		43FD90D2204D78E100960AE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43FD90D1204D78E100960AE3 /* support_custom_fields_sample.app */,
+				43EC463A2056E87E0079953F /* support_request_updates_sample.app */,
+				43EC46572056E96C0079953F /* support_upload_attachment_sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43FD90D3204D78E100960AE3 /* support_custom_fields_sample */ = {
+			isa = PBXGroup;
+			children = (
+				43FD90D4204D78E100960AE3 /* CustomFieldsAppDelegate.swift */,
+				43FD90D6204D78E100960AE3 /* ViewController.swift */,
+				43FD90D8204D78E100960AE3 /* Main.storyboard */,
+				43FD90DB204D78E100960AE3 /* Assets.xcassets */,
+				43FD90DD204D78E100960AE3 /* LaunchScreen.storyboard */,
+				43FD90E0204D78E100960AE3 /* Info.plist */,
+			);
+			path = support_custom_fields_sample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43EC46252056E87E0079953F /* support_request_updates_sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EC46372056E87E0079953F /* Build configuration list for PBXNativeTarget "support_request_updates_sample" */;
+			buildPhases = (
+				43EC46262056E87E0079953F /* Sources */,
+				43EC46292056E87E0079953F /* Frameworks */,
+				43EC462D2056E87E0079953F /* Resources */,
+				43EC46332056E87E0079953F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = support_request_updates_sample;
+			productName = support_sdk_sample_apps_v2;
+			productReference = 43EC463A2056E87E0079953F /* support_request_updates_sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43EC46422056E96C0079953F /* support_upload_attachment_sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EC46542056E96C0079953F /* Build configuration list for PBXNativeTarget "support_upload_attachment_sample" */;
+			buildPhases = (
+				43EC46432056E96C0079953F /* Sources */,
+				43EC46462056E96C0079953F /* Frameworks */,
+				43EC464A2056E96C0079953F /* Resources */,
+				43EC46502056E96C0079953F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = support_upload_attachment_sample;
+			productName = support_sdk_sample_apps_v2;
+			productReference = 43EC46572056E96C0079953F /* support_upload_attachment_sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43FD90D0204D78E100960AE3 /* support_custom_fields_sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43FD90F9204D78E200960AE3 /* Build configuration list for PBXNativeTarget "support_custom_fields_sample" */;
+			buildPhases = (
+				43FD90CD204D78E100960AE3 /* Sources */,
+				43FD90CE204D78E100960AE3 /* Frameworks */,
+				43FD90CF204D78E100960AE3 /* Resources */,
+				43EC461B2056E6930079953F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = support_custom_fields_sample;
+			productName = support_sdk_sample_apps_v2;
+			productReference = 43FD90D1204D78E100960AE3 /* support_custom_fields_sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43FD90C9204D78E100960AE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Killian Smith";
+				TargetAttributes = {
+					43EC46252056E87E0079953F = {
+						ProvisioningStyle = Automatic;
+					};
+					43EC46422056E96C0079953F = {
+						ProvisioningStyle = Automatic;
+					};
+					43FD90D0204D78E100960AE3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 43FD90CC204D78E100960AE3 /* Build configuration list for PBXProject "support_sdk_sample_apps_v2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43FD90C8204D78E100960AE3;
+			productRefGroup = 43FD90D2204D78E100960AE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43FD90D0204D78E100960AE3 /* support_custom_fields_sample */,
+				43EC46252056E87E0079953F /* support_request_updates_sample */,
+				43EC46422056E96C0079953F /* support_upload_attachment_sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43EC462D2056E87E0079953F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EC463E2056E8BC0079953F /* Assets.xcassets in Resources */,
+				43EC463F2056E8BC0079953F /* LaunchScreen.storyboard in Resources */,
+				43EC46402056E8BC0079953F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EC464A2056E96C0079953F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EC465B2056E99E0079953F /* Assets.xcassets in Resources */,
+				43EC465C2056E99E0079953F /* LaunchScreen.storyboard in Resources */,
+				43EC465D2056E99E0079953F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43FD90CF204D78E100960AE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				483351FC206D171800A07D8D /* ZendeskSDKStrings.bundle in Resources */,
+				43EC465F2057D9C20079953F /* Main.storyboard in Resources */,
+				43EC46602057D9C20079953F /* Assets.xcassets in Resources */,
+				43EC46612057D9C20079953F /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43EC46262056E87E0079953F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EC463C2056E8A60079953F /* RequestUpdateAppDelegate.swift in Sources */,
+				43EC463D2056E8A60079953F /* RequestUpdatesVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EC46432056E96C0079953F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EC46592056E98F0079953F /* UploadAttachmentAppDelegate.swift in Sources */,
+				43EC465A2056E98F0079953F /* UploadAttachmentVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43FD90CD204D78E100960AE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EC46632057D9CD0079953F /* CustomFieldsAppDelegate.swift in Sources */,
+				43EC46642057D9CD0079953F /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43EC45F62056E39A0079953F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43EC45F72056E39A0079953F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		43EC45F82056E39A0079953F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43EC45F92056E39A0079953F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43EC46052056E4400079953F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43EC46062056E4400079953F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		43EC46072056E4400079953F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43EC46082056E4400079953F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43FD90D8204D78E100960AE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43FD90D9204D78E100960AE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43FD90DD204D78E100960AE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43FD90DE204D78E100960AE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43EC46382056E87E0079953F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/**",
+				);
+				INFOPLIST_FILE = support_request_updates_sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.support-sdk-sample-apps-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43EC46392056E87E0079953F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/**",
+				);
+				INFOPLIST_FILE = support_request_updates_sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.support-sdk-sample-apps-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43EC46552056E96C0079953F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/**",
+				);
+				INFOPLIST_FILE = support_upload_attachment_sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.support-sdk-sample-apps-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43EC46562056E96C0079953F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/**",
+				);
+				INFOPLIST_FILE = support_upload_attachment_sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.support-sdk-sample-apps-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43FD90F7204D78E200960AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43FD90F8204D78E200960AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43FD90FA204D78E200960AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/**",
+				);
+				INFOPLIST_FILE = support_custom_fields_sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.support-sdk-sample-apps-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43FD90FB204D78E200960AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/**",
+				);
+				INFOPLIST_FILE = support_custom_fields_sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.support-sdk-sample-apps-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43EC46372056E87E0079953F /* Build configuration list for PBXNativeTarget "support_request_updates_sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EC46382056E87E0079953F /* Debug */,
+				43EC46392056E87E0079953F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43EC46542056E96C0079953F /* Build configuration list for PBXNativeTarget "support_upload_attachment_sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EC46552056E96C0079953F /* Debug */,
+				43EC46562056E96C0079953F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43FD90CC204D78E100960AE3 /* Build configuration list for PBXProject "support_sdk_sample_apps_v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43FD90F7204D78E200960AE3 /* Debug */,
+				43FD90F8204D78E200960AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43FD90F9204D78E200960AE3 /* Build configuration list for PBXNativeTarget "support_custom_fields_sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43FD90FA204D78E200960AE3 /* Debug */,
+				43FD90FB204D78E200960AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43FD90C9204D78E100960AE3 /* Project object */;
+}
