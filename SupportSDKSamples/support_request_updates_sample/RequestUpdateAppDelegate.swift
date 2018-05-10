@@ -6,9 +6,7 @@
 //  Copyright © 2018 Zendesk. All rights reserved.
 //
 
-import UIKit
 import ZendeskProviderSDK
-import ZendeskSDK
 import ZendeskCoreSDK
 
 @UIApplicationMain
@@ -27,21 +25,18 @@ class RequestUpdateAppDelegate: UIResponder, UIApplicationDelegate {
                            clientId: <#clientId#>,
                            zendeskUrl: <#zendeskUrl#>)
         
+        Support.initialize(withZendesk: Zendesk.instance)
+        
         /**
          * Set an identity (authentication).
          *
          * Set either Anonymous or JWT identity, as below:
          */
         let identity = Identity.createAnonymous()
-        
-        /*
-         let namedIdentity = Identity.createAnonymous(name: "<#Optional name#>", email: "<#Optional email#>")
-         let jwtIdentity = Identity.createJwt(token: "<#JWT User Identifier#>")
-         */
+        // let namedIdentity = Identity.createAnonymous(name: "<#Optional name#>", email: "<#Optional email#>")
+        // let jwtIdentity = Identity.createJwt(token: "<#JWT User Identifier#>")
         
         Zendesk.instance?.setIdentity(identity)
-        
-        Support.initialize(withZendesk: Zendesk.instance)
         
         return true
     }

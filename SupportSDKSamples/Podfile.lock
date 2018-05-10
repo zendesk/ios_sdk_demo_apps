@@ -1,0 +1,19 @@
+PODS:
+  - ZendeskSDK (2.0.3):
+    - ZendeskSDK/Providers (= 2.0.3)
+    - ZendeskSDK/UI (= 2.0.3)
+  - ZendeskSDK/Core (2.0.3)
+  - ZendeskSDK/Providers (2.0.3)
+  - ZendeskSDK/UI (2.0.3):
+    - ZendeskSDK/Core
+    - ZendeskSDK/Providers
+
+DEPENDENCIES:
+  - ZendeskSDK
+
+SPEC CHECKSUMS:
+  ZendeskSDK: 7495659b1b89091065b4353d32c8339b83b20e3d
+
+PODFILE CHECKSUM: 4d8d52cfeb77b00deb1fe5d1d428c84e440ab8d9
+
+COCOAPODS: 1.2.0
