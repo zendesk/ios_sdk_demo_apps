@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43EC46212056E72E0079953F /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461D2056E71C0079953F /* ZendeskCoreSDK.framework */; };
-		43EC46222056E72E0079953F /* ZendeskProviderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461E2056E71C0079953F /* ZendeskProviderSDK.framework */; };
-		43EC46232056E72E0079953F /* ZendeskSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461F2056E71C0079953F /* ZendeskSDK.framework */; };
+		3214E0222BDD1E738F49A80D /* Pods_support_upload_attachment_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6057F1922FC89ADE03E26679 /* Pods_support_upload_attachment_sample.framework */; };
 		43EC462A2056E87E0079953F /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461D2056E71C0079953F /* ZendeskCoreSDK.framework */; };
 		43EC462B2056E87E0079953F /* ZendeskProviderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461E2056E71C0079953F /* ZendeskProviderSDK.framework */; };
 		43EC462C2056E87E0079953F /* ZendeskSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EC461F2056E71C0079953F /* ZendeskSDK.framework */; };
@@ -31,19 +29,8 @@
 		43EC46612057D9C20079953F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FD90DD204D78E100960AE3 /* LaunchScreen.storyboard */; };
 		43EC46632057D9CD0079953F /* CustomFieldsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD90D4204D78E100960AE3 /* CustomFieldsAppDelegate.swift */; };
 		43EC46642057D9CD0079953F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD90D6204D78E100960AE3 /* ViewController.swift */; };
-		483351FA206D171800A07D8D /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; };
-		483351FB206D171800A07D8D /* ZendeskSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; };
-		483351FC206D171800A07D8D /* ZendeskSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 483351F8206D171800A07D8D /* ZendeskSDKStrings.bundle */; };
-		483351FD206D171800A07D8D /* ZendeskProviderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; };
-		483351FE206D187900A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		483351FF206D187900A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48335200206D187900A07D8D /* ZendeskSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48335201206D188000A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48335202206D188000A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48335203206D188000A07D8D /* ZendeskSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48335204206D188500A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48335205206D188500A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48335206206D188500A07D8D /* ZendeskSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 483351F7206D171800A07D8D /* ZendeskSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACC01641BA05E0470531A7F4 /* Pods_support_request_updates_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBA3EEE68DF1C424E48CB7B /* Pods_support_request_updates_sample.framework */; };
+		D7285C9181924F755C1828B2 /* Pods_support_custom_fields_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A0B646984B7BF8AFE65569 /* Pods_support_custom_fields_sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,9 +40,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				483351FE206D187900A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */,
-				483351FF206D187900A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */,
-				48335200206D187900A07D8D /* ZendeskSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,9 +50,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				48335201206D188000A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */,
-				48335202206D188000A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */,
-				48335203206D188000A07D8D /* ZendeskSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,9 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				48335204206D188500A07D8D /* ZendeskCoreSDK.framework in Embed Frameworks */,
-				48335205206D188500A07D8D /* ZendeskProviderSDK.framework in Embed Frameworks */,
-				48335206206D188500A07D8D /* ZendeskSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,10 +92,15 @@
 		43FD90DB204D78E100960AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43FD90DE204D78E100960AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43FD90E0204D78E100960AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskCoreSDK.framework; path = "swift-4.0.2/ZendeskCoreSDK.framework"; sourceTree = "<group>"; };
-		483351F7206D171800A07D8D /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskSDK.framework; path = "swift-4.0.2/ZendeskSDK.framework"; sourceTree = "<group>"; };
-		483351F8206D171800A07D8D /* ZendeskSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ZendeskSDKStrings.bundle; path = "swift-4.0.2/ZendeskSDKStrings.bundle"; sourceTree = "<group>"; };
-		483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskProviderSDK.framework; path = "swift-4.0.2/ZendeskProviderSDK.framework"; sourceTree = "<group>"; };
+		6057F1922FC89ADE03E26679 /* Pods_support_upload_attachment_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_support_upload_attachment_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2FFE9C1CA19A370718E33A4 /* Pods-support_request_updates_sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-support_request_updates_sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-support_request_updates_sample/Pods-support_request_updates_sample.release.xcconfig"; sourceTree = "<group>"; };
+		A514578EC228FD9B7A66755E /* Pods-support_request_updates_sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-support_request_updates_sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-support_request_updates_sample/Pods-support_request_updates_sample.debug.xcconfig"; sourceTree = "<group>"; };
+		BA0394BDABBF73C1641B9FD7 /* Pods-support_upload_attachment_sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-support_upload_attachment_sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-support_upload_attachment_sample/Pods-support_upload_attachment_sample.release.xcconfig"; sourceTree = "<group>"; };
+		BEBA3EEE68DF1C424E48CB7B /* Pods_support_request_updates_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_support_request_updates_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A0B646984B7BF8AFE65569 /* Pods_support_custom_fields_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_support_custom_fields_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C927452C71068FEF861B42B7 /* Pods-support_upload_attachment_sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-support_upload_attachment_sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-support_upload_attachment_sample/Pods-support_upload_attachment_sample.debug.xcconfig"; sourceTree = "<group>"; };
+		D9B722EA257771E079F75F08 /* Pods-support_custom_fields_sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-support_custom_fields_sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-support_custom_fields_sample/Pods-support_custom_fields_sample.release.xcconfig"; sourceTree = "<group>"; };
+		E0C4B7AC6E1942A22929877F /* Pods-support_custom_fields_sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-support_custom_fields_sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-support_custom_fields_sample/Pods-support_custom_fields_sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +111,7 @@
 				43EC462A2056E87E0079953F /* ZendeskCoreSDK.framework in Frameworks */,
 				43EC462B2056E87E0079953F /* ZendeskProviderSDK.framework in Frameworks */,
 				43EC462C2056E87E0079953F /* ZendeskSDK.framework in Frameworks */,
+				ACC01641BA05E0470531A7F4 /* Pods_support_request_updates_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +122,7 @@
 				43EC46472056E96C0079953F /* ZendeskCoreSDK.framework in Frameworks */,
 				43EC46482056E96C0079953F /* ZendeskProviderSDK.framework in Frameworks */,
 				43EC46492056E96C0079953F /* ZendeskSDK.framework in Frameworks */,
+				3214E0222BDD1E738F49A80D /* Pods_support_upload_attachment_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,22 +130,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483351FB206D171800A07D8D /* ZendeskSDK.framework in Frameworks */,
-				483351FD206D171800A07D8D /* ZendeskProviderSDK.framework in Frameworks */,
-				43EC46212056E72E0079953F /* ZendeskCoreSDK.framework in Frameworks */,
-				43EC46222056E72E0079953F /* ZendeskProviderSDK.framework in Frameworks */,
-				43EC46232056E72E0079953F /* ZendeskSDK.framework in Frameworks */,
-				483351FA206D171800A07D8D /* ZendeskCoreSDK.framework in Frameworks */,
+				D7285C9181924F755C1828B2 /* Pods_support_custom_fields_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1564BC6E65BDECCDA971D7DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0C4B7AC6E1942A22929877F /* Pods-support_custom_fields_sample.debug.xcconfig */,
+				D9B722EA257771E079F75F08 /* Pods-support_custom_fields_sample.release.xcconfig */,
+				A514578EC228FD9B7A66755E /* Pods-support_request_updates_sample.debug.xcconfig */,
+				A2FFE9C1CA19A370718E33A4 /* Pods-support_request_updates_sample.release.xcconfig */,
+				C927452C71068FEF861B42B7 /* Pods-support_upload_attachment_sample.debug.xcconfig */,
+				BA0394BDABBF73C1641B9FD7 /* Pods-support_upload_attachment_sample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		436D6FF12051482700A6F1BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				43EC461C2056E71C0079953F /* ZDKFrameworks */,
+				C5A0B646984B7BF8AFE65569 /* Pods_support_custom_fields_sample.framework */,
+				BEBA3EEE68DF1C424E48CB7B /* Pods_support_request_updates_sample.framework */,
+				6057F1922FC89ADE03E26679 /* Pods_support_upload_attachment_sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,26 +198,15 @@
 			path = ZDKFrameworks;
 			sourceTree = "<group>";
 		};
-		43FA8DB0205152F200ED55DC /* ZDKFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				483351F6206D171800A07D8D /* ZendeskCoreSDK.framework */,
-				483351F9206D171800A07D8D /* ZendeskProviderSDK.framework */,
-				483351F7206D171800A07D8D /* ZendeskSDK.framework */,
-				483351F8206D171800A07D8D /* ZendeskSDKStrings.bundle */,
-			);
-			path = ZDKFrameworks;
-			sourceTree = "<group>";
-		};
 		43FD90C8204D78E100960AE3 = {
 			isa = PBXGroup;
 			children = (
-				43FA8DB0205152F200ED55DC /* ZDKFrameworks */,
 				43EC46022056E4400079953F /* support_request_updates_sample */,
 				43EC45F32056E39A0079953F /* support_upload_attachment_sample */,
 				43FD90D3204D78E100960AE3 /* support_custom_fields_sample */,
 				43FD90D2204D78E100960AE3 /* Products */,
 				436D6FF12051482700A6F1BD /* Frameworks */,
+				1564BC6E65BDECCDA971D7DE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,10 +240,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43EC46372056E87E0079953F /* Build configuration list for PBXNativeTarget "support_request_updates_sample" */;
 			buildPhases = (
+				CF73F6E920F666B804558E4A /* [CP] Check Pods Manifest.lock */,
 				43EC46262056E87E0079953F /* Sources */,
 				43EC46292056E87E0079953F /* Frameworks */,
 				43EC462D2056E87E0079953F /* Resources */,
 				43EC46332056E87E0079953F /* Embed Frameworks */,
+				DD9D1A2D24A2C6D4D64720B8 /* [CP] Embed Pods Frameworks */,
+				FB626DF3F13D587191F058E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,10 +261,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43EC46542056E96C0079953F /* Build configuration list for PBXNativeTarget "support_upload_attachment_sample" */;
 			buildPhases = (
+				4F47B3626D177C560C7D7A48 /* [CP] Check Pods Manifest.lock */,
 				43EC46432056E96C0079953F /* Sources */,
 				43EC46462056E96C0079953F /* Frameworks */,
 				43EC464A2056E96C0079953F /* Resources */,
 				43EC46502056E96C0079953F /* Embed Frameworks */,
+				D6F0A5D084361A73095B2246 /* [CP] Embed Pods Frameworks */,
+				82FF95323F9B653942B31013 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,10 +282,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43FD90F9204D78E200960AE3 /* Build configuration list for PBXNativeTarget "support_custom_fields_sample" */;
 			buildPhases = (
+				3C6F196A62411B7373982415 /* [CP] Check Pods Manifest.lock */,
 				43FD90CD204D78E100960AE3 /* Sources */,
 				43FD90CE204D78E100960AE3 /* Frameworks */,
 				43FD90CF204D78E100960AE3 /* Resources */,
 				43EC461B2056E6930079953F /* Embed Frameworks */,
+				1AC96B3C3FF5059EEEAAF809 /* [CP] Embed Pods Frameworks */,
+				4B4FB9DFE3BFF608333779A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,7 +366,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483351FC206D171800A07D8D /* ZendeskSDKStrings.bundle in Resources */,
 				43EC465F2057D9C20079953F /* Main.storyboard in Resources */,
 				43EC46602057D9C20079953F /* Assets.xcassets in Resources */,
 				43EC46612057D9C20079953F /* LaunchScreen.storyboard in Resources */,
@@ -380,6 +373,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AC96B3C3FF5059EEEAAF809 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-support_custom_fields_sample/Pods-support_custom_fields_sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C6F196A62411B7373982415 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B4FB9DFE3BFF608333779A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-support_custom_fields_sample/Pods-support_custom_fields_sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F47B3626D177C560C7D7A48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82FF95323F9B653942B31013 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-support_upload_attachment_sample/Pods-support_upload_attachment_sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF73F6E920F666B804558E4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F0A5D084361A73095B2246 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-support_upload_attachment_sample/Pods-support_upload_attachment_sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD9D1A2D24A2C6D4D64720B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-support_request_updates_sample/Pods-support_request_updates_sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB626DF3F13D587191F058E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-support_request_updates_sample/Pods-support_request_updates_sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43EC46262056E87E0079953F /* Sources */ = {
@@ -465,6 +596,7 @@
 /* Begin XCBuildConfiguration section */
 		43EC46382056E87E0079953F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A514578EC228FD9B7A66755E /* Pods-support_request_updates_sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +617,7 @@
 		};
 		43EC46392056E87E0079953F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2FFE9C1CA19A370718E33A4 /* Pods-support_request_updates_sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +638,7 @@
 		};
 		43EC46552056E96C0079953F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C927452C71068FEF861B42B7 /* Pods-support_upload_attachment_sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +659,7 @@
 		};
 		43EC46562056E96C0079953F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0394BDABBF73C1641B9FD7 /* Pods-support_upload_attachment_sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -652,6 +787,7 @@
 		};
 		43FD90FA204D78E200960AE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0C4B7AC6E1942A22929877F /* Pods-support_custom_fields_sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -660,6 +796,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
 					"$(PROJECT_DIR)/ZDKFrameworks/**",
+					"$(PROJECT_DIR)/ZDKFrameworks/4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/4.1",
+					"$(PROJECT_DIR)/ZDKFrameworks/4.0",
 				);
 				INFOPLIST_FILE = support_custom_fields_sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -672,6 +811,7 @@
 		};
 		43FD90FB204D78E200960AE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9B722EA257771E079F75F08 /* Pods-support_custom_fields_sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -680,6 +820,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZDKFrameworks/swift-4.0.2",
 					"$(PROJECT_DIR)/ZDKFrameworks/**",
+					"$(PROJECT_DIR)/ZDKFrameworks/4.0.2",
+					"$(PROJECT_DIR)/ZDKFrameworks/4.1",
+					"$(PROJECT_DIR)/ZDKFrameworks/4.0",
 				);
 				INFOPLIST_FILE = support_custom_fields_sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

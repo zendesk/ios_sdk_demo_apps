@@ -1,0 +1,6 @@
+framework module Pods_support_upload_attachment_sample {
+  umbrella header "Pods-support_upload_attachment_sample-umbrella.h"
+
+  export *
+  module * { export * }
+}

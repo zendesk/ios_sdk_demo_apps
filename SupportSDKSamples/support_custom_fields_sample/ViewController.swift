@@ -19,10 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var customField4: UITextField!
     
     @IBAction func submitPressed(_ sender: Any) {
-        let requestProvider = ZDKRequestProvider(zendesk: Zendesk.instance)
+        let requestProvider = ZDKRequestProvider()
         let request = buildCreateRequest()
 
-        requestProvider?.createRequest(request, withCallback: buildCallback())
+        requestProvider.createRequest(request, withCallback: buildCallback())
     
         emptyFields()
     }
