@@ -9,9 +9,17 @@ We hope you'll find those sample Apps useful and encourage you to re-use some of
 
 ### Getting started
 Getting started is fairly straightforward.
+
 Simply download or clone the repository to your system.
-Open the directory in terminal and run `pod install`.
+
+Open the directory in terminal
+
+Ensure the Pod is up-to-date by running `pod update`
+
+Install the pods by running  `pod install`.
+
 Open up the project in Xcode, and there are three apps ready to run in your environment.
+
 Make sure you initialize your Zendesk instance in the App Delegate, before running that application.
 
 #### Custom Fields Sample
