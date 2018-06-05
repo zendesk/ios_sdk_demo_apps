@@ -31,18 +31,7 @@ class RequestUpdatesVC: UIViewController {
     }
     
     @IBAction func onClickedRequestUpdates(_ sender: Any) {
-        ZDKRequestProvider().getUpdatesForDevice(callback: ({ (updates) in
-            if let updates = updates, updates.hasUpdatedRequests() {
-                self.ticketListButton.setTitle("Ticket List (\(updates.requestUpdates.count) new)", for: UIControlState.normal)
-            
-                self.toastWrapper.showError(in: self, withMessage: "New Replies", duration: 3.0)
-                
-            }else {
-                self.ticketListButton.setTitle("Ticket List", for: UIControlState.normal)
-                
-                self.toastWrapper.showError(in: self, withMessage: "No new Replies", duration: 3.0)
-            }
-        }))
+        requestUpdates()
     }
     
     @IBAction func launchHelpCenter(_ sender: Any) {
@@ -50,8 +39,21 @@ class RequestUpdatesVC: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func requestUpdates(){
+        ZDKRequestProvider().getUpdatesForDevice {
+            if let updates = $0, updates.hasUpdatedRequests() {
+                self.ticketListButton.setTitle("Ticket List (\(updates.requestUpdates.count) new)", for: UIControlState.normal)
+                self.toastWrapper.showError(in: self, withMessage: "New Replies", duration: 3.0)
+            }else {
+                self.ticketListButton.setTitle("Ticket List", for: UIControlState.normal)
+                self.toastWrapper.showError(in: self, withMessage: "No new Replies", duration: 3.0)
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         toastWrapper.hideToastView(true)
+        requestUpdates()
     }
 }
 
