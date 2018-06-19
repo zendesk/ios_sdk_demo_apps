@@ -61,19 +61,19 @@ class ViewController: UIViewController {
     // Only appends a custom field if it isn't empty
     private func buildCustomFieldsList()-> [ZDKCustomField] {
         var list = [ZDKCustomField]()
-        if let textField1 = customField1.text, !textField1.isEmpty {
+        if let textField1 = customField1.text.getTag(), !textField1.isEmpty {
             list.append(ZDKCustomField(fieldId: NSNumber(value: 1), andValue: textField1))
         }
         
-        if let textField2 = customField2.text, !textField2.isEmpty {
+        if let textField2 = customField2.text.getTag(), !textField2.isEmpty {
             list.append(ZDKCustomField(fieldId: NSNumber(value: 2), andValue: textField2))
         }
         
-        if let textField3 = customField3.text, !textField3.isEmpty {
+        if let textField3 = customField3.text.getTag(), !textField3.isEmpty {
             list.append(ZDKCustomField(fieldId: NSNumber(value: 3), andValue: textField3))
         }
         
-        if let textField4 = customField4.text, !textField4.isEmpty  {
+        if let textField4 = customField4.text.getTag(), !textField4.isEmpty  {
             list.append(ZDKCustomField(fieldId: NSNumber(value: 4), andValue: textField4))
         }
         list.forEach({ (item) in
@@ -83,3 +83,9 @@ class ViewController: UIViewController {
     }
 }
 
+extension String {
+    // The text fields should be converted to the tag equivalent of the value
+    func getTag() -> String {
+        return self.lowercased().replacingOccurrences(of: " ", with: "_")
+    }
+}
