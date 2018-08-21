@@ -1,6 +1,8 @@
 :warning: *Use of this software is subject to important terms and conditions as set forth in the License file* :warning:
 
 # Zendesk Sample Apps for iOS
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fzendesk%2Fios_sdk_demo_apps.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fzendesk%2Fios_sdk_demo_apps?ref=badge_shield)
+
 
 ## Description
 This repository provides you with sample Apps to help learn how to use the Zendesk Apps framework and APIs.
@@ -27,3 +29,7 @@ Pull requests are welcome.
 
 ## Bugs
 Please submit bug reports to [Zendesk](https://support.zendesk.com/requests/new).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fzendesk%2Fios_sdk_demo_apps.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fzendesk%2Fios_sdk_demo_apps?ref=badge_large)
