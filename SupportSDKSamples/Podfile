@@ -1,23 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'support_custom_fields_sample' do
+target 'CocoaPodSample' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  # Pods for support_custom_fields_sample
-  pod 'ZendeskSDK'
-end
 
-target 'support_request_updates_sample' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  # Pods for support_request_updates_sample
-  pod 'ZendeskSDK'
-end
-
-target 'support_upload_attachment_sample' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  # Pods for support_upload_attachment_sample
-  pod 'ZendeskSDK'
+  # Pods for CocoaPodSample
+    pod 'ZendeskSDK'
 end

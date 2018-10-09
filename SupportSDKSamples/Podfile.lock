@@ -1,11 +1,11 @@
 PODS:
-  - ZendeskSDK (2.1.0):
-    - ZendeskSDK/Providers (= 2.1.0)
-    - ZendeskSDK/UI (= 2.1.0)
-  - ZendeskSDK/Core (2.1.0)
-  - ZendeskSDK/Providers (2.1.0):
+  - ZendeskSDK (2.2.0):
+    - ZendeskSDK/Providers (= 2.2.0)
+    - ZendeskSDK/UI (= 2.2.0)
+  - ZendeskSDK/Core (2.2.0)
+  - ZendeskSDK/Providers (2.2.0):
     - ZendeskSDK/Core
-  - ZendeskSDK/UI (2.1.0):
+  - ZendeskSDK/UI (2.2.0):
     - ZendeskSDK/Core
     - ZendeskSDK/Providers
 
@@ -17,8 +17,8 @@ SPEC REPOS:
     - ZendeskSDK
 
 SPEC CHECKSUMS:
-  ZendeskSDK: e2d9245bc42fb4782eff959219ce4d6bdae13b64
+  ZendeskSDK: 44ee00338dd718495f0364369420ae11b389c878
 
-PODFILE CHECKSUM: 4d8d52cfeb77b00deb1fe5d1d428c84e440ab8d9
+PODFILE CHECKSUM: 8924b65a8f08abcecfb8a28e9693462343845b8f
 
 COCOAPODS: 1.5.3
