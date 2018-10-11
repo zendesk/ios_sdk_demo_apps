@@ -98,12 +98,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB92CB81CFDA1E500918599 /* Build configuration list for PBXNativeTarget "ChatBadgeCount" */;
 			buildPhases = (
+				6202DB52DE67CA91A3D94C70 /* [CP] Check Pods Manifest.lock */,
 				DB696A4CBFFA443515D3CB27 /* 📦 Check Pods Manifest.lock */,
 				5EB92CA01CFDA1E500918599 /* Sources */,
 				5EB92CA11CFDA1E500918599 /* Frameworks */,
 				5EB92CA21CFDA1E500918599 /* Resources */,
-				60A225B0FB2D3A0677B99159 /* 📦 Embed Pods Frameworks */,
 				3B1C0EA4411C87F02FDDD970 /* 📦 Copy Pods Resources */,
+				4AC937B31505855E7DD8C9CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,19 +178,42 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60A225B0FB2D3A0677B99159 /* 📦 Embed Pods Frameworks */ = {
+		4AC937B31505855E7DD8C9CB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-resources.sh",
+				"${PODS_ROOT}/ZDCChat/ZDCChatStrings.bundle",
+				"${PODS_ROOT}/ZDCChat/ZDCChat.bundle",
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZDCChatStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZDCChat.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6202DB52DE67CA91A3D94C70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatBadgeCount-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB696A4CBFFA443515D3CB27 /* 📦 Check Pods Manifest.lock */ = {

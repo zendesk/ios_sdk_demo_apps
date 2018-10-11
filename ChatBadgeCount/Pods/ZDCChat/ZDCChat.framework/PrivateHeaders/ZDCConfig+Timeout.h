@@ -3,7 +3,7 @@
  *  ZDCConfig+Timeout.h
  *  ZDCChat
  *
- *  Created by Zendesk on 2/03/2016
+ *  Created by Zendesk on 15/06/2016.
  *
  *  Copyright (c) 2016 Zendesk. All rights reserved.
  *

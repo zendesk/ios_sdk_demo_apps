@@ -5,7 +5,7 @@
  *
  *  Created by Zendesk on 24/09/2014.
  *
- *  Copyright (c) 2015 Zendesk. All rights reserved.
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
  *
  *  By downloading or using the Zendesk Mobile SDK, You agree to the Zendesk Master
  *  Subscription Agreement https://www.zendesk.com/company/customers-partners/#master-subscription-agreement and Application Developer and API License
@@ -16,9 +16,8 @@
 
 
 #import <UIKit/UIKit.h>
-#import "ZDCChatEvent.h"
-#import "ZDCChatAgent.h"
-#import "ZDUImageLoader.h"
+#import <ZDCChatAPI/ZDCChatEvent.h>
+#import <ZDCChatAPI/ZDCChatAgent.h>
 #import "ZDCChatCellActionDelegate.h"
 
 
@@ -67,11 +66,6 @@ extern NSString * const ZDC_DEFAULT_BROKEN_FILE_ICON_IMAGE;
  * YES if this cell current showing or transitioning to an error state.
  */
 @property (nonatomic, assign) BOOL eventError;
-
-/**
- * The table image loader for avatars.
- */
-@property (nonatomic, strong) ZDUImageLoader *imageLoader;
 
 /**
  * Message resend delegate for checking message timeouts and requesting resend.

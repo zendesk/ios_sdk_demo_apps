@@ -5,7 +5,7 @@
  *
  *  Created by Zendesk on 19/06/2014.
  *
- *  Copyright (c) 2015 Zendesk. All rights reserved.
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
  *
  *  By downloading or using the Zendesk Mobile SDK, You agree to the Zendesk Master
  *  Subscription Agreement https://www.zendesk.com/company/customers-partners/#master-subscription-agreement and Application Developer and API License
@@ -16,8 +16,9 @@
 
 
 #import <UIKit/UIKit.h>
-#import "ZDUTextView.h"
 
+
+@class ZDUTextView;
 
 extern CGFloat const ZDC_TEXTENTRY_MINIMUM_HEIGHT;
 

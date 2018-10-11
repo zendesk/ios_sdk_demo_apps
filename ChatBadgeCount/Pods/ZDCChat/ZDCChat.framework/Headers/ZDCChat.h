@@ -5,7 +5,7 @@
  *
  *  Created by Zendesk on 22/04/2014.
  *
- *  Copyright (c) 2015 Zendesk. All rights reserved.
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
  *
  *  By downloading or using the Zendesk Mobile SDK, You agree to the Zendesk Master
  *  Subscription Agreement https://www.zendesk.com/company/customers-partners/#master-subscription-agreement and Application Developer and API License
@@ -15,64 +15,44 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "ZDCAgentChatCell.h"
-#import "ZDCAgentTypingCell.h"
-#import "ZDCChatAgent.h"
-#import "ZDCChatAvatar.h"
-#import "ZDCChatCell.h"
-#import "ZDCChatIO.h"
-#import "ZDCChatConstants.h"
-#import "ZDCChatDataNode.h"
-#import "ZDCChatDataSource.h"
-#import "ZDCChatEvent.h"
-#import "ZDCChatOverlay.h"
-#import "ZDCChatProfile.h"
-#import "ZDCChatSession.h"
-#import "ZDCChatTimedOutCell.h"
-#import "ZDCChatUI.h"
-#import "ZDCChatView.h"
-#import "ZDCChatViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+// Chat API SDK Version
+#define ZDC_CHAT_SDK_VERSION @"1.4.0"
+
+#if MODULES_DISABLED
+#import <ZDCChatAPI/ZDCChatAPI.h>
+#else
+@import ZDCChatAPI;
+#endif
+
 #import "ZDCConfig.h"
-#import "ZDCDeviceInfo.h"
+
+#import "ZDCOfflineMessageHandler.h"
+
+#import "ZDCChatViewController.h"
+
+#import "ZDCChatOverlay.h"
+#import "ZDCChatAvatar.h"
+
+#import "ZDCChatCell.h"
 #import "ZDCVisitorChatCell.h"
-#import "ZDCJSWidgetIO.h"
-#import "ZDCJoinLeaveCell.h"
-#import "ZDCKeychainWrapper.h"
-#import "ZDCLoadingView.h"
-#import "ZDCLog.h"
-#import "ZDCPreChatData.h"
-#import "ZDCPreChatFormView.h"
-#import "ZDCReachability.h"
-#import "ZDCSessionConfig.h"
-#import "ZDCSessionStateManager.h"
-#import "ZDCTextEntryView.h"
-#import "ZDCVisitorInfo.h"
-#import "ZDCVisitorActionDelegate.h"
-#import "ZDUUtil.h"
-#import "ZDCFormCell.h"
+#import "ZDCAgentChatCell.h"
+#import "ZDCFormCellSingleLine.h"
 #import "ZDCFormCellDepartment.h"
 #import "ZDCFormCellMessage.h"
-#import "ZDCFormCellSingleLine.h"
-#import "ZDCJSONEncoder.h"
-#import "ZDCSystemTriggerCell.h"
-#import "ZDCOfflineMessageHandler.h"
-#import "ZDCBundleUtils.h"
-#import "ZDCChatUpload.h"
+#import "ZDCJoinLeaveCell.h"
 #import "ZDCAgentAttachmentCell.h"
-#import "ZDCImageViewer.h"
 #import "ZDCVisitorAttachmentCell.h"
-#import "ZDCWebViewer.h"
 #import "ZDCRatingCell.h"
-#import "ZDCRatingCommentEditor.h"
+#import "ZDCChatTimedOutCell.h"
+#import "ZDCSystemTriggerCell.h"
 #import "ZDCAccountOfflineCell.h"
-#import "ZDCMobileProvisionAnalyzer.h"
+#import "ZDCAgentTypingCell.h"
 
 
-/**
- * Defaults config block.
- * @param defaults the chat defaults to field requirements, department and tags
- */
-typedef void (^ZDCChatConfigBlock) (ZDCConfig *defaults);
 
 /**
  * Visitor config block.
@@ -84,7 +64,7 @@ typedef void (^ZDCVisitorConfigBlock) (ZDCVisitorInfo *visitor);
  * Session config block.
  * @param info the session info object which can be used to set pre-chat data requirements and session metadata
  */
-typedef void (^ZDCSessionConfigBlock) (ZDCSessionConfig *config);
+typedef void (^ZDCConfigBlock) (ZDCConfig *config);
 
 
 #pragma mark -
@@ -100,7 +80,7 @@ typedef void (^ZDCSessionConfigBlock) (ZDCSessionConfig *config);
 /**
  * The chat session.
  */
-@property (nonatomic, strong) id<ZDCChatSession> session;
+@property (nonatomic, strong) ZDCChatAPI *api;
 
 /**
  * The chat overlay used when chat is minimised.
@@ -111,19 +91,6 @@ typedef void (^ZDCSessionConfigBlock) (ZDCSessionConfig *config);
  * The view controller for the chat UI.
  */
 @property (nonatomic, strong) ZDCChatViewController *chatViewController;
-
-/**
- * Timeout applied on initial chat startup; if the session does not achieve a connection in this 
- * time then the connection attempt is considered to have failed (default 30 seconds).
- */
-@property (nonatomic, assign) NSTimeInterval connectionTimeout;
-
-/**
- * Timeout applied when reconnecting to an existing active chat, if the session does not achieve a 
- * connection in this time then the connection attempt is considered to have failed and the user is 
- * asked if they want to continue or not (default 120 seconds).
- */
-@property (nonatomic, assign) NSTimeInterval reconnectionTimeout;
 
 /**
  * This property allows interception of the offline message handling process. If set then the action 
@@ -142,23 +109,28 @@ typedef void (^ZDCSessionConfigBlock) (ZDCSessionConfig *config);
  */
 @property (nonatomic, assign) BOOL hidesBottomBarWhenPushed;
 
+/**
+ * Get the number of messsages received while the chat UI interface was minimised.
+ */
+@property (nonatomic, assign, readonly) NSInteger unreadMessagesCount;
+
 
 /**
  * Singleton instance of the ZDCChat component.
  */
-+ (instancetype) instance;
++ (instancetype)instance;
 
 /**
- * Configure the Chat SDK.
- * @param config block in which the global settings and pre-chat data requirements are configured
+ * Initializes the chat session
+ * @param accountKey accountKey used
  */
-+ (void) configure:(ZDCChatConfigBlock)config;
++ (void)initializeWithAccountKey:(NSString*)accountKey;
 
 /**
  * Update the visitor data.
  * @param visitorConfig visitor config block
  */
-+ (void) updateVisitor:(ZDCVisitorConfigBlock)visitorConfig;
++ (void)updateVisitor:(ZDCVisitorConfigBlock)visitorConfig;
 
 /**
  * Show the chat UI and begin connecting to the chat server.
@@ -166,24 +138,42 @@ typedef void (^ZDCSessionConfigBlock) (ZDCSessionConfig *config);
  * @param sessionConfig block in which the session config may be used to override the 
  *        defaults for this session only, leave nil to use the default config
  */
-+ (void) startChat:(ZDCSessionConfigBlock)sessionConfig;
++ (void)startChat:(ZDCConfigBlock)sessionConfig;
 
 /**
  * Push the chat UI on to the supplied nav controller and begin connecting to the chat server.
  * @param navController the navigation controller in which to push the chat UI
  * @param configOverride block in which the session config is updated as desired for this session, leave nil to use the default config
  */
-+ (void) startChatIn:(UINavigationController*)navController withConfig:(ZDCSessionConfigBlock)configOverride;
++ (void)startChatIn:(UINavigationController*)navController withConfig:(ZDCConfigBlock)configOverride;
 
 /**
  * End the chat session and dismiss the UI.
  */
-+ (void) endChat;
++ (void)endChat;
 
 /**
  * Minise the chat window.
  */
-+ (void) minimiseChat;
++ (void)minimiseChat;
+
+/**
+ * Set the push token for this session.
+ *
+ * @param token the push token received from the didRegisterForRemoteNotificationsWithDeviceToken response
+ */
++ (void) setPushToken:(NSData*)token;
+
+/**
+ * If a user revokes push permissions you can remove the push token from the session with this method.
+ */
++ (void) clearPushToken;
+
+/**
+ * Push notifications which are received in the app delegate didReceiveRemoteNotification method should be passed to
+ * the SDK via this method.
+ */
++ (void) didReceiveRemoteNotification:(NSDictionary*)userInfo;
 
 
 @end

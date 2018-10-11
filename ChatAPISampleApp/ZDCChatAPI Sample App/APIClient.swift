@@ -60,7 +60,7 @@ final class APIClient {
     setupListeners()
     
     let config = ZDCAPIConfig()
-    chat.startChat(withAccountKey: "2PT4TD5ox8d19nrLoBAGpMk87L4r4VQQ", config: config)
+    chat.startChat(withAccountKey: "miFQf5HltIErsQEJn0Ni44PYRd6k34pe", config: config)
     
   }
   
@@ -110,7 +110,7 @@ final class APIClient {
    - parameter event: ZDCChatEvent
    */
   fileprivate func handleChatEvent(_ event: ZDCChatEvent) {
-    NSLog("Received chat event \(event.eventId) of type \(event.type.rawValue) with: \(event.message)")
+    NSLog("Received chat event \(event.eventId ?? "NO_ID") of type \(event.type.rawValue) with: \(event.message ?? "NO_MSG")")
     
     //Throw away events without timestamps
     if (event.timestamp == nil) {

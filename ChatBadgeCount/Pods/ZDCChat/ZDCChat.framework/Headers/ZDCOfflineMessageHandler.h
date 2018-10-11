@@ -5,7 +5,7 @@
  *
  *  Created by Zendesk on 06/03/2015.
  *
- *  Copyright (c) 2015 Zendesk. All rights reserved.
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
  *
  *  By downloading or using the Zendesk Mobile SDK, You agree to the Zendesk Master
  *  Subscription Agreement https://www.zendesk.com/company/customers-partners/#master-subscription-agreement and Application Developer and API License
@@ -15,13 +15,6 @@
  */
 
 #import <Foundation/Foundation.h>
-
-
-/**
- * Offline message handler block.
- * @param chatViewController reference to the chat view controller
- */
-typedef void (^ZDCOfflineMessageAction) (UIViewController *chatViewController);
 
 
 /**
@@ -46,21 +39,12 @@ typedef void (^ZDCOfflineMessageAction) (UIViewController *chatViewController);
 @property (nonatomic, strong) NSString *noAgentsButtonText;
 
 /**
- * This block should contain the action to be taken (UI to be presented) for handling the offline 
- * message process.
- */
-@property (nonatomic, copy) ZDCOfflineMessageAction action;
-
-
-/**
  * Create a new offline message override with the defined parameters.
  * @param noAgentsMessage the message body on the 'No agents available' screen
  * @param noAgentsButtonText button text on the 'No agents available' screen
- * @param action block executed when the user taps the button on the 'No agents available' screen
  */
 + (instancetype) offlineHandlerWithMessage:(NSString*)noAgentsMessage
-                                buttonText:(NSString*)noAgentsButtonText
-                                 andAction:(ZDCOfflineMessageAction)action;
+                                buttonText:(NSString*)noAgentsButtonText;
 
 
 @end

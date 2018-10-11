@@ -60,7 +60,7 @@ final class BubbleView: UIView {
     }
   }
   
-  @IBInspectable var type: CellType = .Agent {
+  var type: CellType = .Agent {
     didSet {
       let isAgent = type == .Agent
       
@@ -120,8 +120,8 @@ final class BubbleView: UIView {
   func setupConstraints() {
     timeStampLabel.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8).isActive = true
     timeStampLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4).isActive = true
-    timeStampLabel.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
-    timeStampLabel.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
+    timeStampLabel.setContentHuggingPriority(UILayoutPriority.required, for: .horizontal)
+    timeStampLabel.setContentCompressionResistancePriority(UILayoutPriority.required, for: .horizontal)
     
     verifiedImage.widthAnchor.constraint(equalToConstant: 10).isActive = true
     verifiedImage.heightAnchor.constraint(equalToConstant: 10).isActive = true

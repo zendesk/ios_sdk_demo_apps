@@ -5,7 +5,7 @@
  *
  *  Created by Zendesk on 24/09/2014.
  *
- *  Copyright (c) 2015 Zendesk. All rights reserved.
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
  *
  *  By downloading or using the Zendesk Mobile SDK, You agree to the Zendesk Master
  *  Subscription Agreement https://www.zendesk.com/company/customers-partners/#master-subscription-agreement and Application Developer and API License
@@ -17,10 +17,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ZDCTextEntryView.h"
-#import "ZDCVisitorActionDelegate.h"
-#import "ZDUImageLoader.h"
-#import "ZDCMessageMonitor.h"
 
+
+@class ZDCMessageMonitor;
+@protocol ZDCVisitorActionDelegate;
 
 // reuse strings for chat cells
 extern NSString * const ZDC_CHATCELL_AGENT;
@@ -39,7 +39,7 @@ extern NSString * const ZDC_CHATCELL_OFFLINE;
 /**
  * Chat view containing the chat table view and the test entry area.
  */
-@interface ZDCChatView : UIView <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, ZDCTextEntryViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate>
+@interface ZDCChatView : UIView <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, ZDCTextEntryViewDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate>
 
 /**
  * The visitor action delegate.

@@ -33,7 +33,7 @@ class ChatViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.estimatedRowHeight = 44.0
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
     
     delegate = ChatControllerDelegate(client: client)
     dataSource = ChatControllerDataSource(withChatView: self, client: client)
@@ -51,11 +51,11 @@ class ChatViewController: UIViewController {
   
   func setupKeyboardEvents() {
     NotificationCenter.default.addObserver(
-      forName: NSNotification.Name.UIKeyboardDidShow,
+      forName: UIResponder.keyboardDidShowNotification,
       object: nil,
       queue: OperationQueue.main) { [weak self] notification in
         let info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardFrame: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
         UIView.animate(withDuration: 0.2, animations: {
           self?.bottomConstraint.constant = keyboardFrame.size.height
@@ -64,7 +64,7 @@ class ChatViewController: UIViewController {
     }
     
     NotificationCenter.default.addObserver(
-      forName: NSNotification.Name.UIKeyboardDidHide,
+      forName: UIResponder.keyboardDidHideNotification,
       object: nil,
       queue: OperationQueue.main) { [weak self] notificaiton in
         self?.bottomConstraint.constant = 0
@@ -78,11 +78,11 @@ extension ChatViewController {
   
   @IBAction func pickImage(_ sender: AnyObject) {
     let pickerController = DKImagePickerController()
-    
+
     pickerController.singleSelect = true
     pickerController.didSelectAssets = { (assets: [DKAsset]) in
-      
-      assets[0].fetchOriginalImage(false) { (image, info) in
+    
+      assets[0].fetchOriginalImage { (image, info) in
         self.delegate.chatController(self, didSelectImage: image!)
       }
     }

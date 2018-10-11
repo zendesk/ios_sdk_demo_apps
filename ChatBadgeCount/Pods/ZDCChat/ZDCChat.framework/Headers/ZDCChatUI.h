@@ -5,7 +5,7 @@
  *
  *  Created by Zendesk on 05/11/2014.
  *
- *  Copyright (c) 2015 Zendesk. All rights reserved.
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
  *
  *  By downloading or using the Zendesk Mobile SDK, You agree to the Zendesk Master
  *  Subscription Agreement https://www.zendesk.com/company/customers-partners/#master-subscription-agreement and Application Developer and API License
@@ -19,8 +19,6 @@
 #import "ZDCLoadingView.h"
 #import "ZDCPreChatFormView.h"
 #import "ZDCChatView.h"
-#import "ZDCVisitorActionDelegate.h"
-#import "ZDCReachability.h"
 #import "ZDCLoadingErrorView.h"
 #import "ZDCChatUIController.h"
 #import "ZDCOfflineMessageView.h"
@@ -47,7 +45,7 @@ typedef NS_ENUM(NSUInteger, ZDCChatBackgroundAnchor) {
 /**
  * The principle chat UI component that contains all functional aspects of the chat UI.
  */
-@interface ZDCChatUI : UIView <ZDCVisitorActionDelegate>
+@interface ZDCChatUI : UIView
 
 /**
  * Background image view.

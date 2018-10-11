@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CoreLogger.enabled = true
         CoreLogger.logLevel = .verbose
         
-        Zendesk.initialize(appId: <#String(appId)#>,
-                           clientId: <#String(clientId)#>,
-                           zendeskUrl: <#String(zendeskUrl)#>)
+        // Enter your zendesk app configs here
+        Zendesk.initialize(appId: "appId",
+                           clientId: "clientId",
+                           zendeskUrl: "zendeskUrl")
         
         Support.initialize(withZendesk: Zendesk.instance)
         Zendesk.instance?.setIdentity(Identity.createAnonymous(name: "name", email: "name@email.com"))

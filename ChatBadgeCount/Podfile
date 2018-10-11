@@ -1,5 +1,5 @@
 target 'ChatBadgeCount' do
 
-pod 'ZDCChat', '~> 1.2.0.1'
+pod 'ZDCChat'
 
 end

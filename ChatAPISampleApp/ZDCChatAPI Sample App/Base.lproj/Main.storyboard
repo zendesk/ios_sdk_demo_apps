@@ -1,38 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RQU-tE-Pay">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RQU-tE-Pay">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <development version="7000" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoE-Ix-0gi">
-                                <rect key="frame" x="256" y="111" width="88" height="30"/>
-                                <color key="tintColor" red="0.46274509800000002" green="0.27450980390000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoE-Ix-0gi">
+                                <rect key="frame" x="157" y="108" width="88" height="30"/>
+                                <color key="tintColor" red="0.46274509800000002" green="0.27450980390000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Chat with Us"/>
                                 <connections>
                                     <segue destination="Cg3-UQ-aCN" kind="show" id="EO6-pq-JkW"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KoE-Ix-0gi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="R4g-rf-jfE"/>
-                            <constraint firstItem="KoE-Ix-0gi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nqB-IA-hhA"/>
+                            <constraint firstItem="KoE-Ix-0gi" firstAttribute="top" secondItem="OWh-Uy-DfD" secondAttribute="top" constant="47" id="R4g-rf-jfE"/>
+                            <constraint firstItem="KoE-Ix-0gi" firstAttribute="centerX" secondItem="OWh-Uy-DfD" secondAttribute="centerX" id="nqB-IA-hhA"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="OWh-Uy-DfD"/>
                     </view>
                     <navigationItem key="navigationItem" id="beX-tL-4lx"/>
                 </viewController>
@@ -44,27 +44,23 @@
         <scene sceneID="2Oy-FE-E9O">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Cg3-UQ-aCN" customClass="ChatViewController" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nfj-g3-dgr"/>
-                        <viewControllerLayoutGuide type="bottom" id="jla-xf-U35"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vMh-Un-bsc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-IL-0yk">
-                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hr-bb-b0k">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
-                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="s5o-M5-vOU"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCQ-7x-tkp">
-                                        <rect key="frame" x="43" y="8" width="491" height="30"/>
-                                        <color key="tintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="43" y="8" width="266" height="30"/>
+                                        <color key="tintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -78,22 +74,22 @@
                                             <constraint firstAttribute="height" constant="30" id="TMr-tp-5it"/>
                                             <constraint firstAttribute="width" constant="27" id="h7R-PU-y45"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="upload"/>
                                         <connections>
                                             <action selector="pickImage:" destination="Cg3-UQ-aCN" eventType="touchUpInside" id="d5d-pp-FCn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clg-Sh-4LS">
-                                        <rect key="frame" x="549" y="8" width="36" height="30"/>
-                                        <color key="tintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="324" y="8" width="36" height="30"/>
+                                        <color key="tintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Send"/>
                                         <connections>
                                             <action selector="sendMessage:" destination="Cg3-UQ-aCN" eventType="touchUpInside" id="XTs-Uu-i4R"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="0hr-bb-b0k" firstAttribute="top" secondItem="Hky-IL-0yk" secondAttribute="top" id="1ca-nS-15C"/>
                                     <constraint firstAttribute="trailing" secondItem="clg-Sh-4LS" secondAttribute="trailing" constant="15" id="1ud-bI-zP1"/>
@@ -111,33 +107,33 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pAS-ii-SS8">
-                                <rect key="frame" x="0.0" y="64" width="600" height="490"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="557"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="agentCell" rowHeight="90" id="k4g-Ms-BgL" customClass="AgentMessageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k4g-Ms-BgL" id="8xd-T9-wmf">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yds-iE-GVh" customClass="AgentImageView" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                                    <rect key="frame" x="15" y="11" width="34" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="ZFj-iQ-TYm"/>
                                                         <constraint firstAttribute="width" constant="34" id="x2z-Lz-dwm"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OG6-n0-3O2" customClass="BubbleView" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                                    <rect key="frame" x="52" y="8" width="58" height="70"/>
+                                                    <rect key="frame" x="59" y="11" width="58" height="64"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMM-bT-m3Y">
-                                                            <rect key="frame" x="8" y="4" width="42" height="21"/>
+                                                            <rect key="frame" x="8" y="4" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="aMM-bT-m3Y" firstAttribute="top" secondItem="OG6-n0-3O2" secondAttribute="top" constant="4" id="1br-5L-bx9"/>
                                                         <constraint firstAttribute="trailing" secondItem="aMM-bT-m3Y" secondAttribute="trailing" priority="900" constant="8" id="M9l-D4-x22"/>
@@ -168,22 +164,22 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="visitorCell" rowHeight="90" id="iTo-Q7-HdP" userLabel="visitorCell" customClass="VisitorMessageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="118" width="600" height="90"/>
+                                        <rect key="frame" x="0.0" y="118" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTo-Q7-HdP" id="Pvw-nw-vdl">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34f-iv-itW" customClass="BubbleView" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                                    <rect key="frame" x="522" y="8" width="58" height="70"/>
+                                                    <rect key="frame" x="290" y="11" width="58" height="64"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg5-Ln-ohg">
-                                                            <rect key="frame" x="8" y="4" width="42" height="21"/>
+                                                            <rect key="frame" x="8" y="4" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="rg5-Ln-ohg" secondAttribute="trailing" priority="900" constant="8" id="PIt-hf-7rd"/>
                                                         <constraint firstItem="rg5-Ln-ohg" firstAttribute="top" secondItem="34f-iv-itW" secondAttribute="top" constant="4" id="Zs7-ZP-UW6"/>
@@ -211,28 +207,23 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="visitorImageCell" rowHeight="281" id="OVN-E6-wgx" customClass="VisitorImageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="600" height="281"/>
+                                        <rect key="frame" x="0.0" y="208" width="375" height="281"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OVN-E6-wgx" id="dKg-8F-26h">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="281"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-uL-ecs" customClass="BubbleView" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                                    <rect key="frame" x="108" y="12" width="472" height="257"/>
+                                                    <rect key="frame" x="16" y="15" width="332" height="251"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" placeholderIntrinsicWidth="464" placeholderIntrinsicHeight="207" translatesAutoresizingMaskIntoConstraints="NO" id="Xn5-74-4w3">
-                                                            <rect key="frame" x="-1" y="4" width="464" height="227"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" priority="750" constant="227" id="eii-AP-dmT"/>
-                                                            </constraints>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" placeholderIntrinsicWidth="464" placeholderIntrinsicHeight="207" translatesAutoresizingMaskIntoConstraints="NO" id="Xn5-74-4w3">
+                                                            <rect key="frame" x="-106" y="-10" width="464" height="227"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="Xn5-74-4w3" firstAttribute="top" secondItem="YmI-uL-ecs" secondAttribute="top" constant="4" id="B8a-Ye-RXf"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Xn5-74-4w3" secondAttribute="trailing" constant="4" id="BfJ-ox-2vQ"/>
                                                         <constraint firstAttribute="height" priority="750" constant="392" placeholder="YES" id="StP-rJ-eeo"/>
-                                                        <constraint firstItem="Xn5-74-4w3" firstAttribute="leading" secondItem="YmI-uL-ecs" secondAttribute="leading" constant="4" id="ipd-g4-RjJ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="typeString" value="visitor"/>
@@ -243,38 +234,36 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="YmI-uL-ecs" firstAttribute="leading" secondItem="dKg-8F-26h" secondAttribute="leading" constant="16" id="Czt-1e-fc9"/>
                                                 <constraint firstItem="YmI-uL-ecs" firstAttribute="top" secondItem="dKg-8F-26h" secondAttribute="topMargin" constant="4" id="Emi-g9-1oa"/>
-                                                <constraint firstItem="YmI-uL-ecs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dKg-8F-26h" secondAttribute="leadingMargin" constant="100" id="FpI-x5-HDV"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YmI-uL-ecs" secondAttribute="bottom" constant="4" id="PnC-ND-Qdy"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="YmI-uL-ecs" secondAttribute="bottom" constant="4" id="az5-kK-TaF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="YmI-uL-ecs" secondAttribute="trailing" constant="12" id="n6V-w3-wXK"/>
                                                 <constraint firstItem="YmI-uL-ecs" firstAttribute="leading" secondItem="dKg-8F-26h" secondAttribute="leadingMargin" priority="250" constant="100" id="tqi-GV-per"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bubbleView" destination="YmI-uL-ecs" id="3q0-Ir-UiS"/>
-                                            <outlet property="heightConstraint" destination="eii-AP-dmT" id="CP2-b9-Pbl"/>
                                             <outlet property="imageContentView" destination="Xn5-74-4w3" id="WmO-xn-hst"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="agentImageCell" rowHeight="281" id="iKY-Tv-Rxi" customClass="AgentImageCell" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="489" width="600" height="281"/>
+                                        <rect key="frame" x="0.0" y="489" width="375" height="281"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iKY-Tv-Rxi" id="yGa-cY-G4T">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="281"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXN-2b-ifd" customClass="BubbleView" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                                    <rect key="frame" x="52" y="8" width="440" height="261"/>
+                                                    <rect key="frame" x="59" y="11" width="201" height="255"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" placeholderIntrinsicWidth="464" placeholderIntrinsicHeight="207" translatesAutoresizingMaskIntoConstraints="NO" id="SWb-Uq-iXL">
-                                                            <rect key="frame" x="4" y="0.0" width="464" height="227"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="464" placeholderIntrinsicHeight="207" translatesAutoresizingMaskIntoConstraints="NO" id="SWb-Uq-iXL">
+                                                            <rect key="frame" x="4" y="4" width="193" height="227"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" priority="750" constant="227" id="nMi-Hb-3yV"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.84784482760000002" green="0.98124999999999996" blue="0.74094827590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="SWb-Uq-iXL" firstAttribute="top" secondItem="GXN-2b-ifd" secondAttribute="top" constant="4" id="2ei-bi-O5t"/>
                                                         <constraint firstAttribute="height" priority="750" constant="392" placeholder="YES" id="3tt-Td-9K3"/>
@@ -289,7 +278,7 @@
                                                     </connections>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-Jd-diY" customClass="AgentImageView" customModule="ZDCChatAPI_Sample_App" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                                    <rect key="frame" x="15" y="11" width="34" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="34" id="9tK-qZ-DYx"/>
                                                         <constraint firstAttribute="height" constant="34" id="RI0-Hw-dOQ"/>
@@ -321,16 +310,20 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pAS-ii-SS8" firstAttribute="top" secondItem="Nfj-g3-dgr" secondAttribute="bottom" id="Bxw-Op-FDT"/>
-                            <constraint firstAttribute="trailing" secondItem="Hky-IL-0yk" secondAttribute="trailing" id="I1D-wH-5sk"/>
-                            <constraint firstItem="jla-xf-U35" firstAttribute="top" secondItem="Hky-IL-0yk" secondAttribute="bottom" id="Syu-MM-IIG"/>
-                            <constraint firstAttribute="trailing" secondItem="pAS-ii-SS8" secondAttribute="trailing" id="e5N-71-yXn"/>
-                            <constraint firstItem="Hky-IL-0yk" firstAttribute="leading" secondItem="vMh-Un-bsc" secondAttribute="leading" id="ktD-Wp-Z0S"/>
-                            <constraint firstItem="pAS-ii-SS8" firstAttribute="leading" secondItem="vMh-Un-bsc" secondAttribute="leading" id="sri-tu-LRH"/>
+                            <constraint firstItem="pAS-ii-SS8" firstAttribute="leading" secondItem="hd0-10-m3s" secondAttribute="leading" id="8Zq-Ls-mHt"/>
+                            <constraint firstItem="pAS-ii-SS8" firstAttribute="top" secondItem="hd0-10-m3s" secondAttribute="top" id="Bxw-Op-FDT"/>
+                            <constraint firstItem="hd0-10-m3s" firstAttribute="trailing" secondItem="Hky-IL-0yk" secondAttribute="trailing" id="I1D-wH-5sk"/>
+                            <constraint firstItem="hd0-10-m3s" firstAttribute="bottom" secondItem="Hky-IL-0yk" secondAttribute="bottom" id="Syu-MM-IIG"/>
+                            <constraint firstItem="pAS-ii-SS8" firstAttribute="top" secondItem="hd0-10-m3s" secondAttribute="top" id="cEd-Hx-Gpx"/>
+                            <constraint firstItem="hd0-10-m3s" firstAttribute="trailing" secondItem="pAS-ii-SS8" secondAttribute="trailing" id="e5N-71-yXn"/>
+                            <constraint firstItem="Hky-IL-0yk" firstAttribute="leading" secondItem="hd0-10-m3s" secondAttribute="leading" id="ktD-Wp-Z0S"/>
+                            <constraint firstAttribute="trailing" secondItem="pAS-ii-SS8" secondAttribute="trailing" id="raH-ct-V0i"/>
+                            <constraint firstItem="pAS-ii-SS8" firstAttribute="leading" secondItem="hd0-10-m3s" secondAttribute="leading" id="sri-tu-LRH"/>
                             <constraint firstItem="Hky-IL-0yk" firstAttribute="top" secondItem="pAS-ii-SS8" secondAttribute="bottom" id="vUr-3E-C9r"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="hd0-10-m3s"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="9DQ-uR-JMC"/>
                     <connections>
@@ -342,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pT-hv-UJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696" y="121"/>
+            <point key="canvasLocation" x="1695.2" y="120.98950524737631"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zx9-qJ-QeE">
@@ -350,10 +343,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RQU-tE-Pay" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" barStyle="black" id="tYc-Gx-LW3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.86274509803921573" green="0.32156862745098042" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.32156862745098042" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.86274509799999999" green="0.32156862749999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

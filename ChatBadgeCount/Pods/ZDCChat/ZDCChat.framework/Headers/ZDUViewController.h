@@ -5,7 +5,7 @@
  *
  *  Created by Zendesk on 29/04/2014.
  *
- *  Copyright (c) 2015 Zendesk. All rights reserved.
+ *  Copyright (c) 2016 Zendesk. All rights reserved.
  *
  *  By downloading or using the Zendesk Mobile SDK, You agree to the Zendesk Master
  *  Subscription Agreement https://www.zendesk.com/company/customers-partners/#master-subscription-agreement and Application Developer and API License
@@ -16,7 +16,6 @@
 
 
 #import <UIKit/UIKit.h>
-#import "ZDUToastView.h"
 
 
 /**
@@ -40,11 +39,6 @@
  * All subclasses should use this view as a base for their view hierarchy.
  */
 @property (nonatomic, strong) UIView *contentView;
-
-/**
- * A toast for notifying visitors of events/statuses.
- */
-@property (nonatomic, strong) ZDUToastView *toastView;
 
 /**
  * The height of the currently displayed toast.
@@ -78,15 +72,6 @@
 
 #pragma mark toasts
 
-
-/**
- * Present a new toast message if it is not already being show (equality depends on Id, type and message).
- * @param the message to show
- * @param animate if YES animate the toast in
- */
-- (void) presentPersistentToast:(NSString*)message
-                           type:(ZDUToastUIType)type
-                        animate:(BOOL)animate;
 
 /**
  * Dismiss the active toast.
