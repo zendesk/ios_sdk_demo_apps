@@ -1,6 +1,0 @@
-framework module Pods_support_request_updates_sample {
-  umbrella header "Pods-support_request_updates_sample-umbrella.h"
-
-  export *
-  module * { export * }
-}

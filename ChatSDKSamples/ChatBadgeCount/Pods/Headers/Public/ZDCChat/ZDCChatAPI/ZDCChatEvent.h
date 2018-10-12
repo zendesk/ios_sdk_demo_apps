@@ -1,0 +1,1 @@
+../../../../ZDCChat/ZDCChatAPI.framework/Headers/ZDCChatEvent.h
