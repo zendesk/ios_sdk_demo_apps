@@ -10,10 +10,10 @@ We hope you'll find those sample Apps useful and encourage you to re-use some of
 This repository contains the following demos:
 - [SupportSDKSamples](SupportSDKSamples) 
   Set of demos showcasing the basic features of the Suppert SDK.
-- [ChatAPISampleApp](ChatAPISampleApp)
+- [ChatAPISampleApp](ChatSDKSamples/ChatAPISampleApp)
   Demo that showcases building a custom chat UI backed by Zendesk Chat API.   
 
-- [ChatBadgeCount](ChatBadgeCount)
+- [ChatBadgeCount](ChatSDKSamples/ChatBadgeCount)
   Demo that shows the app badge count on the tab bar button.
 
 ## Owners
