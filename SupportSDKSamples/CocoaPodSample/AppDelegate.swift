@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         CoreLogger.enabled = true
-        CoreLogger.logLevel = .verbose
+        CoreLogger.logLevel = .debug
         
         // Enter your zendesk app configs here
         Zendesk.initialize(appId: "appId",
