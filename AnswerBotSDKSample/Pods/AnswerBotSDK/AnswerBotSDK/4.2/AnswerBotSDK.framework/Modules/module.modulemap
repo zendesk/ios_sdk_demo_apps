@@ -1,0 +1,11 @@
+framework module AnswerBotSDK {
+  umbrella header "AnswerBotSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module AnswerBotSDK.Swift {
+    header "AnswerBotSDK-Swift.h"
+    requires objc
+}

@@ -1,0 +1,6 @@
+framework module Pods_AnswerBotSample {
+  umbrella header "Pods-AnswerBotSample-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,11 +8,13 @@ This repository provides you with sample Apps to help learn how to use the Zende
 We hope you'll find those sample Apps useful and encourage you to re-use some of this code in your own Apps.
 
 This repository contains the following demos:
-- [SupportSDKSamples](SupportSDKSamples) 
+- [Support SDK Samples](SupportSDKSamples)
   - A demo application showcasing some of the basic features of the Support SDK.
-- [ChatSDKSamples](ChatSDKSamples)
+- [Chat SDK Samples](ChatSDKSamples)
   - Demo that showcases building a custom chat UI backed by Zendesk Chat API.
   - Demo that shows the app badge count on the tab bar button.
+- [Answer Bot SDK Samples](AnswerBotSDKSample)
+  - A demo application that shows how to integrate the Answer Bot SDK
 
 ## Owners
 If you have any questions please email support@zendesk.com.
