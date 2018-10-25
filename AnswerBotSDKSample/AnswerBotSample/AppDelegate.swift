@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        CoreLogger.enabled = true
+        CoreLogger.logLevel = .debug
+        
         // Initialize the SDK with your Zendesk instance
         // Get these details from your Zendesk dashboard: Admin -> Channels -> MobileSDK.
          Zendesk.initialize(appId: "appId",
@@ -28,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Support is needed to hand off tickets from AB
         
         // Set an identity for authentication.
-        // let identity = Identity.createAnonymous()
-        let identity = Identity.createJwt(token: "JWT_User_Identifier")
+         let identity = Identity.createAnonymous()
+        // let identity = Identity.createJwt(token: "JWT_User_Identifier")
         Zendesk.instance?.setIdentity(identity)
         
         // Initialize Answer Bot with instances of Zendesk and Support singletons
