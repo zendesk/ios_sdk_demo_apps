@@ -59,8 +59,9 @@ final class APIClient {
 
     setupListeners()
     
+    // Chat -> Click on Profile Avatar -> Check Connection
     let config = ZDCAPIConfig()
-    chat.startChat(withAccountKey: "miFQf5HltIErsQEJn0Ni44PYRd6k34pe", config: config)
+    chat.startChat(withAccountKey: "accountKey", config: config)
     
   }
   
