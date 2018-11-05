@@ -25,6 +25,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var addImageButton: UIButton!
     @IBOutlet weak var customFieldTextField: UITextField!
     
+    
+    // MARK: Zendesk UiConfigurations
+
+    var articleConfig: ArticleUiConfiguration {
+        let articleConfig = ArticleUiConfiguration()
+        articleConfig.hideContactSupport = false
+        return articleConfig
+    }
+    
     var hcConfig: HelpCenterUiConfiguration {
         let hcConfig = HelpCenterUiConfiguration()
         hcConfig.hideContactSupport = true
@@ -39,8 +48,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         return config
     }
 
+    // MARK: Button Actions
+
     @IBAction func openHC(_ sender: Any) {
-        let helpCenter = HelpCenterUi.buildHelpCenterOverview(withConfigs: [hcConfig, requestConfig])
+        let helpCenter = HelpCenterUi.buildHelpCenterOverviewUi(withConfigs: [hcConfig, requestConfig])
         navigationController?.pushViewController(helpCenter, animated: true)
     }
     
