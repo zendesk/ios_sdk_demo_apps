@@ -9,7 +9,20 @@ We hope you'll find those sample Apps useful and encourage you to re-use some of
 
 This repository contains the following demos:
 - [Support SDK Samples](SupportSDKSamples)
-  - A demo application showcasing some of the basic features of the Support SDK.
+  You'll find two Sample Apps added to workspace `CocoaPodSample`
+  - A demo application `Sample` showcasing the manual installation of Support SDK.
+  - A demo application `CocoaPodSample` showcasing the integration with pods.
+  
+  Both apps are implementing couple of main features of Support SDK.
+  
+  **Note:** Initialize your Support SDK within AppDelegate.swift by filling out the credentials
+  ```
+          // Enter your zendesk app configs here
+        Zendesk.initialize(appId: "appId",
+                           clientId: "clientId",
+                           zendeskUrl: "zendeskUrl")
+  ```
+                           
 - [Chat SDK Samples](ChatSDKSamples)
   - Demo that showcases building a custom chat UI backed by Zendesk Chat API.
   - Demo that shows the app badge count on the tab bar button.
