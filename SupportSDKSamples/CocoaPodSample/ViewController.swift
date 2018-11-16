@@ -122,10 +122,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func refreshForTicketUpdate(_ sender: Any) {
         ZDKRequestProvider().getUpdatesForDevice { [unowned self] in
             if let updates = $0, updates.hasUpdatedRequests() {
-                self.ticketListButton.setTitle("Ticket List (\(updates.requestUpdates.count) new)", for: UIControlState.normal)
+                self.ticketListButton.setTitle("Ticket List (\(updates.requestUpdates.count) new)", for: .normal)
                 self.showToast(with: "New Replies")
             } else {
-                self.ticketListButton.setTitle("Ticket List", for: UIControlState.normal)
+                self.ticketListButton.setTitle("Ticket List", for: .normal)
                 self.showToast(with: "No new Replies")
             }
         }
@@ -142,7 +142,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     private func getImageDataFrom(view: UIImageView) -> Data?{
         guard let image = view.image else { return nil }
-        return UIImagePNGRepresentation(image)
+        return image.pngData()
     }
     
     // MARK: UI and Layout
@@ -170,8 +170,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 }
 
 extension ViewController: UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let pickedImage = info[.originalImage] as? UIImage else { return }
         
         attachmentImageView.contentMode = .scaleAspectFit
         attachmentImageView.image = pickedImage
