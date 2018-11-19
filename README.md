@@ -16,7 +16,7 @@ This repository contains the following demos:
   
   Both apps are implementing couple of main features of Support SDK.
   
-  **Note:** Initialize your Support SDK within AppDelegate.swift by filling out the credentials
+  **Note:** Initialise the Support SDK in the `AppDelegate.swift`, by passing in the credentials of your Zendesk instance.
   ```
           // Enter your zendesk app configs here
         Zendesk.initialize(appId: "appId",
