@@ -105,13 +105,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func sendRequest(_ sender: Any) {
         buildCreateRequest {
             ZDKRequestProvider().createRequest($0)  { [unowned self] (result, error) in
-                if result != nil {
-                    self.showToast(with: "Message Sent")
-                    self.clearFields()
-                }
-                if error != nil {
-                    self.showToast(with: "Failed to send")
-                    print("Error: Failed to send request. Enable CoreLogger for more info.")
+                DispatchQueue.main.async {
+                    if result != nil {
+                        self.showToast(with: "Message Sent")
+                        self.clearFields()
+                    }
+                    if error != nil {
+                        self.showToast(with: "Failed to send")
+                        print("Error: Failed to send request. Enable CoreLogger for more info.")
+                    }
                 }
             }
         }
@@ -155,7 +157,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     private func clearFields() {
         subjectTextField.text = ""
-        descriptionTextView.text = ""
+        descriptionTextView.text = "Your description"
         customFieldTextField.text = ""
         attachmentImageView.image = nil
     }
