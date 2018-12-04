@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CoreLogger.enabled = true
         CoreLogger.logLevel = .debug
         
-        // Enter your zendesk app configs here
+        #warning("Enter your zendesk app configs here")
         Zendesk.initialize(appId: "appId",
                            clientId: "clientId",
                            zendeskUrl: "zendeskUrl")
