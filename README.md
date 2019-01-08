@@ -10,8 +10,9 @@ We hope you'll find those sample Apps useful and encourage you to re-use some of
 This repository contains the following demos:
 - [Support SDK Samples](SupportSDKSamples)
 
-  You'll find two Sample Apps added to workspace `CocoaPodSample`
-  - A demo application `Sample` showcasing the manual installation of Support SDK.
+  You'll find three Sample Apps added to workspace `CocoaPodSample`
+  - A demo application `Sample` showcasing the manual Swift integration of Support SDK.
+  - A demo application `SampleObjectiveC` showcasing the manual Objective-C integration of Support SDK.
   - A demo application `CocoaPodSample` showcasing the integration with pods.
   
   Both apps are implementing couple of main features of Support SDK.
