@@ -29,7 +29,7 @@
 - (IBAction)openHelpCenter:(id)sender {
     ZDKHelpCenterUiConfiguration *hcConfig = [ZDKHelpCenterUiConfiguration new];
     UIViewController *helpCenter = [ZDKHelpCenterUi buildHelpCenterOverviewWithConfigs:@[hcConfig]];
-//        [ZDKHelpCenterUi buildHelpCenterArticleWithArticleId:(nonnull NSString ]
+    
     [self.navigationController pushViewController:helpCenter animated:YES];
 
 }
