@@ -8,5 +8,4 @@ target 'ZDCChatAPI Sample App' do
   pod 'DKImagePickerController'
   pod 'DateToolsSwift'
   pod 'ZDCChat/API'
-  pod 'Toaster'
 end

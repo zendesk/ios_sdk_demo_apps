@@ -17,7 +17,6 @@
 import UIKit
 import ZDCChatAPI
 
-
 struct ChatControllerDelegate: ChatViewControllerDelegate {
   weak var client: APIClient?
   

@@ -33,7 +33,6 @@ class ChatCell: UITableViewCell{
   
 }
 
-
 extension ChatCell: ChatCellType {
   
   var bubbleState: BubbleState {
