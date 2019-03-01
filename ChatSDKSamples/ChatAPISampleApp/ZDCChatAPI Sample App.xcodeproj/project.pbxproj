@@ -121,12 +121,12 @@
 		D76DF7A11D2E94A600153F71 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D71C13C51D2FFBE2003A51A6 /* AgentImageCell.swift */,
+				D76DF7A21D2E94BF00153F71 /* AgentMessageCell.swift */,
 				D71C13B61D2E9FED003A51A6 /* CellTypes.swift */,
 				D7A74C6F1D339DE500C1E73E /* ChatCell.swift */,
-				D76DF7A21D2E94BF00153F71 /* AgentMessageCell.swift */,
-				D71C13B41D2E9DE7003A51A6 /* VisitorMessageCell.swift */,
-				D71C13C51D2FFBE2003A51A6 /* AgentImageCell.swift */,
 				D71C13C31D2FAD3B003A51A6 /* VisitorImageCell.swift */,
+				D71C13B41D2E9DE7003A51A6 /* VisitorMessageCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -209,11 +209,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Omar Abdelhafith";
 				TargetAttributes = {
 					D7C1C8BA1D2E923B00F2C0C3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7529UAQB93;
 						LastSwiftMigration = 1000;
 					};
 				};
@@ -257,25 +258,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZDCChatAPI Sample App/Pods-ZDCChatAPI Sample App-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CLImageEditor/CLImageEditor.framework",
 				"${BUILT_PRODUCTS_DIR}/DKCamera/DKCamera.framework",
 				"${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/DKPhotoGallery/DKPhotoGallery.framework",
 				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CLImageEditor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKCamera.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKPhotoGallery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOCropViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -389,14 +388,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -436,14 +443,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -473,38 +488,13 @@
 			baseConfigurationReference = 07F1EC48ACF7DCA7DB371BF6 /* Pods-ZDCChatAPI Sample App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-				);
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ZDCChatAPI Sample App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nsomar.ZDCChatAPI-Sample-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.chat-sample-app-public";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -514,38 +504,13 @@
 			baseConfigurationReference = 11FDA4B05935F5CBC727D5BB /* Pods-ZDCChatAPI Sample App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-					"$(PROJECT_DIR)/ZDCChatAPI",
-					Sample,
-					App/Frameworks,
-				);
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ZDCChatAPI Sample App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nsomar.ZDCChatAPI-Sample-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zendesk.chat-sample-app-public";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

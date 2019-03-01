@@ -34,8 +34,8 @@ final class TableCellFactory {
                                          event: ChatUIEvent) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: event.type.tableIdentifier, for: indexPath)
     
-    if var th = cell as? ChatCellType {
-      th.chatEvent = event
+    if var chatCell = cell as? ChatCellType {
+      chatCell.chatEvent = event
     }
     
     return cell
@@ -50,7 +50,7 @@ final class TableCellFactory {
  - VisitorMessage: visitor text message event
  - VisitorImage:   visitor image message event
  */
-enum EventType {
+enum EventType: String {
   case agentMessage, agentImage, visitorMessage, visitorImage
 }
 

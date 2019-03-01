@@ -16,7 +16,6 @@
 
 import UIKit
 import DKImagePickerController
-import Toaster
 
 class ChatViewController: UIViewController {
   
@@ -27,7 +26,15 @@ class ChatViewController: UIViewController {
   
   var delegate: ChatViewControllerDelegate!
   var dataSource: ChatViewControllerDataSource!
-  var toast: Toast?
+
+  // Update the connection state with a new connection value
+  var isChatConnected: Bool = false {
+    didSet {
+      let logMessage = isChatConnected ? "Connected" : "Chat is connecting..."
+      print(logMessage)
+    }
+  }
+
   fileprivate let client = APIClient()
   
   override func viewDidLoad() {
@@ -81,7 +88,7 @@ extension ChatViewController {
 
     pickerController.singleSelect = true
     pickerController.didSelectAssets = { (assets: [DKAsset]) in
-    
+
       assets[0].fetchOriginalImage { (image, info) in
         self.delegate.chatController(self, didSelectImage: image!)
       }
@@ -145,32 +152,7 @@ extension ChatViewController: UITableViewDataSource {
 }
 
 extension ChatViewController: ChatView {
-  
-  // Update the connection state with a new connection value
-  var isChatConnected: Bool {
-    set {
-      if newValue == isChatConnected {
-        return
-      }
-      
-      if newValue {
-        toast?.cancel()
-        Toast.init(text: "Connected").show()
-      } else {
-        toast = Toast.init(text: "Chat is connecting...")
-        toast?.duration = 9999 //Very long
-        toast?.show()
-      }
-    }
-    
-    get {
-      guard let toast = toast else {
-        return true
-      }
-      
-      return toast.view.isHidden
-    }
-  }
+
   
   func updateChatLog() {
     self.tableView.reloadData()
@@ -179,6 +161,6 @@ extension ChatViewController: ChatView {
     
     let last = self.tableView.numberOfRows(inSection: 0) - 1
     self.tableView.scrollToRow(at: IndexPath(row: last, section: 0),
-                                          at: .middle, animated: true)
+                               at: .middle, animated: true)
   }
 }

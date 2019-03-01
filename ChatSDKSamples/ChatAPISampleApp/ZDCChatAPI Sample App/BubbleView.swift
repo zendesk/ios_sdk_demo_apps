@@ -31,14 +31,17 @@ enum BubbleState {
   case hidden
   
   var image: UIImage {
+    var imageName: String = ""
     switch self {
     case .confirmed:
-      return UIImage(named: "check-mark")!
-    case .hidden:
-      return UIImage()
+      imageName = "check-mark"
     case .notConfirmed:
-      return UIImage(named: "refresh")!
+      imageName = "refresh"
+    default:
+      break
     }
+
+    return UIImage(named: imageName)!
   }
 }
 
@@ -77,7 +80,6 @@ final class BubbleView: UIView {
     }
   }
   
-  
   var timestamp: Date = Date.init(timeIntervalSinceNow: -1000) {
     didSet {
       timeStampLabel.text = timestamp.timeAgoSinceNow
@@ -109,7 +111,7 @@ final class BubbleView: UIView {
     timeStampLabel.text = "Some time ago"
     self.addSubview(timeStampLabel)
     
-    verifiedImage = UIImageView(image: UIImage.init(named: "check-mark"))
+    verifiedImage = UIImageView(image: BubbleState.confirmed.image)
     verifiedImage.contentMode = .scaleAspectFit
     verifiedImage.translatesAutoresizingMaskIntoConstraints = false
     self.addSubview(verifiedImage)

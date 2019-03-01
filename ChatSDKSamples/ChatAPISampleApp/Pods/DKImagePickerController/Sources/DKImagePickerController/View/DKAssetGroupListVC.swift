@@ -161,11 +161,7 @@ class DKAssetGroupListVC: UITableViewController, DKImageGroupDataManagerObserver
         self.defaultAssetGroup = defaultAssetGroup
         self.selectedGroupDidChangeBlock = selectedGroupDidChangeBlock
     }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    
+        
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -200,7 +196,8 @@ class DKAssetGroupListVC: UITableViewController, DKImageGroupDataManagerObserver
         
         if let defaultAssetGroup = self.defaultAssetGroup {
             for groupId in groups {
-                let group = self.groupDataManager.fetchGroupWithGroupId(groupId)
+                guard let group = self.groupDataManager.fetchGroup(with: groupId) else { continue }
+                
                 if defaultAssetGroup == group.originalCollection.assetCollectionSubtype {
                     return groupId
                 }
@@ -210,18 +207,17 @@ class DKAssetGroupListVC: UITableViewController, DKImageGroupDataManagerObserver
     }
     
     private func filterEmptyGroupIfNeeded() -> [String]? {
-        var displayGroups = self.groups ?? []
-        if !self.showsEmptyAlbums {
-            if let groups = self.groups {
-                for groupId in groups {
-                    if self.groupDataManager.fetchGroupWithGroupId(groupId).totalCount > 0 {
-                        displayGroups.append(groupId)
-                    }
+        if self.showsEmptyAlbums {
+            return self.groups
+        } else {
+            return self.groups?.filter({ (groupId) -> Bool in
+                guard let group = self.groupDataManager.fetchGroup(with: groupId) else {
+                    assertionFailure("Expect group")
+                    return false
                 }
-            }
+                return group.totalCount > 0
+            }) ?? []
         }
-        
-        return displayGroups
     }
 
     // MARK: - UITableViewDelegate, UITableViewDataSource methods
@@ -237,7 +233,10 @@ class DKAssetGroupListVC: UITableViewController, DKImageGroupDataManagerObserver
                 return UITableViewCell()
         }
 
-        let assetGroup = self.groupDataManager.fetchGroupWithGroupId(groups[indexPath.row])
+        guard let assetGroup = self.groupDataManager.fetchGroup(with: groups[indexPath.row]) else {
+            assertionFailure("Expect group")
+            return UITableViewCell()
+        }
         cell.groupNameLabel.text = assetGroup.groupName
 
         let tag = indexPath.row + 1
@@ -246,8 +245,8 @@ class DKAssetGroupListVC: UITableViewController, DKImageGroupDataManagerObserver
         if assetGroup.totalCount == 0 {
             cell.thumbnailImageView.image = DKImagePickerControllerResource.emptyAlbumIcon()
         } else {
-            self.groupDataManager.fetchGroupThumbnailForGroup(
-                assetGroup.groupId,
+            self.groupDataManager.fetchGroupThumbnail(
+                with: assetGroup.groupId,
                 size: CGSize(width: tableView.rowHeight, height: tableView.rowHeight).toPixel(),
                 options: self.groupThumbnailRequestOptions) { image, info in
                     if cell.tag == tag {
