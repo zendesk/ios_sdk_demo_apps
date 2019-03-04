@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43BC0E37222D4D35007E5894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BC0E35222D4D34007E5894 /* Main.storyboard */; };
 		5EB92CA81CFDA1E500918599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB92CA71CFDA1E500918599 /* AppDelegate.swift */; };
 		5EB92CAA1CFDA1E500918599 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB92CA91CFDA1E500918599 /* FirstViewController.swift */; };
 		5EB92CAC1CFDA1E500918599 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB92CAB1CFDA1E500918599 /* SecondViewController.swift */; };
-		5EB92CAF1CFDA1E500918599 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB92CAD1CFDA1E500918599 /* Main.storyboard */; };
 		5EB92CB11CFDA1E500918599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB92CB01CFDA1E500918599 /* Assets.xcassets */; };
 		5EB92CB41CFDA1E500918599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB92CB21CFDA1E500918599 /* LaunchScreen.storyboard */; };
 		EAECCBE06FAB29EDDDA18707 /* libPods-ChatBadgeCount.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D6D5C313EF274AE355ABEF /* libPods-ChatBadgeCount.a */; };
@@ -20,11 +20,11 @@
 		1AFC707706E31D9309D5B8B5 /* Pods-ChatBadgeCount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBadgeCount.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount.release.xcconfig"; sourceTree = "<group>"; };
 		26B025ED04A26EA8A3381B16 /* Pods-ChatBadgeCount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBadgeCount.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount.debug.xcconfig"; sourceTree = "<group>"; };
 		37D6D5C313EF274AE355ABEF /* libPods-ChatBadgeCount.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatBadgeCount.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43BC0E36222D4D34007E5894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EB92CA41CFDA1E500918599 /* ChatBadgeCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBadgeCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB92CA71CFDA1E500918599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB92CA91CFDA1E500918599 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		5EB92CAB1CFDA1E500918599 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		5EB92CAE1CFDA1E500918599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EB92CB01CFDA1E500918599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB92CB31CFDA1E500918599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EB92CB51CFDA1E500918599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,9 +75,9 @@
 				5EB92CA71CFDA1E500918599 /* AppDelegate.swift */,
 				5EB92CA91CFDA1E500918599 /* FirstViewController.swift */,
 				5EB92CAB1CFDA1E500918599 /* SecondViewController.swift */,
-				5EB92CAD1CFDA1E500918599 /* Main.storyboard */,
 				5EB92CB01CFDA1E500918599 /* Assets.xcassets */,
 				5EB92CB21CFDA1E500918599 /* LaunchScreen.storyboard */,
+				43BC0E35222D4D34007E5894 /* Main.storyboard */,
 				5EB92CB51CFDA1E500918599 /* Info.plist */,
 			);
 			path = ChatBadgeCount;
@@ -154,9 +154,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BC0E37222D4D35007E5894 /* Main.storyboard in Resources */,
 				5EB92CB41CFDA1E500918599 /* LaunchScreen.storyboard in Resources */,
 				5EB92CB11CFDA1E500918599 /* Assets.xcassets in Resources */,
-				5EB92CAF1CFDA1E500918599 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +247,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5EB92CAD1CFDA1E500918599 /* Main.storyboard */ = {
+		43BC0E35222D4D34007E5894 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5EB92CAE1CFDA1E500918599 /* Base */,
+				43BC0E36222D4D34007E5894 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
