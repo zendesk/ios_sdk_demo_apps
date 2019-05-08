@@ -10,7 +10,7 @@ import Photos
 
 public extension CGSize {
 	
-	public func toPixel() -> CGSize {
+    func toPixel() -> CGSize {
 		let scale = UIScreen.main.scale
         
         let screenHeight = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
@@ -101,7 +101,7 @@ open class DKAsset: NSObject {
 
 public extension AVAsset {
 	
-	@objc public func calculateFileSize() -> Float {
+    @objc func calculateFileSize() -> Float {
 		if let URLAsset = self as? AVURLAsset {
 			var size: AnyObject?
 			try! (URLAsset.url as NSURL).getResourceValue(&size, forKey: URLResourceKey.fileSizeKey)
