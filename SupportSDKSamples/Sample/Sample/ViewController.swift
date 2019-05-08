@@ -91,8 +91,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         
         ZDKUploadProvider().uploadAttachment(attachment, withFilename: "image_name_app.png", andContentType: "image") { (response, error) in
             if let response = response {
-                print("Token: ", response.uploadToken)
-                print("Attachment: ", response.attachment)
+                print("Token: ", response.uploadToken!)
+                print("Attachment: ", response.attachment!)
             }
             if let error = error {
                 print("Error: ", error.localizedDescription)

@@ -23,12 +23,14 @@
  - ZDKContactUsVisibilityArticleListOnly: The contact us nav bar button is only visible in the article list.
  - ZDKContactUsVisibilityOff: The contact us nav bar button is not visible anywhere.
  */
+__attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConfiguration to configure the 'contact us' button on their respective screens ")))
 typedef NS_ENUM(NSUInteger, ZDKContactUsVisibility) {
     ZDKContactUsVisibilityArticleListAndArticle,
     ZDKContactUsVisibilityArticleListOnly,
     ZDKContactUsVisibilityOff,
 };
 
+__attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConfiguration to configure the 'contact us' button on their respective screens ")))
 @protocol ZDKHelpCenterConversationsUIDelegate <NSObject>
 
 
@@ -64,6 +66,7 @@ typedef NS_ENUM(NSUInteger, ZDKContactUsVisibility) {
 
 @end
 
+__attribute__((deprecated("use ZDKHelpCenterUiConfiguration and ZDKArticleUiConfiguration to configure the 'contact us' button on their respective screens ")))
 @protocol ZDKHelpCenterDelegate <NSObject>
 
 @property (nonatomic, weak) id<ZDKHelpCenterConversationsUIDelegate> uiDelegate;

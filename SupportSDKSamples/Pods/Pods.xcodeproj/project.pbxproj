@@ -7,275 +7,276 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		30B8658F78264EA476249E8D76A5296F /* ZendeskSDK */ = {
+		9C9C012E1364FDDA0FFEF91F70E052D2 /* ZendeskSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = CA6FCFF347A360D886251C6FF9CA2E9C /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */;
+			buildConfigurationList = 355DF63D7E19846FB7106D0BB845A97E /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */;
 			buildPhases = (
 			);
 			dependencies = (
 			);
 			name = ZendeskSDK;
+			productName = ZendeskSDK;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		135C37EE6FF998B186CDFC7008C894A0 /* Pods-CocoaPodSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D431CA4445202E8CD3A80276C94667 /* Pods-CocoaPodSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		397369325ED480A3B07EA0546C09C4F9 /* Pods-CocoaPodSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B50B5FF5FDEAA3D0A50F3023D8208C /* Pods-CocoaPodSample-dummy.m */; };
-		8B3270856DAFF808F2FA995BDC17D6E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		0910389B34BC69DCEE7D122DA49A9AB7 /* Pods-CocoaPodSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F1C2C6FA707810E154C79BB4E9F522F /* Pods-CocoaPodSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32E7EA3FD8751ED2998F855DE7BC1BCB /* Pods-CocoaPodSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E73B7552DB9A9CC7D6DC5FC3D6916 /* Pods-CocoaPodSample-dummy.m */; };
+		45CB4EDB9BC0283BF6C52625AE1E4C8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5028FCE450C33C402E243DDE8A4E9581 /* PBXContainerItemProxy */ = {
+		684DB4E533056255D941348050DEFC33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 30B8658F78264EA476249E8D76A5296F;
+			remoteGlobalIDString = 9C9C012E1364FDDA0FFEF91F70E052D2;
 			remoteInfo = ZendeskSDK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03544F747EBA88444B5A6BF53D3B6866 /* Pods-CocoaPodSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CocoaPodSample-resources.sh"; sourceTree = "<group>"; };
-		04D431CA4445202E8CD3A80276C94667 /* Pods-CocoaPodSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CocoaPodSample-umbrella.h"; sourceTree = "<group>"; };
-		08CE3788E94C936664C8E43EB6D9FC3F /* Pods-CocoaPodSample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-Info.plist"; sourceTree = "<group>"; };
-		0B05BB0DBE41C757773FE9ABF5EFE737 /* Pods-CocoaPodSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CocoaPodSample-frameworks.sh"; sourceTree = "<group>"; };
-		0F5B4F9E5B7670797B9EDD47CF0C901D /* Pods_CocoaPodSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CocoaPodSample.framework; path = "Pods-CocoaPodSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14124D3F7E1B479D729629E3629E1F02 /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskProviderSDK.framework; path = ZendeskSDK/4.2.1/ZendeskProviderSDK.framework; sourceTree = "<group>"; };
-		2DFBF8979463C22459FE0E6124E26B17 /* Pods-CocoaPodSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.debug.xcconfig"; sourceTree = "<group>"; };
-		40F49EAD288B128BAEFE9D0F88696868 /* Pods-CocoaPodSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CocoaPodSample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		43EE3A0B52924B1886B9670A1932A080 /* ZendeskSDKStrings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ZendeskSDKStrings.bundle; path = ZendeskSDK/4.2.1/ZendeskSDKStrings.bundle; sourceTree = "<group>"; };
-		59B50B5FF5FDEAA3D0A50F3023D8208C /* Pods-CocoaPodSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CocoaPodSample-dummy.m"; sourceTree = "<group>"; };
-		62147B24FF8B7A9D8ED3DFF6D4D3408A /* ZendeskSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZendeskSDK.xcconfig; sourceTree = "<group>"; };
-		625318BADE2F56EC31A9E19806D5E45F /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskSDK.framework; path = ZendeskSDK/4.2.1/ZendeskSDK.framework; sourceTree = "<group>"; };
-		67060D3B8ADE896C0D19497D824935A2 /* Pods-CocoaPodSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-acknowledgements.plist"; sourceTree = "<group>"; };
-		7E68A882BDB1B2A9C65FFBFDEECD7743 /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskCoreSDK.framework; path = ZendeskSDK/4.2.1/ZendeskCoreSDK.framework; sourceTree = "<group>"; };
-		91FF1AC8CD5D92573CF06EDC6FE1E73E /* Pods-CocoaPodSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CocoaPodSample.modulemap"; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BA4790B99BC441D3AE070342B86AD16F /* Pods-CocoaPodSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.release.xcconfig"; sourceTree = "<group>"; };
-		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		23845141A337D448E423ED9CBDD1FED6 /* Pods_CocoaPodSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaPodSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2917D11DA5B6829E807B3EFEA34ACDA5 /* Pods-CocoaPodSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CocoaPodSample-frameworks.sh"; sourceTree = "<group>"; };
+		39413756AF3FDA173D78A24C571E821F /* Pods-CocoaPodSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CocoaPodSample-resources.sh"; sourceTree = "<group>"; };
+		4C0E73B7552DB9A9CC7D6DC5FC3D6916 /* Pods-CocoaPodSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CocoaPodSample-dummy.m"; sourceTree = "<group>"; };
+		5B643E9983270542B58B651E1BA70B9D /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskSDK.framework; path = ZendeskSDK/5.0/ZendeskSDK.framework; sourceTree = "<group>"; };
+		724AFED5F0E52EF643E65477331BE2F0 /* Pods-CocoaPodSample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-Info.plist"; sourceTree = "<group>"; };
+		7A0CE766497A8AE4046BA1DEA255B181 /* Pods-CocoaPodSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.release.xcconfig"; sourceTree = "<group>"; };
+		7E8598034889E9F54FA86318DA5B9945 /* ZendeskSDKStrings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ZendeskSDKStrings.bundle; path = ZendeskSDK/5.0/ZendeskSDKStrings.bundle; sourceTree = "<group>"; };
+		7F1C2C6FA707810E154C79BB4E9F522F /* Pods-CocoaPodSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CocoaPodSample-umbrella.h"; sourceTree = "<group>"; };
+		857DA968C7008CF5B8B101B523365727 /* Pods-CocoaPodSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CocoaPodSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8D6BC249B6F7E0601A2002547C812710 /* Pods-CocoaPodSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CocoaPodSample.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B76A857F69391CE5FEC1D9AA7EE3061A /* Pods-CocoaPodSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		C67F6A6FD6104744E775B46514F5E747 /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskCoreSDK.framework; path = ZendeskSDK/5.0/ZendeskCoreSDK.framework; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC1E0580DB6BC430C55EC15F58C8C198 /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskProviderSDK.framework; path = ZendeskSDK/5.0/ZendeskProviderSDK.framework; sourceTree = "<group>"; };
+		E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZendeskSDK.xcconfig; sourceTree = "<group>"; };
+		FB07EF27BA49B07CE4A9BAACC7CB00F8 /* Pods-CocoaPodSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5814DB4D4672606A67BF61188D4A6CAE /* Frameworks */ = {
+		38D08A5787EFE67F42C342F458C6E4A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B3270856DAFF808F2FA995BDC17D6E7 /* Foundation.framework in Frameworks */,
+				45CB4EDB9BC0283BF6C52625AE1E4C8A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		185BE00DCA5AA512C69513238111F2B2 /* Core */ = {
+		10418E7F9FF9A184B4886F1B66BE51DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D34879A704A9E98125401ACCE7A8D51 /* Frameworks */,
+				DC1E0580DB6BC430C55EC15F58C8C198 /* ZendeskProviderSDK.framework */,
 			);
-			name = Core;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1D167882E55424ACDA8DFF5613CE15E0 /* Pods-CocoaPodSample */ = {
+		31A071B9538EEC91431296B6077B75C5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				91FF1AC8CD5D92573CF06EDC6FE1E73E /* Pods-CocoaPodSample.modulemap */,
-				40F49EAD288B128BAEFE9D0F88696868 /* Pods-CocoaPodSample-acknowledgements.markdown */,
-				67060D3B8ADE896C0D19497D824935A2 /* Pods-CocoaPodSample-acknowledgements.plist */,
-				59B50B5FF5FDEAA3D0A50F3023D8208C /* Pods-CocoaPodSample-dummy.m */,
-				0B05BB0DBE41C757773FE9ABF5EFE737 /* Pods-CocoaPodSample-frameworks.sh */,
-				08CE3788E94C936664C8E43EB6D9FC3F /* Pods-CocoaPodSample-Info.plist */,
-				03544F747EBA88444B5A6BF53D3B6866 /* Pods-CocoaPodSample-resources.sh */,
-				04D431CA4445202E8CD3A80276C94667 /* Pods-CocoaPodSample-umbrella.h */,
-				2DFBF8979463C22459FE0E6124E26B17 /* Pods-CocoaPodSample.debug.xcconfig */,
-				BA4790B99BC441D3AE070342B86AD16F /* Pods-CocoaPodSample.release.xcconfig */,
+				5BD75900CFF0DB203982DAB87819489D /* Pods-CocoaPodSample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		31E3FF2CB8561DEF5EE1AA650921C0ED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				54BCE53379B65D64FB5D211314CDCC3C /* Frameworks */,
+				C72BD8866CBB960B89F78471921026C3 /* Resources */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		4158DA018221CB11DB70D5ED191F89C9 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				10418E7F9FF9A184B4886F1B66BE51DF /* Frameworks */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		54BCE53379B65D64FB5D211314CDCC3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B643E9983270542B58B651E1BA70B9D /* ZendeskSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BD75900CFF0DB203982DAB87819489D /* Pods-CocoaPodSample */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BC249B6F7E0601A2002547C812710 /* Pods-CocoaPodSample.modulemap */,
+				857DA968C7008CF5B8B101B523365727 /* Pods-CocoaPodSample-acknowledgements.markdown */,
+				B76A857F69391CE5FEC1D9AA7EE3061A /* Pods-CocoaPodSample-acknowledgements.plist */,
+				4C0E73B7552DB9A9CC7D6DC5FC3D6916 /* Pods-CocoaPodSample-dummy.m */,
+				2917D11DA5B6829E807B3EFEA34ACDA5 /* Pods-CocoaPodSample-frameworks.sh */,
+				724AFED5F0E52EF643E65477331BE2F0 /* Pods-CocoaPodSample-Info.plist */,
+				39413756AF3FDA173D78A24C571E821F /* Pods-CocoaPodSample-resources.sh */,
+				7F1C2C6FA707810E154C79BB4E9F522F /* Pods-CocoaPodSample-umbrella.h */,
+				FB07EF27BA49B07CE4A9BAACC7CB00F8 /* Pods-CocoaPodSample.debug.xcconfig */,
+				7A0CE766497A8AE4046BA1DEA255B181 /* Pods-CocoaPodSample.release.xcconfig */,
 			);
 			name = "Pods-CocoaPodSample";
 			path = "Target Support Files/Pods-CocoaPodSample";
 			sourceTree = "<group>";
 		};
-		1D34879A704A9E98125401ACCE7A8D51 /* Frameworks */ = {
+		5D5FACF43AF945DFB76E757419B313FD /* ZendeskSDK */ = {
 			isa = PBXGroup;
 			children = (
-				7E68A882BDB1B2A9C65FFBFDEECD7743 /* ZendeskCoreSDK.framework */,
+				76AFE94DEBB9BB7AD1D1F5F35A07F5C7 /* Core */,
+				4158DA018221CB11DB70D5ED191F89C9 /* Providers */,
+				A2446054A4438BD842A8D367EDDF2800 /* Support Files */,
+				31E3FF2CB8561DEF5EE1AA650921C0ED /* UI */,
 			);
-			name = Frameworks;
+			path = ZendeskSDK;
 			sourceTree = "<group>";
 		};
-		3773D1130D3687F95180899FF500D4F3 /* Targets Support Files */ = {
+		76AFE94DEBB9BB7AD1D1F5F35A07F5C7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1D167882E55424ACDA8DFF5613CE15E0 /* Pods-CocoaPodSample */,
+				B5EAE877712AA9543F946BAF5BAB4866 /* Frameworks */,
 			);
-			name = "Targets Support Files";
+			name = Core;
 			sourceTree = "<group>";
 		};
-		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+		7B4A72FCFFE0F9A60A8EA4ECDA01FDEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+				5D5FACF43AF945DFB76E757419B313FD /* ZendeskSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		941811365468E3C8745E5128D1A22746 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23845141A337D448E423ED9CBDD1FED6 /* Pods_CocoaPodSample.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4EDDC75972EE0FDC0D8640A89832A8A4 /* Frameworks */ = {
+		A2446054A4438BD842A8D367EDDF2800 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				14124D3F7E1B479D729629E3629E1F02 /* ZendeskProviderSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5E00DF6364C03F083F9DA0E8480D1EE7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				625318BADE2F56EC31A9E19806D5E45F /* ZendeskSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9B7A8BB142687F0B0EA69B9A18FA998F /* Pods */,
-				A24E69C2454C8120FAB1C0BE618BD56F /* Products */,
-				3773D1130D3687F95180899FF500D4F3 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		97A6369C22BE3760E6961840E1CBD111 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				62147B24FF8B7A9D8ED3DFF6D4D3408A /* ZendeskSDK.xcconfig */,
+				E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ZendeskSDK";
 			sourceTree = "<group>";
 		};
-		99E88695EA59F01516F56E9419AB9504 /* ZendeskSDK */ = {
+		B5EAE877712AA9543F946BAF5BAB4866 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				185BE00DCA5AA512C69513238111F2B2 /* Core */,
-				FC4DAE40CE4B83B3707CB5E79B020830 /* Providers */,
-				97A6369C22BE3760E6961840E1CBD111 /* Support Files */,
-				9D3F1BB424EFC5274F0BE7E8A8EAD29E /* UI */,
-			);
-			name = ZendeskSDK;
-			path = ZendeskSDK;
-			sourceTree = "<group>";
-		};
-		9B7A8BB142687F0B0EA69B9A18FA998F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				99E88695EA59F01516F56E9419AB9504 /* ZendeskSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9D3F1BB424EFC5274F0BE7E8A8EAD29E /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				5E00DF6364C03F083F9DA0E8480D1EE7 /* Frameworks */,
-				AD6181A554FA188592656888187FAFFC /* Resources */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		A24E69C2454C8120FAB1C0BE618BD56F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0F5B4F9E5B7670797B9EDD47CF0C901D /* Pods_CocoaPodSample.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AD6181A554FA188592656888187FAFFC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				43EE3A0B52924B1886B9670A1932A080 /* ZendeskSDKStrings.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				44D5347904CF754D6785B84253F2574A /* iOS */,
+				C67F6A6FD6104744E775B46514F5E747 /* ZendeskCoreSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FC4DAE40CE4B83B3707CB5E79B020830 /* Providers */ = {
+		C72BD8866CBB960B89F78471921026C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4EDDC75972EE0FDC0D8640A89832A8A4 /* Frameworks */,
+				7E8598034889E9F54FA86318DA5B9945 /* ZendeskSDKStrings.bundle */,
 			);
-			name = Providers;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				7B4A72FCFFE0F9A60A8EA4ECDA01FDEC /* Pods */,
+				941811365468E3C8745E5128D1A22746 /* Products */,
+				31A071B9538EEC91431296B6077B75C5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CBB0066BF25DA8DC7EFCFF7E8C097AAA /* Headers */ = {
+		CBB4B6BA6F0904B1ED6AC96FF0FC52A3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				135C37EE6FF998B186CDFC7008C894A0 /* Pods-CocoaPodSample-umbrella.h in Headers */,
+				0910389B34BC69DCEE7D122DA49A9AB7 /* Pods-CocoaPodSample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EC294487615B952CE08656A3CF92A2F1 /* Pods-CocoaPodSample */ = {
+		588FF520397A5A61C6798110F2823A21 /* Pods-CocoaPodSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6376EEBE51C867331F60BD83D8BCD51 /* Build configuration list for PBXNativeTarget "Pods-CocoaPodSample" */;
+			buildConfigurationList = 83EBDDF9B3F2CBC9A6EE63C64BB6D0E0 /* Build configuration list for PBXNativeTarget "Pods-CocoaPodSample" */;
 			buildPhases = (
-				CBB0066BF25DA8DC7EFCFF7E8C097AAA /* Headers */,
-				7E454DD6B123E2E0FD1BF72ADB39562A /* Sources */,
-				5814DB4D4672606A67BF61188D4A6CAE /* Frameworks */,
-				F3763D7E962357999053168DB3721606 /* Resources */,
+				CBB4B6BA6F0904B1ED6AC96FF0FC52A3 /* Headers */,
+				F9C412E244ADECC8AF4ECE59A7128293 /* Sources */,
+				38D08A5787EFE67F42C342F458C6E4A3 /* Frameworks */,
+				8F01253BB850B45089D286E722E0C833 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				63A44C46E85B52954A886E0ECE091FA3 /* PBXTargetDependency */,
+				F4B50E77CBFDCDCACD366E6198D2DF84 /* PBXTargetDependency */,
 			);
 			name = "Pods-CocoaPodSample";
 			productName = "Pods-CocoaPodSample";
-			productReference = 0F5B4F9E5B7670797B9EDD47CF0C901D /* Pods_CocoaPodSample.framework */;
+			productReference = 23845141A337D448E423ED9CBDD1FED6 /* Pods_CocoaPodSample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A24E69C2454C8120FAB1C0BE618BD56F /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 941811365468E3C8745E5128D1A22746 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC294487615B952CE08656A3CF92A2F1 /* Pods-CocoaPodSample */,
-				30B8658F78264EA476249E8D76A5296F /* ZendeskSDK */,
+				588FF520397A5A61C6798110F2823A21 /* Pods-CocoaPodSample */,
+				9C9C012E1364FDDA0FFEF91F70E052D2 /* ZendeskSDK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F3763D7E962357999053168DB3721606 /* Resources */ = {
+		8F01253BB850B45089D286E722E0C833 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,30 +286,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7E454DD6B123E2E0FD1BF72ADB39562A /* Sources */ = {
+		F9C412E244ADECC8AF4ECE59A7128293 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				397369325ED480A3B07EA0546C09C4F9 /* Pods-CocoaPodSample-dummy.m in Sources */,
+				32E7EA3FD8751ED2998F855DE7BC1BCB /* Pods-CocoaPodSample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		63A44C46E85B52954A886E0ECE091FA3 /* PBXTargetDependency */ = {
+		F4B50E77CBFDCDCACD366E6198D2DF84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ZendeskSDK;
-			target = 30B8658F78264EA476249E8D76A5296F /* ZendeskSDK */;
-			targetProxy = 5028FCE450C33C402E243DDE8A4E9581 /* PBXContainerItemProxy */;
+			target = 9C9C012E1364FDDA0FFEF91F70E052D2 /* ZendeskSDK */;
+			targetProxy = 684DB4E533056255D941348050DEFC33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08B0394D5F17A9F046DC0719C25BA452 /* Debug */ = {
+		07488D4657FB0A78086563621D425F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -369,9 +371,25 @@
 			};
 			name = Debug;
 		};
-		092E4A51E0E0C14786982B79513A1C92 /* Debug */ = {
+		2B925F013435D2156BCB9182B669F423 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DFBF8979463C22459FE0E6124E26B17 /* Pods-CocoaPodSample.debug.xcconfig */;
+			baseConfigurationReference = E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74CE8457C7E17FA1A481E528D0D08317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB07EF27BA49B07CE4A9BAACC7CB00F8 /* Pods-CocoaPodSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -406,81 +424,11 @@
 			};
 			name = Debug;
 		};
-		5C3A7249808D4A8EAB8DB3D2743C8B7D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA4790B99BC441D3AE070342B86AD16F /* Pods-CocoaPodSample.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A94830CC65BE3FBF2FE1AD9399E97838 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62147B24FF8B7A9D8ED3DFF6D4D3408A /* ZendeskSDK.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BD761732BE58C69C8C38F7FAF55A0EEF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62147B24FF8B7A9D8ED3DFF6D4D3408A /* ZendeskSDK.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E82C56363775B4EF468FF2AD9A2F5414 /* Release */ = {
+		A1962E6FF39BBAC201A2E5DDF99557DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -537,37 +485,92 @@
 			};
 			name = Release;
 		};
+		CFB5E15824E34F77DBF490E37A9ABC57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0CE766497A8AE4046BA1DEA255B181 /* Pods-CocoaPodSample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EF4D0DD125A356C8C15E76086ACB3359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		355DF63D7E19846FB7106D0BB845A97E /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08B0394D5F17A9F046DC0719C25BA452 /* Debug */,
-				E82C56363775B4EF468FF2AD9A2F5414 /* Release */,
+				2B925F013435D2156BCB9182B669F423 /* Debug */,
+				EF4D0DD125A356C8C15E76086ACB3359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6376EEBE51C867331F60BD83D8BCD51 /* Build configuration list for PBXNativeTarget "Pods-CocoaPodSample" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				092E4A51E0E0C14786982B79513A1C92 /* Debug */,
-				5C3A7249808D4A8EAB8DB3D2743C8B7D /* Release */,
+				07488D4657FB0A78086563621D425F8A /* Debug */,
+				A1962E6FF39BBAC201A2E5DDF99557DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA6FCFF347A360D886251C6FF9CA2E9C /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */ = {
+		83EBDDF9B3F2CBC9A6EE63C64BB6D0E0 /* Build configuration list for PBXNativeTarget "Pods-CocoaPodSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A94830CC65BE3FBF2FE1AD9399E97838 /* Debug */,
-				BD761732BE58C69C8C38F7FAF55A0EEF /* Release */,
+				74CE8457C7E17FA1A481E528D0D08317 /* Debug */,
+				CFB5E15824E34F77DBF490E37A9ABC57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

@@ -16,8 +16,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class ZDKZendesk;
-
 /**
  *  ZDKProvider class
  *
