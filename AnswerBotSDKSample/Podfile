@@ -6,6 +6,6 @@ target 'AnswerBotSample' do
   use_frameworks!
 
   # Pods for AnswerBotSample
-	pod 'AnswerBotSDK', '1.0.0-EAP1' 
+	pod 'AnswerBotSDK', '1.0.0' 
 
 end
