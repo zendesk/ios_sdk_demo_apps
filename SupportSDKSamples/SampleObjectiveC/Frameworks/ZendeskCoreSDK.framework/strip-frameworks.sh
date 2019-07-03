@@ -57,10 +57,20 @@ for file in $(find . -type f -perm +111); do
   if ! [[ "$(file "$file")" == *"dynamically linked shared library"* ]]; then
     continue
   fi
-  # Skip non Zendesk libraries
-  if ! [[ "$(basename $file)" == *"Zendesk"* ]]; then
-    continue
+
+  framework_plist_location="./$(basename "$file").framework/Info.plist"
+
+  framework_bundle_id=$(plutil -extract CFBundleIdentifier xml1 -o - ${framework_plist_location})
+
+  # case insensitive grep for "com.zendesk"
+  if echo "${framework_bundle_id}" | grep -i "com.zendesk"; then
+	echo "Continuing for $(basename "$file")"
+  else
+    # skipping non zendesk frameworks
+	echo "Exiting for $(basename "$file")"
+	continue
   fi
+
   # Get architectures for current file
   archs="$(lipo -info "${file}" | rev | cut -d ':' -f1 | rev)"
   stripped=""

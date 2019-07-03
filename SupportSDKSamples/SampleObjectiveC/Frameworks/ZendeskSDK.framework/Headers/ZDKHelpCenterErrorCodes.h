@@ -21,22 +21,22 @@
  *  Help Center error codes.
  */
 typedef NS_ENUM(NSUInteger, ZDKHelpCenterError) {
-    
+
     /**
      *  Category ids were not found in Help Center.
      */
     ZDKHelpCenterErrorInvalidCategoryIds = 100,
-    
+
     /**
      *  Section ids were not found in Help Center.
      */
     ZDKHelpCenterErrorInvalidSectionIds,
-    
+
     /**
      *  No articles were found with the specified labels.
      */
     ZDKHelpCenterErrorNoArticlesForLabels,
-    
+
     /**
      *  Help Center has no content.
      */

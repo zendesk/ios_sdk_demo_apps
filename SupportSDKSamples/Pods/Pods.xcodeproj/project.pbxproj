@@ -7,22 +7,21 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		9C9C012E1364FDDA0FFEF91F70E052D2 /* ZendeskSDK */ = {
+		D2089324C361F82AE50C11B84ADC4E4F /* ZendeskSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 355DF63D7E19846FB7106D0BB845A97E /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */;
+			buildConfigurationList = 4C77BDDEFF1EF2B0CBF57BD0BCF989C8 /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */;
 			buildPhases = (
 			);
 			dependencies = (
 			);
 			name = ZendeskSDK;
-			productName = ZendeskSDK;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0910389B34BC69DCEE7D122DA49A9AB7 /* Pods-CocoaPodSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F1C2C6FA707810E154C79BB4E9F522F /* Pods-CocoaPodSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32E7EA3FD8751ED2998F855DE7BC1BCB /* Pods-CocoaPodSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E73B7552DB9A9CC7D6DC5FC3D6916 /* Pods-CocoaPodSample-dummy.m */; };
-		45CB4EDB9BC0283BF6C52625AE1E4C8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		0910389B34BC69DCEE7D122DA49A9AB7 /* Pods-CocoaPodSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE675515F0D0E4E26D5536D4FF053E30 /* Pods-CocoaPodSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32E7EA3FD8751ED2998F855DE7BC1BCB /* Pods-CocoaPodSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B56C5359EFB5E53F9971FFED3CBF911 /* Pods-CocoaPodSample-dummy.m */; };
+		749C9729F287DDA0DB815AFBE95D2D61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,30 +29,29 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9C9C012E1364FDDA0FFEF91F70E052D2;
+			remoteGlobalIDString = D2089324C361F82AE50C11B84ADC4E4F;
 			remoteInfo = ZendeskSDK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23845141A337D448E423ED9CBDD1FED6 /* Pods_CocoaPodSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaPodSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2917D11DA5B6829E807B3EFEA34ACDA5 /* Pods-CocoaPodSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CocoaPodSample-frameworks.sh"; sourceTree = "<group>"; };
-		39413756AF3FDA173D78A24C571E821F /* Pods-CocoaPodSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CocoaPodSample-resources.sh"; sourceTree = "<group>"; };
-		4C0E73B7552DB9A9CC7D6DC5FC3D6916 /* Pods-CocoaPodSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CocoaPodSample-dummy.m"; sourceTree = "<group>"; };
-		5B643E9983270542B58B651E1BA70B9D /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskSDK.framework; path = ZendeskSDK/5.0/ZendeskSDK.framework; sourceTree = "<group>"; };
-		724AFED5F0E52EF643E65477331BE2F0 /* Pods-CocoaPodSample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-Info.plist"; sourceTree = "<group>"; };
-		7A0CE766497A8AE4046BA1DEA255B181 /* Pods-CocoaPodSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.release.xcconfig"; sourceTree = "<group>"; };
-		7E8598034889E9F54FA86318DA5B9945 /* ZendeskSDKStrings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ZendeskSDKStrings.bundle; path = ZendeskSDK/5.0/ZendeskSDKStrings.bundle; sourceTree = "<group>"; };
-		7F1C2C6FA707810E154C79BB4E9F522F /* Pods-CocoaPodSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CocoaPodSample-umbrella.h"; sourceTree = "<group>"; };
-		857DA968C7008CF5B8B101B523365727 /* Pods-CocoaPodSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CocoaPodSample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8D6BC249B6F7E0601A2002547C812710 /* Pods-CocoaPodSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CocoaPodSample.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B76A857F69391CE5FEC1D9AA7EE3061A /* Pods-CocoaPodSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-acknowledgements.plist"; sourceTree = "<group>"; };
-		C67F6A6FD6104744E775B46514F5E747 /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskCoreSDK.framework; path = ZendeskSDK/5.0/ZendeskCoreSDK.framework; sourceTree = "<group>"; };
-		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DC1E0580DB6BC430C55EC15F58C8C198 /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskProviderSDK.framework; path = ZendeskSDK/5.0/ZendeskProviderSDK.framework; sourceTree = "<group>"; };
-		E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZendeskSDK.xcconfig; sourceTree = "<group>"; };
-		FB07EF27BA49B07CE4A9BAACC7CB00F8 /* Pods-CocoaPodSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.debug.xcconfig"; sourceTree = "<group>"; };
+		0E6846B063F32B66599F80F3469CED28 /* Pods-CocoaPodSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CocoaPodSample-frameworks.sh"; sourceTree = "<group>"; };
+		108D573C0A042ABAC768AE4474D1E7EF /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskSDK.framework; path = ZendeskSDK/5.0.1/ZendeskSDK.framework; sourceTree = "<group>"; };
+		1C95164819FDEEF1F5E70562DCDFD8FB /* Pods-CocoaPodSample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-Info.plist"; sourceTree = "<group>"; };
+		23845141A337D448E423ED9CBDD1FED6 /* Pods_CocoaPodSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CocoaPodSample.framework; path = "Pods-CocoaPodSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		252D655BB38B7C581847F29B2C61C644 /* Pods-CocoaPodSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.release.xcconfig"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		39F8A7D1D1E59EF29901DBC63DCA9EB1 /* Pods-CocoaPodSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CocoaPodSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		57EBC73EB42F8B1699FE3035CC17278D /* Pods-CocoaPodSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CocoaPodSample.modulemap"; sourceTree = "<group>"; };
+		7454E2FC48C72C8773D959B57C869B01 /* Pods-CocoaPodSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CocoaPodSample.debug.xcconfig"; sourceTree = "<group>"; };
+		7A816131BC92D920141A2DC43F5E1E86 /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskCoreSDK.framework; path = ZendeskSDK/5.0.1/ZendeskCoreSDK.framework; sourceTree = "<group>"; };
+		7B56C5359EFB5E53F9971FFED3CBF911 /* Pods-CocoaPodSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CocoaPodSample-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A02245A19F2D45723E0119EF0CDF744B /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskProviderSDK.framework; path = ZendeskSDK/5.0.1/ZendeskProviderSDK.framework; sourceTree = "<group>"; };
+		B6E8A5DB10020A4D4382028699426EEA /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonUISDK.framework; path = ZendeskSDK/5.0.1/CommonUISDK.framework; sourceTree = "<group>"; };
+		EE613DF1DD3CF00748C5A9B6951CD557 /* Pods-CocoaPodSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CocoaPodSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FAA1A83D36BC62D0111E0E604CE68C1F /* ZendeskSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZendeskSDK.xcconfig; sourceTree = "<group>"; };
+		FE675515F0D0E4E26D5536D4FF053E30 /* Pods-CocoaPodSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CocoaPodSample-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,97 +59,97 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45CB4EDB9BC0283BF6C52625AE1E4C8A /* Foundation.framework in Frameworks */,
+				749C9729F287DDA0DB815AFBE95D2D61 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10418E7F9FF9A184B4886F1B66BE51DF /* Frameworks */ = {
+		0E54835E5A1A4515AC2EDABA2D647244 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DC1E0580DB6BC430C55EC15F58C8C198 /* ZendeskProviderSDK.framework */,
+				B6E8A5DB10020A4D4382028699426EEA /* CommonUISDK.framework */,
+				108D573C0A042ABAC768AE4474D1E7EF /* ZendeskSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		31A071B9538EEC91431296B6077B75C5 /* Targets Support Files */ = {
+		12255A066F40F09968EFBED1C825AF1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5BD75900CFF0DB203982DAB87819489D /* Pods-CocoaPodSample */,
+				7A816131BC92D920141A2DC43F5E1E86 /* ZendeskCoreSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3781D3A8A454111821FA52949983CBCF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63E83F727142A3DA0F17F8E34F3B1E89 /* Pods-CocoaPodSample */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		31E3FF2CB8561DEF5EE1AA650921C0ED /* UI */ = {
+		46F60A1A1FEDFBCC1FBF8954B4EEA4D2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				54BCE53379B65D64FB5D211314CDCC3C /* Frameworks */,
-				C72BD8866CBB960B89F78471921026C3 /* Resources */,
+				12255A066F40F09968EFBED1C825AF1C /* Frameworks */,
 			);
-			name = UI;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		4158DA018221CB11DB70D5ED191F89C9 /* Providers */ = {
+		4BA4FE63353A006EF88EF11D85C9339F /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				10418E7F9FF9A184B4886F1B66BE51DF /* Frameworks */,
+				619C38219ABB0A3F55122C20AFFDBC0D /* Frameworks */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
 		};
-		54BCE53379B65D64FB5D211314CDCC3C /* Frameworks */ = {
+		619C38219ABB0A3F55122C20AFFDBC0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B643E9983270542B58B651E1BA70B9D /* ZendeskSDK.framework */,
+				A02245A19F2D45723E0119EF0CDF744B /* ZendeskProviderSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5BD75900CFF0DB203982DAB87819489D /* Pods-CocoaPodSample */ = {
+		63E83F727142A3DA0F17F8E34F3B1E89 /* Pods-CocoaPodSample */ = {
 			isa = PBXGroup;
 			children = (
-				8D6BC249B6F7E0601A2002547C812710 /* Pods-CocoaPodSample.modulemap */,
-				857DA968C7008CF5B8B101B523365727 /* Pods-CocoaPodSample-acknowledgements.markdown */,
-				B76A857F69391CE5FEC1D9AA7EE3061A /* Pods-CocoaPodSample-acknowledgements.plist */,
-				4C0E73B7552DB9A9CC7D6DC5FC3D6916 /* Pods-CocoaPodSample-dummy.m */,
-				2917D11DA5B6829E807B3EFEA34ACDA5 /* Pods-CocoaPodSample-frameworks.sh */,
-				724AFED5F0E52EF643E65477331BE2F0 /* Pods-CocoaPodSample-Info.plist */,
-				39413756AF3FDA173D78A24C571E821F /* Pods-CocoaPodSample-resources.sh */,
-				7F1C2C6FA707810E154C79BB4E9F522F /* Pods-CocoaPodSample-umbrella.h */,
-				FB07EF27BA49B07CE4A9BAACC7CB00F8 /* Pods-CocoaPodSample.debug.xcconfig */,
-				7A0CE766497A8AE4046BA1DEA255B181 /* Pods-CocoaPodSample.release.xcconfig */,
+				57EBC73EB42F8B1699FE3035CC17278D /* Pods-CocoaPodSample.modulemap */,
+				EE613DF1DD3CF00748C5A9B6951CD557 /* Pods-CocoaPodSample-acknowledgements.markdown */,
+				39F8A7D1D1E59EF29901DBC63DCA9EB1 /* Pods-CocoaPodSample-acknowledgements.plist */,
+				7B56C5359EFB5E53F9971FFED3CBF911 /* Pods-CocoaPodSample-dummy.m */,
+				0E6846B063F32B66599F80F3469CED28 /* Pods-CocoaPodSample-frameworks.sh */,
+				1C95164819FDEEF1F5E70562DCDFD8FB /* Pods-CocoaPodSample-Info.plist */,
+				FE675515F0D0E4E26D5536D4FF053E30 /* Pods-CocoaPodSample-umbrella.h */,
+				7454E2FC48C72C8773D959B57C869B01 /* Pods-CocoaPodSample.debug.xcconfig */,
+				252D655BB38B7C581847F29B2C61C644 /* Pods-CocoaPodSample.release.xcconfig */,
 			);
 			name = "Pods-CocoaPodSample";
 			path = "Target Support Files/Pods-CocoaPodSample";
 			sourceTree = "<group>";
 		};
-		5D5FACF43AF945DFB76E757419B313FD /* ZendeskSDK */ = {
-			isa = PBXGroup;
-			children = (
-				76AFE94DEBB9BB7AD1D1F5F35A07F5C7 /* Core */,
-				4158DA018221CB11DB70D5ED191F89C9 /* Providers */,
-				A2446054A4438BD842A8D367EDDF2800 /* Support Files */,
-				31E3FF2CB8561DEF5EE1AA650921C0ED /* UI */,
-			);
-			path = ZendeskSDK;
-			sourceTree = "<group>";
-		};
-		76AFE94DEBB9BB7AD1D1F5F35A07F5C7 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				B5EAE877712AA9543F946BAF5BAB4866 /* Frameworks */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
 		7B4A72FCFFE0F9A60A8EA4ECDA01FDEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D5FACF43AF945DFB76E757419B313FD /* ZendeskSDK */,
+				84ACAD0F1AAE90ECF3D8FFFC8B3852F0 /* ZendeskSDK */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84ACAD0F1AAE90ECF3D8FFFC8B3852F0 /* ZendeskSDK */ = {
+			isa = PBXGroup;
+			children = (
+				46F60A1A1FEDFBCC1FBF8954B4EEA4D2 /* Core */,
+				4BA4FE63353A006EF88EF11D85C9339F /* Providers */,
+				ADD1FD4A61A8EF63BC5BAC36352D5D93 /* Support Files */,
+				D42AFDBF4164348655186AC08EC9FBB9 /* UI */,
+			);
+			name = ZendeskSDK;
+			path = ZendeskSDK;
 			sourceTree = "<group>";
 		};
 		941811365468E3C8745E5128D1A22746 /* Products */ = {
@@ -162,37 +160,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+		ADD1FD4A61A8EF63BC5BAC36352D5D93 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		A2446054A4438BD842A8D367EDDF2800 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */,
+				FAA1A83D36BC62D0111E0E604CE68C1F /* ZendeskSDK.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ZendeskSDK";
 			sourceTree = "<group>";
 		};
-		B5EAE877712AA9543F946BAF5BAB4866 /* Frameworks */ = {
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C67F6A6FD6104744E775B46514F5E747 /* ZendeskCoreSDK.framework */,
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C72BD8866CBB960B89F78471921026C3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7E8598034889E9F54FA86318DA5B9945 /* ZendeskSDKStrings.bundle */,
-			);
-			name = Resources;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -202,16 +184,24 @@
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				7B4A72FCFFE0F9A60A8EA4ECDA01FDEC /* Pods */,
 				941811365468E3C8745E5128D1A22746 /* Products */,
-				31A071B9538EEC91431296B6077B75C5 /* Targets Support Files */,
+				3781D3A8A454111821FA52949983CBCF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D42AFDBF4164348655186AC08EC9FBB9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0E54835E5A1A4515AC2EDABA2D647244 /* Frameworks */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +218,7 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		588FF520397A5A61C6798110F2823A21 /* Pods-CocoaPodSample */ = {
+		3362C5CAAB817A077AE1FB01E2079B2A /* Pods-CocoaPodSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83EBDDF9B3F2CBC9A6EE63C64BB6D0E0 /* Build configuration list for PBXNativeTarget "Pods-CocoaPodSample" */;
 			buildPhases = (
@@ -253,15 +243,14 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -269,8 +258,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				588FF520397A5A61C6798110F2823A21 /* Pods-CocoaPodSample */,
-				9C9C012E1364FDDA0FFEF91F70E052D2 /* ZendeskSDK */,
+				3362C5CAAB817A077AE1FB01E2079B2A /* Pods-CocoaPodSample */,
+				D2089324C361F82AE50C11B84ADC4E4F /* ZendeskSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -300,17 +289,184 @@
 		F4B50E77CBFDCDCACD366E6198D2DF84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ZendeskSDK;
-			target = 9C9C012E1364FDDA0FFEF91F70E052D2 /* ZendeskSDK */;
+			target = D2089324C361F82AE50C11B84ADC4E4F /* ZendeskSDK */;
 			targetProxy = 684DB4E533056255D941348050DEFC33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07488D4657FB0A78086563621D425F8A /* Debug */ = {
+		279DE14B065394CEBE40587E6D6995CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA1A83D36BC62D0111E0E604CE68C1F /* ZendeskSDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F97EE640BBC39823D6789F8DADD6710 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA1A83D36BC62D0111E0E604CE68C1F /* ZendeskSDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		584773FBD3B88BAE2369FE610EAAE4DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 252D655BB38B7C581847F29B2C61C644 /* Pods-CocoaPodSample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9F493EC4D5DBDA3905D6E5875CB27AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7454E2FC48C72C8773D959B57C869B01 /* Pods-CocoaPodSample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -358,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -366,197 +522,28 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		2B925F013435D2156BCB9182B669F423 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		74CE8457C7E17FA1A481E528D0D08317 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB07EF27BA49B07CE4A9BAACC7CB00F8 /* Pods-CocoaPodSample.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A1962E6FF39BBAC201A2E5DDF99557DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		CFB5E15824E34F77DBF490E37A9ABC57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A0CE766497A8AE4046BA1DEA255B181 /* Pods-CocoaPodSample.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EF4D0DD125A356C8C15E76086ACB3359 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E84779962932CB9BE66CEAF7D2C6C910 /* ZendeskSDK.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		355DF63D7E19846FB7106D0BB845A97E /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B925F013435D2156BCB9182B669F423 /* Debug */,
-				EF4D0DD125A356C8C15E76086ACB3359 /* Release */,
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+		4C77BDDEFF1EF2B0CBF57BD0BCF989C8 /* Build configuration list for PBXAggregateTarget "ZendeskSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07488D4657FB0A78086563621D425F8A /* Debug */,
-				A1962E6FF39BBAC201A2E5DDF99557DF /* Release */,
+				279DE14B065394CEBE40587E6D6995CE /* Debug */,
+				3F97EE640BBC39823D6789F8DADD6710 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -564,8 +551,8 @@
 		83EBDDF9B3F2CBC9A6EE63C64BB6D0E0 /* Build configuration list for PBXNativeTarget "Pods-CocoaPodSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74CE8457C7E17FA1A481E528D0D08317 /* Debug */,
-				CFB5E15824E34F77DBF490E37A9ABC57 /* Release */,
+				9F493EC4D5DBDA3905D6E5875CB27AEC /* Debug */,
+				584773FBD3B88BAE2369FE610EAAE4DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

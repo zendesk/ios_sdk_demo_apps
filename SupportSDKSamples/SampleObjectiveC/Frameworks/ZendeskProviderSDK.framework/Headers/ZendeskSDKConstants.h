@@ -14,9 +14,6 @@
  *
  */
 
-//! Project version number for ZendeskSDK.
-FOUNDATION_EXPORT double ZendeskSDKVersionNumber;
-
 //! Project version string for ZendeskSDK.
 FOUNDATION_EXPORT NSString * const ZendeskSDKVersionString;
 

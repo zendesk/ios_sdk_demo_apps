@@ -35,7 +35,7 @@ typedef void (^ZDKRequestCallback)(ZDKRequest *request, NSError *error);
  *  Block defined for callback to be used for handling async server responses for fetching a list of requests and agents that have publically
  *  commented on them
  *
- *  @param requestsWithCommentingAgnets an object containing an array of requests and users, can be nil on error.
+ *  @param requestsWithCommentingAgents an object containing an array of requests and users, can be nil on error.
  *  @param error NSError returned as a result of any errors taking place when the request is executed, can be nil on success
  */
 typedef void (^ZDKRequestListCallback)(ZDKRequestsWithCommentingAgents *requestsWithCommentingAgents ,NSError *error);

@@ -1,6 +1,6 @@
 framework module ZendeskCoreSDK {
     umbrella header "ZendeskCoreSDK.h"
-    
+
     export *
     module * { export * }
 }
