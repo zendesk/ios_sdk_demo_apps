@@ -16,6 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ZendeskProviderSDK/ZDKNavBarConversationsUIType.h>
+#import <UIKit/UIKit.h>
 
 /**
  Used to select where conversations nav bar button will be active.

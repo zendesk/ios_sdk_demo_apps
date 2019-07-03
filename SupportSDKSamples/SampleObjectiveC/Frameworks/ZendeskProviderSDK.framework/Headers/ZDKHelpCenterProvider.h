@@ -19,7 +19,7 @@
 #import "ZDKHelpCenterDeflection.h"
 #import "ZDKProvider.h"
 
-@class ZDKHelpCenterCategoryViewModel, ZDKHelpCenterSectionViewModel, ZDKHelpCenterOverviewContentModel, ZDKHelpCenterArticle, Zendesk;
+@class ZDKHelpCenterCategoryViewModel, ZDKHelpCenterSectionViewModel, ZDKHelpCenterOverviewContentModel, ZDKHelpCenterArticle, ZDKZendesk;
 
 
 /**
@@ -48,7 +48,7 @@ typedef void (^ZDKHelpCenterGenericCallback)(id response, NSError *error);
 
 @interface ZDKHelpCenterProvider : ZDKProvider
 
-- (instancetype)initWithZendesk:(Zendesk *)zendesk NS_UNAVAILABLE;
+- (instancetype)initWithZendesk:(ZDKZendesk *)zendesk NS_UNAVAILABLE;
 
 /**
  *  Fetches the data required to model the overview UI in Help Center.

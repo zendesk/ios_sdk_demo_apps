@@ -58,7 +58,7 @@ typedef NS_ENUM(NSUInteger, ZDKHelpCenterOverviewGroupType) {
 /**
  *  Hide the `Contact Support` button that is displayed upon an empty search in Help Center
  */
-@property (nonatomic, assign) BOOL hideContactSupport;
+@property (nonatomic, assign) BOOL hideContactSupport __deprecated_msg("Deprecated as of 2.3.0, use ZDKHelpCenterUiConfigration instead");
 
 /**
  *  A list of ids. Only show articles contained in the categorys/sections.

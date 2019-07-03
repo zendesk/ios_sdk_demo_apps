@@ -164,11 +164,11 @@ CG_INLINE CGRect
 CGRectMakeCenteredInScreen(CGFloat width, CGFloat height)
 {
     CGRect screen = [UIScreen mainScreen].bounds;
-    
+
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    
+
     CGRect rect;
-    
+
     if (orientation == UIInterfaceOrientationLandscapeLeft ||
         orientation == UIInterfaceOrientationLandscapeRight) {
         if([ZDKUIUtil isOlderVersion:@"8.0"])
@@ -179,7 +179,7 @@ CGRectMakeCenteredInScreen(CGFloat width, CGFloat height)
             rect = CGRectMake(CGRectGetMidX(screen) - (width * 0.5f),
                               CGRectGetMidY(screen) - (height * 0.5f), width, height);
         }
-        
+
     } else {
         rect = CGRectMake(CGRectGetMidX(screen) - (width * 0.5f),
                           CGRectGetMidY(screen) - (height * 0.5f), width, height);
@@ -233,16 +233,16 @@ CG_INLINE CGRect
 ZDKUIScreenFrame()
 {
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    
+
     CGFloat width = screenSize.width;
     CGFloat height = screenSize.height;
-    
+
     if (ZDKUIIsLandscape() && width < height) {
-        
+
         width = height;
         height = screenSize.width;
     }
-    
+
     return CGRectMake(0, 0, width, height);
 }
 
@@ -257,7 +257,7 @@ ZDKUIOriginInWindow(UIView *view)
     do {
         superView = superView.superview;
     } while (superView.superview);
-    
+
     CGPoint point = [view convertPoint:view.bounds.origin toView:superView];
     return point;
 }

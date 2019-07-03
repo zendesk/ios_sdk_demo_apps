@@ -91,7 +91,7 @@
  *
  *  @since 2.0.0.1
  *
- * @param dictionary the dictionary generated from the API json
+ * @return the dictionary generated from the API json
  */
 - (NSDictionary *)toJson;
 

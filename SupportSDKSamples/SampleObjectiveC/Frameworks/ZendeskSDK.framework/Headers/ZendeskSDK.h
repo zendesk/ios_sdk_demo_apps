@@ -32,8 +32,6 @@
 #import "ZDKSupportAttachmentCell.h"
 #import "ZDKToastViewWrapper.h"
 #import "ZDKUIUtil.h"
-#import "ZDKUiConfiguration.h"
-#import "ZendeskFabric.h"
 
 #if MODULES_DISABLED
 #import <ZendeskProviderSDK/ZendeskProviderSDK.h>
