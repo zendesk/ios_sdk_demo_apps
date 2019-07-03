@@ -114,7 +114,6 @@
 				43058C30215D060A005AD098 /* Resources */,
 				43058C5E215D0770005AD098 /* Embed Frameworks */,
 				E9FCCD97C9C640B2A22B566F /* [CP] Embed Pods Frameworks */,
-				EA1EEE7F151A532AB329589A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,50 +195,26 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks.sh",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/4.2/CommonUISDK.framework",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/4.2/AnswerBotProvidersSDK.framework",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/4.2/AnswerBotSDK.framework",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/4.2/ZendeskCoreSDK.framework",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/4.2/ZendeskProviderSDK.framework",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/4.2/ZendeskSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks.sh",
+				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.0.1/AnswerBotProvidersSDK.framework",
+				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.0.1/AnswerBotSDK.framework",
+				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskCoreSDK.framework",
+				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskProviderSDK.framework",
+				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskSDK.framework",
+				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/CommonUISDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonUISDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnswerBotProvidersSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnswerBotSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZendeskCoreSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZendeskProviderSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZendeskSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonUISDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA1EEE7F151A532AB329589A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-resources.sh",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/4.2/CommonUIStrings.bundle",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/4.2/AnswerBotProvidersStrings.bundle",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/4.2/AnswerBotStrings.bundle",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/4.2/ZendeskSDKStrings.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CommonUIStrings.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AnswerBotProvidersStrings.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AnswerBotStrings.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZendeskSDKStrings.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
