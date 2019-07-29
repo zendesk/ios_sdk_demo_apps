@@ -194,23 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks.sh",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.0.1/AnswerBotProvidersSDK.framework",
-				"${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.0.1/AnswerBotSDK.framework",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskCoreSDK.framework",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskProviderSDK.framework",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskSDK.framework",
-				"${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/CommonUISDK.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnswerBotProvidersSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnswerBotSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZendeskCoreSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZendeskProviderSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZendeskSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonUISDK.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
