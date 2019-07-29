@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZendeskSDK
 import ZendeskCoreSDK
 import ZendeskProviderSDK
 import AnswerBotProvidersSDK
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             zendeskUrl: "zendeskUrl")
         
         Support.initialize(withZendesk: Zendesk.instance)
+        SupportUI.initialize(withZendesk: Zendesk.instance)
         // Support is needed to hand off tickets from AB
         
         // Set an identity for authentication.
