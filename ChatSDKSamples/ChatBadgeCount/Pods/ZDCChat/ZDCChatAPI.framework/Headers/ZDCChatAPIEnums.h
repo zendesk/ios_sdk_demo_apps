@@ -92,6 +92,8 @@ extern NSString * const ZDC_CHAT_UI_DID_LOAD;
 
 extern NSString * const ZDC_CHAT_UI_DID_LAYOUT;
 
+extern NSString * const ZDC_CHAT_UI_WILL_APPEAR;
+
 extern NSString * const ZDC_CHAT_UI_WILL_UNLOAD;
 
 extern NSString * const ZDC_NOTIFICATION_FILE_UPLOAD;
