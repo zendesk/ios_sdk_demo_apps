@@ -30,6 +30,10 @@
  */
 @property (nonatomic, strong) ZDCChatUI *chatUI;
 
+@property (nonatomic, assign) BOOL showsConnectionBar;
+
+@property (nonatomic, assign) NSTimeInterval connectionBarAutocloseDuration;
+
 
 @end
 

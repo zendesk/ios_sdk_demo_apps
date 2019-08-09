@@ -52,7 +52,7 @@ PODS:
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
   - TOCropViewController (2.4.0)
-  - ZDCChat/API (1.4.0)
+  - ZDCChat/API (1.4.1)
 
 DEPENDENCIES:
   - DateToolsSwift
@@ -79,8 +79,8 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   TOCropViewController: 368d8df3ea43b62c3dc5a61f11b9048274d240bd
-  ZDCChat: 1def9764647bb81cf71aebd9df38aa4024c52d12
+  ZDCChat: ead4909dceb46e82f7dbedf3a1721332e6df078e
 
-PODFILE CHECKSUM: f192697e177e9ee58ee54629c6fd0c1fa4d25c52
+PODFILE CHECKSUM: 356388e8a9994a31cc0b433fb91a8866e8178ce5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5

@@ -184,7 +184,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-resources.sh",
 				"${PODS_ROOT}/ZDCChat/ZDCChatStrings.bundle",
 				"${PODS_ROOT}/ZDCChat/ZDCChat.bundle",
 			);
@@ -195,7 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatBadgeCount/Pods-ChatBadgeCount-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6202DB52DE67CA91A3D94C70 /* [CP] Check Pods Manifest.lock */ = {

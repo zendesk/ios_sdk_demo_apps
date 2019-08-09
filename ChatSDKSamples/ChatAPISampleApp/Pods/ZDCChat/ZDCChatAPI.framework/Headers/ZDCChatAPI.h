@@ -17,7 +17,7 @@
 #import <UIKit/UIKit.h>
 
 // Chat API SDK Version
-#define ZDC_CHAT_API_SDK_VERSION @"1.4.0"
+#define ZDC_CHAT_API_SDK_VERSION @"1.4.1"
 
 #import <SystemConfiguration/SystemConfiguration.h>
 
@@ -354,5 +354,18 @@
  * @param event the event string to be added
  */
 - (void)trackEvent:(NSString*)event;
+
+@end
+
+@interface ZDCChatAPI (Department)
+
+- (void)updateDepartment:(NSString *)department;
+
+@end
+
+@interface ZDCChatAPI (Observers)
+
+- (void)addObserver:(id)target forDepartmentEvents:(SEL)selector;
+- (void)removeObserverForDepartmentEvents:(id)target;
 
 @end

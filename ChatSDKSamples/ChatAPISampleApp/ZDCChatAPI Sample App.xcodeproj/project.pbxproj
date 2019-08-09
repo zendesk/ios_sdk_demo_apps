@@ -258,7 +258,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZDCChatAPI Sample App/Pods-ZDCChatAPI Sample App-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ZDCChatAPI Sample App/Pods-ZDCChatAPI Sample App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DKCamera/DKCamera.framework",
 				"${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/DKPhotoGallery/DKPhotoGallery.framework",
@@ -279,7 +279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZDCChatAPI Sample App/Pods-ZDCChatAPI Sample App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZDCChatAPI Sample App/Pods-ZDCChatAPI Sample App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5EE2C70312CC25FC7DB000A0 /* [CP] Check Pods Manifest.lock */ = {
