@@ -1,58 +1,63 @@
 PODS:
+  - CropViewController (2.5.1)
   - DateToolsSwift (4.0.0)
   - DKCamera (1.6.4)
-  - DKImagePickerController (4.1.2):
-    - DKImagePickerController/Camera (= 4.1.2)
-    - DKImagePickerController/Core (= 4.1.2)
-    - DKImagePickerController/ImageDataManager (= 4.1.2)
-    - DKImagePickerController/InlineCamera (= 4.1.2)
-    - DKImagePickerController/PhotoEditor (= 4.1.2)
-    - DKImagePickerController/PhotoGallery (= 4.1.2)
-    - DKImagePickerController/Resource (= 4.1.2)
-  - DKImagePickerController/Camera (4.1.2):
+  - DKImagePickerController (4.1.5):
+    - DKImagePickerController/Camera (= 4.1.5)
+    - DKImagePickerController/Core (= 4.1.5)
+    - DKImagePickerController/ImageDataManager (= 4.1.5)
+    - DKImagePickerController/InlineCamera (= 4.1.5)
+    - DKImagePickerController/PhotoEditor (= 4.1.5)
+    - DKImagePickerController/PhotoGallery (= 4.1.5)
+    - DKImagePickerController/Resource (= 4.1.5)
+  - DKImagePickerController/Camera (4.1.5):
     - DKCamera
     - DKImagePickerController/Core
-  - DKImagePickerController/Core (4.1.2):
+  - DKImagePickerController/Core (4.1.5):
     - DKImagePickerController/ImageDataManager
     - DKImagePickerController/Resource
-  - DKImagePickerController/ImageDataManager (4.1.2)
-  - DKImagePickerController/InlineCamera (4.1.2):
+  - DKImagePickerController/ImageDataManager (4.1.5)
+  - DKImagePickerController/InlineCamera (4.1.5):
     - DKCamera
     - DKImagePickerController/Core
-  - DKImagePickerController/PhotoEditor (4.1.2):
+  - DKImagePickerController/PhotoEditor (4.1.5):
+    - CropViewController (~> 2.4)
     - DKImagePickerController/Core
-    - TOCropViewController (~> 2.4)
-  - DKImagePickerController/PhotoGallery (4.1.2):
+  - DKImagePickerController/PhotoGallery (4.1.5):
     - DKImagePickerController/Core
     - DKPhotoGallery
-  - DKImagePickerController/Resource (4.1.2)
-  - DKPhotoGallery (0.0.11):
-    - DKPhotoGallery/Core (= 0.0.11)
-    - DKPhotoGallery/Model (= 0.0.11)
-    - DKPhotoGallery/Preview (= 0.0.11)
-    - DKPhotoGallery/Resource (= 0.0.11)
-    - SDWebImage/GIF
-  - DKPhotoGallery/Core (0.0.11):
+  - DKImagePickerController/Resource (4.1.5)
+  - DKPhotoGallery (0.0.13):
+    - DKPhotoGallery/Core (= 0.0.13)
+    - DKPhotoGallery/Model (= 0.0.13)
+    - DKPhotoGallery/Preview (= 0.0.13)
+    - DKPhotoGallery/Resource (= 0.0.13)
+    - SDWebImage
+    - SDWebImageFLPlugin
+  - DKPhotoGallery/Core (0.0.13):
     - DKPhotoGallery/Model
     - DKPhotoGallery/Preview
-    - SDWebImage/GIF
-  - DKPhotoGallery/Model (0.0.11):
-    - SDWebImage/GIF
-  - DKPhotoGallery/Preview (0.0.11):
+    - SDWebImage
+    - SDWebImageFLPlugin
+  - DKPhotoGallery/Model (0.0.13):
+    - SDWebImage
+    - SDWebImageFLPlugin
+  - DKPhotoGallery/Preview (0.0.13):
     - DKPhotoGallery/Model
     - DKPhotoGallery/Resource
-    - SDWebImage/GIF
-  - DKPhotoGallery/Resource (0.0.11):
-    - SDWebImage/GIF
+    - SDWebImage
+    - SDWebImageFLPlugin
+  - DKPhotoGallery/Resource (0.0.13):
+    - SDWebImage
+    - SDWebImageFLPlugin
   - FLAnimatedImage (1.0.12)
-  - SDWebImage (4.4.5):
-    - SDWebImage/Core (= 4.4.5)
-  - SDWebImage/Core (4.4.5)
-  - SDWebImage/GIF (4.4.5):
-    - FLAnimatedImage (~> 1.0)
-    - SDWebImage/Core
-  - TOCropViewController (2.4.0)
-  - ZDCChat/API (1.4.0)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
+  - SDWebImageFLPlugin (0.3.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.0)
+  - ZDCChat/API (1.4.1)
 
 DEPENDENCIES:
   - DateToolsSwift
@@ -62,25 +67,27 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CropViewController
     - DateToolsSwift
     - DKCamera
     - DKImagePickerController
     - DKPhotoGallery
     - FLAnimatedImage
     - SDWebImage
-    - TOCropViewController
+    - SDWebImageFLPlugin
     - ZDCChat
 
 SPEC CHECKSUMS:
+  CropViewController: 10ba7af75e302f2db7eb913f8aa1156f95cfe88e
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
   DKCamera: 61fa47629a39354e5111bca1fe96695de020dcb9
-  DKImagePickerController: 358ebcd5ce87db8863ec4b8dea651c67baca36e0
-  DKPhotoGallery: e5fc53899345c26af4374503dd249caabac7d26a
+  DKImagePickerController: 58d6c4b316ac9bfcf6f7259866ef36cc3d985352
+  DKPhotoGallery: ce7c1f629450dd07048aa30310319953785857a7
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
-  TOCropViewController: 368d8df3ea43b62c3dc5a61f11b9048274d240bd
-  ZDCChat: 1def9764647bb81cf71aebd9df38aa4024c52d12
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+  SDWebImageFLPlugin: cf3f4ae49f249dd785129346fd61bbc8433a88cf
+  ZDCChat: ead4909dceb46e82f7dbedf3a1721332e6df078e
 
-PODFILE CHECKSUM: f192697e177e9ee58ee54629c6fd0c1fa4d25c52
+PODFILE CHECKSUM: 356388e8a9994a31cc0b433fb91a8866e8178ce5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5

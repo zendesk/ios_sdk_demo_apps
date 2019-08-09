@@ -160,3 +160,9 @@ typedef NS_ENUM(NSUInteger, ZDCChatBackgroundAnchor) {
 
 @end
 
+@interface ZDCChatUI (NoAgents)
+
+- (void)showNoAgentsMessage;
+- (void)removeNoAgentsMessage;
+
+@end

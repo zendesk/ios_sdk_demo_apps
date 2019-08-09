@@ -79,4 +79,14 @@
  */
 @property (nonatomic, assign) NSTimeInterval reconnectionTimeout;
 
+/**
+ * If YES, connection bar will be shown to inform user when connection status change. Defaults to YES.
+ */
+@property (nonatomic, assign) BOOL showsConnectionBar;
+
+/**
+ * Defaults to 0 seconds. When 0 seconds is specified, connection bar will stay persistent. If non-zero interval is provided, the connection bar will auto-close after defined timeout
+ */
+@property (nonatomic, assign) NSTimeInterval connectionBarAutoCloseDuration;
+
 @end
