@@ -1,11 +1,11 @@
 PODS:
-  - ZendeskSDK (3.0.1):
-    - ZendeskSDK/Providers (= 3.0.1)
-    - ZendeskSDK/UI (= 3.0.1)
-  - ZendeskSDK/Core (3.0.1)
-  - ZendeskSDK/Providers (3.0.1):
+  - ZendeskSDK (3.0.2):
+    - ZendeskSDK/Providers (= 3.0.2)
+    - ZendeskSDK/UI (= 3.0.2)
+  - ZendeskSDK/Core (3.0.2)
+  - ZendeskSDK/Providers (3.0.2):
     - ZendeskSDK/Core
-  - ZendeskSDK/UI (3.0.1):
+  - ZendeskSDK/UI (3.0.2):
     - ZendeskSDK/Core
     - ZendeskSDK/Providers
 
@@ -17,7 +17,7 @@ SPEC REPOS:
     - ZendeskSDK
 
 SPEC CHECKSUMS:
-  ZendeskSDK: c2e49fd16a73e43e490f777cea67dd852b819ace
+  ZendeskSDK: f1c093a28ffcd0dc84b0cc1844801c7fc3a3dffd
 
 PODFILE CHECKSUM: 594a39e13b5a99f2e5885f2ec1b335968f9f8dbb
 

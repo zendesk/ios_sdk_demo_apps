@@ -1,7 +1,7 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_ENABLE_MODULES = YES
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ZendeskSDK
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 OTHER_LDFLAGS = $(inherited) -framework "MessageUI" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
 PODS_BUILD_DIR = ${BUILD_DIR}
