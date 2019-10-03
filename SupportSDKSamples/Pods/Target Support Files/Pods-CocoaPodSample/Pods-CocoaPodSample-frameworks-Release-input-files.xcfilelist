@@ -1,5 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-CocoaPodSample/Pods-CocoaPodSample-frameworks.sh
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskCoreSDK.framework
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskProviderSDK.framework
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskSDK.framework
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/CommonUISDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/ZendeskCoreSDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/ZendeskProviderSDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/ZendeskSDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/CommonUISDK.framework

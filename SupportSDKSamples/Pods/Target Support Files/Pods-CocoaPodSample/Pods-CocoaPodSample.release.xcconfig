@@ -1,6 +1,6 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_ENABLE_MODULES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 OTHER_LDFLAGS = $(inherited) -framework "CommonUISDK" -framework "MessageUI" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "ZendeskCoreSDK" -framework "ZendeskProviderSDK" -framework "ZendeskSDK"
