@@ -1,7 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks.sh
-${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.0.1/AnswerBotProvidersSDK.framework
-${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.0.1/AnswerBotSDK.framework
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskCoreSDK.framework
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskProviderSDK.framework
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/ZendeskSDK.framework
-${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.0.1/CommonUISDK.framework
+${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.1/AnswerBotProvidersSDK.framework
+${PODS_ROOT}/AnswerBotSDK/AnswerBotSDK/5.1/AnswerBotSDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/ZendeskCoreSDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/ZendeskProviderSDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/ZendeskSDK.framework
+${PODS_ROOT}/ZendeskSDK/ZendeskSDK/5.1/CommonUISDK.framework
