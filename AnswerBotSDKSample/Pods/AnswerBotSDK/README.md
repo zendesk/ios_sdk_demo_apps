@@ -27,7 +27,7 @@ pod 'AnswerBotSDK'
 
 ### Manual
 
-- Take the Answer Bot `.framework` and `.bundle` files that live in the `AnswerBotSDK/5.0.1` folder (depending on which version of Swift you are using).
+- Take the Answer Bot `.framework` and `.bundle` files that live in the `AnswerBotSDK/5.1` folder (depending on which version of Swift you are using).
 - Drag them into your project, and link them to your applications
 
 For more information see the [docs](##documentation)
