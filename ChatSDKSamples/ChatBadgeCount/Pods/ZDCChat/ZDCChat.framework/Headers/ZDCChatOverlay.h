@@ -74,6 +74,7 @@ typedef NS_ENUM(NSUInteger, ZDCOverlayAlignment) {
  */
 - (void) setEnabled:(BOOL)enabled;
 
+- (void) storePositionAndHide;
 
 @end
 

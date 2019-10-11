@@ -1,6 +1,6 @@
 :warning: *Use of this software is subject to important terms and conditions as set forth in the License file* :warning:
 
-# Zendesk Chat SDK for iOS 1.4.1
+# Zendesk Chat SDK for iOS 1.4.3
 
 Zendesk Chat SDK is a quick, convenient way to get live chat into your mobile apps. With just a few lines of code, you can provide your end users with an easy way to get in touch from any mobile app.
 
