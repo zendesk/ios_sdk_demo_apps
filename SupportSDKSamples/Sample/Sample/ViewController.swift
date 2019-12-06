@@ -29,13 +29,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
     var articleConfig: ArticleUiConfiguration {
         let articleConfig = ArticleUiConfiguration()
-        articleConfig.hideContactSupport = false
+        articleConfig.showContactOptions = true
         return articleConfig
     }
     
     var hcConfig: HelpCenterUiConfiguration {
         let hcConfig = HelpCenterUiConfiguration()
-        hcConfig.hideContactSupport = true
+        hcConfig.showContactOptions = true
         hcConfig.labels = ["label"] // only hc articles with the label 'label' will appear
         return hcConfig
     }
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         request.subject = subjectTextField.text ?? requestConfig.subject
         request.requestDescription = descriptionTextView.text ?? "Default: The problem of the ticket"
         request.tags = requestConfig.tags
-        request.customTicketFields = getCustomFields()
+        request.customFields = getCustomFields()
         
         uploadAttachment { (attachment) in
             if let attachment = attachment {
@@ -76,11 +76,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
-    private func getCustomFields() -> [ZDKCustomField] {
-        var customFields = [ZDKCustomField]()
-        
+    private func getCustomFields() -> [CustomField] {
+        var customFields = [CustomField]()
+
         if let customFieldValue = customFieldTextField.text, !customFieldValue.isEmpty {
-            customFields.append(ZDKCustomField(fieldId: NSNumber(value: 1), andValue: customFieldValue) )// get fieldId from Support Settings
+            let field = CustomField(fieldId: 1, value: customFieldValue)
+            customFields.append(field)
         }
         
         return customFields

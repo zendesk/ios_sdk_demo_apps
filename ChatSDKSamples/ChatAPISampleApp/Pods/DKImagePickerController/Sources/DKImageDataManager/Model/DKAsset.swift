@@ -11,15 +11,11 @@ import Photos
 public extension CGSize {
 	
     func toPixel() -> CGSize {
-		let scale = UIScreen.main.scale
+        let scale = UIScreen.main.scale
         
-        let screenHeight = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
-        if UIDevice.current.userInterfaceIdiom == .phone && screenHeight == 812.0 { // iPhoneX.
-            return CGSize(width: min(279, self.width * scale), height: min(279, self.height * scale))
-        } else {
-            return CGSize(width: self.width * scale, height: self.height * scale)
-        }
-	}
+//        let screenHeight = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+        return CGSize(width: self.width * scale, height: self.height * scale)
+    }
 }
 
 @objc
@@ -102,27 +98,27 @@ open class DKAsset: NSObject {
 public extension AVAsset {
 	
     @objc func calculateFileSize() -> Float {
-		if let URLAsset = self as? AVURLAsset {
-			var size: AnyObject?
-			try! (URLAsset.url as NSURL).getResourceValue(&size, forKey: URLResourceKey.fileSizeKey)
-			if let size = size as? NSNumber {
-				return size.floatValue
-			} else {
-				return 0
-			}
-		} else if let _ = self as? AVComposition {
-			var estimatedSize: Float = 0.0
-			var duration: Float = 0.0
-			for track in self.tracks {
-				let rate = track.estimatedDataRate / 8.0
-				let seconds = Float(CMTimeGetSeconds(track.timeRange.duration))
-				duration += seconds
-				estimatedSize += seconds * rate
-			}
-			return estimatedSize
-		} else {
-			return 0
-		}
-	}
+        if let URLAsset = self as? AVURLAsset {
+            var size: AnyObject?
+            try! (URLAsset.url as NSURL).getResourceValue(&size, forKey: URLResourceKey.fileSizeKey)
+            if let size = size as? NSNumber {
+                return size.floatValue
+            } else {
+                return 0
+            }
+        } else if let _ = self as? AVComposition {
+            var estimatedSize: Float = 0.0
+            var duration: Float = 0.0
+            for track in self.tracks {
+                let rate = track.estimatedDataRate / 8.0
+                let seconds = Float(CMTimeGetSeconds(track.timeRange.duration))
+                duration += seconds
+                estimatedSize += seconds * rate
+            }
+            return estimatedSize
+        } else {
+            return 0
+        }
+    }
     
 }

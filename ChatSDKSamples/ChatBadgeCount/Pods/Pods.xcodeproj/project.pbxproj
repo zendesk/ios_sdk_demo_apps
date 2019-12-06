@@ -15,7 +15,6 @@
 			dependencies = (
 			);
 			name = ZDCChat;
-			productName = ZDCChat;
 		};
 /* End PBXAggregateTarget section */
 
@@ -38,11 +37,11 @@
 		0D453AA1ABD6ABB7BD492D16D6B6B9F0 /* ZDCChat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZDCChat.xcconfig; sourceTree = "<group>"; };
 		1EC899B31F7ED73A03C649F91FC62315 /* ZDCChat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZDCChat.framework; sourceTree = "<group>"; };
 		45B5C80BC3154E9CE90E79F5063B3C25 /* ZDCChatStrings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = ZDCChatStrings.bundle; sourceTree = "<group>"; };
-		52B0D382EB2D9BD0E13432AC056D5938 /* libPods-ChatBadgeCount.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatBadgeCount.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B0D382EB2D9BD0E13432AC056D5938 /* libPods-ChatBadgeCount.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ChatBadgeCount.a"; path = "libPods-ChatBadgeCount.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		650387C543E9F2DC6ADAB2B43E1360E1 /* Pods-ChatBadgeCount-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatBadgeCount-dummy.m"; sourceTree = "<group>"; };
 		7E0ABC0939574CF80806527A45C73C98 /* Pods-ChatBadgeCount-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatBadgeCount-resources.sh"; sourceTree = "<group>"; };
 		9D2C8560BD5CC6B774C74AE98BD0423F /* Pods-ChatBadgeCount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatBadgeCount.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EFD354D920B7B09EEA2C2B97FFC13DD /* Pods-ChatBadgeCount-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatBadgeCount-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B95978F7C350C4FB6C0498F8E198EC5E /* Pods-ChatBadgeCount-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatBadgeCount-acknowledgements.plist"; sourceTree = "<group>"; };
 		BEF67941D9AAA66FCF9943A272386659 /* ZDCChatAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZDCChatAPI.framework; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 				83DBE16838D41EF407C46AB0E184F63A /* Support Files */,
 				DB4A123D5114DAB4FBF2E707725EB32A /* UI */,
 			);
+			name = ZDCChat;
 			path = ZDCChat;
 			sourceTree = "<group>";
 		};
@@ -239,7 +239,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 854E38EC7DD2295398E9E37C261E0185 /* Products */;
@@ -396,7 +395,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

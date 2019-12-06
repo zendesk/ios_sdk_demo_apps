@@ -45,7 +45,6 @@
  */
 @property (nonatomic, assign) CGFloat toastHeight;
 
-
 #pragma mark keyboard event handling
 
 
@@ -56,15 +55,19 @@
 - (void) registerForKeyboardNotifications;
 
 /**
- * Called when the keyboard was shown, invoke [super keyboardDidShow:] to
- * update the size of the contentView.
+ * Called when the keyboard will show, invoke [super keyboardWillShow:]
+ * @param aNotification the notification
+ */
+- (void) keyboardWillShow:(NSNotification*)aNotification;
+
+/**
+ * Called when the keyboard was shown, invoke [super keyboardDidShow:]
  * @param aNotification the notification
  */
 - (void) keyboardDidShow:(NSNotification*)aNotification;
 
 /**
- * Called when the keyboard is about to be hidden, invoke [super keyboardWillHide:] to
- * update the size of the contentView.
+ * Called when the keyboard is about to be hidden, invoke [super keyboardWillHide:]
  * @param aNotification the notification
  */
 - (void) keyboardWillHide:(NSNotification*)aNotification;
