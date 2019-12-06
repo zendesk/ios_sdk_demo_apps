@@ -1,35 +1,35 @@
 PODS:
-  - AnswerBotSDK (1.0.2):
-    - AnswerBotSDK/Providers (= 1.0.2)
-    - AnswerBotSDK/SDK (= 1.0.2)
-    - ZendeskSDK (= 3.0.2)
-  - AnswerBotSDK/Providers (1.0.2):
-    - ZendeskSDK (= 3.0.2)
-  - AnswerBotSDK/SDK (1.0.2):
+  - AnswerBotSDK (1.1.0):
+    - AnswerBotSDK/Providers (= 1.1.0)
+    - AnswerBotSDK/SDK (= 1.1.0)
+    - ZendeskSDK (= 4.0.0)
+  - AnswerBotSDK/Providers (1.1.0):
+    - ZendeskSDK (= 4.0.0)
+  - AnswerBotSDK/SDK (1.1.0):
     - AnswerBotSDK/Providers
-    - ZendeskSDK (= 3.0.2)
-  - ZendeskSDK (3.0.2):
-    - ZendeskSDK/Providers (= 3.0.2)
-    - ZendeskSDK/UI (= 3.0.2)
-  - ZendeskSDK/Core (3.0.2)
-  - ZendeskSDK/Providers (3.0.2):
+    - ZendeskSDK (= 4.0.0)
+  - ZendeskSDK (4.0.0):
+    - ZendeskSDK/Providers (= 4.0.0)
+    - ZendeskSDK/UI (= 4.0.0)
+  - ZendeskSDK/Core (4.0.0)
+  - ZendeskSDK/Providers (4.0.0):
     - ZendeskSDK/Core
-  - ZendeskSDK/UI (3.0.2):
+  - ZendeskSDK/UI (4.0.0):
     - ZendeskSDK/Core
     - ZendeskSDK/Providers
 
 DEPENDENCIES:
-  - AnswerBotSDK (= 1.0.2)
+  - AnswerBotSDK (= 1.1.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AnswerBotSDK
     - ZendeskSDK
 
 SPEC CHECKSUMS:
-  AnswerBotSDK: 7308bd7a8b275959f724a26afed425c6052cd498
-  ZendeskSDK: f1c093a28ffcd0dc84b0cc1844801c7fc3a3dffd
+  AnswerBotSDK: 9bb0d002c2881a7c367561ca734a2c583a43ce5c
+  ZendeskSDK: 99679d8420a6d862773e2ddef0ebcc51b282317d
 
-PODFILE CHECKSUM: 1250e3da7cb1c9111c5c1c1d98060c2f74d98a5d
+PODFILE CHECKSUM: 6bec28b3385a9274f24f764de48840ad74049891
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

@@ -53,7 +53,10 @@ internal protocol DKImagePickerControllerObserver {
 ////////////////////////////////////////////////////////////////////////
 
 @objc
-open class DKImagePickerController: UINavigationController, DKImageBaseManagerObserver {
+open class DKUINavigationController: UINavigationController {}
+
+@objc
+open class DKImagePickerController: DKUINavigationController, DKImageBaseManagerObserver {
     
     /// Use UIDelegate to Customize the picker UI.
     @objc public var UIDelegate: DKImagePickerControllerBaseUIDelegate! {
@@ -603,7 +606,10 @@ open class DKImagePickerController: UINavigationController, DKImageBaseManagerOb
             
             var assets: [DKAsset] = []
             for index in 0 ..< group.totalCount {
-                let asset = self.groupDataManager.fetchAsset(group, index: index)
+                guard let asset = self.groupDataManager.fetchAsset(group, index: index) else {
+                    assertionFailure("Expect asset")
+                    continue
+                }
                 assets.append(asset)
             }
             
@@ -615,9 +621,15 @@ open class DKImagePickerController: UINavigationController, DKImageBaseManagerOb
     }
     
     @objc open func deselect(asset: DKAsset) {
+        removeSelection(asset: asset)
+        
+        self.notify(with: #selector(DKImagePickerControllerObserver.imagePickerControllerDidDeselect(assets:)), object: [asset] as AnyObject)
+    }
+    
+    @objc open func removeSelection(asset: DKAsset) {
         if self.assets[asset.localIdentifier] == nil { return }
         
-        self.selectedAssetIdentifiers.remove(at: self.selectedAssetIdentifiers.index(of: asset.localIdentifier)!)
+        self.selectedAssetIdentifiers.remove(at: self.selectedAssetIdentifiers.firstIndex(of: asset.localIdentifier)!)
         self.assets[asset.localIdentifier] = nil
         self.clearSelectedAssetsCache()
         
@@ -625,8 +637,6 @@ open class DKImagePickerController: UINavigationController, DKImageBaseManagerOb
         
         let deselectAssets = [asset]
         self.UIDelegate?.imagePickerController(self, didDeselectAssets: deselectAssets)
-        
-        self.notify(with: #selector(DKImagePickerControllerObserver.imagePickerControllerDidDeselect(assets:)), object: deselectAssets as AnyObject)
     }
     
     @objc open func deselectAll() {
@@ -654,7 +664,7 @@ open class DKImagePickerController: UINavigationController, DKImageBaseManagerOb
     
     open func index(of asset: DKAsset) -> Int? {
         if self.contains(asset: asset) {
-            return self.selectedAssetIdentifiers.index(of: asset.localIdentifier)
+            return self.selectedAssetIdentifiers.firstIndex(of: asset.localIdentifier)
         } else {
             return nil
         }

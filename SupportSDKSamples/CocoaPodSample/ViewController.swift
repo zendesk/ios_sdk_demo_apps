@@ -62,13 +62,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: Request Creation
     
-    func buildCreateRequest(callback: @escaping (ZDKCreateRequest) -> Void) {
+     func buildCreateRequest(callback: @escaping (ZDKCreateRequest) -> Void) {
         let request = ZDKCreateRequest()
         request.subject = subjectTextField.text ?? requestConfig.subject
         request.requestDescription = descriptionTextView.text ?? "Default: The problem of the ticket"
         request.tags = requestConfig.tags
-        request.customTicketFields = getCustomFields()
-        
+        request.customFields = getCustomFields()
+
         uploadAttachment { (attachment) in
             if let attachment = attachment {
                 request.attachments.append(attachment)
@@ -76,16 +76,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             callback(request)
         }
     }
-    
-    private func getCustomFields() -> [ZDKCustomField] {
-        var customFields = [ZDKCustomField]()
-        
+
+    private func getCustomFields() -> [CustomField] {
+        var customFields = [CustomField]()
+
         if let customFieldValue = customFieldTextField.text, !customFieldValue.isEmpty {
-            customFields.append(ZDKCustomField(fieldId: NSNumber(value: 1), andValue: customFieldValue) )// get fieldId from Support Settings
+            let field = CustomField(fieldId: 1, value: customFieldValue)
+            customFields.append(field)
         }
-        
+
         return customFields
     }
+
     
     func uploadAttachment(callback: @escaping (ZDKUploadResponse?) -> Void) {
         let attachment = getImageDataFrom(view: attachmentImageView)

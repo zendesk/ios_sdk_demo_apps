@@ -52,10 +52,6 @@ class ChatViewController: UIViewController {
     updateSendButtonState()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    
-  }
-  
   func setupKeyboardEvents() {
     NotificationCenter.default.addObserver(
       forName: UIResponder.keyboardDidShowNotification,

@@ -1,11 +1,11 @@
 PODS:
-  - ZDCChat (1.4.3):
-    - ZDCChat/API (= 1.4.3)
-    - ZDCChat/Localization (= 1.4.3)
-    - ZDCChat/UI (= 1.4.3)
-  - ZDCChat/API (1.4.3)
-  - ZDCChat/Localization (1.4.3)
-  - ZDCChat/UI (1.4.3):
+  - ZDCChat (1.4.4):
+    - ZDCChat/API (= 1.4.4)
+    - ZDCChat/Localization (= 1.4.4)
+    - ZDCChat/UI (= 1.4.4)
+  - ZDCChat/API (1.4.4)
+  - ZDCChat/Localization (1.4.4)
+  - ZDCChat/UI (1.4.4):
     - ZDCChat/API
 
 DEPENDENCIES:
@@ -16,8 +16,8 @@ SPEC REPOS:
     - ZDCChat
 
 SPEC CHECKSUMS:
-  ZDCChat: eb076fde647e1204e8e7202063de989602a67727
+  ZDCChat: 02340a2389a4b7d9f6c78bf2374130875ebffb9b
 
 PODFILE CHECKSUM: 8990464f4a9f9c22670e537d4d0737dceb9acdab
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.4

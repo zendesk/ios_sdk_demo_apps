@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize the SDK with your Zendesk instance
         // Get these details from your Zendesk dashboard: Admin -> Channels -> MobileSDK.
          Zendesk.initialize(appId: "appId",
-                            clientId: "cleintId",
+                            clientId: "clientId",
                             zendeskUrl: "zendeskUrl")
         
         Support.initialize(withZendesk: Zendesk.instance)
