@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ZendeskSDK
+import SupportSDK
 import ZendeskCoreSDK
 
 class ViewController: UIViewController, UINavigationControllerDelegate {

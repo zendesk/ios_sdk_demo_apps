@@ -4,9 +4,9 @@
 //
 
 #import "ViewController.h"
-#import <ZendeskSDK/ZendeskSDK.h>
+#import <SupportSDK/SupportSDK.h>
 #import <ZendeskCoreSDK/ZendeskCoreSDK.h>
-#import <ZendeskProviderSDK/ZendeskProviderSDK.h>
+#import <SupportProvidersSDK/SupportProvidersSDK.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *helpCenterButton;
