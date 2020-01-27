@@ -8,7 +8,7 @@
 
 import UIKit
 
-import ZendeskSDK
+import SupportSDK
 import ZendeskCoreSDK
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
@@ -30,13 +30,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 
     var articleConfig: ArticleUiConfiguration {
         let articleConfig = ArticleUiConfiguration()
-        articleConfig.hideContactSupport = false
+        articleConfig.showContactOptions = true
         return articleConfig
     }
     
     var hcConfig: HelpCenterUiConfiguration {
         let hcConfig = HelpCenterUiConfiguration()
-        hcConfig.hideContactSupport = true
+        hcConfig.showContactOptions = true
         hcConfig.labels = ["label"] // only hc articles with the label 'label' will appear
         return hcConfig
     }

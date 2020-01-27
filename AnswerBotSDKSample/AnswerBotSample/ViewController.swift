@@ -3,12 +3,13 @@
 //  AnswerBotSample
 //
 //  Created by Killian Smith on 27/09/2018.
-//  Copyright © 2018 Zendesk. All rights reserved.
+//  Copyright © 2020 Zendesk. All rights reserved.
 //
 
 import UIKit
-import ZendeskSDK
+import SupportSDK
 import AnswerBotSDK
+import MessagingSDK
 
 class ViewController: UIViewController {
 
@@ -18,21 +19,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openAnswerBotViewController(_ sender: Any) {
-        let answerBotConfigs = AnswerBotUIConfiguration()
-        // NOTE: Currently no configs in the AnswerBotUiConfiguration
-        
-        let requestUIConfigs = RequestUiConfiguration()
-        requestUIConfigs.subject = "Example subject field from requests redirected from Answer Bot"
-        requestUIConfigs.tags = ["Answer_Bot", "Tag", "iOS"]
-        // Requests that are redirected from AB to Support will have the above subject and list of tags
-        
-        guard let answerBotViewController = AnswerBotUI.buildAnswerBotUI(with: [requestUIConfigs, answerBotConfigs]) else { return }
-        self.navigationController?.pushViewController(answerBotViewController, animated: true)
+        do {
+            let answerBotEngine = try AnswerBotEngine.engine()
+            let supportEngine = try SupportEngine.engine()
+            let messagingConfiguration = MessagingConfiguration()
+            let viewController = try Messaging.instance.buildUI(engines: [answerBotEngine, supportEngine],
+                                                    configs: [messagingConfiguration])
+            self.navigationController?.pushViewController(viewController, animated: true)
+        } catch {
+            // do something with error
+        }
     }
     
     @IBAction func openRequestList(_ sender: Any) {
-        let requestList = RequestUi.buildRequestList()
-        self.navigationController?.pushViewController(requestList, animated: true)
+        let requestScreen = RequestUi.buildRequestUi(with: [])
+        self.navigationController?.pushViewController(requestScreen, animated: true)
     }
-    
 }

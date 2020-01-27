@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)
-// swift-module-flags: -target i386-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZendeskCoreSDK
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZendeskCoreSDK
 import Foundation
 import Swift
 import UIKit
@@ -32,9 +32,6 @@ public protocol URLService {
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public init()
   @objc deinit
-}
-public struct VersionConstants {
-  public static let ZendeskCoreSDKVersionString: Swift.String
 }
 public typealias ActionInfo = [Swift.String : Any]
 public protocol ActionHandler {
@@ -159,10 +156,10 @@ extension Anonymous : Swift.Equatable {
 final public class PushRegistrationProvider {
   @objc deinit
 }
+public typealias PushRegistrationResult = Swift.Result<ZendeskCoreSDK.PushRegistrationResponse, Swift.Error>
 extension PushRegistrationProvider {
-  public typealias PushRegistrationResult = Swift.Result<ZendeskCoreSDK.PushRegistrationResponse, Swift.Error>
-  final public func registerForPush(withDeviceIdentifier identifier: Swift.String, locale: Swift.String, callback: @escaping (ZendeskCoreSDK.PushRegistrationProvider.PushRegistrationResult) -> Swift.Void)
-  final public func registerForPush(withUAChannelId identifier: Swift.String, locale: Swift.String, callback: @escaping (ZendeskCoreSDK.PushRegistrationProvider.PushRegistrationResult) -> Swift.Void)
+  final public func registerForPush(withDeviceIdentifier identifier: Swift.String, locale: Swift.String, callback: @escaping (ZendeskCoreSDK.PushRegistrationResult) -> Swift.Void)
+  final public func registerForPush(withUAChannelId identifier: Swift.String, locale: Swift.String, callback: @escaping (ZendeskCoreSDK.PushRegistrationResult) -> Swift.Void)
   final public func unregisterForPush()
 }
 @objc final public class ZDKUserProvider : ObjectiveC.NSObject {
@@ -217,7 +214,7 @@ final public class Stores : ZendeskCoreSDK.StoreModule {
   @objc deinit
 }
 public struct UserAction<T> : Swift.Encodable where T : Swift.Encodable {
-  public init(version: Swift.String = VersionConstants.ZendeskCoreSDKVersionString, action: Swift.String, label: Swift.String? = nil, channel: Swift.String = "core_sdk", category: Swift.String, value: T? = nil)
+  public init(version: Swift.String, action: Swift.String, label: Swift.String? = nil, channel: Swift.String = "core_sdk", category: Swift.String, value: T? = nil)
   public func encode(to encoder: Swift.Encoder) throws
 }
 public protocol URLProvider {

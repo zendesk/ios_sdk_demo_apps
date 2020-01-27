@@ -3,13 +3,12 @@
 //  AnswerBotSample
 //
 //  Created by Killian Smith on 27/09/2018.
-//  Copyright © 2018 Zendesk. All rights reserved.
+//  Copyright © 2020 Zendesk. All rights reserved.
 //
 
 import UIKit
-import ZendeskSDK
+import SupportProvidersSDK
 import ZendeskCoreSDK
-import ZendeskProviderSDK
 import AnswerBotProvidersSDK
 
 @UIApplicationMain
@@ -20,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         CoreLogger.enabled = true
         CoreLogger.logLevel = .debug
-        
+
         // Initialize the SDK with your Zendesk instance
         // Get these details from your Zendesk dashboard: Admin -> Channels -> MobileSDK.
          Zendesk.initialize(appId: "appId",
@@ -28,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             zendeskUrl: "zendeskUrl")
         
         Support.initialize(withZendesk: Zendesk.instance)
-        SupportUI.initialize(withZendesk: Zendesk.instance)
         // Support is needed to hand off tickets from AB
         
         // Set an identity for authentication.
