@@ -246,8 +246,6 @@ SWIFT_CLASS_NAMED("Configurations")
 - (id <ZDKConfiguration> _Nonnull)objectAtIndexedSubscript:(NSInteger)index SWIFT_WARN_UNUSED_RESULT;
 /// Creates a default type of Configuration for the Type passed in and
 /// adds it to the internal array
-/// \param type The type that we want a default config created for.
-///
 - (void)addDefaultConfigIfNeeded:(id <ZDKConfiguration> _Nonnull)config;
 @end
 
@@ -501,8 +499,6 @@ SWIFT_CLASS_NAMED("Configurations")
 - (id <ZDKConfiguration> _Nonnull)objectAtIndexedSubscript:(NSInteger)index SWIFT_WARN_UNUSED_RESULT;
 /// Creates a default type of Configuration for the Type passed in and
 /// adds it to the internal array
-/// \param type The type that we want a default config created for.
-///
 - (void)addDefaultConfigIfNeeded:(id <ZDKConfiguration> _Nonnull)config;
 @end
 
@@ -759,8 +755,6 @@ SWIFT_CLASS_NAMED("Configurations")
 - (id <ZDKConfiguration> _Nonnull)objectAtIndexedSubscript:(NSInteger)index SWIFT_WARN_UNUSED_RESULT;
 /// Creates a default type of Configuration for the Type passed in and
 /// adds it to the internal array
-/// \param type The type that we want a default config created for.
-///
 - (void)addDefaultConfigIfNeeded:(id <ZDKConfiguration> _Nonnull)config;
 @end
 
@@ -1014,8 +1008,6 @@ SWIFT_CLASS_NAMED("Configurations")
 - (id <ZDKConfiguration> _Nonnull)objectAtIndexedSubscript:(NSInteger)index SWIFT_WARN_UNUSED_RESULT;
 /// Creates a default type of Configuration for the Type passed in and
 /// adds it to the internal array
-/// \param type The type that we want a default config created for.
-///
 - (void)addDefaultConfigIfNeeded:(id <ZDKConfiguration> _Nonnull)config;
 @end
 

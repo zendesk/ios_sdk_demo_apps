@@ -1,6 +1,6 @@
 PODS:
   - CropViewController (2.5.2)
-  - DateToolsSwift (4.0.0)
+  - DateToolsSwift (5.0.0)
   - DKCamera (1.6.6)
   - DKImagePickerController (4.1.7):
     - DKImagePickerController/Camera (= 4.1.7)
@@ -51,13 +51,13 @@ PODS:
     - SDWebImage
     - SDWebImageFLPlugin
   - FLAnimatedImage (1.0.12)
-  - SDWebImage (5.4.0):
-    - SDWebImage/Core (= 5.4.0)
-  - SDWebImage/Core (5.4.0)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
   - SDWebImageFLPlugin (0.3.0):
     - FLAnimatedImage (>= 1.0.11)
     - SDWebImage/Core (~> 5.0)
-  - ZDCChat/API (1.4.4)
+  - ZDCChat/API (1.4.5)
 
 DEPENDENCIES:
   - DateToolsSwift
@@ -79,14 +79,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CropViewController: 1aac40093c5739e60d992b04724a55d12a689a4c
-  DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
   DKCamera: d6fad4db4b25c00eefe6904e9c86a926034d0c62
   DKImagePickerController: 6ffad961c212b0debf644f3d1aa72d0a2ee03d5f
   DKPhotoGallery: 0290d32343574f06eaa4c26f8f2f8a1035e916be
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SDWebImageFLPlugin: cf3f4ae49f249dd785129346fd61bbc8433a88cf
-  ZDCChat: 02340a2389a4b7d9f6c78bf2374130875ebffb9b
+  ZDCChat: ce527de86c39efd6a10024f553ed756a400d66f0
 
 PODFILE CHECKSUM: 36f7357fba85606c7ce6c2a9803292cf1ef76505
 

@@ -11,7 +11,7 @@ import SDKConfigurations
 import Swift
 import UIKit
 public protocol ActionOptionsCellDelegate : AnyObject {
-  func actionOptionsCell(_ cell: CommonUISDK.ActionOptionsTableViewCell, didSelect viewModel: CommonUISDK.ActionOptionViewModelProtocol)
+  func actionOptionsCell(_ cell: CommonUISDK.ActionOptionsTableViewCell, didSelect viewModel: CommonUISDK.ButtonOptionViewModelProtocol)
 }
 @objc final public class ActionOptionsTableViewCell : CommonUISDK.InteractionCell {
   weak final public var delegate: CommonUISDK.InteractionCellDelegate?
@@ -26,20 +26,17 @@ public protocol ActionOptionsCellDelegate : AnyObject {
 extension ActionOptionsTableViewCell {
   final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
 }
-public protocol ActionOptionViewModelProtocol {
-  var description: Swift.String { get }
+public protocol ActionOptionViewModelProtocol : CommonUISDK.ButtonOptionViewModelProtocol {
   var iconImage: UIKit.UIImage? { get }
-  var localizedLabelText: Swift.String { get }
-  var action: (([Swift.String : Any]) -> Swift.Void)? { get }
-  var transfer: CommonUISDK.TransferOption? { get }
+  var action: (([Swift.String : Any]) -> Swift.Void) { get }
 }
 public struct ActionOptionViewModel : CommonUISDK.ActionOptionViewModelProtocol {
   public let description: Swift.String
   public let iconImage: UIKit.UIImage?
   public let localizedLabelText: Swift.String
-  public let action: (([Swift.String : Any]) -> Swift.Void)?
-  public let transfer: CommonUISDK.TransferOption?
-  public init(description: Swift.String, iconImage: UIKit.UIImage? = nil, localisedLabelText: Swift.String, contactOptionAction: (([Swift.String : Any]) -> Swift.Void)?, transfer: CommonUISDK.TransferOption?)
+  public let shouldHaveBottomBorder: Swift.Bool
+  public let action: (([Swift.String : Any]) -> Swift.Void)
+  public init(description: Swift.String, iconImage: UIKit.UIImage? = nil, localisedLabelText: Swift.String, shouldHaveBottomBorder: Swift.Bool, contactOptionAction: @escaping (([Swift.String : Any]) -> Swift.Void))
 }
 extension ActionOptionViewModel : Swift.Equatable {
   public static func == (lhs: CommonUISDK.ActionOptionViewModel, rhs: CommonUISDK.ActionOptionViewModel) -> Swift.Bool
@@ -82,10 +79,11 @@ final public class ConcreteKeyboardHelper : CommonUISDK.KeyboardHelper {
   public init(bottomConstraint: UIKit.NSLayoutConstraint, parentView: UIKit.UIView)
   @objc deinit
 }
-public struct TransferOption {
+public struct TransferOption : Swift.Equatable {
   public let engineId: Swift.String
   public let displayName: Swift.String
   public init(engineId: Swift.String, displayName: Swift.String)
+  public static func == (a: CommonUISDK.TransferOption, b: CommonUISDK.TransferOption) -> Swift.Bool
 }
 public struct AttachmentViewModel : Swift.Equatable {
   public let name: Swift.String
@@ -97,17 +95,21 @@ public struct AttachmentViewModel : Swift.Equatable {
   public init(name: Swift.String? = nil, size: Swift.Int, url: Foundation.URL)
   public static func == (a: CommonUISDK.AttachmentViewModel, b: CommonUISDK.AttachmentViewModel) -> Swift.Bool
 }
-public struct ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Swift.Equatable {
-  public let id: Swift.String
-  public let timestamp: Foundation.Date
-  public let messageStatus: CommonUISDK.Status
-  public let name: Swift.String?
-  public let isBot: Swift.Bool
-  public let url: Foundation.URL
-  public let filename: Swift.String
-  public let image: UIKit.UIImage?
-  public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL)
-  public static func == (a: CommonUISDK.ImageCellViewModel, b: CommonUISDK.ImageCellViewModel) -> Swift.Bool
+final public class ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Swift.Equatable {
+  public static func == (lhs: CommonUISDK.ImageCellViewModel, rhs: CommonUISDK.ImageCellViewModel) -> Swift.Bool
+  final public let id: Swift.String
+  final public let timestamp: Foundation.Date
+  final public let messageStatus: CommonUISDK.Status
+  final public let name: Swift.String?
+  final public let isBot: Swift.Bool
+  final public let url: Foundation.URL
+  final public let filename: Swift.String
+  final public var image: UIKit.UIImage? {
+    get
+    }
+  final public let cachedURL: Foundation.URL?
+  public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL, cachedURL: Foundation.URL?)
+  @objc deinit
 }
 public struct StatusViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {
   public let id: Swift.String
@@ -235,19 +237,19 @@ extension InteractionCellViewModelProtocol {
   }
 }
 public protocol ActionOptionsCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
-  var actionOptionViewModels: [CommonUISDK.ActionOptionViewModel] { get }
+  var actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol] { get }
   var titleText: Swift.String { get }
 }
 public struct ActionOptionsCellViewModel : CommonUISDK.ActionOptionsCellViewModelProtocol, Swift.Equatable {
-  public let actionOptionViewModels: [CommonUISDK.ActionOptionViewModel]
+  public let actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol]
   public let id: Swift.String
   public let timestamp: Foundation.Date
   public let messageStatus: CommonUISDK.Status
   public let name: Swift.String?
   public let isBot: Swift.Bool
   public let titleText: Swift.String
-  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, titleText: Swift.String = Constants.Strings.getInTouchReply, isBot: Swift.Bool = false, actionOptionViewModels: [CommonUISDK.ActionOptionViewModel])
-  public static func == (a: CommonUISDK.ActionOptionsCellViewModel, b: CommonUISDK.ActionOptionsCellViewModel) -> Swift.Bool
+  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, titleText: Swift.String = Constants.Strings.getInTouchReply, isBot: Swift.Bool = false, actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol])
+  public static func == (lhs: CommonUISDK.ActionOptionsCellViewModel, rhs: CommonUISDK.ActionOptionsCellViewModel) -> Swift.Bool
 }
 @objc(ZDKCommonTheme) final public class CommonTheme : ObjectiveC.NSObject {
   @objc public static let currentTheme: CommonUISDK.CommonTheme
@@ -266,6 +268,7 @@ public enum MessagingCoordinatorAction {
   case didChangeInputText(text: Swift.String?, textView: UIKit.UITextView)
   case showArticle(articleId: Swift.Int64, articleUrl: Swift.String, deflectionId: Swift.Int64, interactionAccessToken: Swift.String, navigationController: UIKit.UINavigationController?)
   case didSelectActionOption(actionOptionViewModel: CommonUISDK.ActionOptionViewModelProtocol, navigationController: UIKit.UINavigationController?)
+  case didSelectTransferOption(transferOptionDescription: CommonUISDK.TransferOption)
   case didSelectResponseOptionViewModel(optionViewModel: CommonUISDK.ResponseOptionViewModelProtocol, responseCellViewModel: CommonUISDK.ResponseOptionsCellViewModelProtocol)
   case resendMessage(viewModel: CommonUISDK.InteractionCellViewModelProtocol)
   case deleteMessage(viewModel: CommonUISDK.InteractionCellViewModelProtocol)
@@ -325,6 +328,9 @@ public struct DeflectionArticleViewModel : CommonUISDK.DeflectionArticleViewMode
   public static func == (a: CommonUISDK.DeflectionArticleViewModel, b: CommonUISDK.DeflectionArticleViewModel) -> Swift.Bool
 }
 public struct InputFieldViewModel : Swift.Equatable {
+  public let enabled: Swift.Bool
+  public let shouldShowAttachmentIcon: Swift.Bool
+  public let endUserHint: Swift.String
   public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil)
   public static func == (a: CommonUISDK.InputFieldViewModel, b: CommonUISDK.InputFieldViewModel) -> Swift.Bool
 }
@@ -390,9 +396,14 @@ public enum Connection : Swift.String {
     get
   }
 }
-public struct ConnectionViewModel {
+public struct ConnectionViewModel : Swift.Hashable {
   public let connection: CommonUISDK.Connection
   public init(connection: CommonUISDK.Connection)
+  public static func == (a: CommonUISDK.ConnectionViewModel, b: CommonUISDK.ConnectionViewModel) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
 }
 public protocol ArticlesTableViewCellDelegate : AnyObject {
   func articlesTableViewCell(_ cell: CommonUISDK.ArticlesTableViewCell, didSelectArticleID articleID: Swift.Int64, andArticleUrl url: Swift.String, withDeflectionId deflectionId: Swift.Int64, andInteractionAccessToken accessToken: Swift.String)
@@ -433,6 +444,19 @@ extension Identifier {
   public var identifier: Swift.String {
     get
   }
+}
+public protocol TransferOptionViewModelProtocol : CommonUISDK.ButtonOptionViewModelProtocol {
+  var transfer: CommonUISDK.TransferOption { get }
+}
+public struct TransferOptionViewModel : CommonUISDK.TransferOptionViewModelProtocol {
+  public let description: Swift.String
+  public let localizedLabelText: Swift.String
+  public let transfer: CommonUISDK.TransferOption
+  public let shouldHaveBottomBorder: Swift.Bool
+  public init(description: Swift.String, localisedLabelText: Swift.String, shouldHaveBottomBorder: Swift.Bool, transfer: CommonUISDK.TransferOption)
+}
+extension TransferOptionViewModel : Swift.Equatable {
+  public static func == (lhs: CommonUISDK.TransferOptionViewModel, rhs: CommonUISDK.TransferOptionViewModel) -> Swift.Bool
 }
 public protocol ArticlesCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
   var deflectionViewModels: [CommonUISDK.DeflectionArticleViewModel] { get }
@@ -546,6 +570,11 @@ final public class EquatableCellViewModel {
 extension EquatableCellViewModel : Swift.Equatable {
   public static func == (lhs: CommonUISDK.EquatableCellViewModel, rhs: CommonUISDK.EquatableCellViewModel) -> Swift.Bool
 }
+public protocol ButtonOptionViewModelProtocol {
+  var description: Swift.String { get }
+  var localizedLabelText: Swift.String { get }
+  var shouldHaveBottomBorder: Swift.Bool { get }
+}
 extension UIView {
   public enum Dimension {
     case height
@@ -621,7 +650,9 @@ extension UIView {
   @discardableResult
   public func constrainToSuperview(attribute: UIKit.UIView.Attribute, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
-  public func constrain(dimension: UIKit.UIView.Dimension, withConstant constant: CoreGraphics.CGFloat = 0, relation: UIKit.NSLayoutConstraint.Relation = .equal) -> UIKit.NSLayoutConstraint
+  public func constrain(dimension: UIKit.UIView.Dimension, withConstant constant: CoreGraphics.CGFloat = 0, relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required) -> UIKit.NSLayoutConstraint
+  @discardableResult
+  public func constrain(size: CoreGraphics.CGSize, relation: UIKit.NSLayoutConstraint.Relation = .equal) -> [UIKit.NSLayoutConstraint]
   @discardableResult
   public func constrain(attribute: UIKit.UIView.Attribute, toView view: UIKit.UIView, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
