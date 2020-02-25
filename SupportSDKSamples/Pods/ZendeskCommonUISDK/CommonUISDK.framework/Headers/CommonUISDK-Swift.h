@@ -346,6 +346,8 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
@@ -675,6 +677,8 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (void)awakeFromNib;
 @end
+
+
 
 
 
@@ -1049,6 +1053,8 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
@@ -1378,6 +1384,8 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier SWIFT_UNAVAILABLE;
 - (void)awakeFromNib;
 @end
+
+
 
 
 

@@ -109,11 +109,11 @@ public struct Attachment : Swift.Hashable {
 public protocol Observable : AnyObject {
   associatedtype Observable
   var onUpdate: ([Foundation.UUID : (Self.Observable) -> Swift.Void]) { get set }
-  func addObserver<T>(_ observer: T, observable: Self.Observable?, onRemove: ((Foundation.UUID) -> Swift.Void)?, _ closure: @escaping (T?, Foundation.UUID, Self.Observable) -> Swift.Void) -> MessagingAPI.ObservationToken where T : AnyObject
+  func addObserver<T>(_ observer: T, eagerObserver: Self.Observable?, onRemove: ((Foundation.UUID) -> Swift.Void)?, _ closure: @escaping (T?, Foundation.UUID, Self.Observable) -> Swift.Void) -> MessagingAPI.ObservationToken where T : AnyObject
   func notifyObservers(_ observable: Self.Observable)
 }
 extension Observable {
-  public func addObserver<T>(_ observer: T, observable: Self.Observable? = nil, onRemove: ((Foundation.UUID) -> Swift.Void)? = nil, _ closure: @escaping (T?, Foundation.UUID, Self.Observable) -> Swift.Void) -> MessagingAPI.ObservationToken where T : AnyObject
+  public func addObserver<T>(_ observer: T, eagerObserver: Self.Observable? = nil, onRemove: ((Foundation.UUID) -> Swift.Void)? = nil, _ closure: @escaping (T?, Foundation.UUID, Self.Observable) -> Swift.Void) -> MessagingAPI.ObservationToken where T : AnyObject
   public func notifyObservers(_ observable: Self.Observable)
 }
 @objc(ZDKObservationToken) final public class ObservationToken : ObjectiveC.NSObject {
@@ -121,6 +121,20 @@ extension Observable {
   @objc final public func cancel()
   @objc override dynamic public init()
   @objc deinit
+}
+public struct TransferResponse : MessagingAPI.Response, Swift.Hashable {
+  public let id: Swift.String
+  public let titleText: Swift.String
+  public let timestamp: Foundation.Date
+  public let agentName: Swift.String
+  public let isBot: Swift.Bool
+  public let transferOptions: [MessagingAPI.TransferOptionDescription]
+  public init(id: Swift.String, titleText: Swift.String, timestamp: Foundation.Date = Date(), agentName: Swift.String, isBot: Swift.Bool, transferOptions: [MessagingAPI.TransferOptionDescription])
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: MessagingAPI.TransferResponse, b: MessagingAPI.TransferResponse) -> Swift.Bool
 }
 public protocol Identifier {
   static var staticIdentifier: Swift.String { get }
@@ -148,9 +162,9 @@ public struct TextResponse : MessagingAPI.Response, Swift.Hashable {
   public static func == (a: MessagingAPI.TextResponse, b: MessagingAPI.TextResponse) -> Swift.Bool
 }
 public struct InputFieldState : Swift.Equatable {
-  public let enabled: Swift.Bool
-  public let shouldShowAttachmentIcon: Swift.Bool
-  public let endUserHint: Swift.String?
+  public var enabled: Swift.Bool
+  public var shouldShowAttachmentIcon: Swift.Bool
+  public var endUserHint: Swift.String?
   public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil)
   public static func == (a: MessagingAPI.InputFieldState, b: MessagingAPI.InputFieldState) -> Swift.Bool
 }
@@ -163,12 +177,11 @@ public protocol LoggableEvent : MessagingAPI.LoggableItem {
 public protocol LoggableMessage : MessagingAPI.LoggableItem {
 }
 public struct Action : Swift.Hashable {
-  public let actionDescription: Swift.String
+  public let description: Swift.String
   public let iconImage: UIKit.UIImage?
   public let localizedLabelText: Swift.String
-  public let action: (([Swift.String : Any]) -> Swift.Void)?
-  public let transferOption: MessagingAPI.TransferOptionDescription?
-  public init(description: Swift.String, iconImage: UIKit.UIImage? = nil, localisedLabelText: Swift.String, transferOption: MessagingAPI.TransferOptionDescription?, action: (([Swift.String : Any]) -> Swift.Void)?)
+  public let action: (([Swift.String : Any]) -> Swift.Void)
+  public init(description: Swift.String, iconImage: UIKit.UIImage? = nil, localisedLabelText: Swift.String, action: @escaping (([Swift.String : Any]) -> Swift.Void))
   public var hashValue: Swift.Int {
     get
   }
@@ -183,12 +196,13 @@ public protocol MessagingAPIProtocol : AnyObject {
   func getConfigurations() -> SDKConfigurations.Configurations
   func getBotAgentDetails() -> MessagingAPI.AgentDetails
 }
-@frozen public struct AgentDetails {
+@frozen public struct AgentDetails : Swift.Equatable {
   public static let initialBot: MessagingAPI.AgentDetails
   public let name: Swift.String
   public let isBot: Swift.Bool
   public let avatar: UIKit.UIImage?
   public init(name: Swift.String, isBot: Swift.Bool, avatar: UIKit.UIImage?)
+  public static func == (a: MessagingAPI.AgentDetails, b: MessagingAPI.AgentDetails) -> Swift.Bool
 }
 public struct EquatableMessagingItem {
   public let messagingItem: MessagingAPI.MessagingItem
@@ -219,7 +233,8 @@ public struct ImageResponse : MessagingAPI.Response, MessagingAPI.ImageItem, Mes
   public var url: Foundation.URL {
     get
   }
-  public init(id: Swift.String, timestamp: Foundation.Date = Date(), agentName: Swift.String, isBot: Swift.Bool, attachment: MessagingAPI.Attachment)
+  public let cachedURL: Foundation.URL?
+  public init(id: Swift.String, timestamp: Foundation.Date = Date(), agentName: Swift.String, isBot: Swift.Bool, attachment: MessagingAPI.Attachment, cachedURL: Foundation.URL? = nil)
   public static func == (a: MessagingAPI.ImageResponse, b: MessagingAPI.ImageResponse) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
@@ -254,7 +269,8 @@ public enum Event : Swift.Equatable {
   case messageDeleted(messageId: Swift.String)
   case messageResent(messageId: Swift.String, message: Swift.String? = nil)
   case articleSuggestionClicked(articleId: Swift.Int64, articleUrl: Swift.String, deflectionId: Swift.Int64, interactionAccessToken: Swift.String, navigationController: UIKit.UINavigationController?)
-  case actionOptionClicked(description: Swift.String, action: (([Swift.String : Any]) -> Swift.Void)? = nil, transferOption: MessagingAPI.TransferOptionDescription? = nil, navigationController: UIKit.UINavigationController? = nil)
+  case actionOptionClicked(description: Swift.String, action: (([Swift.String : Any]) -> Swift.Void), navigationController: UIKit.UINavigationController? = nil)
+  case transferOptionClicked(transferOption: MessagingAPI.TransferOptionDescription)
   case responseOptionClicked(optionViewModelId: Swift.String, responseCellViewModelId: Swift.String)
   case reconnectButtonClicked
   case applicationEventRaised(MessagingAPI.ApplicationEvent)
@@ -272,7 +288,8 @@ public struct ImageQuery : MessagingAPI.Query, MessagingAPI.ImageItem, Messaging
   public var url: Foundation.URL {
     get
   }
-  public init(id: Swift.String, timestamp: Foundation.Date = Date(), status: MessagingAPI.ItemDeliveryStatus, attachment: MessagingAPI.Attachment)
+  public let cachedURL: Foundation.URL?
+  public init(id: Swift.String, timestamp: Foundation.Date = Date(), status: MessagingAPI.ItemDeliveryStatus, attachment: MessagingAPI.Attachment, cachedURL: Foundation.URL? = nil)
   public static func == (a: MessagingAPI.ImageQuery, b: MessagingAPI.ImageQuery) -> Swift.Bool
   public var hashValue: Swift.Int {
     get

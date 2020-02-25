@@ -1,10 +1,10 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.3'
+# platform :ios, '10.0'
 
 target 'CocoaPodSample' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for CocoaPodSample
-    pod 'ZendeskSupportSDK', '5.0.0'
+    pod 'ZendeskSupportSDK', '5.0.1'
 end
