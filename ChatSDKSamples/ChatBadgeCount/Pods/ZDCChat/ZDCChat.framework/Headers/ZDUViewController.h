@@ -47,13 +47,6 @@
 
 #pragma mark keyboard event handling
 
-
-/**
- * Register the view controler to be notified of keyboard show/hide events.
- * Override keyboardWillBeShown: and keyboardWillBeHidden: to handle the events
- */
-- (void) registerForKeyboardNotifications;
-
 /**
  * Called when the keyboard will show, invoke [super keyboardWillShow:]
  * @param aNotification the notification

@@ -221,10 +221,9 @@
 			};
 			buildConfigurationList = D7C1C8B61D2E923B00F2C0C3 /* Build configuration list for PBXProject "ZDCChatAPI Sample App" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
