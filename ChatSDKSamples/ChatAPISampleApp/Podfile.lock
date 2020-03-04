@@ -57,7 +57,7 @@ PODS:
   - SDWebImageFLPlugin (0.3.0):
     - FLAnimatedImage (>= 1.0.11)
     - SDWebImage/Core (~> 5.0)
-  - ZDCChat/API (1.4.5)
+  - ZDCChat/API (1.4.6)
 
 DEPENDENCIES:
   - DateToolsSwift
@@ -86,7 +86,7 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SDWebImageFLPlugin: cf3f4ae49f249dd785129346fd61bbc8433a88cf
-  ZDCChat: ce527de86c39efd6a10024f553ed756a400d66f0
+  ZDCChat: 7f859194742797b542d669d350406f243fdb1458
 
 PODFILE CHECKSUM: 36f7357fba85606c7ce6c2a9803292cf1ef76505
 
