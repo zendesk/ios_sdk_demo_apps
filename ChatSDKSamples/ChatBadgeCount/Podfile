@@ -1,5 +1,0 @@
-target 'ChatBadgeCount' do
-
-pod 'ZDCChat'
-
-end

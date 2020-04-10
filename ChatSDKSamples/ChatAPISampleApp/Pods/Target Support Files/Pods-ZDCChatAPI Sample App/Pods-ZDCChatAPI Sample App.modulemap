@@ -1,6 +1,0 @@
-framework module Pods_ZDCChatAPI_Sample_App {
-  umbrella header "Pods-ZDCChatAPI Sample App-umbrella.h"
-
-  export *
-  module * { export * }
-}
