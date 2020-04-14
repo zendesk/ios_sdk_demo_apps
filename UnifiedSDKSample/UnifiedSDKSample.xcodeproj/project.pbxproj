@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22C7286A24448FAB00B7DF5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C7286924448FAB00B7DF5E /* AppDelegate.swift */; };
+		22C7286C24448FAB00B7DF5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C7286B24448FAB00B7DF5E /* SceneDelegate.swift */; };
+		22C7286E24448FAB00B7DF5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C7286D24448FAB00B7DF5E /* ContentView.swift */; };
+		22C7287024448FAC00B7DF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C7286F24448FAC00B7DF5E /* Assets.xcassets */; };
+		22C7287324448FAC00B7DF5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C7287224448FAC00B7DF5E /* Preview Assets.xcassets */; };
+		22C7287624448FAC00B7DF5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C7287424448FAC00B7DF5E /* LaunchScreen.storyboard */; };
+		22C7287E2444901E00B7DF5E /* ZendeskMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C7287D2444901E00B7DF5E /* ZendeskMessaging.swift */; };
+		22CFE2002449BED000EB7391 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 22CFE1FF2449BED000EB7391 /* README.md */; };
+		A35A1E75FE2EF8E88AFCEA06 /* Pods_UnifiedSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08645DD1EE6468851C32AB99 /* Pods_UnifiedSDKSample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		22C728D6244497DF00B7DF5E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08645DD1EE6468851C32AB99 /* Pods_UnifiedSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C7286624448FAB00B7DF5E /* UnifiedSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnifiedSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C7286924448FAB00B7DF5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22C7286B24448FAB00B7DF5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		22C7286D24448FAB00B7DF5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		22C7286F24448FAC00B7DF5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22C7287224448FAC00B7DF5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		22C7287524448FAC00B7DF5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22C7287724448FAC00B7DF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C7287D2444901E00B7DF5E /* ZendeskMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZendeskMessaging.swift; sourceTree = "<group>"; };
+		22C728B5244497DF00B7DF5E /* MessagingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagingSDK.framework; path = ../Carthage/Build/iOS/MessagingSDK.framework; sourceTree = "<group>"; };
+		22C728B6244497DF00B7DF5E /* SupportProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SupportProvidersSDK.framework; path = ../Carthage/Build/iOS/SupportProvidersSDK.framework; sourceTree = "<group>"; };
+		22C728B7244497DF00B7DF5E /* SupportSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SupportSDK.framework; path = ../Carthage/Build/iOS/SupportSDK.framework; sourceTree = "<group>"; };
+		22C728B8244497DF00B7DF5E /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonUISDK.framework; path = ../Carthage/Build/iOS/CommonUISDK.framework; sourceTree = "<group>"; };
+		22C728B9244497DF00B7DF5E /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskCoreSDK.framework; path = ../Carthage/Build/iOS/ZendeskCoreSDK.framework; sourceTree = "<group>"; };
+		22C728BA244497DF00B7DF5E /* ChatSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChatSDK.framework; path = ../Carthage/Build/iOS/ChatSDK.framework; sourceTree = "<group>"; };
+		22C728BB244497DF00B7DF5E /* AnswerBotProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnswerBotProvidersSDK.framework; path = ../Carthage/Build/iOS/AnswerBotProvidersSDK.framework; sourceTree = "<group>"; };
+		22C728BC244497DF00B7DF5E /* SDKConfigurations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDKConfigurations.framework; path = ../Carthage/Build/iOS/SDKConfigurations.framework; sourceTree = "<group>"; };
+		22C728BD244497DF00B7DF5E /* AnswerBotSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnswerBotSDK.framework; path = ../Carthage/Build/iOS/AnswerBotSDK.framework; sourceTree = "<group>"; };
+		22C728BE244497DF00B7DF5E /* MessagingAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagingAPI.framework; path = ../Carthage/Build/iOS/MessagingAPI.framework; sourceTree = "<group>"; };
+		22C728BF244497DF00B7DF5E /* ChatProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChatProvidersSDK.framework; path = ../Carthage/Build/iOS/ChatProvidersSDK.framework; sourceTree = "<group>"; };
+		22CFE1FF2449BED000EB7391 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55F869FEC2B3BBC3A32B1FA4 /* Pods-UnifiedSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDKSample.release.xcconfig"; path = "Target Support Files/Pods-UnifiedSDKSample/Pods-UnifiedSDKSample.release.xcconfig"; sourceTree = "<group>"; };
+		7EEF1A4A3E5C3C2F1D4902EE /* Pods-UnifiedSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDKSample.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedSDKSample/Pods-UnifiedSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22C7286324448FAB00B7DF5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A35A1E75FE2EF8E88AFCEA06 /* Pods_UnifiedSDKSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04B96CEAA0E30BA40CD52C69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EEF1A4A3E5C3C2F1D4902EE /* Pods-UnifiedSDKSample.debug.xcconfig */,
+				55F869FEC2B3BBC3A32B1FA4 /* Pods-UnifiedSDKSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		22C7285D24448FAB00B7DF5E = {
+			isa = PBXGroup;
+			children = (
+				22CFE1FF2449BED000EB7391 /* README.md */,
+				22C7286824448FAB00B7DF5E /* UnifiedSDKSample */,
+				22C7286724448FAB00B7DF5E /* Products */,
+				22C728B4244497DE00B7DF5E /* Frameworks */,
+				04B96CEAA0E30BA40CD52C69 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		22C7286724448FAB00B7DF5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22C7286624448FAB00B7DF5E /* UnifiedSDKSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22C7286824448FAB00B7DF5E /* UnifiedSDKSample */ = {
+			isa = PBXGroup;
+			children = (
+				22C7286924448FAB00B7DF5E /* AppDelegate.swift */,
+				22C7286B24448FAB00B7DF5E /* SceneDelegate.swift */,
+				22C7287D2444901E00B7DF5E /* ZendeskMessaging.swift */,
+				22C7286D24448FAB00B7DF5E /* ContentView.swift */,
+				22C7286F24448FAC00B7DF5E /* Assets.xcassets */,
+				22C7287424448FAC00B7DF5E /* LaunchScreen.storyboard */,
+				22C7287724448FAC00B7DF5E /* Info.plist */,
+				22C7287124448FAC00B7DF5E /* Preview Content */,
+			);
+			path = UnifiedSDKSample;
+			sourceTree = "<group>";
+		};
+		22C7287124448FAC00B7DF5E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				22C7287224448FAC00B7DF5E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22C728B4244497DE00B7DF5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22C728BB244497DF00B7DF5E /* AnswerBotProvidersSDK.framework */,
+				22C728BD244497DF00B7DF5E /* AnswerBotSDK.framework */,
+				22C728BF244497DF00B7DF5E /* ChatProvidersSDK.framework */,
+				22C728BA244497DF00B7DF5E /* ChatSDK.framework */,
+				22C728B8244497DF00B7DF5E /* CommonUISDK.framework */,
+				22C728BE244497DF00B7DF5E /* MessagingAPI.framework */,
+				22C728B5244497DF00B7DF5E /* MessagingSDK.framework */,
+				22C728BC244497DF00B7DF5E /* SDKConfigurations.framework */,
+				22C728B6244497DF00B7DF5E /* SupportProvidersSDK.framework */,
+				22C728B7244497DF00B7DF5E /* SupportSDK.framework */,
+				22C728B9244497DF00B7DF5E /* ZendeskCoreSDK.framework */,
+				08645DD1EE6468851C32AB99 /* Pods_UnifiedSDKSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22C7286524448FAB00B7DF5E /* UnifiedSDKSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C7287A24448FAC00B7DF5E /* Build configuration list for PBXNativeTarget "UnifiedSDKSample" */;
+			buildPhases = (
+				A75A847E435BB76B1B6E83DB /* [CP] Check Pods Manifest.lock */,
+				22C7286224448FAB00B7DF5E /* Sources */,
+				22C7286324448FAB00B7DF5E /* Frameworks */,
+				22C7286424448FAB00B7DF5E /* Resources */,
+				22C728D6244497DF00B7DF5E /* Embed Frameworks */,
+				293CD10A9873C83AB4C9E325 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnifiedSDKSample;
+			productName = UnifiedSDKSample;
+			productReference = 22C7286624448FAB00B7DF5E /* UnifiedSDKSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22C7285E24448FAB00B7DF5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Zendesk;
+				TargetAttributes = {
+					22C7286524448FAB00B7DF5E = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 22C7286124448FAB00B7DF5E /* Build configuration list for PBXProject "UnifiedSDKSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22C7285D24448FAB00B7DF5E;
+			productRefGroup = 22C7286724448FAB00B7DF5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22C7286524448FAB00B7DF5E /* UnifiedSDKSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22C7286424448FAB00B7DF5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C7287624448FAC00B7DF5E /* LaunchScreen.storyboard in Resources */,
+				22C7287324448FAC00B7DF5E /* Preview Assets.xcassets in Resources */,
+				22CFE2002449BED000EB7391 /* README.md in Resources */,
+				22C7287024448FAC00B7DF5E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		293CD10A9873C83AB4C9E325 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDKSample/Pods-UnifiedSDKSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDKSample/Pods-UnifiedSDKSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDKSample/Pods-UnifiedSDKSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A75A847E435BB76B1B6E83DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnifiedSDKSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22C7286224448FAB00B7DF5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C7286A24448FAB00B7DF5E /* AppDelegate.swift in Sources */,
+				22C7286C24448FAB00B7DF5E /* SceneDelegate.swift in Sources */,
+				22C7286E24448FAB00B7DF5E /* ContentView.swift in Sources */,
+				22C7287E2444901E00B7DF5E /* ZendeskMessaging.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22C7287424448FAC00B7DF5E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22C7287524448FAC00B7DF5E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22C7287824448FAC00B7DF5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22C7287924448FAC00B7DF5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22C7287B24448FAC00B7DF5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EEF1A4A3E5C3C2F1D4902EE /* Pods-UnifiedSDKSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"UnifiedSDKSample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UnifiedSDKSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zendesk.unifiedSDKSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22C7287C24448FAC00B7DF5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F869FEC2B3BBC3A32B1FA4 /* Pods-UnifiedSDKSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"UnifiedSDKSample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UnifiedSDKSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zendesk.unifiedSDKSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22C7286124448FAB00B7DF5E /* Build configuration list for PBXProject "UnifiedSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C7287824448FAC00B7DF5E /* Debug */,
+				22C7287924448FAC00B7DF5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C7287A24448FAC00B7DF5E /* Build configuration list for PBXNativeTarget "UnifiedSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C7287B24448FAC00B7DF5E /* Debug */,
+				22C7287C24448FAC00B7DF5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22C7285E24448FAB00B7DF5E /* Project object */;
+}
