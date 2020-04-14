@@ -11,15 +11,18 @@ This repository contains the following demos:
 - [Unified SDK Sample](UnifiedSDK)
  - A demo application showcasing the ChatSDK on the UnifiedSDK
  
+- [Unified SDK Samples](UnifiedSDKSamples)
+ - A Demo application that shows how to integrate the Unified SDK with multiple engines.
+
 - [Support SDK Samples](SupportSDKSamples)
 
   You'll find three Sample Apps added to workspace `CocoaPodSample`
   - A demo application `Sample` showcasing the manual Swift integration of Support SDK.
   - A demo application `SampleObjectiveC` showcasing the manual Objective-C integration of Support SDK.
   - A demo application `CocoaPodSample` showcasing the integration with pods.
-  
+
   Both apps are implementing couple of main features of Support SDK.
-  
+
   **Note:** Initialise the Support SDK in the `AppDelegate.swift`, by passing in the credentials of your Zendesk instance.
   ```
           // Enter your zendesk app configs here
@@ -27,7 +30,7 @@ This repository contains the following demos:
                            clientId: "clientId",
                            zendeskUrl: "zendeskUrl")
   ```
-                           
+
 - [Chat SDK Samples](ChatSDKSamples)
   - Demo that showcases building a custom chat UI backed by Zendesk Chat API.
   - Demo that shows the app badge count on the tab bar button.
