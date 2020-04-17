@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     let themeColor: UIColor?
+    @State private var answerBot = true
+    @State private var chat = true
 
     var body: some View {
         NavigationView {
@@ -23,9 +25,20 @@ struct ContentView: View {
                 Text("SwiftUI Sample")
                 Spacer()
                     .frame(width: 100, height: 20, alignment: .center)
-                NavigationLink(destination: MessagingView(themeColor: themeColor)) {
+
+                NavigationLink(destination: MessagingView(themeColor: themeColor,
+                                                          answerBotEnabled: answerBot,
+                                                          chatEnabled: chat)) {
                     Text("Start Messaging")
                 }
+                HStack {
+                    Toggle(isOn: $answerBot) {
+                        Text("Answer Bot")
+                    }
+                    Toggle(isOn: $chat) {
+                        Text("Chat")
+                    }
+                }.padding(.horizontal, 40)
             }.padding(.bottom, 80)
         }
     }

@@ -8,30 +8,35 @@
 
 import SwiftUI
 
-// ViewController and engines
+// ViewController and Engines
 import MessagingSDK
 import MessagingAPI
 
 // Theme
 import CommonUISDK
 
-// Engine
+// Product engines
 import ChatSDK
+import AnswerBotSDK
 
 // Chat API and models
 import ChatProvidersSDK
 
 struct MessagingView: View {
     let themeColor: UIColor?
+    let answerBotEnabled: Bool
+    let chatEnabled: Bool
 
     var body: some View {
-        MessagingController(themeColor: themeColor)
+        MessagingController(themeColor: themeColor, answerBotEnabled: answerBotEnabled, chatEnabled: chatEnabled)
     }
 }
 
 struct MessagingController: UIViewControllerRepresentable {
     var controllers: [UIViewController] = []
     var themeColor: UIColor?
+    var answerBotEnabled: Bool
+    var chatEnabled: Bool
 
     // MARK: Configurations
     var messagingConfiguration: MessagingConfiguration {
@@ -51,7 +56,9 @@ struct MessagingController: UIViewControllerRepresentable {
         let chatAPIConfig = ChatAPIConfiguration()
         chatAPIConfig.department = "Sales"
         chatAPIConfig.tags = ["iOS", "chat_v2"]
-        chatAPIConfig.visitorInfo = VisitorInfo(name: "iOS User_\(UUID().uuidString)", email: "test@email.com", phoneNumber: "")
+
+        let name = "iOS User_\(UUID().uuidString)"
+        chatAPIConfig.visitorInfo = VisitorInfo(name: name, email: "test@email.com", phoneNumber: "")
         return chatAPIConfig
     }
 
@@ -61,7 +68,7 @@ struct MessagingController: UIViewControllerRepresentable {
         CommonTheme.currentTheme.primaryColor = themeColor
     }
 
-    // MARK: View Controllers
+    // MARK: View Controller
     func buildMessagingViewController() throws -> UIViewController {
         try Messaging.instance.buildUI(engines: engines, configs: [messagingConfiguration, chatConfiguration])
     }
@@ -85,13 +92,23 @@ struct MessagingController: UIViewControllerRepresentable {
 extension MessagingController {
 
     var engines: [Engine] {
-        let engineTypes: [Engine.Type] = [ChatEngine.self]
+        var engineTypes = [Engine.Type]()
+
+        if answerBotEnabled {
+            engineTypes.append(AnswerBotEngine.self)
+        }
+
+        if chatEnabled {
+            engineTypes.append(ChatEngine.self)
+        }
         return engines(from: engineTypes)
     }
 
     func engines(from engineTypes: [Engine.Type]) -> [Engine] {
         engineTypes.compactMap { type -> Engine? in
             switch type {
+            case is AnswerBotEngine.Type:
+                return try? AnswerBotEngine.engine()
             case is ChatEngine.Type:
                 return try? ChatEngine.engine()
             default:
