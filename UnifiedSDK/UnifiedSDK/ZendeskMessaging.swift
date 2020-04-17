@@ -15,12 +15,17 @@ import MessagingAPI
 // Theme
 import CommonUISDK
 
+import AnswerBotSDK
+
 // Chat Engine, API and models
 import ChatSDK
 import ChatProvidersSDK
 
 struct ZendeskMessaging {
-    var themeColor: UIColor?
+    let themeColor: UIColor?
+
+    let answerBotEnabled: Bool
+    let chatEnabled: Bool
 
     // MARK: Configurations
     var messagingConfiguration: MessagingConfiguration {
@@ -61,15 +66,24 @@ struct ZendeskMessaging {
 
 // MARK: Engines
 extension ZendeskMessaging {
-
     var engines: [Engine] {
-        let engineTypes: [Engine.Type] = [ChatEngine.self]
+        var engineTypes = [Engine.Type]()
+
+        if answerBotEnabled {
+            engineTypes.append(AnswerBotEngine.self)
+        }
+
+        if chatEnabled {
+            engineTypes.append(ChatEngine.self)
+        }
         return engines(from: engineTypes)
     }
 
     func engines(from engineTypes: [Engine.Type]) -> [Engine] {
         engineTypes.compactMap { type -> Engine? in
             switch type {
+            case is AnswerBotEngine.Type:
+                return try? AnswerBotEngine.engine()
             case is ChatEngine.Type:
                 return try? ChatEngine.engine()
             default:

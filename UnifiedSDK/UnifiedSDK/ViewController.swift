@@ -10,8 +10,17 @@ import UIKit
 
 final class ViewController: UIViewController {
 
-    private let zendeskWrapper = ZendeskMessaging(themeColor: nil)
-    private weak var zendeskNavigationController: UINavigationController!
+    @IBOutlet private weak var answerBotSwitch: UISwitch!
+    @IBOutlet private weak var chatSwitch: UISwitch!
+
+    private var themeColor: UIColor?
+
+    private var answerBotEnabled: Bool { answerBotSwitch.isOn }
+    private var chatEnabled: Bool { chatSwitch.isOn }
+
+    private var zendeskWrapper: ZendeskMessaging {
+        ZendeskMessaging(themeColor: themeColor, answerBotEnabled: answerBotEnabled, chatEnabled: chatEnabled)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +29,8 @@ final class ViewController: UIViewController {
     @IBAction func startMessaging(_ sender: Any) {
         do {
             let viewController = try zendeskWrapper.buildMessagingViewController()
-            let chatNavigationController = UINavigationController(rootViewController: viewController)
-            zendeskNavigationController = chatNavigationController
-            present(chatNavigationController, animated: true)
+            let navController = UINavigationController(rootViewController: viewController)
+            present(navController, animated: true)
         } catch {
             print(error)
         }

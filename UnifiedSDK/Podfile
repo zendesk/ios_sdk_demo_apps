@@ -4,4 +4,6 @@ target 'UnifiedSDK' do
 
   # Pods for UnifiedSDK
   pod 'ZendeskChatSDK'
+  pod 'ZendeskAnswerBotSDK'
+
 end
