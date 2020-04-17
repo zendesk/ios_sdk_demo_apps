@@ -8,6 +8,9 @@ This repository provides you with sample Apps to help learn how to use the Zende
 We hope you'll find those sample Apps useful and encourage you to re-use some of this code in your own Apps.
 
 This repository contains the following demos:
+- [Unified SDK Sample](UnifiedSDK)
+ - A demo application showcasing the ChatSDK on the UnifiedSDK
+ 
 - [Support SDK Samples](SupportSDKSamples)
 
   You'll find three Sample Apps added to workspace `CocoaPodSample`
