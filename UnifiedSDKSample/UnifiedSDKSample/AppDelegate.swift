@@ -10,14 +10,26 @@ import UIKit
 
 import ChatProvidersSDK
 
+import AnswerBotProvidersSDK
+import ZendeskCoreSDK
+import SupportProvidersSDK
+
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupAnswerBot()
         setupZendesk()
 
         return true
+    }
+
+    private func setupAnswerBot(){
+        #error("Please provide app credentials")
+        Zendesk.initialize(appId: "", clientId: "", zendeskUrl: "")
+        Support.initialize(withZendesk: Zendesk.instance!)
+        AnswerBot.initialize(withZendesk: Zendesk.instance!, support: Support.instance!)
     }
 
     private func setupZendesk(){
