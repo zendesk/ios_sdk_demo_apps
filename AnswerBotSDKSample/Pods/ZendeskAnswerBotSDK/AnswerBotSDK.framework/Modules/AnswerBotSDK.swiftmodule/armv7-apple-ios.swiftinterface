@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AnswerBotSDK
 import AnswerBotProvidersSDK
 @_exported import AnswerBotSDK
@@ -22,7 +22,7 @@ public struct InteractionData : AnswerBotSDK.InteractionDataProtocol, Swift.Equa
   public init(deflectionId: Swift.Int64, interactionAccessToken: Swift.String)
   public static func == (a: AnswerBotSDK.InteractionData, b: AnswerBotSDK.InteractionData) -> Swift.Bool
 }
-@objc(ZDKAnswerBotEngine) final public class AnswerBotEngine : ObjectiveC.NSObject, MessagingAPI.Engine {
+@_hasMissingDesignatedInitializers @objc(ZDKAnswerBotEngine) final public class AnswerBotEngine : ObjectiveC.NSObject, MessagingAPI.Engine {
   final public let id: Swift.String
   final public let transferOptionDescription: MessagingAPI.TransferOptionDescription
   final public var onUpdate: ([Foundation.UUID : (MessagingAPI.Update) -> Swift.Void])
@@ -31,8 +31,8 @@ public struct InteractionData : AnswerBotSDK.InteractionDataProtocol, Swift.Equa
   final public func stop()
   final public func onEvent(_ event: MessagingAPI.Event)
   @objc public static func engine() throws -> AnswerBotSDK.AnswerBotEngine
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 extension AnswerBotEngine : MessagingAPI.Observable {
   final public func observeUpdates(_ callback: @escaping (MessagingAPI.Update) -> Swift.Void) -> MessagingAPI.ObservationToken

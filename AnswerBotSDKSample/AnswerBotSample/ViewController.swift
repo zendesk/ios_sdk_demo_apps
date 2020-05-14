@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             let supportEngine = try SupportEngine.engine()
             let messagingConfiguration = MessagingConfiguration()
             let viewController = try Messaging.instance.buildUI(engines: [answerBotEngine, supportEngine],
-                                                    configs: [messagingConfiguration])
+                                                                configs: [messagingConfiguration])
             self.navigationController?.pushViewController(viewController, animated: true)
         } catch {
             // do something with error

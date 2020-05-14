@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MessagingAPI
 import Foundation
 @_exported import MessagingAPI
@@ -25,7 +25,7 @@ public struct FileQuery : MessagingAPI.Query, MessagingAPI.AttachmentItem, Swift
   public let timestamp: Foundation.Date
   public var status: MessagingAPI.ItemDeliveryStatus {
     get
-    }
+  }
   public let attachment: MessagingAPI.Attachment
   public init(id: Swift.String, timestamp: Foundation.Date = Date(), status: MessagingAPI.ItemDeliveryStatus, attachment: MessagingAPI.Attachment)
   public var hashValue: Swift.Int {
@@ -68,7 +68,7 @@ public struct TextQuery : MessagingAPI.Query, Swift.Hashable {
   public let message: Swift.String
   public var status: MessagingAPI.ItemDeliveryStatus {
     get
-    }
+  }
   public init(id: Swift.String, timestamp: Foundation.Date = Date(), message: Swift.String, status: MessagingAPI.ItemDeliveryStatus)
   public var hashValue: Swift.Int {
     get
@@ -92,19 +92,19 @@ public protocol Engine : MessagingAPI.ZDKEngine {
   @objc final public let displayName: Swift.String
   @objc public init(engineId: Swift.String, displayName: Swift.String)
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 public struct Attachment : Swift.Hashable {
   public let name: Swift.String
   public let size: Swift.Int
   public let url: Foundation.URL
   public init(name: Swift.String, size: Swift.Int, url: Foundation.URL)
+  public static func == (a: MessagingAPI.Attachment, b: MessagingAPI.Attachment) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: MessagingAPI.Attachment, b: MessagingAPI.Attachment) -> Swift.Bool
 }
 public protocol Observable : AnyObject {
   associatedtype Observable
@@ -117,10 +117,10 @@ extension Observable {
   public func notifyObservers(_ observable: Self.Observable)
 }
 @objc(ZDKObservationToken) final public class ObservationToken : ObjectiveC.NSObject {
+  @objc deinit
   public init(id: Foundation.UUID, cancellationClosure: @escaping () -> Swift.Void)
   @objc final public func cancel()
   @objc override dynamic public init()
-  @objc deinit
 }
 public struct TransferResponse : MessagingAPI.Response, Swift.Hashable {
   public let id: Swift.String
@@ -165,8 +165,14 @@ public struct InputFieldState : Swift.Equatable {
   public var enabled: Swift.Bool
   public var shouldShowAttachmentIcon: Swift.Bool
   public var endUserHint: Swift.String?
-  public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil)
+  public var keyboardType: UIKit.UIKeyboardType
+  public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType = .default)
   public static func == (a: MessagingAPI.InputFieldState, b: MessagingAPI.InputFieldState) -> Swift.Bool
+}
+public struct Banner : Swift.Equatable {
+  public let text: Swift.String
+  public init(text: Swift.String)
+  public static func == (a: MessagingAPI.Banner, b: MessagingAPI.Banner) -> Swift.Bool
 }
 public protocol LoggableItem {
   var timestamp: Foundation.Date { get }
@@ -241,19 +247,23 @@ public struct ImageResponse : MessagingAPI.Response, MessagingAPI.ImageItem, Mes
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-public enum ConnectionState : Swift.String {
+public enum ConnectionStatus : Swift.String {
   case connecting
   case connected
   case disconnected
   case reconnecting
   case failed
+  case unreachable
+  public var isConnected: Swift.Bool {
+    get
+  }
   public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
   public var rawValue: Swift.String {
     get
   }
 }
-extension ConnectionState : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+extension ConnectionStatus : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
   public var description: Swift.String {
     get
   }
@@ -270,6 +280,7 @@ public enum Event : Swift.Equatable {
   case messageResent(messageId: Swift.String, message: Swift.String? = nil)
   case articleSuggestionClicked(articleId: Swift.Int64, articleUrl: Swift.String, deflectionId: Swift.Int64, interactionAccessToken: Swift.String, navigationController: UIKit.UINavigationController?)
   case actionOptionClicked(description: Swift.String, action: (([Swift.String : Any]) -> Swift.Void), navigationController: UIKit.UINavigationController? = nil)
+  case onMenuTap(action: ([UIKit.UIAlertAction]) -> Swift.Void)
   case transferOptionClicked(transferOption: MessagingAPI.TransferOptionDescription)
   case responseOptionClicked(optionViewModelId: Swift.String, responseCellViewModelId: Swift.String)
   case reconnectButtonClicked
@@ -283,7 +294,7 @@ public struct ImageQuery : MessagingAPI.Query, MessagingAPI.ImageItem, Messaging
   public let timestamp: Foundation.Date
   public var status: MessagingAPI.ItemDeliveryStatus {
     get
-    }
+  }
   public let attachment: MessagingAPI.Attachment
   public var url: Foundation.URL {
     get
@@ -317,8 +328,11 @@ public enum Update : Swift.Equatable {
   case removeMessagingItem(id: Swift.String, animated: Swift.Bool)
   case appendMessagingItems(items: [MessagingAPI.MessagingItem], animated: Swift.Bool)
   case updateActiveAgent(agent: MessagingAPI.AgentDetails)
-  case updateConnectionState(_: MessagingAPI.ConnectionState)
+  case updateConnectionStatus(_: MessagingAPI.ConnectionStatus)
   case updateInputFieldState(_: MessagingAPI.InputFieldState)
+  case showBanner(MessagingAPI.Banner)
+  case showMenu(Swift.Bool)
+  case presentAlertController(UIKit.UIAlertController)
 }
 extension Update {
   public static func == (lhs: MessagingAPI.Update, rhs: MessagingAPI.Update) -> Swift.Bool
@@ -357,11 +371,11 @@ public enum ItemDeliveryStatus : Swift.Hashable {
   case pending
   case errored(errorMessage: MessagingAPI.ItemDeliveryStatusError)
   case received
+  public static func == (a: MessagingAPI.ItemDeliveryStatus, b: MessagingAPI.ItemDeliveryStatus) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: MessagingAPI.ItemDeliveryStatus, b: MessagingAPI.ItemDeliveryStatus) -> Swift.Bool
 }
 public enum ItemDeliveryStatusError : Swift.Hashable {
   case unsupportedFileType
@@ -408,8 +422,8 @@ public protocol SeparatorItem : MessagingAPI.MessagingItem {
     get
   }
 }
-extension MessagingAPI.ConnectionState : Swift.Equatable {}
-extension MessagingAPI.ConnectionState : Swift.Hashable {}
-extension MessagingAPI.ConnectionState : Swift.RawRepresentable {}
+extension MessagingAPI.ConnectionStatus : Swift.Equatable {}
+extension MessagingAPI.ConnectionStatus : Swift.Hashable {}
+extension MessagingAPI.ConnectionStatus : Swift.RawRepresentable {}
 extension MessagingAPI.ApplicationEvent : Swift.Hashable {}
 extension MessagingAPI.ApplicationEvent : Swift.RawRepresentable {}
