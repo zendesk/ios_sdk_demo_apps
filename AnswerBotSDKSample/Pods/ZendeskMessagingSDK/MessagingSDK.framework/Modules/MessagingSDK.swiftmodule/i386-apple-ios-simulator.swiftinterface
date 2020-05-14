@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MessagingSDK
 import CommonUISDK
 import Foundation
@@ -7,7 +7,7 @@ import MessagingAPI
 @_exported import MessagingSDK
 import SDKConfigurations
 import Swift
-@objc(ZDKMessaging) final public class Messaging : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ZDKMessaging) final public class Messaging : ObjectiveC.NSObject {
   @objc public static var instance: MessagingSDK.Messaging {
     @objc get
   }
@@ -54,7 +54,7 @@ final public class DispatchTimer {
   final public func execute(_ block: @escaping () -> Swift.Void)
   final public func stop()
 }
-@objc(ZDKMessagingConfiguration) final public class MessagingConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
+@_inheritsConvenienceInitializers @objc(ZDKMessagingConfiguration) final public class MessagingConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
   @objc final public var name: Swift.String
   @objc final public var botAvatar: UIKit.UIImage
   @objc override dynamic public init()

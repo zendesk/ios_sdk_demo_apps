@@ -6,7 +6,7 @@ target 'AnswerBotSample' do
   use_frameworks!
 
   # Pods for AnswerBotSample
-	pod 'ZendeskAnswerBotSDK', '2.0.1'
-	pod 'ZendeskSupportSDK', '5.0.1'
+	pod 'ZendeskAnswerBotSDK'
+	pod 'ZendeskSupportSDK'
 
 end
