@@ -11,7 +11,12 @@ import UIKit
 final class ViewController: UIViewController {
 
     private let zendeskWrapper = ZendeskMessaging(themeColor: nil)
-    private weak var zendeskNavigationController: UINavigationController!
+
+    private var modalBackButton: UIBarButtonItem {
+        UIBarButtonItem(barButtonSystemItem: .close,
+                        target: self,
+                        action: #selector(dismissViewController))
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +25,28 @@ final class ViewController: UIViewController {
     @IBAction func startMessaging(_ sender: Any) {
         do {
             let viewController = try zendeskWrapper.buildMessagingViewController()
-            let chatNavigationController = UINavigationController(rootViewController: viewController)
-            zendeskNavigationController = chatNavigationController
-            present(chatNavigationController, animated: true)
+            presentModally(viewController)
+            // pushViewController(viewController)
         } catch {
             print(error)
         }
+    }
+
+    private func pushViewController(_ viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    private func presentModally(_ viewController: UIViewController,
+                                presenationStyle: UIModalPresentationStyle = .automatic) {
+        viewController.navigationItem.leftBarButtonItem = modalBackButton
+
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = presenationStyle
+        present(navigationController, animated: true)
+    }
+
+    /// Dismiss modal `viewController` action
+    @objc private func dismissViewController() {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }
