@@ -11,6 +11,10 @@ import Swift
   @objc public static var instance: MessagingSDK.Messaging {
     @objc get
   }
+  @objc final public var isMessagingPresented: Swift.Bool {
+    @objc get
+  }
+  @objc weak final public var delegate: MessagingSDK.MessagingDelegate?
   @objc deinit
   final public func buildUI(engines: [MessagingAPI.Engine], configs: [SDKConfigurations.Configuration] = []) throws -> UIKit.UIViewController
 }
@@ -32,6 +36,24 @@ extension TextResponse : MessagingAPI.LoggableMessage {
 }
 extension ArticlesResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
+}
+@objc(ZDKMessagingUIEvent) public enum MessagingUIEvent : Swift.Int {
+  case viewDidLoad
+  case viewWillAppear
+  case viewDidAppear
+  case viewWillDisappear
+  case viewDidDisappear
+  case viewDidLayoutSubviews
+  case viewControllerDidClose
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(ZDKMessagingDelegate) public protocol MessagingDelegate : AnyObject {
+  @objc func messaging(_ messaging: MessagingSDK.Messaging, didPerformEvent event: MessagingSDK.MessagingUIEvent, context: Any?)
+  @objc func messaging(_ messaging: MessagingSDK.Messaging, shouldOpenURL url: Foundation.URL) -> Swift.Bool
 }
 extension TransferResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
@@ -66,3 +88,6 @@ extension FileResponse : MessagingAPI.LoggableMessage {
 extension ActionResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
+extension MessagingSDK.MessagingUIEvent : Swift.Equatable {}
+extension MessagingSDK.MessagingUIEvent : Swift.Hashable {}
+extension MessagingSDK.MessagingUIEvent : Swift.RawRepresentable {}
