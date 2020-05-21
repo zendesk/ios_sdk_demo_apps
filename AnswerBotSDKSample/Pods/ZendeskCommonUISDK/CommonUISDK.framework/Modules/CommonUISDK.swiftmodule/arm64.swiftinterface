@@ -44,7 +44,10 @@ extension ActionOptionViewModel : Swift.Equatable {
 public enum ViewControllerEvent : Swift.Equatable {
   case viewDidLoad
   case viewWillAppear
+  case viewDidAppear
   case viewWillDisappear
+  case viewDidDisappear
+  case viewDidLayoutSubviews
   case viewControllerDidClose
   public var hashValue: Swift.Int {
     get
@@ -57,6 +60,7 @@ public protocol MessagingViewModelProtocol {
   var shouldAnimateChanges: Swift.Bool { get }
   var connection: CommonUISDK.Connection { get }
   var dataSource: [CommonUISDK.InteractionCellViewModelProtocol] { get }
+  var isApplicationInactive: Swift.Bool { get }
   func newItems(oldViewModel: CommonUISDK.MessagingViewModelProtocol?) -> [(offset: Swift.Int, element: CommonUISDK.EquatableCellViewModel)]
   func updatedItems(oldViewModel: CommonUISDK.MessagingViewModelProtocol?) -> [(offset: Swift.Int, element: CommonUISDK.EquatableCellViewModel)]
   func removedItems(oldViewModel: CommonUISDK.MessagingViewModelProtocol?) -> [(offset: Swift.Int, element: CommonUISDK.EquatableCellViewModel)]
@@ -289,6 +293,7 @@ public enum MessagingCoordinatorAction {
 public protocol MessagingCoordinatorProtocol : AnyObject {
   var interactions: [CommonUISDK.InteractionCellViewModelProtocol] { get }
   var delegate: CommonUISDK.MessagingCoordinatorDelegate? { get set }
+  var isViewControllerPresented: Swift.Bool { get }
   func configureViewController(avatarImage: UIKit.UIImage?, inputFieldState: CommonUISDK.InputFieldViewModel) -> UIKit.UIViewController
   func set(avatarImage: UIKit.UIImage?, animated: Swift.Bool)
   func updateInputField(_ inputFieldState: CommonUISDK.InputFieldViewModel)
@@ -307,6 +312,9 @@ public protocol MessagingCoordinatorDelegate : AnyObject {
   func messagingCoordinator(_ coordinator: CommonUISDK.MessagingCoordinatorProtocol, didPerformAction: CommonUISDK.MessagingCoordinatorAction)
 }
 final public class MessagingCoordinator : CommonUISDK.MessagingCoordinatorProtocol {
+  final public var isViewControllerPresented: Swift.Bool {
+    get
+  }
   weak final public var delegate: CommonUISDK.MessagingCoordinatorDelegate?
   final public var interactions: [CommonUISDK.InteractionCellViewModelProtocol] {
     get
@@ -381,6 +389,9 @@ public struct MessagingViewModel : CommonUISDK.MessagingViewModelProtocol {
   public let avatarImage: UIKit.UIImage?
   public let shouldAnimateChanges: Swift.Bool
   public let dataSource: [CommonUISDK.InteractionCellViewModelProtocol]
+  public var isApplicationInactive: Swift.Bool {
+    get
+  }
   public init(messages: [CommonUISDK.InteractionCellViewModelProtocol], avatarImage: UIKit.UIImage?, connection: CommonUISDK.Connection = .connected, shouldAnimateChanges: Swift.Bool = true)
   public func newItems(oldViewModel: CommonUISDK.MessagingViewModelProtocol?) -> [(offset: Swift.Int, element: CommonUISDK.EquatableCellViewModel)]
   public func updatedItems(oldViewModel: CommonUISDK.MessagingViewModelProtocol?) -> [(offset: Swift.Int, element: CommonUISDK.EquatableCellViewModel)]
