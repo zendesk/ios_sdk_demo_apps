@@ -23,14 +23,14 @@ final class ZendeskMessaging {
     static let instance = ZendeskMessaging()
 
     #warning("Please provide Chat account key")
-    static let accountKey = "<#String#>"
+    let accountKey = "<#String#>"
 
-    static func initialize() {
+    func initialize() {
         setChatLogging(isEnabled: true, logLevel: .verbose)
         Chat.initialize(accountKey: accountKey)
     }
 
-    static func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {
+    func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {
         Logger.isEnabled = isEnabled
         Logger.defaultLevel = logLevel
     }
@@ -60,7 +60,6 @@ final class ZendeskMessaging {
         let chatAPIConfig = ChatAPIConfiguration()
         chatAPIConfig.department = "Sales"
         chatAPIConfig.tags = ["iOS", "chat_v2"]
-        chatAPIConfig.visitorInfo = VisitorInfo(name: "iOS_User", email: "test@email.com", phoneNumber: "")
         return chatAPIConfig
     }
 
