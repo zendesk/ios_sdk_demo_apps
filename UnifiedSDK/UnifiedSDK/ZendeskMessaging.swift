@@ -20,16 +20,22 @@ import ChatSDK
 import ChatProvidersSDK
 
 final class ZendeskMessaging {
+    static let instance = ZendeskMessaging()
 
     #warning("Please provide Chat account key")
     static let accountKey = "<#String#>"
+
+    static func initialize() {
+        setChatLogging(isEnabled: true, logLevel: .verbose)
+        Chat.initialize(accountKey: accountKey)
+    }
 
     static func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {
         Logger.isEnabled = isEnabled
         Logger.defaultLevel = logLevel
     }
 
-    var themeColor: UIColor? {
+    static var themeColor: UIColor? {
         didSet {
             guard let themeColor = themeColor else { return }
             CommonTheme.currentTheme.primaryColor = themeColor
@@ -46,7 +52,7 @@ final class ZendeskMessaging {
     var chatConfiguration: ChatConfiguration {
         let chatConfiguration = ChatConfiguration()
         chatConfiguration.isAgentAvailabilityEnabled = false
-        chatConfiguration.isPreChatFormEnabled = false
+        chatConfiguration.isPreChatFormEnabled = true
         return chatConfiguration
     }
 

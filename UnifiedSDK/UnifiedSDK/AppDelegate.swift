@@ -14,13 +14,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupZendesk()
+        ZendeskMessaging.initialize()
         return true
-    }
-
-    private func setupZendesk() {
-        ZendeskMessaging.setChatLogging(isEnabled: true, logLevel: .verbose)
-        Chat.initialize(accountKey: ZendeskMessaging.accountKey)
     }
 
     // MARK: UISceneSession Lifecycle
