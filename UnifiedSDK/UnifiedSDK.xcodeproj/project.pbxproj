@@ -15,11 +15,10 @@
 		22CFE21A2449C4DE00EB7391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CFE2182449C4DE00EB7391 /* LaunchScreen.storyboard */; };
 		22CFE2222449C6A300EB7391 /* ZendeskMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFE2212449C6A300EB7391 /* ZendeskMessaging.swift */; };
 		22CFE25D2449D34D00EB7391 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 22CFE25C2449D34D00EB7391 /* README.md */; };
-		D6315CAF8BBED91CEFD82E49 /* Pods_UnifiedSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFF2458904C518C44CA77BA /* Pods_UnifiedSDK.framework */; };
+		C38DD3740B6CCCB8B9EBA65A /* Pods_UnifiedSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704B1DDE1B1FF2F3EEF029A9 /* Pods_UnifiedSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15E129FBAF3B1C75CDA3897C /* Pods-UnifiedSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDK.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		22CFE20A2449C4DD00EB7391 /* UnifiedSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnifiedSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CFE20D2449C4DD00EB7391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22CFE20F2449C4DD00EB7391 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +29,15 @@
 		22CFE21B2449C4DE00EB7391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CFE2212449C6A300EB7391 /* ZendeskMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZendeskMessaging.swift; sourceTree = "<group>"; };
 		22CFE25C2449D34D00EB7391 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3BFF2458904C518C44CA77BA /* Pods_UnifiedSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8A4A36451D28CE1D624FB74 /* Pods-UnifiedSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDK.release.xcconfig"; path = "Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK.release.xcconfig"; sourceTree = "<group>"; };
+		22F3B55524894082003512D5 /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonUISDK.framework; path = Frameworks/CommonUISDK.framework; sourceTree = "<group>"; };
+		22F3B55624894082003512D5 /* ChatProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChatProvidersSDK.framework; path = Frameworks/ChatProvidersSDK.framework; sourceTree = "<group>"; };
+		22F3B55724894082003512D5 /* MessagingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagingSDK.framework; path = Frameworks/MessagingSDK.framework; sourceTree = "<group>"; };
+		22F3B55824894082003512D5 /* MessagingAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagingAPI.framework; path = Frameworks/MessagingAPI.framework; sourceTree = "<group>"; };
+		22F3B55924894082003512D5 /* SDKConfigurations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDKConfigurations.framework; path = Frameworks/SDKConfigurations.framework; sourceTree = "<group>"; };
+		22F3B55A24894082003512D5 /* ChatSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChatSDK.framework; path = Frameworks/ChatSDK.framework; sourceTree = "<group>"; };
+		704B1DDE1B1FF2F3EEF029A9 /* Pods_UnifiedSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FEB5913211A31D8CCB8B937 /* Pods-UnifiedSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDK.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		BF4C9191964D52051A27760A /* Pods-UnifiedSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDK.release.xcconfig"; path = "Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,30 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6315CAF8BBED91CEFD82E49 /* Pods_UnifiedSDK.framework in Frameworks */,
+				C38DD3740B6CCCB8B9EBA65A /* Pods_UnifiedSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1EBEE45D17DDA626683DAFA4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				15E129FBAF3B1C75CDA3897C /* Pods-UnifiedSDK.debug.xcconfig */,
-				E8A4A36451D28CE1D624FB74 /* Pods-UnifiedSDK.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		22CFE2012449C4DD00EB7391 = {
 			isa = PBXGroup;
 			children = (
 				22CFE25C2449D34D00EB7391 /* README.md */,
 				22CFE20C2449C4DD00EB7391 /* UnifiedSDK */,
 				22CFE20B2449C4DD00EB7391 /* Products */,
-				1EBEE45D17DDA626683DAFA4 /* Pods */,
-				506A82AA1FED503C129E6284 /* Frameworks */,
+				22F3B525248908C4003512D5 /* Frameworks */,
+				9F32791557F383A37628ACB6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,12 +102,27 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		506A82AA1FED503C129E6284 /* Frameworks */ = {
+		22F3B525248908C4003512D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3BFF2458904C518C44CA77BA /* Pods_UnifiedSDK.framework */,
+				22F3B55624894082003512D5 /* ChatProvidersSDK.framework */,
+				22F3B55A24894082003512D5 /* ChatSDK.framework */,
+				22F3B55524894082003512D5 /* CommonUISDK.framework */,
+				22F3B55824894082003512D5 /* MessagingAPI.framework */,
+				22F3B55724894082003512D5 /* MessagingSDK.framework */,
+				22F3B55924894082003512D5 /* SDKConfigurations.framework */,
+				704B1DDE1B1FF2F3EEF029A9 /* Pods_UnifiedSDK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F32791557F383A37628ACB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FEB5913211A31D8CCB8B937 /* Pods-UnifiedSDK.debug.xcconfig */,
+				BF4C9191964D52051A27760A /* Pods-UnifiedSDK.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,11 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22CFE21E2449C4DE00EB7391 /* Build configuration list for PBXNativeTarget "UnifiedSDK" */;
 			buildPhases = (
-				8AAA78BD8541068EA1E285AA /* [CP] Check Pods Manifest.lock */,
+				63CB5920EED8AD6F578F9B54 /* [CP] Check Pods Manifest.lock */,
 				22CFE2062449C4DD00EB7391 /* Sources */,
 				22CFE2072449C4DD00EB7391 /* Frameworks */,
 				22CFE2082449C4DD00EB7391 /* Resources */,
-				BD897986BE2FD5792F6EE13A /* [CP] Embed Pods Frameworks */,
+				5AD4FF8CEEF4F828DDD16A7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,7 +195,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8AAA78BD8541068EA1E285AA /* [CP] Check Pods Manifest.lock */ = {
+		5AD4FF8CEEF4F828DDD16A7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63CB5920EED8AD6F578F9B54 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,23 +232,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD897986BE2FD5792F6EE13A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -374,11 +386,12 @@
 		};
 		22CFE21F2449C4DE00EB7391 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15E129FBAF3B1C75CDA3897C /* Pods-UnifiedSDK.debug.xcconfig */;
+			baseConfigurationReference = 7FEB5913211A31D8CCB8B937 /* Pods-UnifiedSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = UnifiedSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,11 +406,12 @@
 		};
 		22CFE2202449C4DE00EB7391 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8A4A36451D28CE1D624FB74 /* Pods-UnifiedSDK.release.xcconfig */;
+			baseConfigurationReference = BF4C9191964D52051A27760A /* Pods-UnifiedSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = UnifiedSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

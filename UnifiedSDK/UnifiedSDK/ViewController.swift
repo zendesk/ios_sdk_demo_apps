@@ -9,8 +9,7 @@
 import UIKit
 
 final class ViewController: UIViewController {
-
-    private let zendeskWrapper = ZendeskMessaging(themeColor: nil)
+    var zendesk: ZendeskMessaging?
 
     private var modalBackButton: UIBarButtonItem {
         UIBarButtonItem(barButtonSystemItem: .close,
@@ -20,13 +19,14 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        dismissViewController()
+        zendesk = ZendeskMessaging()
     }
 
     @IBAction func startMessaging(_ sender: Any) {
         do {
-            let viewController = try zendeskWrapper.buildMessagingViewController()
+            let viewController = try zendesk!.buildMessagingViewController()
             presentModally(viewController)
-            // pushViewController(viewController)
         } catch {
             print(error)
         }
@@ -48,5 +48,9 @@ final class ViewController: UIViewController {
     /// Dismiss modal `viewController` action
     @objc private func dismissViewController() {
         navigationController?.dismiss(animated: true, completion: nil)
+    }
+
+    deinit {
+        zendesk = nil
     }
 }

@@ -18,10 +18,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    private func setupZendesk(){
-        #warning("Please provide Chat account key")
-        Chat.initialize(accountKey: "")
-        Logger.defaultLevel = .verbose // Chat logging
+    private func setupZendesk() {
+        ZendeskMessaging.setChatLogging(isEnabled: true, logLevel: .verbose)
+        Chat.initialize(accountKey: ZendeskMessaging.accountKey)
     }
 
     // MARK: UISceneSession Lifecycle
