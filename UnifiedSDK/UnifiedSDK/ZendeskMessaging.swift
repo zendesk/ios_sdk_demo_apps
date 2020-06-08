@@ -19,8 +19,22 @@ import CommonUISDK
 import ChatSDK
 import ChatProvidersSDK
 
-struct ZendeskMessaging {
-    var themeColor: UIColor?
+final class ZendeskMessaging {
+
+    #warning("Please provide Chat account key")
+    static let accountKey = "<#String#>"
+
+    static func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {
+        Logger.isEnabled = isEnabled
+        Logger.defaultLevel = logLevel
+    }
+
+    var themeColor: UIColor? {
+        didSet {
+            guard let themeColor = themeColor else { return }
+            CommonTheme.currentTheme.primaryColor = themeColor
+        }
+    }
 
     // MARK: Configurations
     var messagingConfiguration: MessagingConfiguration {
@@ -31,8 +45,8 @@ struct ZendeskMessaging {
 
     var chatConfiguration: ChatConfiguration {
         let chatConfiguration = ChatConfiguration()
-        chatConfiguration.chatMenuActions = [.emailTranscript]
         chatConfiguration.isAgentAvailabilityEnabled = false
+        chatConfiguration.isPreChatFormEnabled = false
         return chatConfiguration
     }
 
@@ -44,16 +58,9 @@ struct ZendeskMessaging {
         return chatAPIConfig
     }
 
-    // MARK: Theme
-    private func updateMessagingStyling() {
-        guard let themeColor = themeColor else { return }
-        CommonTheme.currentTheme.primaryColor = themeColor
-    }
-
     // MARK: View Controllers
     func buildMessagingViewController() throws -> UIViewController {
         Chat.instance?.configuration = chatAPIConfig
-        updateMessagingStyling()
         return try Messaging.instance.buildUI(engines: engines,
                                               configs: [messagingConfiguration, chatConfiguration])
     }
