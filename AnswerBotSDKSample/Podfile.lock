@@ -1,23 +1,23 @@
 PODS:
-  - ZendeskAnswerBotProvidersSDK (2.0.4):
-    - ZendeskSupportProvidersSDK (~> 5.0.4)
-  - ZendeskAnswerBotSDK (2.0.4):
-    - ZendeskAnswerBotProvidersSDK (~> 2.0.4)
-    - ZendeskMessagingSDK (~> 3.5.0)
-  - ZendeskCommonUISDK (4.5.0):
-    - ZendeskSDKConfigurationsSDK (~> 1.1.2)
-  - ZendeskCoreSDK (2.2.3)
-  - ZendeskMessagingAPISDK (3.5.0):
-    - ZendeskSDKConfigurationsSDK (~> 1.1.2)
-  - ZendeskMessagingSDK (3.5.0):
-    - ZendeskCommonUISDK (~> 4.5.0)
-    - ZendeskMessagingAPISDK (~> 3.5.0)
+  - ZendeskAnswerBotProvidersSDK (2.0.5):
+    - ZendeskSupportProvidersSDK (~> 5.0.5)
+  - ZendeskAnswerBotSDK (2.0.5):
+    - ZendeskAnswerBotProvidersSDK (~> 2.0.5)
+    - ZendeskMessagingSDK (~> 3.6.0)
+  - ZendeskCommonUISDK (5.0.0):
+    - ZendeskSDKConfigurationsSDK (~> 1.1.5)
+  - ZendeskCoreSDK (2.4.0)
+  - ZendeskMessagingAPISDK (3.6.0):
+    - ZendeskSDKConfigurationsSDK (~> 1.1.5)
+  - ZendeskMessagingSDK (3.6.0):
+    - ZendeskCommonUISDK (~> 5.0.0)
+    - ZendeskMessagingAPISDK (~> 3.6.0)
   - ZendeskSDKConfigurationsSDK (1.1.5)
-  - ZendeskSupportProvidersSDK (5.0.4):
-    - ZendeskCoreSDK (~> 2.2.1)
-  - ZendeskSupportSDK (5.0.4):
-    - ZendeskMessagingSDK (~> 3.5.0)
-    - ZendeskSupportProvidersSDK (~> 5.0.4)
+  - ZendeskSupportProvidersSDK (5.0.5):
+    - ZendeskCoreSDK (~> 2.4.0)
+  - ZendeskSupportSDK (5.0.5):
+    - ZendeskMessagingSDK (~> 3.6.0)
+    - ZendeskSupportProvidersSDK (~> 5.0.5)
 
 DEPENDENCIES:
   - ZendeskAnswerBotSDK
@@ -36,15 +36,15 @@ SPEC REPOS:
     - ZendeskSupportSDK
 
 SPEC CHECKSUMS:
-  ZendeskAnswerBotProvidersSDK: 17ab28be855896183d5c61a649e1c6aca701fb90
-  ZendeskAnswerBotSDK: 89b7121bf5a92d40c34f5c403a71cd907e406302
-  ZendeskCommonUISDK: 1544e18a810d4089cd3c8e2fc975128756e4eb62
-  ZendeskCoreSDK: 5fa27aeb70392e8770e17c26bfe6c4c78b21975a
-  ZendeskMessagingAPISDK: 592764cdbb4eb3e17859d9a33a5028e8be146469
-  ZendeskMessagingSDK: de16036707b7623bacee7068009e121f823567f2
+  ZendeskAnswerBotProvidersSDK: 294a835f26545e5da4e0e9b168cceab8aca930c6
+  ZendeskAnswerBotSDK: 58889818d89e041478e2fa8266f159f4851b6ec3
+  ZendeskCommonUISDK: 0b5ae632c28545c6f7e0791902f5672494d5ccd0
+  ZendeskCoreSDK: 804aff5229ae9500b8057b65fe53ad869856f427
+  ZendeskMessagingAPISDK: 29ce93e76b4833a2257d837de17a0efaeef867e5
+  ZendeskMessagingSDK: bdb534cc75853fab1bc201ce97faadf9accdd1ab
   ZendeskSDKConfigurationsSDK: 0c610c22c9e3cafcd31591344b8cc3b4398e49b2
-  ZendeskSupportProvidersSDK: bc70efd7a7241856846d7f888a052300575ed33b
-  ZendeskSupportSDK: 2ca9515f4c66080820052a912ecbce2f5e5866e4
+  ZendeskSupportProvidersSDK: d21ce8eb3df1066338c7d3875bb818b32c3f124e
+  ZendeskSupportSDK: 7e29a825e862aba217b7b89f7d3397f7deef586a
 
 PODFILE CHECKSUM: 47c7d5093250d57164172b5f0e52bbb095c8e995
 

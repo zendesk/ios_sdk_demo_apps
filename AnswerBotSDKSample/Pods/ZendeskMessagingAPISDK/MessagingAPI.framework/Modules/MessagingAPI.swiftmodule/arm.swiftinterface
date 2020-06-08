@@ -76,6 +76,12 @@ public struct TextQuery : MessagingAPI.Query, Swift.Hashable {
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: MessagingAPI.TextQuery, b: MessagingAPI.TextQuery) -> Swift.Bool
 }
+final public class BotMessageDispatcher {
+  final public var isInteractionInProcess: Swift.Bool
+  public init(typingDelay: Swift.Int = 1200, botDetails: @escaping () -> MessagingAPI.AgentDetails, onUpdate: @escaping (MessagingAPI.Update) -> Swift.Void, onDequeue: @escaping (MessagingAPI.MessagingItem) -> Swift.Void)
+  final public func append(_ messagingItems: [MessagingAPI.MessagingItem], onPostSend: (() -> Swift.Void)? = nil)
+  @objc deinit
+}
 @objc public protocol ZDKEngine {
 }
 public protocol Engine : MessagingAPI.ZDKEngine {

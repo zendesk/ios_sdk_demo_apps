@@ -2,14 +2,18 @@
 // swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommonUISDK
 import AVFoundation
+import CommonCrypto
 @_exported import CommonUISDK
+import CoreImage
 import Foundation
 import MobileCoreServices
 import Photos
 import QuickLook
 import SDKConfigurations
 import Swift
+import UIKit.UIImage
 import UIKit
+import os
 public protocol ActionOptionsCellDelegate : AnyObject {
   func actionOptionsCell(_ cell: CommonUISDK.ActionOptionsTableViewCell, didSelect viewModel: CommonUISDK.ButtonOptionViewModelProtocol, from actionModel: CommonUISDK.ActionOptionsCellViewModel)
 }
@@ -21,6 +25,7 @@ public protocol ActionOptionsCellDelegate : AnyObject {
     @objc get
   }
   @objc override final public func prepareForReuse()
+  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
 }
 extension ActionOptionsTableViewCell {
@@ -108,9 +113,6 @@ final public class ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Sw
   final public let isBot: Swift.Bool
   final public let url: Foundation.URL
   final public let filename: Swift.String
-  final public var image: UIKit.UIImage? {
-    get
-  }
   final public let cachedURL: Foundation.URL?
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL, cachedURL: Foundation.URL?)
   @objc deinit
@@ -137,6 +139,9 @@ public struct StatusViewModel : CommonUISDK.InteractionCellViewModelProtocol, Sw
 }
 extension UIColor {
   public static func colorFromHex(_ hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1.0) -> UIKit.UIColor
+}
+extension UIImageView {
+  @objc dynamic open func nuke_display(image: UIKit.UIImage?)
 }
 public protocol ResponseOptionsCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
   var responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel] { get }
@@ -264,9 +269,16 @@ public struct ActionOptionsCellViewModel : CommonUISDK.ActionOptionsCellViewMode
   public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, titleText: Swift.String = Constants.Strings.getInTouchReply, isBot: Swift.Bool = false, isEnabled: Swift.Bool = true, actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol])
   public static func == (lhs: CommonUISDK.ActionOptionsCellViewModel, rhs: CommonUISDK.ActionOptionsCellViewModel) -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ZDKCommonTheme) final public class CommonTheme : ObjectiveC.NSObject {
-  @objc public static let currentTheme: CommonUISDK.CommonTheme
+extension CGSize : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(ZDKCommonTheme) final public class CommonTheme : ObjectiveC.NSObject {
+  @objc public static var currentTheme: CommonUISDK.CommonTheme
   @objc final public var primaryColor: UIKit.UIColor
+  @objc override dynamic public init()
   @objc deinit
 }
 extension UIView {
@@ -384,6 +396,12 @@ public struct TextCellViewModel : CommonUISDK.TextCellViewModelProtocol, Swift.E
   public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), text: Swift.String, name: Swift.String?, isBot: Swift.Bool = false, messageStatus: CommonUISDK.Status = .received)
   public static func == (a: CommonUISDK.TextCellViewModel, b: CommonUISDK.TextCellViewModel) -> Swift.Bool
 }
+@_hasMissingDesignatedInitializers final public class CacheManager {
+  @objc deinit
+}
+extension CacheManager : Swift.Equatable {
+  public static func == (lhs: CommonUISDK.CacheManager, rhs: CommonUISDK.CacheManager) -> Swift.Bool
+}
 public struct MessagingViewModel : CommonUISDK.MessagingViewModelProtocol {
   public let connection: CommonUISDK.Connection
   public let avatarImage: UIKit.UIImage?
@@ -453,6 +471,7 @@ public protocol ArticlesTableViewCellDelegate : AnyObject {
   @objc override final public var canBecomeFirstResponder: Swift.Bool {
     @objc get
   }
+  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
 }
 extension ArticlesTableViewCell {
@@ -579,14 +598,10 @@ public enum Constants {
   public static let controller: Swift.String
   public static let configs: Swift.String
   public enum UI {
-    public static let midGrey: UIKit.UIColor
-    public static let systemGrey: UIKit.UIColor
-    public static let backgroundColorUserInput: UIKit.UIColor
-    public static let backgroundColor: UIKit.UIColor
+    public static let systemBackground: UIKit.UIColor
+    public static let systemGray2: UIKit.UIColor
+    public static let systemGray5: UIKit.UIColor
     public static let primaryColor: UIKit.UIColor
-    public static let lightGreyColor: UIKit.UIColor
-    public static let disabledInputFieldColor: UIKit.UIColor
-    public static let disabledPlaceholderTextColor: UIKit.UIColor
   }
   public enum Strings {
     public static let noArticlesReply: Swift.String
