@@ -29,12 +29,6 @@
 		22CFE21B2449C4DE00EB7391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CFE2212449C6A300EB7391 /* ZendeskMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZendeskMessaging.swift; sourceTree = "<group>"; };
 		22CFE25C2449D34D00EB7391 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		22F3B55524894082003512D5 /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonUISDK.framework; path = Frameworks/CommonUISDK.framework; sourceTree = "<group>"; };
-		22F3B55624894082003512D5 /* ChatProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChatProvidersSDK.framework; path = Frameworks/ChatProvidersSDK.framework; sourceTree = "<group>"; };
-		22F3B55724894082003512D5 /* MessagingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagingSDK.framework; path = Frameworks/MessagingSDK.framework; sourceTree = "<group>"; };
-		22F3B55824894082003512D5 /* MessagingAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagingAPI.framework; path = Frameworks/MessagingAPI.framework; sourceTree = "<group>"; };
-		22F3B55924894082003512D5 /* SDKConfigurations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDKConfigurations.framework; path = Frameworks/SDKConfigurations.framework; sourceTree = "<group>"; };
-		22F3B55A24894082003512D5 /* ChatSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChatSDK.framework; path = Frameworks/ChatSDK.framework; sourceTree = "<group>"; };
 		704B1DDE1B1FF2F3EEF029A9 /* Pods_UnifiedSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEB5913211A31D8CCB8B937 /* Pods-UnifiedSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDK.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		BF4C9191964D52051A27760A /* Pods-UnifiedSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedSDK.release.xcconfig"; path = "Target Support Files/Pods-UnifiedSDK/Pods-UnifiedSDK.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,12 +99,6 @@
 		22F3B525248908C4003512D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				22F3B55624894082003512D5 /* ChatProvidersSDK.framework */,
-				22F3B55A24894082003512D5 /* ChatSDK.framework */,
-				22F3B55524894082003512D5 /* CommonUISDK.framework */,
-				22F3B55824894082003512D5 /* MessagingAPI.framework */,
-				22F3B55724894082003512D5 /* MessagingSDK.framework */,
-				22F3B55924894082003512D5 /* SDKConfigurations.framework */,
 				704B1DDE1B1FF2F3EEF029A9 /* Pods_UnifiedSDK.framework */,
 			);
 			name = Frameworks;
