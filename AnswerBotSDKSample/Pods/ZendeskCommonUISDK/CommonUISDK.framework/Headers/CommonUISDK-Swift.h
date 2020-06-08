@@ -223,6 +223,7 @@ SWIFT_CLASS("_TtC11CommonUISDK16ActionOptionView")
 
 
 
+@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 @interface ActionOptionsTableViewCell : UITableViewCell
@@ -232,6 +233,7 @@ SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
 - (void)prepareForReuse;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -247,6 +249,7 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 - (void)prepareForReuse;
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -260,18 +263,17 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 SWIFT_CLASS_NAMED("CommonTheme")
 @interface ZDKCommonTheme : NSObject
 /// The theme currently applied to the SDK.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDKCommonTheme * _Nonnull currentTheme;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDKCommonTheme * _Nonnull currentTheme;)
 + (ZDKCommonTheme * _Nonnull)currentTheme SWIFT_WARN_UNUSED_RESULT;
++ (void)setCurrentTheme:(ZDKCommonTheme * _Nonnull)value;
 /// The primary color of the SDK.
 /// This is applied as a tint to various UI components
 @property (nonatomic, strong) UIColor * _Nonnull primaryColor;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
-@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 @interface InputField : UIView
@@ -288,6 +290,8 @@ SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 - (void)textViewDidChange:(UITextView * _Nonnull)textView;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 @end
+
+
 
 
 
@@ -342,6 +346,24 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface UIImageView (SWIFT_EXTENSION(CommonUISDK))
+/// Displays an image.
+- (void)nuke_displayWithImage:(UIImage * _Nullable)image;
+@end
 
 
 
@@ -592,6 +614,7 @@ SWIFT_CLASS("_TtC11CommonUISDK16ActionOptionView")
 
 
 
+@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 @interface ActionOptionsTableViewCell : UITableViewCell
@@ -601,6 +624,7 @@ SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
 - (void)prepareForReuse;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -616,6 +640,7 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 - (void)prepareForReuse;
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -629,18 +654,17 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 SWIFT_CLASS_NAMED("CommonTheme")
 @interface ZDKCommonTheme : NSObject
 /// The theme currently applied to the SDK.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDKCommonTheme * _Nonnull currentTheme;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDKCommonTheme * _Nonnull currentTheme;)
 + (ZDKCommonTheme * _Nonnull)currentTheme SWIFT_WARN_UNUSED_RESULT;
++ (void)setCurrentTheme:(ZDKCommonTheme * _Nonnull)value;
 /// The primary color of the SDK.
 /// This is applied as a tint to various UI components
 @property (nonatomic, strong) UIColor * _Nonnull primaryColor;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
-@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 @interface InputField : UIView
@@ -657,6 +681,8 @@ SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 - (void)textViewDidChange:(UITextView * _Nonnull)textView;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 @end
+
+
 
 
 
@@ -711,6 +737,24 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface UIImageView (SWIFT_EXTENSION(CommonUISDK))
+/// Displays an image.
+- (void)nuke_displayWithImage:(UIImage * _Nullable)image;
+@end
 
 
 
@@ -964,6 +1008,7 @@ SWIFT_CLASS("_TtC11CommonUISDK16ActionOptionView")
 
 
 
+@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 @interface ActionOptionsTableViewCell : UITableViewCell
@@ -973,6 +1018,7 @@ SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
 - (void)prepareForReuse;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -988,6 +1034,7 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 - (void)prepareForReuse;
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -1001,18 +1048,17 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 SWIFT_CLASS_NAMED("CommonTheme")
 @interface ZDKCommonTheme : NSObject
 /// The theme currently applied to the SDK.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDKCommonTheme * _Nonnull currentTheme;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDKCommonTheme * _Nonnull currentTheme;)
 + (ZDKCommonTheme * _Nonnull)currentTheme SWIFT_WARN_UNUSED_RESULT;
++ (void)setCurrentTheme:(ZDKCommonTheme * _Nonnull)value;
 /// The primary color of the SDK.
 /// This is applied as a tint to various UI components
 @property (nonatomic, strong) UIColor * _Nonnull primaryColor;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
-@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 @interface InputField : UIView
@@ -1029,6 +1075,8 @@ SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 - (void)textViewDidChange:(UITextView * _Nonnull)textView;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 @end
+
+
 
 
 
@@ -1083,6 +1131,24 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface UIImageView (SWIFT_EXTENSION(CommonUISDK))
+/// Displays an image.
+- (void)nuke_displayWithImage:(UIImage * _Nullable)image;
+@end
 
 
 
@@ -1333,6 +1399,7 @@ SWIFT_CLASS("_TtC11CommonUISDK16ActionOptionView")
 
 
 
+@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 @interface ActionOptionsTableViewCell : UITableViewCell
@@ -1342,6 +1409,7 @@ SWIFT_CLASS("_TtC11CommonUISDK26ActionOptionsTableViewCell")
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
 - (void)prepareForReuse;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -1357,6 +1425,7 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 - (void)prepareForReuse;
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
 
 
@@ -1370,18 +1439,17 @@ SWIFT_CLASS("_TtC11CommonUISDK21ArticlesTableViewCell")
 SWIFT_CLASS_NAMED("CommonTheme")
 @interface ZDKCommonTheme : NSObject
 /// The theme currently applied to the SDK.
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ZDKCommonTheme * _Nonnull currentTheme;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) ZDKCommonTheme * _Nonnull currentTheme;)
 + (ZDKCommonTheme * _Nonnull)currentTheme SWIFT_WARN_UNUSED_RESULT;
++ (void)setCurrentTheme:(ZDKCommonTheme * _Nonnull)value;
 /// The primary color of the SDK.
 /// This is applied as a tint to various UI components
 @property (nonatomic, strong) UIColor * _Nonnull primaryColor;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
-@class UITraitCollection;
 
 SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 @interface InputField : UIView
@@ -1398,6 +1466,8 @@ SWIFT_CLASS("_TtC11CommonUISDK10InputField")
 - (void)textViewDidChange:(UITextView * _Nonnull)textView;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 @end
+
+
 
 
 
@@ -1452,6 +1522,24 @@ SWIFT_CLASS("_TtC11CommonUISDK28TypingIndicatorTableViewCell")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface UIImageView (SWIFT_EXTENSION(CommonUISDK))
+/// Displays an image.
+- (void)nuke_displayWithImage:(UIImage * _Nullable)image;
+@end
 
 
 
