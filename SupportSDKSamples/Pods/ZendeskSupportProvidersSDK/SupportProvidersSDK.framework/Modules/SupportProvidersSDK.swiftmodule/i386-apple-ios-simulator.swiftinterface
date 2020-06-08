@@ -20,7 +20,7 @@ import ZendeskCoreSDK
   @objc deinit
 }
 extension HelpCenterBlips {
-  @objc public static func blipArticleViewed(_ pageTitle: Swift.String, url: Swift.String, navigatorLanguage: Swift.String)
+  @objc public static func blipArticleViewed(_ pageTitle: Swift.String, url: Swift.String, navigatorLanguage: Swift.String, pageId: Swift.Int64, pageLocale: Swift.String)
   @objc public static func blipSearchQuery(_ query: Swift.String)
   @objc public static func blipArticleVote(_ articleId: Swift.String, vote: Swift.Int)
 }
