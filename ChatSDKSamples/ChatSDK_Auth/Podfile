@@ -1,0 +1,7 @@
+target 'ChatSDK_Auth' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ChatSDK_Auth
+  pod 'ZendeskChatSDK'
+end

@@ -7,38 +7,33 @@
 //
 
 import Foundation
-
-// ViewController and engines
 import MessagingSDK
 import MessagingAPI
-
-// Theme
 import CommonUISDK
-
-// Chat Engine, API and models
 import ChatSDK
 import ChatProvidersSDK
 
-final class ZendeskMessaging {
+final class ZendeskMessaging: NSObject, JWTAuthenticator {
+
     static let instance = ZendeskMessaging()
-
-    #warning("Please provide Chat account key")
-    let accountKey = "<#String#>"
-
-    func initialize() {
-        setChatLogging(isEnabled: true, logLevel: .verbose)
-        Chat.initialize(accountKey: accountKey)
-    }
-
-    func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {
-        Logger.isEnabled = isEnabled
-        Logger.defaultLevel = logLevel
-    }
 
     static var themeColor: UIColor? {
         didSet {
             guard let themeColor = themeColor else { return }
             CommonTheme.currentTheme.primaryColor = themeColor
+        }
+    }
+
+    #warning("Please provide Chat account key")
+    let accountKey = "<#String#>"
+
+    var authToken: String = "" {
+        didSet {
+            guard !authToken.isEmpty else {
+                resetVisitorIdentity()
+                return
+            }
+            Chat.instance?.setIdentity(authenticator: self)
         }
     }
 
@@ -52,7 +47,7 @@ final class ZendeskMessaging {
     var chatConfiguration: ChatConfiguration {
         let chatConfiguration = ChatConfiguration()
         chatConfiguration.isAgentAvailabilityEnabled = false
-        chatConfiguration.isPreChatFormEnabled = true
+        chatConfiguration.isPreChatFormEnabled = false
         return chatConfiguration
     }
 
@@ -62,7 +57,26 @@ final class ZendeskMessaging {
         return chatAPIConfig
     }
 
-    // MARK: View Controllers
+    // MARK: Chat
+    func initialize() {
+        setChatLogging(isEnabled: true, logLevel: .verbose)
+        Chat.initialize(accountKey: accountKey)
+    }
+
+    func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {
+        Logger.isEnabled = isEnabled
+        Logger.defaultLevel = logLevel
+    }
+
+    func resetVisitorIdentity() {
+        Chat.instance?.resetIdentity(nil)
+    }
+
+    func getToken(_ completion: @escaping (String?, Error?) -> Void) {
+        completion(authToken, nil)
+    }
+
+    // MARK: View Controller
     func buildMessagingViewController() throws -> UIViewController {
         Chat.instance?.configuration = chatAPIConfig
         return try Messaging.instance.buildUI(engines: engines,
@@ -70,9 +84,8 @@ final class ZendeskMessaging {
     }
 }
 
-// MARK: Engines
 extension ZendeskMessaging {
-
+    // MARK: Engines
     var engines: [Engine] {
         let engineTypes: [Engine.Type] = [ChatEngine.self]
         return engines(from: engineTypes)
