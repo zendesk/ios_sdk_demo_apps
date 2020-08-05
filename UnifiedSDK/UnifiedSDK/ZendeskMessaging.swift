@@ -58,7 +58,6 @@ final class ZendeskMessaging {
 
     var chatAPIConfig: ChatAPIConfiguration {
         let chatAPIConfig = ChatAPIConfiguration()
-        chatAPIConfig.department = "Sales"
         chatAPIConfig.tags = ["iOS", "chat_v2"]
         return chatAPIConfig
     }
