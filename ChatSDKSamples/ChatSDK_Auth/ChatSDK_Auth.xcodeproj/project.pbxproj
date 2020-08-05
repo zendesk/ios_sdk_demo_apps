@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		227B996324D9AA8A0032675E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B996224D9AA8A0032675E /* AppDelegate.swift */; };
+		227B996524D9AA8B0032675E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B996424D9AA8B0032675E /* SceneDelegate.swift */; };
+		227B996724D9AA8B0032675E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B996624D9AA8B0032675E /* ViewController.swift */; };
+		227B996C24D9AA8E0032675E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227B996B24D9AA8E0032675E /* Assets.xcassets */; };
+		227B996F24D9AA8E0032675E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227B996D24D9AA8E0032675E /* LaunchScreen.storyboard */; };
+		227B997824D9AB5E0032675E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227B997624D9AB5E0032675E /* Main.storyboard */; };
+		227B997A24D9AC750032675E /* ZendeskMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B997924D9AC750032675E /* ZendeskMessaging.swift */; };
+		227B997C24D9B1BD0032675E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 227B997B24D9B1BC0032675E /* README.md */; };
+		9C3A23EA1BF82E0EF1BB730D /* Pods_ChatSDK_Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE92888D028BB96D25FC52A /* Pods_ChatSDK_Auth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2192E4B57DE023E780FB9A17 /* Pods-ChatSDK_Auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatSDK_Auth.debug.xcconfig"; path = "Target Support Files/Pods-ChatSDK_Auth/Pods-ChatSDK_Auth.debug.xcconfig"; sourceTree = "<group>"; };
+		227B995F24D9AA8A0032675E /* ChatSDK_Auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatSDK_Auth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		227B996224D9AA8A0032675E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		227B996424D9AA8B0032675E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		227B996624D9AA8B0032675E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		227B996B24D9AA8E0032675E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		227B996E24D9AA8E0032675E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		227B997024D9AA8E0032675E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227B997724D9AB5E0032675E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		227B997924D9AC750032675E /* ZendeskMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZendeskMessaging.swift; sourceTree = "<group>"; };
+		227B997B24D9B1BC0032675E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2CE92888D028BB96D25FC52A /* Pods_ChatSDK_Auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatSDK_Auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1A0BBD9C5A894FE4239739 /* Pods-ChatSDK_Auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatSDK_Auth.release.xcconfig"; path = "Target Support Files/Pods-ChatSDK_Auth/Pods-ChatSDK_Auth.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		227B995C24D9AA8A0032675E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3A23EA1BF82E0EF1BB730D /* Pods_ChatSDK_Auth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00D223D0CAF962662F2CEEDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CE92888D028BB96D25FC52A /* Pods_ChatSDK_Auth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		227B995624D9AA8A0032675E = {
+			isa = PBXGroup;
+			children = (
+				227B997B24D9B1BC0032675E /* README.md */,
+				227B996124D9AA8A0032675E /* ChatSDK_Auth */,
+				227B996024D9AA8A0032675E /* Products */,
+				3656A02C2B1FF51DC8EA628E /* Pods */,
+				00D223D0CAF962662F2CEEDB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		227B996024D9AA8A0032675E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				227B995F24D9AA8A0032675E /* ChatSDK_Auth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		227B996124D9AA8A0032675E /* ChatSDK_Auth */ = {
+			isa = PBXGroup;
+			children = (
+				227B997624D9AB5E0032675E /* Main.storyboard */,
+				227B996224D9AA8A0032675E /* AppDelegate.swift */,
+				227B996424D9AA8B0032675E /* SceneDelegate.swift */,
+				227B996624D9AA8B0032675E /* ViewController.swift */,
+				227B997924D9AC750032675E /* ZendeskMessaging.swift */,
+				227B996B24D9AA8E0032675E /* Assets.xcassets */,
+				227B996D24D9AA8E0032675E /* LaunchScreen.storyboard */,
+				227B997024D9AA8E0032675E /* Info.plist */,
+			);
+			path = ChatSDK_Auth;
+			sourceTree = "<group>";
+		};
+		3656A02C2B1FF51DC8EA628E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2192E4B57DE023E780FB9A17 /* Pods-ChatSDK_Auth.debug.xcconfig */,
+				AC1A0BBD9C5A894FE4239739 /* Pods-ChatSDK_Auth.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		227B995E24D9AA8A0032675E /* ChatSDK_Auth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227B997324D9AA8E0032675E /* Build configuration list for PBXNativeTarget "ChatSDK_Auth" */;
+			buildPhases = (
+				5950C78E3304A5D07103195D /* [CP] Check Pods Manifest.lock */,
+				227B995B24D9AA8A0032675E /* Sources */,
+				227B995C24D9AA8A0032675E /* Frameworks */,
+				227B995D24D9AA8A0032675E /* Resources */,
+				E2B463EF37947D6F50999FCD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatSDK_Auth;
+			productName = ChatSDK_Auth;
+			productReference = 227B995F24D9AA8A0032675E /* ChatSDK_Auth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		227B995724D9AA8A0032675E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Zendesk;
+				TargetAttributes = {
+					227B995E24D9AA8A0032675E = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 227B995A24D9AA8A0032675E /* Build configuration list for PBXProject "ChatSDK_Auth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 227B995624D9AA8A0032675E;
+			productRefGroup = 227B996024D9AA8A0032675E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				227B995E24D9AA8A0032675E /* ChatSDK_Auth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		227B995D24D9AA8A0032675E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227B997824D9AB5E0032675E /* Main.storyboard in Resources */,
+				227B996F24D9AA8E0032675E /* LaunchScreen.storyboard in Resources */,
+				227B997C24D9B1BD0032675E /* README.md in Resources */,
+				227B996C24D9AA8E0032675E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5950C78E3304A5D07103195D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatSDK_Auth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2B463EF37947D6F50999FCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatSDK_Auth/Pods-ChatSDK_Auth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatSDK_Auth/Pods-ChatSDK_Auth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatSDK_Auth/Pods-ChatSDK_Auth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		227B995B24D9AA8A0032675E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227B996724D9AA8B0032675E /* ViewController.swift in Sources */,
+				227B996324D9AA8A0032675E /* AppDelegate.swift in Sources */,
+				227B996524D9AA8B0032675E /* SceneDelegate.swift in Sources */,
+				227B997A24D9AC750032675E /* ZendeskMessaging.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		227B996D24D9AA8E0032675E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				227B996E24D9AA8E0032675E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		227B997624D9AB5E0032675E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				227B997724D9AB5E0032675E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		227B997124D9AA8E0032675E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		227B997224D9AA8E0032675E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		227B997424D9AA8E0032675E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2192E4B57DE023E780FB9A17 /* Pods-ChatSDK_Auth.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				INFOPLIST_FILE = ChatSDK_Auth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Zendesk.ChatSDK-Auth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		227B997524D9AA8E0032675E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC1A0BBD9C5A894FE4239739 /* Pods-ChatSDK_Auth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				INFOPLIST_FILE = ChatSDK_Auth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Zendesk.ChatSDK-Auth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		227B995A24D9AA8A0032675E /* Build configuration list for PBXProject "ChatSDK_Auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227B997124D9AA8E0032675E /* Debug */,
+				227B997224D9AA8E0032675E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227B997324D9AA8E0032675E /* Build configuration list for PBXNativeTarget "ChatSDK_Auth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227B997424D9AA8E0032675E /* Debug */,
+				227B997524D9AA8E0032675E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 227B995724D9AA8A0032675E /* Project object */;
+}
