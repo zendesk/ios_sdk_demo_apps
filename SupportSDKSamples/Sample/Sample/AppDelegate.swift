@@ -19,13 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CoreLogger.enabled = true
         CoreLogger.logLevel = .debug
         
+        // Initialize the SDK with your Zendesk instance
+        // Get these details from your Zendesk dashboard: Admin -> Channels -> MobileSDK.
         #warning("Enter your zendesk app configs here")
-        Zendesk.initialize(appId: "appId",
-                           clientId: "clientId",
-                           zendeskUrl: "zendeskUrl")
-        
+        Zendesk.initialize(appId: "<#appId#>",
+                           clientId: "<#clientId#>",
+                           zendeskUrl: "<#zendeskUrl#>")
+
         Support.initialize(withZendesk: Zendesk.instance)
-        Zendesk.instance?.setIdentity(Identity.createAnonymous(name: "name", email: "name@email.com"))
+        // Support is needed to hand off tickets from AB
+
+        // Set an identity for authentication.
+        let identity = Identity.createAnonymous()
+        // let identity = Identity.createJwt(token: "JWT_User_Identifier")
+        Zendesk.instance?.setIdentity(identity)
         return true
     }
 }

@@ -22,15 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Initialize the SDK with your Zendesk instance
         // Get these details from your Zendesk dashboard: Admin -> Channels -> MobileSDK.
-         Zendesk.initialize(appId: "appId",
-                            clientId: "clientId",
-                            zendeskUrl: "zendeskUrl")
+        #warning("Enter your zendesk app configs here")
+        Zendesk.initialize(appId: "<#appId#>",
+                           clientId: "<#clientId#>",
+                           zendeskUrl: "<#zendeskUrl#>")
         
         Support.initialize(withZendesk: Zendesk.instance)
         // Support is needed to hand off tickets from AB
         
         // Set an identity for authentication.
-         let identity = Identity.createAnonymous()
+        let identity = Identity.createAnonymous()
         // let identity = Identity.createJwt(token: "JWT_User_Identifier")
         Zendesk.instance?.setIdentity(identity)
         

@@ -20,9 +20,9 @@
     ZDKCoreLogger.enabled = true;
 
     #warning Enter your Zendesk credentials here
-    [ZDKZendesk initializeWithAppId: @"appId"
-                           clientId: @"clientId"
-                         zendeskUrl: @"zendeskUrl"];
+    [ZDKZendesk initializeWithAppId: @"<#appId#>"
+                           clientId: @"<#clientId#>"
+                         zendeskUrl: @"<#zendeskUrl#>"];
     [ZDKSupport initializeWithZendesk: [ZDKZendesk instance]];
 
     

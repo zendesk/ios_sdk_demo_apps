@@ -14,7 +14,6 @@
 		21A399A2219F2A7F001116B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A399A0219F2A7F001116B8 /* LaunchScreen.storyboard */; };
 		21A399B1219F2B78001116B8 /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */; };
 		21A399B4219F2BBE001116B8 /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		482801F323DF3BBE00EA08E9 /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */; };
 		482801F923DF3BBF00EA08E9 /* SupportSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F423DF3BBE00EA08E9 /* SupportSDK.framework */; };
 		482801FA23DF3BBF00EA08E9 /* SupportSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F423DF3BBE00EA08E9 /* SupportSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		482801FB23DF3BBF00EA08E9 /* MessagingSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F523DF3BBE00EA08E9 /* MessagingSDK.framework */; };
@@ -57,10 +56,7 @@
 		21A3999E219F2A7F001116B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A399A1219F2A7F001116B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A399A3219F2A7F001116B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21A399AB219F2B76001116B8 /* ZendeskProviderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskProviderSDK.framework; sourceTree = "<group>"; };
-		21A399AC219F2B76001116B8 /* ZendeskSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZendeskSDKStrings.bundle; sourceTree = "<group>"; };
 		21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskCoreSDK.framework; sourceTree = "<group>"; };
-		21A399AE219F2B78001116B8 /* ZendeskSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskSDK.framework; sourceTree = "<group>"; };
 		482801F423DF3BBE00EA08E9 /* SupportSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportSDK.framework; sourceTree = "<group>"; };
 		482801F523DF3BBE00EA08E9 /* MessagingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessagingSDK.framework; sourceTree = "<group>"; };
 		482801F623DF3BBE00EA08E9 /* SDKConfigurations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDKConfigurations.framework; sourceTree = "<group>"; };
@@ -78,7 +74,6 @@
 				21A399B1219F2B78001116B8 /* ZendeskCoreSDK.framework in Frameworks */,
 				4828020423DF3C4700EA08E9 /* CommonUISDK.framework in Frameworks */,
 				482801F923DF3BBF00EA08E9 /* SupportSDK.framework in Frameworks */,
-				482801F323DF3BBE00EA08E9 /* ZendeskCoreSDK.framework in Frameworks */,
 				482801FF23DF3BBF00EA08E9 /* SupportProvidersSDK.framework in Frameworks */,
 				482801FD23DF3BBF00EA08E9 /* SDKConfigurations.framework in Frameworks */,
 				4828020123DF3BBF00EA08E9 /* MessagingAPI.framework in Frameworks */,
@@ -128,9 +123,6 @@
 				482801F723DF3BBE00EA08E9 /* SupportProvidersSDK.framework */,
 				482801F423DF3BBE00EA08E9 /* SupportSDK.framework */,
 				21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */,
-				21A399AB219F2B76001116B8 /* ZendeskProviderSDK.framework */,
-				21A399AE219F2B78001116B8 /* ZendeskSDK.framework */,
-				21A399AC219F2B76001116B8 /* ZendeskSDKStrings.bundle */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -164,7 +156,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Boris Bielik";
 				TargetAttributes = {
 					21A39993219F2A7E001116B8 = {
