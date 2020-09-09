@@ -19,6 +19,8 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view.
     }
 
@@ -51,6 +53,10 @@ final class ViewController: UIViewController {
 
     @IBAction func setToken(_ sender: Any) {
         ZendeskMessaging.instance.authToken = tokenTextField.text ?? "" 
+    }
+
+    @objc func dismissKeyboard() {
+        tokenTextField.resignFirstResponder()
     }
 }
 

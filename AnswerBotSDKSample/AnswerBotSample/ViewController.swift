@@ -11,7 +11,7 @@ import SupportSDK
 import AnswerBotSDK
 import MessagingSDK
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

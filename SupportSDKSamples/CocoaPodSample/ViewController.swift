@@ -7,11 +7,10 @@
 //
 
 import UIKit
-
 import SupportSDK
 import ZendeskCoreSDK
 
-class ViewController: UIViewController, UINavigationControllerDelegate {
+final class ViewController: UIViewController, UINavigationControllerDelegate {
     
     let imagePickerController = UIImagePickerController()
     private let toastWrapper = ZDKToastViewWrapper()
@@ -92,7 +91,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     func uploadAttachment(callback: @escaping (ZDKUploadResponse?) -> Void) {
         let attachment = getImageDataFrom(view: attachmentImageView)
         
-        ZDKUploadProvider().uploadAttachment(attachment, withFilename: "image_name_app.png", andContentType: "image") { (response, error) in
+        ZDKUploadProvider().uploadAttachment(attachment,
+                                             withFilename: "image_name_app.png",
+                                             andContentType: "image/png") { (response, error) in
             if let response = response {
                 print("Token: ", response.uploadToken ?? "")
                 print("Attachment: ", response.attachment ?? "")
