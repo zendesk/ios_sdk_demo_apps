@@ -46,6 +46,7 @@ final class ZendeskMessaging {
     var messagingConfiguration: MessagingConfiguration {
         let messagingConfiguration = MessagingConfiguration()
         messagingConfiguration.name = "Chat Bot"
+        messagingConfiguration.isMultilineResponseOptionsEnabled = true
         return messagingConfiguration
     }
 
