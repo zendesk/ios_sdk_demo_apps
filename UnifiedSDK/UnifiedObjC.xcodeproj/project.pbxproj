@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22203447251A3CAE00681C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22203446251A3CAE00681C77 /* Main.storyboard */; };
+		22203456251A3E5500681C77 /* ZendeskMessaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 22203455251A3E5500681C77 /* ZendeskMessaging.m */; };
+		228B6869250B693A00B1084E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B6868250B693A00B1084E /* AppDelegate.m */; };
+		228B686C250B693A00B1084E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B686B250B693A00B1084E /* SceneDelegate.m */; };
+		228B686F250B693A00B1084E /* ZendeskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B686E250B693A00B1084E /* ZendeskViewController.m */; };
+		228B6874250B693C00B1084E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228B6873250B693C00B1084E /* Assets.xcassets */; };
+		228B6877250B693C00B1084E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B6875250B693C00B1084E /* LaunchScreen.storyboard */; };
+		228B687A250B693C00B1084E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B6879250B693C00B1084E /* main.m */; };
+		30931E26F9E6A20F898C3B6A /* Pods_UnifiedObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053D8AD0EA36CB9F17BAD1AB /* Pods_UnifiedObjC.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		053D8AD0EA36CB9F17BAD1AB /* Pods_UnifiedObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22203446251A3CAE00681C77 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		22203455251A3E5500681C77 /* ZendeskMessaging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZendeskMessaging.m; sourceTree = "<group>"; };
+		2220348C251A4B1800681C77 /* ZendeskMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZendeskMessaging.h; sourceTree = "<group>"; };
+		228B6864250B693A00B1084E /* UnifiedObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnifiedObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		228B6867250B693A00B1084E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		228B6868250B693A00B1084E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		228B686A250B693A00B1084E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		228B686B250B693A00B1084E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		228B686D250B693A00B1084E /* ZendeskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZendeskViewController.h; sourceTree = "<group>"; };
+		228B686E250B693A00B1084E /* ZendeskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZendeskViewController.m; sourceTree = "<group>"; };
+		228B6873250B693C00B1084E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		228B6876250B693C00B1084E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		228B6878250B693C00B1084E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228B6879250B693C00B1084E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D00879FC2D20C3D9B3F4162 /* Pods-UnifiedObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedObjC.release.xcconfig"; path = "Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC.release.xcconfig"; sourceTree = "<group>"; };
+		BFDC02237FB406E1AE346408 /* Pods-UnifiedObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedObjC.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		228B6861250B693A00B1084E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30931E26F9E6A20F898C3B6A /* Pods_UnifiedObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22203449251A3D2F00681C77 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				228B6867250B693A00B1084E /* AppDelegate.h */,
+				228B6868250B693A00B1084E /* AppDelegate.m */,
+				228B686A250B693A00B1084E /* SceneDelegate.h */,
+				228B686B250B693A00B1084E /* SceneDelegate.m */,
+				2220348C251A4B1800681C77 /* ZendeskMessaging.h */,
+				22203455251A3E5500681C77 /* ZendeskMessaging.m */,
+				228B686D250B693A00B1084E /* ZendeskViewController.h */,
+				228B686E250B693A00B1084E /* ZendeskViewController.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		2220344A251A3D4300681C77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				228B6879250B693C00B1084E /* main.m */,
+				228B6878250B693C00B1084E /* Info.plist */,
+				22203446251A3CAE00681C77 /* Main.storyboard */,
+				228B6873250B693C00B1084E /* Assets.xcassets */,
+				228B6875250B693C00B1084E /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		228B685B250B693A00B1084E = {
+			isa = PBXGroup;
+			children = (
+				228B6866250B693A00B1084E /* UnifiedObjC */,
+				228B6886250B6BC500B1084E /* Frameworks */,
+				228B6865250B693A00B1084E /* Products */,
+				8CC6CE968D8FD06BE7D62B67 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		228B6865250B693A00B1084E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				228B6864250B693A00B1084E /* UnifiedObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		228B6866250B693A00B1084E /* UnifiedObjC */ = {
+			isa = PBXGroup;
+			children = (
+				22203449251A3D2F00681C77 /* Source */,
+				2220344A251A3D4300681C77 /* Resources */,
+			);
+			path = UnifiedObjC;
+			sourceTree = "<group>";
+		};
+		228B6886250B6BC500B1084E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				053D8AD0EA36CB9F17BAD1AB /* Pods_UnifiedObjC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CC6CE968D8FD06BE7D62B67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC02237FB406E1AE346408 /* Pods-UnifiedObjC.debug.xcconfig */,
+				3D00879FC2D20C3D9B3F4162 /* Pods-UnifiedObjC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		228B6863250B693A00B1084E /* UnifiedObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 228B687D250B693C00B1084E /* Build configuration list for PBXNativeTarget "UnifiedObjC" */;
+			buildPhases = (
+				0BE53177E1DB95F4C610E08B /* [CP] Check Pods Manifest.lock */,
+				228B6860250B693A00B1084E /* Sources */,
+				228B6861250B693A00B1084E /* Frameworks */,
+				228B6862250B693A00B1084E /* Resources */,
+				28714F44E4145877ABFD789B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnifiedObjC;
+			productName = UnifiedObjC;
+			productReference = 228B6864250B693A00B1084E /* UnifiedObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		228B685C250B693A00B1084E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Zendesk;
+				TargetAttributes = {
+					228B6863250B693A00B1084E = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 228B685F250B693A00B1084E /* Build configuration list for PBXProject "UnifiedObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 228B685B250B693A00B1084E;
+			productRefGroup = 228B6865250B693A00B1084E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				228B6863250B693A00B1084E /* UnifiedObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		228B6862250B693A00B1084E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22203447251A3CAE00681C77 /* Main.storyboard in Resources */,
+				228B6877250B693C00B1084E /* LaunchScreen.storyboard in Resources */,
+				228B6874250B693C00B1084E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BE53177E1DB95F4C610E08B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnifiedObjC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28714F44E4145877ABFD789B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		228B6860250B693A00B1084E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22203456251A3E5500681C77 /* ZendeskMessaging.m in Sources */,
+				228B686F250B693A00B1084E /* ZendeskViewController.m in Sources */,
+				228B6869250B693A00B1084E /* AppDelegate.m in Sources */,
+				228B687A250B693C00B1084E /* main.m in Sources */,
+				228B686C250B693A00B1084E /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		228B6875250B693C00B1084E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				228B6876250B693C00B1084E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		228B687B250B693C00B1084E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		228B687C250B693C00B1084E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		228B687E250B693C00B1084E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFDC02237FB406E1AE346408 /* Pods-UnifiedObjC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = UnifiedObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zendesk.UnifiedObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		228B687F250B693C00B1084E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D00879FC2D20C3D9B3F4162 /* Pods-UnifiedObjC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7529UAQB93;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = UnifiedObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zendesk.UnifiedObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		228B685F250B693A00B1084E /* Build configuration list for PBXProject "UnifiedObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				228B687B250B693C00B1084E /* Debug */,
+				228B687C250B693C00B1084E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		228B687D250B693C00B1084E /* Build configuration list for PBXNativeTarget "UnifiedObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				228B687E250B693C00B1084E /* Debug */,
+				228B687F250B693C00B1084E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 228B685C250B693A00B1084E /* Project object */;
+}

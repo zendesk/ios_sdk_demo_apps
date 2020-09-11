@@ -1,7 +1,15 @@
-target 'UnifiedSDK' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+workspace 'UnifiedSDK'
+# Comment the next line if you don't want to use dynamic frameworks
+use_frameworks!
 
-  # Pods for UnifiedSDK
-  pod 'ZendeskChatSDK'
+project 'UnifiedObjC'
+target 'UnifiedObjC' do
+    project 'UnifiedObjC'
+    pod 'ZendeskChatSDK'
+end
+
+project 'UnifiedSDK'
+target 'UnifiedSDK' do
+    project 'UnifiedSDK'
+    pod 'ZendeskChatSDK'
 end
