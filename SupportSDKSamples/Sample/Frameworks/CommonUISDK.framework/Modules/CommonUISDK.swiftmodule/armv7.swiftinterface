@@ -144,6 +144,7 @@ extension UIImageView {
   @objc dynamic open func nuke_display(image: UIKit.UIImage?)
 }
 public protocol ResponseOptionsCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
+  var isMultilineEnabled: Swift.Bool { get }
   var responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel] { get }
 }
 public struct ResponseOptionsCellViewModel : CommonUISDK.ResponseOptionsCellViewModelProtocol, Swift.Equatable {
@@ -154,7 +155,8 @@ public struct ResponseOptionsCellViewModel : CommonUISDK.ResponseOptionsCellView
   public let messageStatus: CommonUISDK.Status
   public let name: Swift.String?
   public let isBot: Swift.Bool
-  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, isBot: Swift.Bool = false, responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel])
+  public let isMultilineEnabled: Swift.Bool
+  public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, isBot: Swift.Bool = false, responseOptionViewModels: [CommonUISDK.ResponseOptionViewModel], isMultilineEnabled: Swift.Bool = false)
   public static func == (a: CommonUISDK.ResponseOptionsCellViewModel, b: CommonUISDK.ResponseOptionsCellViewModel) -> Swift.Bool
 }
 public struct AttachmentCellViewModel : CommonUISDK.PresentableCellViewModel, Swift.Equatable {
@@ -418,20 +420,6 @@ public struct MessagingViewModel : CommonUISDK.MessagingViewModelProtocol {
 @_hasMissingDesignatedInitializers final public class EventListener<Sender> {
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ResponseOptionsView : UIKit.UIView {
-  @objc deinit
-}
-extension ResponseOptionsView : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate {
-  @objc final public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
-}
-extension ResponseOptionsView : UIKit.UICollectionViewDelegateFlowLayout {
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TypingIndicatorTableViewCell : CommonUISDK.InteractionCell {
   weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
@@ -568,16 +556,6 @@ extension InputField : UIKit.UITextViewDelegate {
 }
 public protocol InteractionCellDelegate : AnyObject {
 }
-public protocol ResponseOptionsCellDelegate : CommonUISDK.InteractionCellDelegate {
-  func responseOptionsCell(_ cell: CommonUISDK.ResponseOptionsTableViewCell, didSelect viewModel: CommonUISDK.ResponseOptionViewModelProtocol, forResponseViewModel responseCellViewModel: CommonUISDK.ResponseOptionsCellViewModelProtocol)
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ResponseOptionsTableViewCell : CommonUISDK.InteractionCell {
-  weak final public var delegate: CommonUISDK.InteractionCellDelegate?
-  @objc deinit
-}
-extension ResponseOptionsTableViewCell {
-  final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ActionOptionView : UIKit.UIView {
   @objc deinit
 }
@@ -622,6 +600,39 @@ public typealias InteractionCell = UIKit.UITableViewCell & CommonUISDK.Interacti
 }
 extension EquatableCellViewModel : Swift.Equatable {
   public static func == (lhs: CommonUISDK.EquatableCellViewModel, rhs: CommonUISDK.EquatableCellViewModel) -> Swift.Bool
+}
+public enum HorizontalAlignment {
+  case left
+  case right
+  case leading
+  case trailing
+  case justified
+  public static func == (a: CommonUISDK.HorizontalAlignment, b: CommonUISDK.HorizontalAlignment) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum VerticalAlignment {
+  case top
+  case center
+  case bottom
+  public static func == (a: CommonUISDK.VerticalAlignment, b: CommonUISDK.VerticalAlignment) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc open class AlignedCollectionViewFlowLayout : UIKit.UICollectionViewFlowLayout {
+  public var horizontalAlignment: CommonUISDK.HorizontalAlignment
+  public var verticalAlignment: CommonUISDK.VerticalAlignment
+  public init(horizontalAlignment: CommonUISDK.HorizontalAlignment = .justified, verticalAlignment: CommonUISDK.VerticalAlignment = .center)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func shouldInvalidateLayout(forBoundsChange newBounds: CoreGraphics.CGRect) -> Swift.Bool
+  @objc override dynamic open func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @objc override dynamic open func layoutAttributesForElements(in rect: CoreGraphics.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
+  @objc override dynamic public init()
+  @objc deinit
 }
 public protocol ButtonOptionViewModelProtocol {
   var description: Swift.String { get }
@@ -701,7 +712,7 @@ extension UIView {
   @discardableResult
   public func constrainSafeLayout(attribute: UIKit.UIView.Attribute, toAttribute: UIKit.UIView.Attribute, ofView view: UIKit.UIView, constant: CoreGraphics.CGFloat = 0.0) -> UIKit.NSLayoutConstraint?
   @discardableResult
-  public func constrainToSuperview(attribute: UIKit.UIView.Attribute, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
+  public func constrainToSuperview(attribute: UIKit.UIView.Attribute, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
   public func constrain(dimension: UIKit.UIView.Dimension, withConstant constant: CoreGraphics.CGFloat = 0, relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required) -> UIKit.NSLayoutConstraint
   @discardableResult
@@ -709,7 +720,7 @@ extension UIView {
   @discardableResult
   public func constrain(attribute: UIKit.UIView.Attribute, toView view: UIKit.UIView, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
-  public func constrain(attribute: UIKit.UIView.Attribute, toAttribute: UIKit.UIView.Attribute, ofView view: UIKit.UIView?, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
+  public func constrain(attribute: UIKit.UIView.Attribute, toAttribute: UIKit.UIView.Attribute, ofView view: UIKit.UIView?, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
 }
 public protocol PresentableCellViewModel : CommonUISDK.InteractionCellViewModelProtocol {
   var url: Foundation.URL { get }
@@ -738,6 +749,10 @@ extension CommonUISDK.CellPinning : Swift.RawRepresentable {}
 extension CommonUISDK.Connection : Swift.Equatable {}
 extension CommonUISDK.Connection : Swift.Hashable {}
 extension CommonUISDK.Connection : Swift.RawRepresentable {}
+extension CommonUISDK.HorizontalAlignment : Swift.Equatable {}
+extension CommonUISDK.HorizontalAlignment : Swift.Hashable {}
+extension CommonUISDK.VerticalAlignment : Swift.Equatable {}
+extension CommonUISDK.VerticalAlignment : Swift.Hashable {}
 extension UIKit.UIView.Dimension : Swift.Equatable {}
 extension UIKit.UIView.Dimension : Swift.Hashable {}
 extension UIKit.UIView.Attribute : Swift.Equatable {}

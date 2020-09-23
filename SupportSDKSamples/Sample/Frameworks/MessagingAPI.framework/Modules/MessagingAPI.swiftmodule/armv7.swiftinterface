@@ -5,6 +5,7 @@ import Foundation
 @_exported import MessagingAPI
 import SDKConfigurations
 import Swift
+import UIKit
 public struct SystemMessage : MessagingAPI.SeparatorItem, Swift.Hashable {
   public var status: MessagingAPI.ItemDeliveryStatus {
     get

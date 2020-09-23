@@ -12,36 +12,36 @@
 		21A3999D219F2A7E001116B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A3999B219F2A7E001116B8 /* Main.storyboard */; };
 		21A3999F219F2A7F001116B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A3999E219F2A7F001116B8 /* Assets.xcassets */; };
 		21A399A2219F2A7F001116B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A399A0219F2A7F001116B8 /* LaunchScreen.storyboard */; };
-		21A399B1219F2B78001116B8 /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */; };
-		21A399B4219F2BBE001116B8 /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		482801F923DF3BBF00EA08E9 /* SupportSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F423DF3BBE00EA08E9 /* SupportSDK.framework */; };
-		482801FA23DF3BBF00EA08E9 /* SupportSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F423DF3BBE00EA08E9 /* SupportSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		482801FB23DF3BBF00EA08E9 /* MessagingSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F523DF3BBE00EA08E9 /* MessagingSDK.framework */; };
-		482801FC23DF3BBF00EA08E9 /* MessagingSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F523DF3BBE00EA08E9 /* MessagingSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		482801FD23DF3BBF00EA08E9 /* SDKConfigurations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F623DF3BBE00EA08E9 /* SDKConfigurations.framework */; };
-		482801FE23DF3BBF00EA08E9 /* SDKConfigurations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F623DF3BBE00EA08E9 /* SDKConfigurations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		482801FF23DF3BBF00EA08E9 /* SupportProvidersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F723DF3BBE00EA08E9 /* SupportProvidersSDK.framework */; };
-		4828020023DF3BBF00EA08E9 /* SupportProvidersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F723DF3BBE00EA08E9 /* SupportProvidersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4828020123DF3BBF00EA08E9 /* MessagingAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F823DF3BBE00EA08E9 /* MessagingAPI.framework */; };
-		4828020223DF3BBF00EA08E9 /* MessagingAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482801F823DF3BBE00EA08E9 /* MessagingAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4828020423DF3C4700EA08E9 /* CommonUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4828020323DF3C4700EA08E9 /* CommonUISDK.framework */; };
-		4828020523DF3C4700EA08E9 /* CommonUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4828020323DF3C4700EA08E9 /* CommonUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8438B8251B910200A1451A /* CommonUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AB251B90F100A1451A /* CommonUISDK.framework */; };
+		5E8438B9251B910200A1451A /* CommonUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AB251B90F100A1451A /* CommonUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8438BA251B910200A1451A /* MessagingAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438B0251B90F500A1451A /* MessagingAPI.framework */; };
+		5E8438BB251B910200A1451A /* MessagingAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438B0251B90F500A1451A /* MessagingAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8438BC251B910200A1451A /* MessagingSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AC251B90F200A1451A /* MessagingSDK.framework */; };
+		5E8438BD251B910200A1451A /* MessagingSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AC251B90F200A1451A /* MessagingSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8438BE251B910200A1451A /* SDKConfigurations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AE251B90F400A1451A /* SDKConfigurations.framework */; };
+		5E8438BF251B910200A1451A /* SDKConfigurations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AE251B90F400A1451A /* SDKConfigurations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8438C0251B910200A1451A /* SupportProvidersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */; };
+		5E8438C1251B910200A1451A /* SupportProvidersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8438C2251B910200A1451A /* SupportSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AD251B90F400A1451A /* SupportSDK.framework */; };
+		5E8438C3251B910200A1451A /* SupportSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AD251B90F400A1451A /* SupportSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8438C4251B910200A1451A /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */; };
+		5E8438C5251B910200A1451A /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		21A399B3219F2BB6001116B8 /* Embed Frameworks */ = {
+		5E8438C6251B910200A1451A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4828020223DF3BBF00EA08E9 /* MessagingAPI.framework in Embed Frameworks */,
-				4828020023DF3BBF00EA08E9 /* SupportProvidersSDK.framework in Embed Frameworks */,
-				4828020523DF3C4700EA08E9 /* CommonUISDK.framework in Embed Frameworks */,
-				482801FE23DF3BBF00EA08E9 /* SDKConfigurations.framework in Embed Frameworks */,
-				21A399B4219F2BBE001116B8 /* ZendeskCoreSDK.framework in Embed Frameworks */,
-				482801FC23DF3BBF00EA08E9 /* MessagingSDK.framework in Embed Frameworks */,
-				482801FA23DF3BBF00EA08E9 /* SupportSDK.framework in Embed Frameworks */,
+				5E8438BF251B910200A1451A /* SDKConfigurations.framework in Embed Frameworks */,
+				5E8438BD251B910200A1451A /* MessagingSDK.framework in Embed Frameworks */,
+				5E8438C5251B910200A1451A /* ZendeskCoreSDK.framework in Embed Frameworks */,
+				5E8438C1251B910200A1451A /* SupportProvidersSDK.framework in Embed Frameworks */,
+				5E8438BB251B910200A1451A /* MessagingAPI.framework in Embed Frameworks */,
+				5E8438B9251B910200A1451A /* CommonUISDK.framework in Embed Frameworks */,
+				5E8438C3251B910200A1451A /* SupportSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,13 +56,13 @@
 		21A3999E219F2A7F001116B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A399A1219F2A7F001116B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A399A3219F2A7F001116B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskCoreSDK.framework; sourceTree = "<group>"; };
-		482801F423DF3BBE00EA08E9 /* SupportSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportSDK.framework; sourceTree = "<group>"; };
-		482801F523DF3BBE00EA08E9 /* MessagingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessagingSDK.framework; sourceTree = "<group>"; };
-		482801F623DF3BBE00EA08E9 /* SDKConfigurations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDKConfigurations.framework; sourceTree = "<group>"; };
-		482801F723DF3BBE00EA08E9 /* SupportProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportProvidersSDK.framework; sourceTree = "<group>"; };
-		482801F823DF3BBE00EA08E9 /* MessagingAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessagingAPI.framework; sourceTree = "<group>"; };
-		4828020323DF3C4700EA08E9 /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CommonUISDK.framework; sourceTree = "<group>"; };
+		5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskCoreSDK.framework; sourceTree = "<group>"; };
+		5E8438AB251B90F100A1451A /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CommonUISDK.framework; sourceTree = "<group>"; };
+		5E8438AC251B90F200A1451A /* MessagingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessagingSDK.framework; sourceTree = "<group>"; };
+		5E8438AD251B90F400A1451A /* SupportSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportSDK.framework; sourceTree = "<group>"; };
+		5E8438AE251B90F400A1451A /* SDKConfigurations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDKConfigurations.framework; sourceTree = "<group>"; };
+		5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportProvidersSDK.framework; sourceTree = "<group>"; };
+		5E8438B0251B90F500A1451A /* MessagingAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessagingAPI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +70,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				482801FB23DF3BBF00EA08E9 /* MessagingSDK.framework in Frameworks */,
-				21A399B1219F2B78001116B8 /* ZendeskCoreSDK.framework in Frameworks */,
-				4828020423DF3C4700EA08E9 /* CommonUISDK.framework in Frameworks */,
-				482801F923DF3BBF00EA08E9 /* SupportSDK.framework in Frameworks */,
-				482801FF23DF3BBF00EA08E9 /* SupportProvidersSDK.framework in Frameworks */,
-				482801FD23DF3BBF00EA08E9 /* SDKConfigurations.framework in Frameworks */,
-				4828020123DF3BBF00EA08E9 /* MessagingAPI.framework in Frameworks */,
+				5E8438BA251B910200A1451A /* MessagingAPI.framework in Frameworks */,
+				5E8438B8251B910200A1451A /* CommonUISDK.framework in Frameworks */,
+				5E8438C4251B910200A1451A /* ZendeskCoreSDK.framework in Frameworks */,
+				5E8438BC251B910200A1451A /* MessagingSDK.framework in Frameworks */,
+				5E8438C2251B910200A1451A /* SupportSDK.framework in Frameworks */,
+				5E8438C0251B910200A1451A /* SupportProvidersSDK.framework in Frameworks */,
+				5E8438BE251B910200A1451A /* SDKConfigurations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,13 +116,13 @@
 		21A399AA219F2B64001116B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4828020323DF3C4700EA08E9 /* CommonUISDK.framework */,
-				482801F823DF3BBE00EA08E9 /* MessagingAPI.framework */,
-				482801F523DF3BBE00EA08E9 /* MessagingSDK.framework */,
-				482801F623DF3BBE00EA08E9 /* SDKConfigurations.framework */,
-				482801F723DF3BBE00EA08E9 /* SupportProvidersSDK.framework */,
-				482801F423DF3BBE00EA08E9 /* SupportSDK.framework */,
-				21A399AD219F2B77001116B8 /* ZendeskCoreSDK.framework */,
+				5E8438AB251B90F100A1451A /* CommonUISDK.framework */,
+				5E8438B0251B90F500A1451A /* MessagingAPI.framework */,
+				5E8438AC251B90F200A1451A /* MessagingSDK.framework */,
+				5E8438AE251B90F400A1451A /* SDKConfigurations.framework */,
+				5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */,
+				5E8438AD251B90F400A1451A /* SupportSDK.framework */,
+				5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -137,8 +137,8 @@
 				21A39990219F2A7E001116B8 /* Sources */,
 				21A39991219F2A7E001116B8 /* Frameworks */,
 				21A39992219F2A7E001116B8 /* Resources */,
-				21A399B3219F2BB6001116B8 /* Embed Frameworks */,
 				21A399B8219F2CB0001116B8 /* Strip slices from fat frameworks */,
+				5E8438C6251B910200A1451A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
