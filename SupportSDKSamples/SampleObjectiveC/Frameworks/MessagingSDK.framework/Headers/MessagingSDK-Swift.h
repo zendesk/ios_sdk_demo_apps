@@ -276,6 +276,18 @@ SWIFT_CLASS_NAMED("MessagingConfiguration")
 @property (nonatomic, copy) NSString * _Nonnull name;
 /// The avatar image for the bot. Default is the Answer Bot avatar.
 @property (nonatomic, strong) UIImage * _Nonnull botAvatar;
+/// Flag to enable whether the user response options will span across multiple lines, or just have one line.
+/// <ul>
+///   <li>
+///     <code>false</code>:  <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which scrolls horizontally
+///     if the <code>contentSize.width</code> is greater than the collectionView’s<code>frame.width</code>
+///   </li>
+///   <li>
+///     <code>true</code>: <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which expands vertically to fit all the content on screen
+///   </li>
+/// </ul>
+/// eg. AnswerBot response options or Chat’s pre-chat form department selection.
+@property (nonatomic) BOOL isMultilineResponseOptionsEnabled;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -599,6 +611,18 @@ SWIFT_CLASS_NAMED("MessagingConfiguration")
 @property (nonatomic, copy) NSString * _Nonnull name;
 /// The avatar image for the bot. Default is the Answer Bot avatar.
 @property (nonatomic, strong) UIImage * _Nonnull botAvatar;
+/// Flag to enable whether the user response options will span across multiple lines, or just have one line.
+/// <ul>
+///   <li>
+///     <code>false</code>:  <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which scrolls horizontally
+///     if the <code>contentSize.width</code> is greater than the collectionView’s<code>frame.width</code>
+///   </li>
+///   <li>
+///     <code>true</code>: <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which expands vertically to fit all the content on screen
+///   </li>
+/// </ul>
+/// eg. AnswerBot response options or Chat’s pre-chat form department selection.
+@property (nonatomic) BOOL isMultilineResponseOptionsEnabled;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -925,6 +949,18 @@ SWIFT_CLASS_NAMED("MessagingConfiguration")
 @property (nonatomic, copy) NSString * _Nonnull name;
 /// The avatar image for the bot. Default is the Answer Bot avatar.
 @property (nonatomic, strong) UIImage * _Nonnull botAvatar;
+/// Flag to enable whether the user response options will span across multiple lines, or just have one line.
+/// <ul>
+///   <li>
+///     <code>false</code>:  <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which scrolls horizontally
+///     if the <code>contentSize.width</code> is greater than the collectionView’s<code>frame.width</code>
+///   </li>
+///   <li>
+///     <code>true</code>: <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which expands vertically to fit all the content on screen
+///   </li>
+/// </ul>
+/// eg. AnswerBot response options or Chat’s pre-chat form department selection.
+@property (nonatomic) BOOL isMultilineResponseOptionsEnabled;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1248,6 +1284,18 @@ SWIFT_CLASS_NAMED("MessagingConfiguration")
 @property (nonatomic, copy) NSString * _Nonnull name;
 /// The avatar image for the bot. Default is the Answer Bot avatar.
 @property (nonatomic, strong) UIImage * _Nonnull botAvatar;
+/// Flag to enable whether the user response options will span across multiple lines, or just have one line.
+/// <ul>
+///   <li>
+///     <code>false</code>:  <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which scrolls horizontally
+///     if the <code>contentSize.width</code> is greater than the collectionView’s<code>frame.width</code>
+///   </li>
+///   <li>
+///     <code>true</code>: <code>ResponseOptions</code> appear in a <code>UICollectionView</code> which expands vertically to fit all the content on screen
+///   </li>
+/// </ul>
+/// eg. AnswerBot response options or Chat’s pre-chat form department selection.
+@property (nonatomic) BOOL isMultilineResponseOptionsEnabled;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

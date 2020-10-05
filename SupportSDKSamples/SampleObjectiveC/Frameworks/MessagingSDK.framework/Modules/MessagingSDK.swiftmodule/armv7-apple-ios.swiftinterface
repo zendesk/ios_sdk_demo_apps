@@ -79,6 +79,7 @@ final public class DispatchTimer {
 @_inheritsConvenienceInitializers @objc(ZDKMessagingConfiguration) final public class MessagingConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
   @objc final public var name: Swift.String
   @objc final public var botAvatar: UIKit.UIImage
+  @objc final public var isMultilineResponseOptionsEnabled: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
 }
