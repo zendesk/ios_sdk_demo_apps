@@ -7,5 +7,5 @@ target 'CocoaPodSample' do
   use_frameworks!
 
   # Pods for CocoaPodSample
-  pod 'ZendeskSupportSDK'
+  pod 'ZendeskSDK'
 end

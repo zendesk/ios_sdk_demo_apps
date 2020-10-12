@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SupportSDK
+import ZendeskSDK
 import ZendeskCoreSDK
 
 @UIApplicationMain
