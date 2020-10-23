@@ -53,7 +53,7 @@ final class ZendeskMessaging {
     var chatConfiguration: ChatConfiguration {
         let chatConfiguration = ChatConfiguration()
         chatConfiguration.isAgentAvailabilityEnabled = false
-        chatConfiguration.isPreChatFormEnabled = true
+        chatConfiguration.isPreChatFormEnabled = false
         return chatConfiguration
     }
 
@@ -68,6 +68,10 @@ final class ZendeskMessaging {
         Chat.instance?.configuration = chatAPIConfig
         return try Messaging.instance.buildUI(engines: engines,
                                               configs: [messagingConfiguration, chatConfiguration])
+    }
+
+    func endChat(completion: ((Result<Bool, DeliveryStatusError>)-> Void)?) {
+        Chat.instance?.chatProvider.endChat(completion)
     }
 }
 

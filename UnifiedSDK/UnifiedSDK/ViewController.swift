@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import ChatProvidersSDK
 
 final class ViewController: UIViewController {
+    // Press button on Modal to see chat end
     private var modalBackButton: UIBarButtonItem {
         UIBarButtonItem(barButtonSystemItem: .close,
                         target: self,
-                        action: #selector(dismissViewController))
+                        action: #selector(endChat))
     }
 
     override func viewDidLoad() {
@@ -44,5 +46,12 @@ final class ViewController: UIViewController {
     /// Dismiss modal `viewController` action
     @objc private func dismissViewController() {
         navigationController?.dismiss(animated: true, completion: nil)
+    }
+
+    @objc private func endChat() {
+        ZendeskMessaging.instance.endChat { (result) in
+            // See the logs, or put a breakpoint to see closure is hit
+            print("EndChat<Result>: \(result)")
+        }
     }
 }
