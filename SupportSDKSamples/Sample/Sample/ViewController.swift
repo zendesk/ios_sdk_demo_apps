@@ -36,7 +36,7 @@ final class ViewController: UIViewController, UINavigationControllerDelegate {
     var hcConfig: HelpCenterUiConfiguration {
         let hcConfig = HelpCenterUiConfiguration()
         hcConfig.showContactOptions = true
-        hcConfig.labels = ["label"] // only hc articles with the label 'label' will appear
+        // hcConfig.labels = ["label"] // only hc articles with the label 'label' will appear
         return hcConfig
     }
     
