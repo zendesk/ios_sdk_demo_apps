@@ -28,6 +28,12 @@ final class ViewController: UIViewController {
         }
     }
 
+    @IBAction func getChatInfo(_ sender: Any) {
+        ZendeskMessaging.instance.isChatting { (isChatting) in
+            print(isChatting)
+        }
+    }
+
     private func pushViewController(_ viewController: UIViewController) {
         self.navigationController?.pushViewController(viewController, animated: true)
     }

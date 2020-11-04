@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,12 +52,21 @@
                                     <constraint firstAttribute="bottom" secondItem="R1X-tj-8Bb" secondAttribute="bottom" constant="16" id="xfx-c8-Prb"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQB-bS-pSH">
+                                <rect key="frame" x="166.5" y="601" width="81" height="30"/>
+                                <state key="normal" title="getChatInfo"/>
+                                <connections>
+                                    <action selector="getChatInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="38V-Wj-oFX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="t4J-C3-oJ2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KI7-Vh-aoq"/>
+                            <constraint firstItem="kQB-bS-pSH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LWH-ax-NqX"/>
                             <constraint firstItem="t4J-C3-oJ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V3T-Ig-dl7"/>
+                            <constraint firstItem="kQB-bS-pSH" firstAttribute="top" secondItem="t4J-C3-oJ2" secondAttribute="bottom" constant="8" id="cSm-dS-nBf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t4J-C3-oJ2" secondAttribute="trailing" constant="60" id="nVO-X6-AVn"/>
                             <constraint firstItem="t4J-C3-oJ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="rFR-Fp-Bvu"/>
                         </constraints>
