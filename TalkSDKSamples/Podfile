@@ -1,0 +1,7 @@
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
+platform :ios, '10.0'
+
+target 'TalkSDKSamples' do
+  use_frameworks!
+  pod 'ZendeskTalkSDK'
+end
