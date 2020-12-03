@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  TalkSDKSamples
+//  TalkSDKSamples-Swift
 //
-//  Created by Michał Smaga on 26/11/2020.
+//  Created by Michał Smaga on 03/12/2020.
 //
 
 import UIKit
