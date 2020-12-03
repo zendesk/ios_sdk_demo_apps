@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1EAD37762578DCA0006F20E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37752578DCA0006F20E7 /* AppDelegate.m */; };
 		1EAD37792578DCA0006F20E7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37782578DCA0006F20E7 /* SceneDelegate.m */; };
-		1EAD377C2578DCA0006F20E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD377B2578DCA0006F20E7 /* ViewController.m */; };
 		1EAD377F2578DCA0006F20E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD377D2578DCA0006F20E7 /* Main.storyboard */; };
 		1EAD37812578DCA2006F20E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD37802578DCA2006F20E7 /* Assets.xcassets */; };
 		1EAD37842578DCA2006F20E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD37822578DCA2006F20E7 /* LaunchScreen.storyboard */; };
 		1EAD37872578DCA2006F20E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37862578DCA2006F20E7 /* main.m */; };
+		1EBA9A5925790F6800FB7235 /* ZENAutomaticCallFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA9A5825790F6800FB7235 /* ZENAutomaticCallFlowViewController.m */; };
+		1EBA9A5F2579120900FB7235 /* ZendeskConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA9A5E2579120900FB7235 /* ZendeskConfig.m */; };
 		F888B399442A2FD97574060B /* Pods_TalkSDKSamples_ObjectiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30219ACC5DEC28268176224 /* Pods_TalkSDKSamples_ObjectiveC.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,13 +24,15 @@
 		1EAD37752578DCA0006F20E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1EAD37772578DCA0006F20E7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		1EAD37782578DCA0006F20E7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		1EAD377A2578DCA0006F20E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1EAD377B2578DCA0006F20E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1EAD377E2578DCA0006F20E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EAD37802578DCA2006F20E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EAD37832578DCA2006F20E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EAD37852578DCA2006F20E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EAD37862578DCA2006F20E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1EBA9A5725790F6800FB7235 /* ZENAutomaticCallFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZENAutomaticCallFlowViewController.h; sourceTree = "<group>"; };
+		1EBA9A5825790F6800FB7235 /* ZENAutomaticCallFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZENAutomaticCallFlowViewController.m; sourceTree = "<group>"; };
+		1EBA9A5D2579120900FB7235 /* ZendeskConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZendeskConfig.h; sourceTree = "<group>"; };
+		1EBA9A5E2579120900FB7235 /* ZendeskConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZendeskConfig.m; sourceTree = "<group>"; };
 		73CFB2347E1C9BF7B63EA804 /* Pods-TalkSDKSamples-ObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSDKSamples-ObjectiveC.release.xcconfig"; path = "Target Support Files/Pods-TalkSDKSamples-ObjectiveC/Pods-TalkSDKSamples-ObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
 		A30219ACC5DEC28268176224 /* Pods_TalkSDKSamples_ObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkSDKSamples_ObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E2DE51B49842C397C9DEFA /* Pods-TalkSDKSamples-ObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSDKSamples-ObjectiveC.debug.xcconfig"; path = "Target Support Files/Pods-TalkSDKSamples-ObjectiveC/Pods-TalkSDKSamples-ObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,8 +75,10 @@
 				1EAD37752578DCA0006F20E7 /* AppDelegate.m */,
 				1EAD37772578DCA0006F20E7 /* SceneDelegate.h */,
 				1EAD37782578DCA0006F20E7 /* SceneDelegate.m */,
-				1EAD377A2578DCA0006F20E7 /* ViewController.h */,
-				1EAD377B2578DCA0006F20E7 /* ViewController.m */,
+				1EBA9A5D2579120900FB7235 /* ZendeskConfig.h */,
+				1EBA9A5E2579120900FB7235 /* ZendeskConfig.m */,
+				1EBA9A5725790F6800FB7235 /* ZENAutomaticCallFlowViewController.h */,
+				1EBA9A5825790F6800FB7235 /* ZENAutomaticCallFlowViewController.m */,
 				1EAD377D2578DCA0006F20E7 /* Main.storyboard */,
 				1EAD37802578DCA2006F20E7 /* Assets.xcassets */,
 				1EAD37822578DCA2006F20E7 /* LaunchScreen.storyboard */,
@@ -97,7 +102,6 @@
 				A5E2DE51B49842C397C9DEFA /* Pods-TalkSDKSamples-ObjectiveC.debug.xcconfig */,
 				73CFB2347E1C9BF7B63EA804 /* Pods-TalkSDKSamples-ObjectiveC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,10 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EAD377C2578DCA0006F20E7 /* ViewController.m in Sources */,
 				1EAD37762578DCA0006F20E7 /* AppDelegate.m in Sources */,
+				1EBA9A5925790F6800FB7235 /* ZENAutomaticCallFlowViewController.m in Sources */,
 				1EAD37872578DCA2006F20E7 /* main.m in Sources */,
 				1EAD37792578DCA0006F20E7 /* SceneDelegate.m in Sources */,
+				1EBA9A5F2579120900FB7235 /* ZendeskConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
