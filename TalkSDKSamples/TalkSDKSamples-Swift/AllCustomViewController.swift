@@ -172,7 +172,6 @@ class AllCustomViewController: UIViewController {
             answer = recordingConsentSwitch.isOn ? .optedIn : .optedOut
         }
 
-
         makeCall(recordingConsentAnswer: answer)
     }
 
