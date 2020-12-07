@@ -17,6 +17,8 @@ class AutomaticCallFlowViewController: UIViewController {
     var talk: Talk?
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         callButton.isEnabled = false
 
         Zendesk.initialize(appId: ZendeskConfig.appId,

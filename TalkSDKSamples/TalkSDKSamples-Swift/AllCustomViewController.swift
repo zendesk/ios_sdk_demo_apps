@@ -35,6 +35,8 @@ class AllCustomViewController: UIViewController {
     let durationFormatter: DateComponentsFormatter = DateComponentsFormatter()
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         microphonePermissionView.isHidden = true
         recordingConsentView.isHidden = true
         callButton.isEnabled = false
@@ -60,6 +62,7 @@ class AllCustomViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         if isMovingFromParent {
             stopTimer()
 
@@ -197,7 +200,6 @@ class AllCustomViewController: UIViewController {
         case .connecting:
             agentAvailabilityLabel.text = "Connecting..."
             agentAvailabilityLabel.textColor = .darkGray
-
             ongoingCallView.isHidden = false
             callButton.isEnabled = false
             setOngoingCallControls(enabled: false)

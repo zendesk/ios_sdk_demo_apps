@@ -23,6 +23,8 @@ class CustomCallConfigurationViewController: UIViewController {
     var recordingConsentConfiguration: RecordingConsent?
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         microphonePermissionView.isHidden = true
         recordingConsentView.isHidden = true
         callButton.isEnabled = false

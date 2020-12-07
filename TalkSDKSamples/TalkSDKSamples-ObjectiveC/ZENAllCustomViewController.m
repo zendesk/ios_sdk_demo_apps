@@ -67,6 +67,18 @@
     [self checkMicrophonePermission];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    if ([self isMovingFromParentViewController]) {
+        [self stopTimer];
+
+        [self.talkCall disconnect];
+        self.talkCall = nil;
+    }
+}
+
 #pragma mark - Microphone access permission
 
 - (void)checkMicrophonePermission
@@ -188,6 +200,11 @@
 
 - (void)makeCallWithRecordingConsentAnswer:(RecordingConsentAnswer)answer
 {
+    if (self.talkCall != nil) {
+        [self.talkCall disconnect];
+        self.talkCall = nil;
+    }
+
     ZDKTalkCallData *callData = [[ZDKTalkCallData alloc] initWithDigitalLine:ZENZendeskDigitalLine
                                                       recordingConsentAnswer:answer];
     __weak typeof(self) weakSelf = self;
@@ -204,7 +221,6 @@
         case CallStatusConnecting:
             self.agentAvailabilityLabel.text = @"Connecting...";
             self.agentAvailabilityLabel.textColor = [UIColor darkGrayColor];
-
             self.ongoingCallView.hidden = NO;
             self.callButton.enabled = NO;
             [self setOngoingCallControlsEnabled:NO];
