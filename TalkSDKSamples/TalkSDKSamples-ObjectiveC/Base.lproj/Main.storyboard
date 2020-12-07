@@ -452,7 +452,7 @@
         <!--Custom Call Configuration screen-->
         <scene sceneID="eL3-Go-uRA">
             <objects>
-                <viewController id="Zuf-Da-FvD" customClass="CustomCallConfigurationViewController" customModule="TalkSDKSamples_ObjectiveC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zuf-Da-FvD" customClass="ZENCustomCallConfigurationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pMO-Gy-n0f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

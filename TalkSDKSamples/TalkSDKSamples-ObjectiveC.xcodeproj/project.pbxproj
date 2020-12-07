@@ -17,6 +17,7 @@
 		1EBA9A5F2579120900FB7235 /* ZendeskConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA9A5E2579120900FB7235 /* ZendeskConfig.m */; };
 		1EBA9A63257A4E3800FB7235 /* ZENManualCallScreensViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA9A62257A4E3800FB7235 /* ZENManualCallScreensViewController.m */; };
 		1EBA9A68257A507A00FB7235 /* ZENCustomStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA9A67257A507A00FB7235 /* ZENCustomStyle.m */; };
+		1EBA9A6D257E130200FB7235 /* ZENCustomCallConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA9A6C257E130200FB7235 /* ZENCustomCallConfigurationViewController.m */; };
 		F888B399442A2FD97574060B /* Pods_TalkSDKSamples_ObjectiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30219ACC5DEC28268176224 /* Pods_TalkSDKSamples_ObjectiveC.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,8 @@
 		1EBA9A62257A4E3800FB7235 /* ZENManualCallScreensViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZENManualCallScreensViewController.m; sourceTree = "<group>"; };
 		1EBA9A66257A507A00FB7235 /* ZENCustomStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZENCustomStyle.h; sourceTree = "<group>"; };
 		1EBA9A67257A507A00FB7235 /* ZENCustomStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZENCustomStyle.m; sourceTree = "<group>"; };
+		1EBA9A6B257E130200FB7235 /* ZENCustomCallConfigurationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZENCustomCallConfigurationViewController.h; sourceTree = "<group>"; };
+		1EBA9A6C257E130200FB7235 /* ZENCustomCallConfigurationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZENCustomCallConfigurationViewController.m; sourceTree = "<group>"; };
 		73CFB2347E1C9BF7B63EA804 /* Pods-TalkSDKSamples-ObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSDKSamples-ObjectiveC.release.xcconfig"; path = "Target Support Files/Pods-TalkSDKSamples-ObjectiveC/Pods-TalkSDKSamples-ObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
 		A30219ACC5DEC28268176224 /* Pods_TalkSDKSamples_ObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkSDKSamples_ObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E2DE51B49842C397C9DEFA /* Pods-TalkSDKSamples-ObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSDKSamples-ObjectiveC.debug.xcconfig"; path = "Target Support Files/Pods-TalkSDKSamples-ObjectiveC/Pods-TalkSDKSamples-ObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				1EBA9A5825790F6800FB7235 /* ZENAutomaticCallFlowViewController.m */,
 				1EBA9A61257A4E3800FB7235 /* ZENManualCallScreensViewController.h */,
 				1EBA9A62257A4E3800FB7235 /* ZENManualCallScreensViewController.m */,
+				1EBA9A6B257E130200FB7235 /* ZENCustomCallConfigurationViewController.h */,
+				1EBA9A6C257E130200FB7235 /* ZENCustomCallConfigurationViewController.m */,
 				1EAD377D2578DCA0006F20E7 /* Main.storyboard */,
 				1EAD37802578DCA2006F20E7 /* Assets.xcassets */,
 				1EAD37822578DCA2006F20E7 /* LaunchScreen.storyboard */,
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EBA9A6D257E130200FB7235 /* ZENCustomCallConfigurationViewController.m in Sources */,
 				1EAD37762578DCA0006F20E7 /* AppDelegate.m in Sources */,
 				1EBA9A5925790F6800FB7235 /* ZENAutomaticCallFlowViewController.m in Sources */,
 				1EAD37872578DCA2006F20E7 /* main.m in Sources */,
