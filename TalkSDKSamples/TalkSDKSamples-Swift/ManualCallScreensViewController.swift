@@ -115,8 +115,7 @@ class ManualCallScreensViewController: UIViewController {
                                     recordingConsentAnswer: recordingConsentAnswer)
 
         let callViewController = talk.makeCallViewController(with: callData) { [weak self] _, callSummary in
-            let delay: TimeInterval = callSummary.error == .some(.digitalLineNotFound) ? 0 : 2
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [unowned self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
                 self?.dismiss(animated: true, completion: nil)
             }
         }

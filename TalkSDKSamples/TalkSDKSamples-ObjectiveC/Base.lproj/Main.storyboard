@@ -214,7 +214,7 @@
         <!--Manual presentation of Call Screens-->
         <scene sceneID="mDh-66-0Si">
             <objects>
-                <viewController id="ov0-F8-yrD" customClass="ManualCallScreensViewController" customModule="TalkSDKSamples_ObjectiveC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ov0-F8-yrD" customClass="ZENManualCallScreensViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wAJ-ih-WLg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
