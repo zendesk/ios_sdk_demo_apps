@@ -280,7 +280,7 @@
         <!--All custom UI using TalkSDK API-->
         <scene sceneID="IfC-e3-2IC">
             <objects>
-                <viewController id="soH-Wj-IVn" customClass="AllCustomViewController" customModule="TalkSDKSamples_ObjectiveC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="soH-Wj-IVn" customClass="ZENAllCustomViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3uT-vC-dqU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

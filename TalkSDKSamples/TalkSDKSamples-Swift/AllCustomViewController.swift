@@ -41,7 +41,7 @@ class AllCustomViewController: UIViewController {
         ongoingCallView.isHidden = true
 
         durationFormatter.allowedUnits = [.minute, .second]
-        durationFormatter.zeroFormattingBehavior = .dropTrailing
+        durationFormatter.zeroFormattingBehavior = .pad
 
         Zendesk.initialize(appId: ZendeskConfig.appId,
                            clientId: ZendeskConfig.clientId,
@@ -189,7 +189,7 @@ class AllCustomViewController: UIViewController {
         talkCall = talk.call(callData: callData,
                              statusChangeHandler: onCallStatusChange(status:error:))
 
-        callDurationLabel.text = "0:00"
+        callDurationLabel.text = "00:00"
     }
 
     private func onCallStatusChange(status: CallStatus, error: TalkCallError?) {
@@ -248,7 +248,7 @@ class AllCustomViewController: UIViewController {
             guard let call = self.talkCall else { return }
 
             if call.duration < 1 {
-                self.callDurationLabel.text = "0:00"
+                self.callDurationLabel.text = "00:00"
             } else {
                 self.callDurationLabel.text = durationFormatter.string(from: call.duration)
             }
