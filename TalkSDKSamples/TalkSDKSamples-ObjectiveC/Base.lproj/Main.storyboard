@@ -74,11 +74,11 @@
                                             <segue destination="ov0-F8-yrD" kind="show" id="5hh-RL-xZg"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ManualCallScreen" textLabel="oJZ-gY-RVf" detailTextLabel="Nrm-1d-r5C" style="IBUITableViewCellStyleSubtitle" id="3ej-Vv-rsh" userLabel="ManualCallScreen">
-                                        <rect key="frame" x="0.0" y="204" width="414" height="106"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ManualCallScreen" textLabel="oJZ-gY-RVf" detailTextLabel="Nrm-1d-r5C" style="IBUITableViewCellStyleSubtitle" id="3ej-Vv-rsh" userLabel="ManualCallScreen">
+                                        <rect key="frame" x="0.0" y="204" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ej-Vv-rsh" id="hwX-Y5-qw7">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Custom call configuration with out-of-the box Call Screen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oJZ-gY-RVf">
@@ -101,11 +101,11 @@
                                             <segue destination="Zuf-Da-FvD" kind="show" id="PLA-qX-kLw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomUI" textLabel="CJT-kK-q18" detailTextLabel="fhb-fE-lNf" style="IBUITableViewCellStyleSubtitle" id="as9-Gi-UI2">
-                                        <rect key="frame" x="0.0" y="310" width="414" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomUI" textLabel="CJT-kK-q18" detailTextLabel="fhb-fE-lNf" style="IBUITableViewCellStyleSubtitle" id="as9-Gi-UI2">
+                                        <rect key="frame" x="0.0" y="309" width="414" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="as9-Gi-UI2" id="Pfb-Jf-xRX">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="All custom UI using TalkSDK API" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CJT-kK-q18">

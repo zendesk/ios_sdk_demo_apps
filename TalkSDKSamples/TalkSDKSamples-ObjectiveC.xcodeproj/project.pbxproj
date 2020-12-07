@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1EAD37762578DCA0006F20E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37752578DCA0006F20E7 /* AppDelegate.m */; };
-		1EAD37792578DCA0006F20E7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37782578DCA0006F20E7 /* SceneDelegate.m */; };
 		1EAD377F2578DCA0006F20E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD377D2578DCA0006F20E7 /* Main.storyboard */; };
 		1EAD37812578DCA2006F20E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD37802578DCA2006F20E7 /* Assets.xcassets */; };
 		1EAD37842578DCA2006F20E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD37822578DCA2006F20E7 /* LaunchScreen.storyboard */; };
@@ -26,8 +25,6 @@
 		1EAD37712578DCA0006F20E7 /* TalkSDKSamples-ObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TalkSDKSamples-ObjectiveC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAD37742578DCA0006F20E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1EAD37752578DCA0006F20E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1EAD37772578DCA0006F20E7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		1EAD37782578DCA0006F20E7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		1EAD377E2578DCA0006F20E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EAD37802578DCA2006F20E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EAD37832578DCA2006F20E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,8 +82,6 @@
 			children = (
 				1EAD37742578DCA0006F20E7 /* AppDelegate.h */,
 				1EAD37752578DCA0006F20E7 /* AppDelegate.m */,
-				1EAD37772578DCA0006F20E7 /* SceneDelegate.h */,
-				1EAD37782578DCA0006F20E7 /* SceneDelegate.m */,
 				1EBA9A5D2579120900FB7235 /* ZendeskConfig.h */,
 				1EBA9A5E2579120900FB7235 /* ZendeskConfig.m */,
 				1EBA9A65257A505E00FB7235 /* Helpers */,
@@ -250,7 +245,6 @@
 				1EAD37762578DCA0006F20E7 /* AppDelegate.m in Sources */,
 				1EBA9A5925790F6800FB7235 /* ZENAutomaticCallFlowViewController.m in Sources */,
 				1EAD37872578DCA2006F20E7 /* main.m in Sources */,
-				1EAD37792578DCA0006F20E7 /* SceneDelegate.m in Sources */,
 				1EBA9A71257E205300FB7235 /* ZENAllCustomViewController.m in Sources */,
 				1EBA9A63257A4E3800FB7235 /* ZENManualCallScreensViewController.m in Sources */,
 				1EBA9A5F2579120900FB7235 /* ZendeskConfig.m in Sources */,
@@ -400,6 +394,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "TalkSDKSamples-ObjectiveC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,6 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "TalkSDKSamples-ObjectiveC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

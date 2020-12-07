@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1EAD37DE25790BE6006F20E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37DD25790BE6006F20E7 /* AppDelegate.swift */; };
-		1EAD37E025790BE6006F20E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37DF25790BE6006F20E7 /* SceneDelegate.swift */; };
 		1EAD37E525790BE6006F20E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD37E325790BE6006F20E7 /* Main.storyboard */; };
 		1EAD37E725790BE8006F20E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD37E625790BE8006F20E7 /* Assets.xcassets */; };
 		1EAD37EA25790BE8006F20E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAD37E825790BE8006F20E7 /* LaunchScreen.storyboard */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		1EAD37DA25790BE6006F20E7 /* TalkSDKSamples-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TalkSDKSamples-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAD37DD25790BE6006F20E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1EAD37DF25790BE6006F20E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1EAD37E425790BE6006F20E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EAD37E625790BE8006F20E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EAD37E925790BE8006F20E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				1EAD37DD25790BE6006F20E7 /* AppDelegate.swift */,
-				1EAD37DF25790BE6006F20E7 /* SceneDelegate.swift */,
 				1EAD380925790CDE006F20E7 /* ZendeskConfig.swift */,
 				1EAD37FC25790C93006F20E7 /* Helpers */,
 				1EAD380025790C93006F20E7 /* AutomaticCallFlowViewController.swift */,
@@ -229,7 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EAD37DE25790BE6006F20E7 /* AppDelegate.swift in Sources */,
-				1EAD37E025790BE6006F20E7 /* SceneDelegate.swift in Sources */,
 				1EAD380A25790CDE006F20E7 /* ZendeskConfig.swift in Sources */,
 				1EAD381625790D28006F20E7 /* CustomStyle.swift in Sources */,
 				1EAD380225790C93006F20E7 /* AutomaticCallFlowViewController.swift in Sources */,
@@ -385,6 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "TalkSDKSamples-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,6 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "TalkSDKSamples-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
