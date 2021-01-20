@@ -49,10 +49,6 @@
     self.callButton.enabled = NO;
     self.ongoingCallView.hidden = YES;
 
-    self.durationFormatter = [[NSDateComponentsFormatter alloc] init];
-    self.durationFormatter.allowedUnits = NSCalendarUnitMinute|NSCalendarUnitSecond;
-    self.durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
-
     [ZDKZendesk initializeWithAppId:ZENZendeskAppID clientId:ZENZendeskClientID zendeskUrl:ZENZendeskURL];
 
     id<ZDKObjCIdentity> userIdentity = [[ZDKObjCAnonymous alloc] initWithName:nil email:nil];
@@ -73,10 +69,30 @@
 
     if ([self isMovingFromParentViewController]) {
         [self stopTimer];
-
-        [self.talkCall disconnect];
-        self.talkCall = nil;
+        [self disconnectCall];
     }
+}
+
+- (RecordingConsentAnswer)recordingConsentAnswer
+{
+    RecordingConsentAnswer answer = RecordingConsentAnswerUnknown;
+
+    if (self.recordingConsentConfiguration == RecordingConsentOptIn || self.recordingConsentConfiguration == RecordingConsentOptOut) {
+        answer = self.recordingConsentSwitch.isOn ? RecordingConsentAnswerOptedIn : RecordingConsentAnswerOptedOut;
+    }
+
+    return answer;
+}
+
+- (NSDateComponentsFormatter *)durationFormatter
+{
+    if (!_durationFormatter) {
+        _durationFormatter = [[NSDateComponentsFormatter alloc] init];
+        _durationFormatter.allowedUnits = NSCalendarUnitMinute|NSCalendarUnitSecond;
+        _durationFormatter.zeroFormattingBehavior = NSDateComponentsFormatterZeroFormattingBehaviorPad;
+    }
+
+    return _durationFormatter;
 }
 
 #pragma mark - Microphone access permission
@@ -189,33 +205,32 @@
 
 - (IBAction)callButtonTapped:(id)sender
 {
-    RecordingConsentAnswer answer = RecordingConsentAnswerUnknown;
-
-    if (self.recordingConsentConfiguration == RecordingConsentOptIn || self.recordingConsentConfiguration == RecordingConsentOptOut) {
-        answer = self.recordingConsentSwitch.isOn ? RecordingConsentAnswerOptedIn : RecordingConsentAnswerOptedOut;
-    }
-
-    [self makeCallWithRecordingConsentAnswer:answer];
+    [self makeCall];
 }
 
-- (void)makeCallWithRecordingConsentAnswer:(RecordingConsentAnswer)answer
+- (void)makeCall
 {
     if (self.talkCall != nil) {
-        [self.talkCall disconnect];
-        self.talkCall = nil;
+        [self disconnectCall];
     }
 
     ZDKTalkCallData *callData = [[ZDKTalkCallData alloc] initWithDigitalLine:ZENZendeskDigitalLine
-                                                      recordingConsentAnswer:answer];
+                                                      recordingConsentAnswer:[self recordingConsentAnswer]];
     __weak typeof(self) weakSelf = self;
     self.talkCall = [self.talk callWithCallData:callData statusChangeHandler:^(enum CallStatus status, NSError *error) {
-        [weakSelf onCallStatusChange:status error:error];
+        [weakSelf handleCallStatusChangeToStatus:status error:error];
     }];
 
     self. callDurationLabel.text = @"00:00";
 }
 
-- (void)onCallStatusChange:(CallStatus)status error:(NSError *)error
+- (void)disconnectCall
+{
+    [self.talkCall disconnect];
+    self.talkCall = nil;
+}
+
+- (void)handleCallStatusChangeToStatus:(CallStatus)status error:(NSError *)error
 {
     switch (status) {
         case CallStatusConnecting:
@@ -305,8 +320,7 @@
 
 - (IBAction)endCallButtonTapped:(id)sender
 {
-    [self.talkCall disconnect];
-    self.talkCall = nil;
+    [self disconnectCall];
 }
 
 @end

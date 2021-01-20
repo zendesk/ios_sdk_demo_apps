@@ -6,9 +6,9 @@
 //
 
 #import "ZENCustomCallConfigurationViewController.h"
-#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
-#import <TalkSDK/TalkSDK.h>
 #import "ZendeskConfig.h"
+@import ZendeskCoreSDK;
+@import TalkSDK;
 @import AVFoundation;
 
 @interface ZENCustomCallConfigurationViewController ()
@@ -47,6 +47,17 @@
 {
     [super viewDidAppear:animated];
     [self checkMicrophonePermission];
+}
+
+- (RecordingConsentAnswer)recordingConsentAnswer
+{
+    RecordingConsentAnswer answer = RecordingConsentAnswerUnknown;
+
+    if (self.recordingConsentConfiguration == RecordingConsentOptIn || self.recordingConsentConfiguration == RecordingConsentOptOut) {
+        answer = self.recordingConsentSwitch.isOn ? RecordingConsentAnswerOptedIn : RecordingConsentAnswerOptedOut;
+    }
+
+    return answer;
 }
 
 #pragma mark - Microphone access permission
@@ -159,19 +170,13 @@
 
 - (IBAction)callButtonTapped:(id)sender
 {
-    RecordingConsentAnswer answer = RecordingConsentAnswerUnknown;
-
-    if (self.recordingConsentConfiguration == RecordingConsentOptIn || self.recordingConsentConfiguration == RecordingConsentOptOut) {
-        answer = self.recordingConsentSwitch.isOn ? RecordingConsentAnswerOptedIn : RecordingConsentAnswerOptedOut;
-    }
-
-    [self presentCallScreenWithRecordingConsentAnswer:answer];
+    [self presentCallScreen];
 }
 
-- (void)presentCallScreenWithRecordingConsentAnswer:(RecordingConsentAnswer)answer
+- (void)presentCallScreen
 {
     ZDKTalkCallData *callData = [[ZDKTalkCallData alloc] initWithDigitalLine:ZENZendeskDigitalLine
-                                                      recordingConsentAnswer:answer];
+                                                      recordingConsentAnswer:[self recordingConsentAnswer]];
     __weak typeof(self) weakSelf = self;
     UIViewController<CallScreen> *callViewController = [self.talk makeCallViewControllerWith:callData
                                                                         callDidFinishHandler:^(NSTimeInterval callDuration, NSError  * _Nullable error) {

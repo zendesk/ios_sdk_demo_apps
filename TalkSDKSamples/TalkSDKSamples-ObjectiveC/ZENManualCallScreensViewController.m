@@ -6,10 +6,10 @@
 //
 
 #import "ZENManualCallScreensViewController.h"
-#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
-#import <TalkSDK/TalkSDK.h>
 #import "ZendeskConfig.h"
 #import "ZENCustomStyle.h"
+@import ZendeskCoreSDK;
+@import TalkSDK;
 
 @interface ZENManualCallScreensViewController ()
 

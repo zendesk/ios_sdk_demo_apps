@@ -6,9 +6,9 @@
 //
 
 #import "ZENAutomaticCallFlowViewController.h"
-#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
-#import <TalkSDK/TalkSDK.h>
 #import "ZendeskConfig.h"
+@import ZendeskCoreSDK;
+@import TalkSDK;
 
 @interface ZENAutomaticCallFlowViewController ()
 

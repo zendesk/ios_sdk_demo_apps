@@ -21,6 +21,15 @@ class CustomCallConfigurationViewController: UIViewController {
 
     var talk: Talk?
     var recordingConsentConfiguration: RecordingConsent?
+    var recordingConsentAnswer: RecordingConsentAnswer {
+        var answer: RecordingConsentAnswer = .unknown
+
+        if let configuration = recordingConsentConfiguration, configuration == .optIn || configuration == .optOut {
+            answer = recordingConsentSwitch.isOn ? .optedIn : .optedOut
+        }
+
+        return answer
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -143,16 +152,10 @@ class CustomCallConfigurationViewController: UIViewController {
     // MARK: - Making a call
     
     @IBAction func callButtonTapped(_ sender: Any) {
-        var answer: RecordingConsentAnswer = .unknown
-
-        if let configuration = recordingConsentConfiguration, configuration == .optIn || configuration == .optOut {
-            answer = recordingConsentSwitch.isOn ? .optedIn : .optedOut
-        }
-
-        presentCallScreen(recordingConsentAnswer: answer)
+        presentCallScreen()
     }
 
-    private func presentCallScreen(recordingConsentAnswer: RecordingConsentAnswer) {
+    private func presentCallScreen() {
         guard let talk = talk else { return }
 
         let callData = TalkCallData(digitalLine: ZendeskConfig.digitalLine,

@@ -29,10 +29,25 @@ class AllCustomViewController: UIViewController {
 
     var talk: Talk?
     var recordingConsentConfiguration: RecordingConsent?
+    var recordingConsentAnswer: RecordingConsentAnswer {
+        var answer: RecordingConsentAnswer = .unknown
+
+        if let configuration = recordingConsentConfiguration, configuration == .optIn || configuration == .optOut {
+            answer = recordingConsentSwitch.isOn ? .optedIn : .optedOut
+        }
+
+        return answer
+    }
+
     var talkCall: TalkCall?
 
     var callTimer: Timer?
-    let durationFormatter: DateComponentsFormatter = DateComponentsFormatter()
+    lazy var durationFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = .pad
+        return formatter
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +56,6 @@ class AllCustomViewController: UIViewController {
         recordingConsentView.isHidden = true
         callButton.isEnabled = false
         ongoingCallView.isHidden = true
-
-        durationFormatter.allowedUnits = [.minute, .second]
-        durationFormatter.zeroFormattingBehavior = .pad
 
         Zendesk.initialize(appId: ZendeskConfig.appId,
                            clientId: ZendeskConfig.clientId,
@@ -65,9 +77,7 @@ class AllCustomViewController: UIViewController {
         
         if isMovingFromParent {
             stopTimer()
-
-            talkCall?.disconnect()
-            talkCall = nil
+            disconnectCall()
         }
     }
 
@@ -169,21 +179,14 @@ class AllCustomViewController: UIViewController {
     // MARK: - Making a call
 
     @IBAction func callButtonTapped(_ sender: Any) {
-        var answer: RecordingConsentAnswer = .unknown
-
-        if let configuration = recordingConsentConfiguration, configuration == .optIn || configuration == .optOut {
-            answer = recordingConsentSwitch.isOn ? .optedIn : .optedOut
-        }
-
-        makeCall(recordingConsentAnswer: answer)
+        makeCall()
     }
 
-    private func makeCall(recordingConsentAnswer: RecordingConsentAnswer) {
+    private func makeCall() {
         guard let talk = talk else { return }
 
-        if let call = talkCall {
-            call.disconnect()
-            talkCall = nil
+        if talkCall != nil {
+            disconnectCall()
         }
 
         let callData = TalkCallData(digitalLine: ZendeskConfig.digitalLine,
@@ -193,6 +196,11 @@ class AllCustomViewController: UIViewController {
                              statusChangeHandler: onCallStatusChange(status:error:))
 
         callDurationLabel.text = "00:00"
+    }
+
+    private func disconnectCall() {
+        talkCall?.disconnect()
+        talkCall = nil
     }
 
     private func onCallStatusChange(status: CallStatus, error: TalkCallError?) {
@@ -277,9 +285,6 @@ class AllCustomViewController: UIViewController {
     }
 
     @IBAction func endCallButtonTapped(_ sender: Any) {
-        guard let call = talkCall else { return }
-
-        call.disconnect()
-        talkCall = nil
+        disconnectCall()
     }
 }
