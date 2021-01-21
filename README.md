@@ -9,7 +9,7 @@ We hope you'll find those sample Apps useful and encourage you to re-use some of
 
 This repository contains the following demos:
 - [Unified SDK Sample](UnifiedSDK)
- - A demo application showcasing the ChatSDK on the UnifiedSDK
+  - A demo application showcasing the ChatSDK on the UnifiedSDK
  
 - [Support SDK Samples](SupportSDKSamples)
 
@@ -31,8 +31,13 @@ This repository contains the following demos:
 - [Chat SDK Samples](ChatSDKSamples)
   - Demo that showcases building a custom chat UI backed by Zendesk Chat API.
   - Demo that shows the app badge count on the tab bar button.
+
 - [Answer Bot SDK Samples](AnswerBotSDKSample)
   - A demo application that shows how to integrate the Answer Bot SDK
+
+- [Talk SDK Sample](TalkSDKSamples)
+  
+  A demo application that shows how to integrate the Talk SDK. It contains two targets: `TalkSDKSamples-Swift` and `TalkSDKSamples-ObjectiveC` presenting the integration for either Swift or for Objective-C. Each version contains multiple use cases (that are presented with separate view controllers), to showcase various levels of complexity based on required customisability.
 
 ## Owners
 If you have any questions please email support@zendesk.com.
