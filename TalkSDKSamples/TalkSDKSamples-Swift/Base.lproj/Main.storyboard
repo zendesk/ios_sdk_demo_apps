@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LOL-2Z-7Ox">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TalkSDK Examples-->
+        <scene sceneID="qS3-mo-nm5">
+            <objects>
+                <tableViewController id="xzf-za-wBN" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j9I-ZI-aSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="gc9-VV-TI9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AutomaticFlow" textLabel="CS9-LI-D8l" detailTextLabel="HRe-le-guQ" style="IBUITableViewCellStyleSubtitle" id="KUE-0b-Vo5" userLabel="AutomaticFlow">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KUE-0b-Vo5" id="k45-x7-u9W">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Automatic Call Flow Example" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CS9-LI-D8l">
+                                                    <rect key="frame" x="20" y="8" width="218.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRe-le-guQ">
+                                                    <rect key="frame" x="20" y="31.5" width="354.5" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Basic way of starting a call. Simplest but does not enable customization. The call related  view controllers are presented modally.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="W1T-3w-Sde" kind="show" id="P2k-ay-EyT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ManualBoth" textLabel="Eao-G1-q3F" detailTextLabel="kUU-uh-rDx" style="IBUITableViewCellStyleSubtitle" id="BqR-Ht-S5V" userLabel="ManualBoth">
+                                        <rect key="frame" x="0.0" y="113" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BqR-Ht-S5V" id="U1K-h7-2VO">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Manual presentation of Call Configuration and Call screens" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eao-G1-q3F">
+                                                    <rect key="frame" x="20" y="8" width="352.5" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SDK provided view controllers are created and presented manually." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kUU-uh-rDx">
+                                                    <rect key="frame" x="20" y="52" width="265.5" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ov0-F8-yrD" kind="show" id="5hh-RL-xZg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ManualCallScreen" textLabel="oJZ-gY-RVf" detailTextLabel="Nrm-1d-r5C" style="IBUITableViewCellStyleSubtitle" id="3ej-Vv-rsh" userLabel="ManualCallScreen">
+                                        <rect key="frame" x="0.0" y="204" width="414" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ej-Vv-rsh" id="hwX-Y5-qw7">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Custom call configuration with out-of-the box Call Screen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oJZ-gY-RVf">
+                                                    <rect key="frame" x="20" y="8" width="350.5" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Only SDK provided Call Screen view controller is used. The Call Configuration screen's functionality is implemented in place." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nrm-1d-r5C">
+                                                    <rect key="frame" x="20" y="52" width="336" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Zuf-Da-FvD" kind="show" id="PLA-qX-kLw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomUI" textLabel="CJT-kK-q18" detailTextLabel="fhb-fE-lNf" style="IBUITableViewCellStyleSubtitle" id="as9-Gi-UI2">
+                                        <rect key="frame" x="0.0" y="310" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="as9-Gi-UI2" id="Pfb-Jf-xRX">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="All custom UI using TalkSDK API" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CJT-kK-q18">
+                                                    <rect key="frame" x="20" y="8" width="243.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="No SDK UI is used. All UI is custom implemented and uses the SDK provided APIs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fhb-fE-lNf">
+                                                    <rect key="frame" x="20" y="31.5" width="353" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="soH-Wj-IVn" kind="show" id="WZw-op-uyl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xzf-za-wBN" id="Sxo-ke-yTz"/>
+                            <outlet property="delegate" destination="xzf-za-wBN" id="byd-uv-TXi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TalkSDK Examples" id="Jeu-Pr-Cef">
+                        <barButtonItem key="backBarButtonItem" title=" " id="yLl-Nc-k1G"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H1W-hm-pt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959.4202898550725" y="-36.160714285714285"/>
+        </scene>
+        <!--Automatic Call Flow Example-->
+        <scene sceneID="MXl-TC-HjO">
+            <objects>
+                <viewController id="W1T-3w-Sde" customClass="AutomaticCallFlowViewController" customModule="TalkSDKSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ztX-hN-7uW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNi-fB-LJL">
+                                <rect key="frame" x="117" y="428" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="fGX-WV-V6S"/>
+                                    <constraint firstAttribute="height" constant="40" id="uj6-aG-bUl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
+                                <state key="normal" title="Call Support" image="call-icon"/>
+                                <connections>
+                                    <action selector="callButtonTapped:" destination="W1T-3w-Sde" eventType="touchUpInside" id="ECB-KT-arl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GL-ir-v2X">
+                                <rect key="frame" x="117" y="468" width="180" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YlC-Ov-rfa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2GL-ir-v2X" firstAttribute="centerX" secondItem="ZNi-fB-LJL" secondAttribute="centerX" id="9Cy-sN-ggj"/>
+                            <constraint firstItem="ZNi-fB-LJL" firstAttribute="centerY" secondItem="ztX-hN-7uW" secondAttribute="centerY" id="LeV-O0-0wS"/>
+                            <constraint firstItem="2GL-ir-v2X" firstAttribute="top" secondItem="ZNi-fB-LJL" secondAttribute="bottom" id="T14-dT-8E4"/>
+                            <constraint firstItem="ZNi-fB-LJL" firstAttribute="centerX" secondItem="ztX-hN-7uW" secondAttribute="centerX" id="fGO-Hx-2IC"/>
+                            <constraint firstItem="2GL-ir-v2X" firstAttribute="width" secondItem="ZNi-fB-LJL" secondAttribute="width" id="wy5-dh-O3h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Automatic Call Flow Example" id="qpR-p2-gGd"/>
+                    <connections>
+                        <outlet property="agentAvailabilityLabel" destination="2GL-ir-v2X" id="NTY-54-Hj5"/>
+                        <outlet property="callButton" destination="ZNi-fB-LJL" id="s2s-c5-nci"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lH-Yl-ChC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="-688"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5FK-WV-TbK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LOL-2Z-7Ox" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fa3-rg-PvY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xzf-za-wBN" kind="relationship" relationship="rootViewController" id="arh-ek-Ndv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obv-Wg-Q11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="-36.160714285714285"/>
+        </scene>
+        <!--Manual presentation of Call Screens-->
+        <scene sceneID="mDh-66-0Si">
+            <objects>
+                <viewController id="ov0-F8-yrD" customClass="ManualCallScreensViewController" customModule="TalkSDKSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wAJ-ih-WLg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udB-mv-HxO">
+                                <rect key="frame" x="117" y="428" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7T4-8W-RkG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Oka-fi-jLd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
+                                <state key="normal" title="Call Support" image="call-icon"/>
+                                <connections>
+                                    <action selector="callButtonTapped:" destination="ov0-F8-yrD" eventType="touchUpInside" id="8K8-cW-imJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t55-R5-t9p">
+                                <rect key="frame" x="117" y="468" width="180" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kxm-5z-wjT">
+                                <rect key="frame" x="101" y="581.5" width="212" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show customized UI" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-0V-Mkk">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gsT-Ix-nP2">
+                                        <rect key="frame" x="163" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tx5-qS-TOh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t55-R5-t9p" firstAttribute="centerX" secondItem="udB-mv-HxO" secondAttribute="centerX" id="ET9-8a-Lwt"/>
+                            <constraint firstItem="udB-mv-HxO" firstAttribute="centerY" secondItem="wAJ-ih-WLg" secondAttribute="centerY" id="GFL-US-8Dh"/>
+                            <constraint firstItem="t55-R5-t9p" firstAttribute="width" secondItem="udB-mv-HxO" secondAttribute="width" id="Y9l-db-YLZ"/>
+                            <constraint firstItem="t55-R5-t9p" firstAttribute="top" secondItem="udB-mv-HxO" secondAttribute="bottom" id="bhG-4e-SnD"/>
+                            <constraint firstItem="kxm-5z-wjT" firstAttribute="centerX" secondItem="wAJ-ih-WLg" secondAttribute="centerX" id="g0u-Y3-riG"/>
+                            <constraint firstItem="kxm-5z-wjT" firstAttribute="top" secondItem="t55-R5-t9p" secondAttribute="bottom" constant="100" id="sJ0-QJ-R2z"/>
+                            <constraint firstItem="udB-mv-HxO" firstAttribute="centerX" secondItem="wAJ-ih-WLg" secondAttribute="centerX" id="zma-We-PsS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manual presentation of Call Screens" id="GVw-lQ-qAy"/>
+                    <connections>
+                        <outlet property="agentAvailabilityLabel" destination="t55-R5-t9p" id="bZD-ek-cyA"/>
+                        <outlet property="callButton" destination="udB-mv-HxO" id="5SN-PI-yRh"/>
+                        <outlet property="customizeSwitch" destination="gsT-Ix-nP2" id="W3k-te-1Sb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJw-3W-HKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2803" y="-321"/>
+        </scene>
+        <!--All custom UI using TalkSDK API-->
+        <scene sceneID="IfC-e3-2IC">
+            <objects>
+                <viewController id="soH-Wj-IVn" customClass="AllCustomViewController" customModule="TalkSDKSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3uT-vC-dqU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nzC-su-eN6">
+                                <rect key="frame" x="117" y="421.5" width="180" height="53.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHQ-Lv-z0t">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="IW8-P6-2ND"/>
+                                            <constraint firstAttribute="height" constant="40" id="iaW-n5-dmo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
+                                        <state key="normal" title="Call Support" image="call-icon"/>
+                                        <connections>
+                                            <action selector="callButtonTapped:" destination="soH-Wj-IVn" eventType="touchUpInside" id="HcT-ud-uEb"/>
+                                            <action selector="callButtonTapped:" destination="Zuf-Da-FvD" eventType="touchUpInside" id="h0d-96-aSm"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEo-wC-w9Q">
+                                        <rect key="frame" x="0.0" y="40" width="180" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="NbM-xn-eJN">
+                                <rect key="frame" x="0.0" y="176.5" width="414" height="181"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2pc-Ba-jzW">
+                                        <rect key="frame" x="13.5" y="0.0" width="387.5" height="89.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microphone permission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4i-u9-s47">
+                                                <rect key="frame" x="0.0" y="0.0" width="387.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permission to use your microphone are required before you can start a call. Go to your app settings and allow access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkR-k2-f39">
+                                                <rect key="frame" x="0.0" y="28.5" width="387.5" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IIY-XX-ZIM">
+                                        <rect key="frame" x="70" y="121.5" width="274" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call recording consent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkJ-R0-6at">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GAv-ed-8JJ">
+                                                <rect key="frame" x="0.0" y="28.5" width="274" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree for call to be recorded" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOF-kN-aqh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="217" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l5i-0B-krd">
+                                                        <rect key="frame" x="225" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-6z-lRm">
+                                <rect key="frame" x="94" y="507" width="226.5" height="185.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPv-9F-NPv">
+                                        <rect key="frame" x="0.0" y="0.0" width="226.5" height="69.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="58"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sYW-r0-tvw">
+                                        <rect key="frame" x="0.0" y="77.5" width="226.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle speaker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-WA-CUX">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zmm-zF-S5g">
+                                                <rect key="frame" x="177.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="speakerSwitchValueChanged:" destination="soH-Wj-IVn" eventType="valueChanged" id="Q18-aK-yOa"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NAD-JZ-zgN">
+                                        <rect key="frame" x="0.0" y="116.5" width="226.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mute microphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izU-7e-f7H">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wAg-oI-t3H">
+                                                <rect key="frame" x="177.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="muteSwitchValueChanged:" destination="soH-Wj-IVn" eventType="valueChanged" id="arM-Ak-fD3"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEc-aS-8jh">
+                                        <rect key="frame" x="0.0" y="155.5" width="226.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                        <state key="normal" title="End Call">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endCallButtonTapped:" destination="soH-Wj-IVn" eventType="touchUpInside" id="xIb-q0-lH0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6ab-Ln-FcT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nzC-su-eN6" firstAttribute="top" secondItem="NbM-xn-eJN" secondAttribute="bottom" constant="64" id="CiO-ud-gf3"/>
+                            <constraint firstItem="y5p-6z-lRm" firstAttribute="top" secondItem="nzC-su-eN6" secondAttribute="bottom" constant="32" id="MMq-pQ-msa"/>
+                            <constraint firstItem="y5p-6z-lRm" firstAttribute="centerX" secondItem="3uT-vC-dqU" secondAttribute="centerX" id="RaE-hA-3QT"/>
+                            <constraint firstItem="nzC-su-eN6" firstAttribute="centerX" secondItem="3uT-vC-dqU" secondAttribute="centerX" id="k8p-Ee-aYS"/>
+                            <constraint firstItem="nzC-su-eN6" firstAttribute="centerY" secondItem="3uT-vC-dqU" secondAttribute="centerY" id="qMG-RU-Huc"/>
+                            <constraint firstAttribute="trailing" secondItem="NbM-xn-eJN" secondAttribute="trailing" id="slu-DX-rLZ"/>
+                            <constraint firstItem="NbM-xn-eJN" firstAttribute="leading" secondItem="6ab-Ln-FcT" secondAttribute="leading" id="xID-vG-0hc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="All custom UI using TalkSDK API" id="eSa-m3-MFv"/>
+                    <connections>
+                        <outlet property="agentAvailabilityLabel" destination="dEo-wC-w9Q" id="CZS-1P-4CB"/>
+                        <outlet property="callButton" destination="hHQ-Lv-z0t" id="MRN-jv-dGu"/>
+                        <outlet property="callDurationLabel" destination="EPv-9F-NPv" id="hWP-QB-BXd"/>
+                        <outlet property="endCallButton" destination="MEc-aS-8jh" id="oTk-gJ-wcV"/>
+                        <outlet property="microphonePermissionView" destination="2pc-Ba-jzW" id="0p6-Da-FCX"/>
+                        <outlet property="muteSwitch" destination="wAg-oI-t3H" id="Sxo-vX-nMP"/>
+                        <outlet property="muteSwitchLabel" destination="izU-7e-f7H" id="dbp-Kr-Zcq"/>
+                        <outlet property="ongoingCallView" destination="y5p-6z-lRm" id="NLU-KN-xyu"/>
+                        <outlet property="recordingConsentSwitch" destination="l5i-0B-krd" id="ZRF-6q-IBq"/>
+                        <outlet property="recordingConsentView" destination="IIY-XX-ZIM" id="hS1-mi-hbQ"/>
+                        <outlet property="speakerSwitch" destination="Zmm-zF-S5g" id="nZ7-tI-24f"/>
+                        <outlet property="speakerSwitchLabel" destination="8Hl-WA-CUX" id="Qyt-8T-tYA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QrF-iu-zzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867" y="606"/>
+        </scene>
+        <!--Custom Call Configuration screen-->
+        <scene sceneID="eL3-Go-uRA">
+            <objects>
+                <viewController id="Zuf-Da-FvD" customClass="CustomCallConfigurationViewController" customModule="TalkSDKSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pMO-Gy-n0f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Fm-HN-TaY">
+                                <rect key="frame" x="117" y="421.5" width="180" height="53.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgr-Pd-Zcz">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0El-9Z-lbe"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="wP6-IG-X7h"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
+                                        <state key="normal" title="Call Support" image="call-icon"/>
+                                        <connections>
+                                            <action selector="callButtonTapped:" destination="Zuf-Da-FvD" eventType="touchUpInside" id="JYK-Ye-1da"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ft-6Q-Lzg">
+                                        <rect key="frame" x="0.0" y="40" width="180" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-FG-10u">
+                                <rect key="frame" x="20" y="176.5" width="374" height="181"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dOg-Fn-rmo">
+                                        <rect key="frame" x="3" y="0.0" width="368" height="89.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microphone permission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsE-VU-ljw">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permission to use your microphone are required before you can start a call. Go to your app settings and allow access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDU-aj-3gP">
+                                                <rect key="frame" x="0.0" y="28.5" width="368" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oCd-aF-iCJ">
+                                        <rect key="frame" x="50" y="121.5" width="274" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call recording consent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SM-8e-oWU">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="76S-Eo-Q5I">
+                                                <rect key="frame" x="0.0" y="28.5" width="274" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree for call to be recorded" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UA-Ou-12R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="217" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nPM-0Y-Vmo">
+                                                        <rect key="frame" x="225" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xfe-t5-lVm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Fm-HN-TaY" firstAttribute="centerY" secondItem="pMO-Gy-n0f" secondAttribute="centerY" id="JUe-jq-P5g"/>
+                            <constraint firstItem="5Fm-HN-TaY" firstAttribute="centerX" secondItem="pMO-Gy-n0f" secondAttribute="centerX" id="Tfx-yi-rdB"/>
+                            <constraint firstItem="5ea-FG-10u" firstAttribute="leading" secondItem="xfe-t5-lVm" secondAttribute="leading" constant="20" id="dRY-DC-WEi"/>
+                            <constraint firstItem="5Fm-HN-TaY" firstAttribute="top" secondItem="5ea-FG-10u" secondAttribute="bottom" constant="64" id="g4P-M1-Bzz"/>
+                            <constraint firstAttribute="trailing" secondItem="5ea-FG-10u" secondAttribute="trailing" constant="20" id="ujN-MH-ngu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Call Configuration screen" id="OaW-Vi-KKN"/>
+                    <connections>
+                        <outlet property="agentAvailabilityLabel" destination="5ft-6Q-Lzg" id="RjI-mg-JHZ"/>
+                        <outlet property="callButton" destination="lgr-Pd-Zcz" id="liN-Le-SYi"/>
+                        <outlet property="microphonePermissionView" destination="dOg-Fn-rmo" id="VDg-DP-qTI"/>
+                        <outlet property="recordingConsentSwitch" destination="nPM-0Y-Vmo" id="rWx-pZ-AU5"/>
+                        <outlet property="recordingConsentView" destination="oCd-aF-iCJ" id="grW-AT-VwA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1D-ym-ke3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2802.898550724638" y="343.52678571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="call-icon" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
