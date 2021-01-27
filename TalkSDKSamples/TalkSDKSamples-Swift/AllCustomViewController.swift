@@ -21,6 +21,7 @@ class AllCustomViewController: UIViewController {
 
     @IBOutlet weak var ongoingCallView: UIStackView!
     @IBOutlet weak var callDurationLabel: UILabel!
+    @IBOutlet weak var audioRoutingButton: UIButton!
     @IBOutlet weak var speakerSwitchLabel: UILabel!
     @IBOutlet weak var speakerSwitch: UISwitch!
     @IBOutlet weak var muteSwitchLabel: UILabel!
@@ -236,6 +237,7 @@ class AllCustomViewController: UIViewController {
     }
 
     private func setOngoingCallControls(enabled: Bool) {
+        audioRoutingButton.isEnabled = enabled
         speakerSwitchLabel.textColor = enabled ? .black : .lightGray
         speakerSwitch.isEnabled = enabled
         muteSwitchLabel.textColor = enabled ? .black : .lightGray
@@ -271,6 +273,38 @@ class AllCustomViewController: UIViewController {
     }
 
     // MARK: - Ongoing call actions
+
+    @IBAction func audioRoutingButtonTapped(_ sender: Any) {
+        guard let alertController = makeAudioRoutingAlertController() else { return }
+        present(alertController, animated: true, completion: nil)
+    }
+
+    private func makeAudioRoutingAlertController() -> UIAlertController? {
+        guard let call = talkCall else { return nil }
+
+        let alertController = UIAlertController(title: "Change Audio Routing",
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+
+        for option in call.availableAudioRoutingOptions {
+            var isSelected = false
+            if let currentOption = call.audioRouting {
+                isSelected = option.type == currentOption.type && option.name == option.name
+            }
+
+            let action = UIAlertAction(title: option.name, style: .default) { [weak self] _ in
+                self?.talkCall?.audioRouting = option
+            }
+
+            action.setValue(isSelected, forKey: "checked")
+            alertController.addAction(action)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+
+        return alertController
+    }
 
     @IBAction func speakerSwitchValueChanged(_ sender: Any) {
         guard let call = talkCall else { return }

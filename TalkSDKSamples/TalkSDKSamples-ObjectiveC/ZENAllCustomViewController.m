@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UIStackView *ongoingCallView;
 @property (weak, nonatomic) IBOutlet UILabel *callDurationLabel;
+@property (weak, nonatomic) IBOutlet UIButton *audioRoutingButton;
 @property (weak, nonatomic) IBOutlet UILabel *speakerSwitchLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *speakerSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *muteSwitchLabel;
@@ -278,6 +279,7 @@
 
 - (void)setOngoingCallControlsEnabled:(BOOL)enabled
 {
+    self.audioRoutingButton.enabled = enabled;
     self.speakerSwitchLabel.textColor = enabled ? [UIColor blackColor] : [UIColor lightGrayColor];
     self.speakerSwitch.enabled = enabled;
     self.muteSwitchLabel.textColor = enabled ? [UIColor blackColor] : [UIColor lightGrayColor];
@@ -307,6 +309,40 @@
 }
 
 #pragma mark - Ongoing call actions
+
+- (IBAction)audioRoutingButtonTapped:(id)sender
+{
+    UIAlertController *alertController = [self makeAudioRoutingAlertController];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (UIAlertController *)makeAudioRoutingAlertController
+{
+    __weak typeof(self) weakSelf = self;
+    id<AudioRoutingOption> currentOption = self.talkCall.audioRouting;
+
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Change Audio Routing"
+                                                                             message:nil
+                                                                      preferredStyle:UIAlertControllerStyleActionSheet];
+
+    for (id<AudioRoutingOption> option in self.talkCall.availableAudioRoutingOptions) {
+        BOOL isSelected = option.type == currentOption.type && option.name == currentOption.name;
+
+        UIAlertAction *action = [UIAlertAction actionWithTitle:option.name
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+            weakSelf.talkCall.audioRouting = option;
+        }];
+        [action setValue:@(isSelected) forKey:@"checked"];
+        [alertController addAction:action];
+
+    }
+
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:cancelAction];
+
+    return alertController;
+}
 
 - (IBAction)speakerSwitchValueChanged:(id)sender
 {
