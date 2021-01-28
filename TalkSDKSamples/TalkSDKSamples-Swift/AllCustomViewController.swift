@@ -61,10 +61,21 @@ class AllCustomViewController: UIViewController {
                            clientId: ZendeskConfig.clientId,
                            zendeskUrl: ZendeskConfig.zendeskURL)
 
-        let identity = Identity.createAnonymous()
+        let identity = makeUserIdentity()
         Zendesk.instance?.setIdentity(identity)
 
         talk = Talk(zendesk: Zendesk.instance!)
+    }
+
+    private func makeUserIdentity() -> Identity {
+        var userName: String?
+        var userEmail: String?
+
+        // provide if able to identify user
+        userName = "End User"
+        userEmail = "end.user@domain.com"
+
+        return Identity.createAnonymous(name: userName, email: userEmail)
     }
 
     override func viewDidAppear(_ animated: Bool) {

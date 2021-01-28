@@ -29,10 +29,22 @@
 
     [ZDKZendesk initializeWithAppId:ZENZendeskAppID clientId:ZENZendeskClientID zendeskUrl:ZENZendeskURL];
 
-    id<ZDKObjCIdentity> userIdentity = [[ZDKObjCAnonymous alloc] initWithName:nil email:nil];
+    id<ZDKObjCIdentity> userIdentity = [self makeUserIdentity];
     [[ZDKZendesk instance] setIdentity:userIdentity];
 
     self.talk = [[ZDKTalk alloc] initWithZendesk:[ZDKZendesk instance]];
+}
+
+- (id<ZDKObjCIdentity>)makeUserIdentity
+{
+    NSString *userName;
+    NSString *userEmail;
+
+    // provide if able to identify user
+    userName = @"End User";
+    userEmail = @"end.user@domain.com";
+
+    return [[ZDKObjCAnonymous alloc] initWithName:userName email:userEmail];
 }
 
 - (void)viewDidAppear:(BOOL)animated
