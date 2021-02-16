@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LOL-2Z-7Ox">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LOL-2Z-7Ox">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -359,7 +361,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-6z-lRm">
-                                <rect key="frame" x="94" y="507" width="226.5" height="185.5"/>
+                                <rect key="frame" x="94" y="507" width="226.5" height="223.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPv-9F-NPv">
                                         <rect key="frame" x="0.0" y="0.0" width="226.5" height="69.5"/>
@@ -367,8 +369,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWR-CP-VGm">
+                                        <rect key="frame" x="0.0" y="77.5" width="226.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                        <state key="normal" title="Audio">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="audioRoutingButtonTapped:" destination="soH-Wj-IVn" eventType="touchUpInside" id="4Y4-z5-zpW"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sYW-r0-tvw">
-                                        <rect key="frame" x="0.0" y="77.5" width="226.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="226.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle speaker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-WA-CUX">
                                                 <rect key="frame" x="0.0" y="0.0" width="169.5" height="31"/>
@@ -385,7 +400,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NAD-JZ-zgN">
-                                        <rect key="frame" x="0.0" y="116.5" width="226.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="154.5" width="226.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mute microphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izU-7e-f7H">
                                                 <rect key="frame" x="0.0" y="0.0" width="169.5" height="31"/>
@@ -402,7 +417,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEc-aS-8jh">
-                                        <rect key="frame" x="0.0" y="155.5" width="226.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="193.5" width="226.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <state key="normal" title="End Call">
                                             <color key="titleColor" systemColor="systemRedColor"/>
@@ -432,6 +447,7 @@
                     <navigationItem key="navigationItem" title="All custom UI using TalkSDK API" id="eSa-m3-MFv"/>
                     <connections>
                         <outlet property="agentAvailabilityLabel" destination="dEo-wC-w9Q" id="CZS-1P-4CB"/>
+                        <outlet property="audioRoutingButton" destination="DWR-CP-VGm" id="hTS-MH-cPJ"/>
                         <outlet property="callButton" destination="hHQ-Lv-z0t" id="MRN-jv-dGu"/>
                         <outlet property="callDurationLabel" destination="EPv-9F-NPv" id="hWP-QB-BXd"/>
                         <outlet property="endCallButton" destination="MEc-aS-8jh" id="oTk-gJ-wcV"/>
@@ -556,6 +572,9 @@
     </scenes>
     <resources>
         <image name="call-icon" width="30" height="30"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
