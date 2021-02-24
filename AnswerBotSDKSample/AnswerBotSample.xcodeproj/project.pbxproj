@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2226EE1F25E6AD7100BDE104 /* ZendeskAnswerBotSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2226EE1E25E6AD7100BDE104 /* ZendeskAnswerBotSDK */; };
 		43058C36215D060A005AD098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43058C35215D060A005AD098 /* AppDelegate.swift */; };
 		43058C38215D060A005AD098 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43058C37215D060A005AD098 /* ViewController.swift */; };
 		43058C3B215D060A005AD098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43058C39215D060A005AD098 /* Main.storyboard */; };
 		43058C3D215D060B005AD098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43058C3C215D060B005AD098 /* Assets.xcassets */; };
 		43058C40215D060B005AD098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43058C3E215D060B005AD098 /* LaunchScreen.storyboard */; };
-		5510BFB6E8346AD4A3499EA1 /* Pods_AnswerBotSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2079FB4E754CE30B75CFCD3 /* Pods_AnswerBotSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,9 +36,6 @@
 		43058C3C215D060B005AD098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43058C3F215D060B005AD098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43058C41215D060B005AD098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		626B9370684F65F9B907E80E /* Pods-AnswerBotSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnswerBotSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample.release.xcconfig"; sourceTree = "<group>"; };
-		7196A72ED060A5B6AE8D3C42 /* Pods-AnswerBotSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnswerBotSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample.debug.xcconfig"; sourceTree = "<group>"; };
-		E2079FB4E754CE30B75CFCD3 /* Pods_AnswerBotSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnswerBotSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,29 +43,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5510BFB6E8346AD4A3499EA1 /* Pods_AnswerBotSample.framework in Frameworks */,
+				2226EE1F25E6AD7100BDE104 /* ZendeskAnswerBotSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B8F45DAACA449A1350BE805 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7196A72ED060A5B6AE8D3C42 /* Pods-AnswerBotSample.debug.xcconfig */,
-				626B9370684F65F9B907E80E /* Pods-AnswerBotSample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		43058C29215D060A005AD098 = {
 			isa = PBXGroup;
 			children = (
 				43058C34215D060A005AD098 /* AnswerBotSample */,
 				43058C33215D060A005AD098 /* Products */,
-				1B8F45DAACA449A1350BE805 /* Pods */,
-				97A0FE929DF76D2D3A5AE774 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,14 +79,6 @@
 			path = AnswerBotSample;
 			sourceTree = "<group>";
 		};
-		97A0FE929DF76D2D3A5AE774 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E2079FB4E754CE30B75CFCD3 /* Pods_AnswerBotSample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,18 +86,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43058C44215D060B005AD098 /* Build configuration list for PBXNativeTarget "AnswerBotSample" */;
 			buildPhases = (
-				62F5C3A70E1DDA62A1B9F6ED /* [CP] Check Pods Manifest.lock */,
 				43058C2E215D060A005AD098 /* Sources */,
 				43058C2F215D060A005AD098 /* Frameworks */,
 				43058C30215D060A005AD098 /* Resources */,
 				43058C5E215D0770005AD098 /* Embed Frameworks */,
-				E9FCCD97C9C640B2A22B566F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AnswerBotSample;
+			packageProductDependencies = (
+				2226EE1E25E6AD7100BDE104 /* ZendeskAnswerBotSDK */,
+			);
 			productName = AnswerBotSample;
 			productReference = 43058C32215D060A005AD098 /* AnswerBotSample.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 43058C29215D060A005AD098;
+			packageReferences = (
+				2226EE1D25E6AD7100BDE104 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */,
+			);
 			productRefGroup = 43058C33215D060A005AD098 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,44 +152,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		62F5C3A70E1DDA62A1B9F6ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnswerBotSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E9FCCD97C9C640B2A22B566F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnswerBotSample/Pods-AnswerBotSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43058C2E215D060A005AD098 /* Sources */ = {
@@ -359,7 +303,6 @@
 		};
 		43058C45215D060B005AD098 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7196A72ED060A5B6AE8D3C42 /* Pods-AnswerBotSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,7 +322,6 @@
 		};
 		43058C46215D060B005AD098 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 626B9370684F65F9B907E80E /* Pods-AnswerBotSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2226EE1D25E6AD7100BDE104 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zendesk/answer_bot_sdk_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2226EE1E25E6AD7100BDE104 /* ZendeskAnswerBotSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2226EE1D25E6AD7100BDE104 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */;
+			productName = ZendeskAnswerBotSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43058C2A215D060A005AD098 /* Project object */;
 }
