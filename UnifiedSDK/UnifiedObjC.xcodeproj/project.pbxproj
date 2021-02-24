@@ -3,23 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		22203447251A3CAE00681C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22203446251A3CAE00681C77 /* Main.storyboard */; };
 		22203456251A3E5500681C77 /* ZendeskMessaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 22203455251A3E5500681C77 /* ZendeskMessaging.m */; };
+		2257BE6425E54AE600664840 /* ZendeskChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2257BE6325E54AE600664840 /* ZendeskChatSDK */; };
 		228B6869250B693A00B1084E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B6868250B693A00B1084E /* AppDelegate.m */; };
 		228B686C250B693A00B1084E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B686B250B693A00B1084E /* SceneDelegate.m */; };
 		228B686F250B693A00B1084E /* ZendeskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B686E250B693A00B1084E /* ZendeskViewController.m */; };
 		228B6874250B693C00B1084E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 228B6873250B693C00B1084E /* Assets.xcassets */; };
 		228B6877250B693C00B1084E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228B6875250B693C00B1084E /* LaunchScreen.storyboard */; };
 		228B687A250B693C00B1084E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 228B6879250B693C00B1084E /* main.m */; };
-		30931E26F9E6A20F898C3B6A /* Pods_UnifiedObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053D8AD0EA36CB9F17BAD1AB /* Pods_UnifiedObjC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		053D8AD0EA36CB9F17BAD1AB /* Pods_UnifiedObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22203446251A3CAE00681C77 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		22203455251A3E5500681C77 /* ZendeskMessaging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZendeskMessaging.m; sourceTree = "<group>"; };
 		2220348C251A4B1800681C77 /* ZendeskMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZendeskMessaging.h; sourceTree = "<group>"; };
@@ -34,8 +33,6 @@
 		228B6876250B693C00B1084E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		228B6878250B693C00B1084E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		228B6879250B693C00B1084E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3D00879FC2D20C3D9B3F4162 /* Pods-UnifiedObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedObjC.release.xcconfig"; path = "Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC.release.xcconfig"; sourceTree = "<group>"; };
-		BFDC02237FB406E1AE346408 /* Pods-UnifiedObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedObjC.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30931E26F9E6A20F898C3B6A /* Pods_UnifiedObjC.framework in Frameworks */,
+				2257BE6425E54AE600664840 /* ZendeskChatSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,9 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				228B6866250B693A00B1084E /* UnifiedObjC */,
-				228B6886250B6BC500B1084E /* Frameworks */,
 				228B6865250B693A00B1084E /* Products */,
-				8CC6CE968D8FD06BE7D62B67 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,23 +99,6 @@
 			path = UnifiedObjC;
 			sourceTree = "<group>";
 		};
-		228B6886250B6BC500B1084E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				053D8AD0EA36CB9F17BAD1AB /* Pods_UnifiedObjC.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8CC6CE968D8FD06BE7D62B67 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BFDC02237FB406E1AE346408 /* Pods-UnifiedObjC.debug.xcconfig */,
-				3D00879FC2D20C3D9B3F4162 /* Pods-UnifiedObjC.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,17 +106,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 228B687D250B693C00B1084E /* Build configuration list for PBXNativeTarget "UnifiedObjC" */;
 			buildPhases = (
-				0BE53177E1DB95F4C610E08B /* [CP] Check Pods Manifest.lock */,
 				228B6860250B693A00B1084E /* Sources */,
 				228B6861250B693A00B1084E /* Frameworks */,
 				228B6862250B693A00B1084E /* Resources */,
-				28714F44E4145877ABFD789B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = UnifiedObjC;
+			packageProductDependencies = (
+				2257BE6325E54AE600664840 /* ZendeskChatSDK */,
+			);
 			productName = UnifiedObjC;
 			productReference = 228B6864250B693A00B1084E /* UnifiedObjC.app */;
 			productType = "com.apple.product-type.application";
@@ -149,7 +128,7 @@
 		228B685C250B693A00B1084E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Zendesk;
 				TargetAttributes = {
 					228B6863250B693A00B1084E = {
@@ -166,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 228B685B250B693A00B1084E;
+			packageReferences = (
+				2257BE6225E54AE600664840 /* XCRemoteSwiftPackageReference "chat_sdk_ios" */,
+			);
 			productRefGroup = 228B6865250B693A00B1084E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,48 +169,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0BE53177E1DB95F4C610E08B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UnifiedObjC-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		28714F44E4145877ABFD789B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnifiedObjC/Pods-UnifiedObjC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		228B6860250B693A00B1084E /* Sources */ = {
@@ -283,6 +223,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -341,6 +282,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -369,7 +311,6 @@
 		};
 		228B687E250B693C00B1084E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFDC02237FB406E1AE346408 /* Pods-UnifiedObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,7 +330,6 @@
 		};
 		228B687F250B693C00B1084E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D00879FC2D20C3D9B3F4162 /* Pods-UnifiedObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -429,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2257BE6225E54AE600664840 /* XCRemoteSwiftPackageReference "chat_sdk_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zendesk/chat_sdk_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2257BE6325E54AE600664840 /* ZendeskChatSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2257BE6225E54AE600664840 /* XCRemoteSwiftPackageReference "chat_sdk_ios" */;
+			productName = ZendeskChatSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 228B685C250B693A00B1084E /* Project object */;
 }
