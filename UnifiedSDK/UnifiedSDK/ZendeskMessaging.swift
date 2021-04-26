@@ -25,9 +25,14 @@ final class ZendeskMessaging {
     #warning("Please provide Chat account key")
     let accountKey = "<#String#>"
 
+    var observeBehaviours = ObserveBehaviours()
+
     func initialize() {
         setChatLogging(isEnabled: true, logLevel: .verbose)
         Chat.initialize(accountKey: accountKey)
+        observeBehaviours.addBehaviour(
+            observeChatState()
+        )
     }
 
     func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {
@@ -68,6 +73,13 @@ final class ZendeskMessaging {
         Chat.instance?.configuration = chatAPIConfig
         return try Messaging.instance.buildUI(engines: engines,
                                               configs: [messagingConfiguration, chatConfiguration])
+    }
+
+    func observeChatState() -> ObserveBehaviour {
+        Chat.chatProvider!.observeChatState { (state) in
+            let agentMessages = state.logs.filter { $0.participant == .agent }
+            print("agentMessages.count \(agentMessages.count)")
+        }.asBehaviour()
     }
 }
 
