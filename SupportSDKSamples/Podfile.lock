@@ -1,17 +1,17 @@
 PODS:
-  - ZendeskCommonUISDK (6.1.0)
-  - ZendeskCoreSDK (2.5.0)
-  - ZendeskMessagingAPISDK (3.8.1):
-    - ZendeskSDKConfigurationsSDK (~> 1.1.7)
-  - ZendeskMessagingSDK (3.8.1):
-    - ZendeskCommonUISDK (~> 6.1.0)
-    - ZendeskMessagingAPISDK (~> 3.8.1)
-  - ZendeskSDKConfigurationsSDK (1.1.7)
-  - ZendeskSupportProvidersSDK (5.2.0):
-    - ZendeskCoreSDK (~> 2.5.0)
-  - ZendeskSupportSDK (5.2.0):
-    - ZendeskMessagingSDK (~> 3.8.1)
-    - ZendeskSupportProvidersSDK (~> 5.2.0)
+  - ZendeskCommonUISDK (6.1.1)
+  - ZendeskCoreSDK (2.5.1)
+  - ZendeskMessagingAPISDK (3.8.2):
+    - ZendeskSDKConfigurationsSDK (~> 1.1.8)
+  - ZendeskMessagingSDK (3.8.2):
+    - ZendeskCommonUISDK (~> 6.1.1)
+    - ZendeskMessagingAPISDK (~> 3.8.2)
+  - ZendeskSDKConfigurationsSDK (1.1.8)
+  - ZendeskSupportProvidersSDK (5.3.0):
+    - ZendeskCoreSDK (~> 2.5.1)
+  - ZendeskSupportSDK (5.3.0):
+    - ZendeskMessagingSDK (~> 3.8.2)
+    - ZendeskSupportProvidersSDK (~> 5.3.0)
 
 DEPENDENCIES:
   - ZendeskSupportSDK
@@ -27,14 +27,14 @@ SPEC REPOS:
     - ZendeskSupportSDK
 
 SPEC CHECKSUMS:
-  ZendeskCommonUISDK: 92ca6b16956430a2cb61c89aeaa6ca123d1f81fd
-  ZendeskCoreSDK: f3d5dcd6a18186dcecbecd56f66296c40fb2fcb4
-  ZendeskMessagingAPISDK: 986919a8f6f11a7019660d1ff798f1efb42fa572
-  ZendeskMessagingSDK: bf9a06f0cbb219617d9cf60a46aba1b68c8f3b30
-  ZendeskSDKConfigurationsSDK: 45fa87ec8418697f7fce5e56bec472052f0aedb5
-  ZendeskSupportProvidersSDK: 5221df6ca45e0b6f12470a5e8e65ccf3ccca17fa
-  ZendeskSupportSDK: e100a7a0a1bb5d7d43abbde3338727d985a4986d
+  ZendeskCommonUISDK: 5808802951ad2bb424f0bed4259dc3c0ce9b52ec
+  ZendeskCoreSDK: 19a18e5ef2edcb18f4dbc0ea0d12bd31f515712a
+  ZendeskMessagingAPISDK: 144e0fb0e633a3c4e73149b781ab65338938d5a8
+  ZendeskMessagingSDK: 500e83d9413481e95180c37ddca0d4ef9d515600
+  ZendeskSDKConfigurationsSDK: 8371b468db0d09e9198f6c5a97818826943ee1ee
+  ZendeskSupportProvidersSDK: 2bdf8544f7cd0fd4c002546f5704b813845beb2a
+  ZendeskSupportSDK: 3a8e508ab1d9dd22dc038df6c694466414e037ba
 
 PODFILE CHECKSUM: 4b926eb9103d3cce4ac291192a7ad3c89e4cbb89
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
