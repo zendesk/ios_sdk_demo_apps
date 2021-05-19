@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             completion?(status)
         } else {
             status = .initializing
-            ZendeskSDKMessaging.Messaging.initialize(channelKey: "eyJzZXR0aW5nc191cmwiOiJodHRwczovL2t1Y29pbi56ZW5kZXNrLmNvbS9tb2JpbGVfc2RrX2FwaS9zZXR0aW5ncy8wMUYzUTI2RlhNVFo1MkZKSk45WDhYWkJOOC5qc29uIn0=") { (result) in
+            ZendeskSDKMessaging.Messaging.initialize(channelKey: <#T##String#>) { (result) in
                 do {
                     self.messaging = try result.get()
                     self.status = .ready
