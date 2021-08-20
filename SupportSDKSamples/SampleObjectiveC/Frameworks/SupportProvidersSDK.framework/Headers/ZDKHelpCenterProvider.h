@@ -15,9 +15,9 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "ZDKHelpCenterSearch.h"
-#import "ZDKHelpCenterDeflection.h"
-#import "ZDKProvider.h"
+#import <SupportProvidersSDK/ZDKHelpCenterSearch.h>
+#import <SupportProvidersSDK/ZDKHelpCenterDeflection.h>
+#import <SupportProvidersSDK/ZDKProvider.h>
 
 @class ZDKHelpCenterCategoryViewModel, ZDKHelpCenterSectionViewModel, ZDKHelpCenterOverviewContentModel, ZDKHelpCenterArticle, ZDKZendesk;
 
