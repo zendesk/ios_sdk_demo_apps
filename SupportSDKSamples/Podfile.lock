@@ -1,17 +1,17 @@
 PODS:
-  - ZendeskCommonUISDK (6.1.1)
-  - ZendeskCoreSDK (2.5.1)
-  - ZendeskMessagingAPISDK (3.8.2):
-    - ZendeskSDKConfigurationsSDK (~> 1.1.8)
-  - ZendeskMessagingSDK (3.8.2):
-    - ZendeskCommonUISDK (~> 6.1.1)
-    - ZendeskMessagingAPISDK (~> 3.8.2)
-  - ZendeskSDKConfigurationsSDK (1.1.8)
-  - ZendeskSupportProvidersSDK (5.3.0):
-    - ZendeskCoreSDK (~> 2.5.1)
-  - ZendeskSupportSDK (5.3.0):
-    - ZendeskMessagingSDK (~> 3.8.2)
-    - ZendeskSupportProvidersSDK (~> 5.3.0)
+  - ZendeskCommonUISDK (6.1.2)
+  - ZendeskCoreSDK (2.6.0)
+  - ZendeskMessagingAPISDK (3.8.3):
+    - ZendeskSDKConfigurationsSDK (~> 1.1.9)
+  - ZendeskMessagingSDK (3.8.3):
+    - ZendeskCommonUISDK (~> 6.1.2)
+    - ZendeskMessagingAPISDK (~> 3.8.3)
+  - ZendeskSDKConfigurationsSDK (1.1.9)
+  - ZendeskSupportProvidersSDK (5.4.0):
+    - ZendeskCoreSDK (~> 2.6.0)
+  - ZendeskSupportSDK (5.4.0):
+    - ZendeskMessagingSDK (~> 3.8.3)
+    - ZendeskSupportProvidersSDK (~> 5.4.0)
 
 DEPENDENCIES:
   - ZendeskSupportSDK
