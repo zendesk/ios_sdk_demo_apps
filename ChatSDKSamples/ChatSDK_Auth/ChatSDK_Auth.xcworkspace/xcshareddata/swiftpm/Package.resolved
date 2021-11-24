@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/zendesk/chat_providers_sdk_ios",
         "state": {
           "branch": null,
-          "revision": "eb3b54f087d0f21bb7a80f98a4e4680e490c6abf",
-          "version": "2.11.1"
+          "revision": "4774294aa2ade1eb74a8d081514d8f6f209232f3",
+          "version": "2.11.2"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/zendesk/chat_sdk_ios",
         "state": {
           "branch": null,
-          "revision": "92ca0c74e4004b7513cfdad31e3700a0ea7d8f2e",
-          "version": "2.11.1"
+          "revision": "d3a51e4172a2c2f6ed76f5641e12fb74f4aa47aa",
+          "version": "2.11.2"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/zendesk/commonui_sdk_ios",
         "state": {
           "branch": null,
-          "revision": "6a27a10d89379ab120c38758013079518c4b3002",
-          "version": "6.1.1"
+          "revision": "45ef3ab2bbf2efbe73735f67723643495c424ffb",
+          "version": "6.1.2"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/zendesk/messaging_sdk_ios",
         "state": {
           "branch": null,
-          "revision": "305f4a3991b355f87e70497616833d0e71f90298",
-          "version": "3.8.2"
+          "revision": "11121b6dc3e9b3065faa1b6ab2d775b3e3a4ea1e",
+          "version": "3.8.3"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/zendesk/messagingapi_sdk_ios",
         "state": {
           "branch": null,
-          "revision": "97a131367258192800e5b45cc13412224b84d9e8",
-          "version": "3.8.2"
+          "revision": "75a4bb9d81bf15de1d4f98f52a4523ce2aacdceb",
+          "version": "3.8.3"
         }
       },
       {
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/zendesk/sdkconfigurations_sdk_ios",
         "state": {
           "branch": null,
-          "revision": "7649c83108cad094cf9cbb68f25f6e8270177099",
-          "version": "1.1.8"
+          "revision": "dd8365d28c4885cd916c772db05222acc12c7edf",
+          "version": "1.1.9"
         }
       }
     ]

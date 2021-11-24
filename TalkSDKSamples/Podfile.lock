@@ -1,6 +1,6 @@
 PODS:
   - TwilioVoice (5.3.1)
-  - ZendeskCoreSDK (2.5.0)
+  - ZendeskCoreSDK (2.5.1)
   - ZendeskTalkSDK (1.1.0):
     - TwilioVoice (~> 5.3.1)
     - ZendeskCoreSDK
@@ -16,9 +16,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   TwilioVoice: 524743a779dfbd4b93ebd15cb0aba9fe678a2beb
-  ZendeskCoreSDK: f3d5dcd6a18186dcecbecd56f66296c40fb2fcb4
+  ZendeskCoreSDK: 19a18e5ef2edcb18f4dbc0ea0d12bd31f515712a
   ZendeskTalkSDK: aaee505cbd70ff5092bea214fb31d3137e98bae0
 
 PODFILE CHECKSUM: b2e0602f764b8a606552471c9e71e8f9c63d7dd1
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
