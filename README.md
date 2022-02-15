@@ -40,7 +40,7 @@ This repository contains the following demos:
   A demo application that shows how to integrate the Talk SDK. It contains two targets: `TalkSDKSamples-Swift` and `TalkSDKSamples-ObjectiveC` presenting the integration for either Swift or for Objective-C. Each version contains multiple use cases (that are presented with separate view controllers), to showcase various levels of complexity based on required customisability.
 
 ## Owners
-If you have any questions please email support@zendesk.com.
+If you have any questions please contact us through one of the methods outlined [here](https://support.zendesk.com/hc/en-us/articles/4408843597850-Contacting-Zendesk-Customer-Support).
 
 ## Getting Started
 Each of the modules in this project is a stand-alone iOS app.
@@ -49,4 +49,4 @@ Each of the modules in this project is a stand-alone iOS app.
 Pull requests are welcome.
 
 ## Bugs
-Please submit bug reports to [Zendesk](https://support.zendesk.com/requests/new).
+Please submit bug reports to [Zendesk](https://support.zendesk.com/hc/en-us/articles/4408843597850-Contacting-Zendesk-Customer-Support).
