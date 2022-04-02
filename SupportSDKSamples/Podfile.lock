@@ -1,20 +1,20 @@
 PODS:
-  - ZendeskCommonUISDK (6.1.2)
+  - ZendeskCommonUISDK (6.1.3)
   - ZendeskCoreSDK (2.6.0)
-  - ZendeskMessagingAPISDK (3.8.3):
-    - ZendeskSDKConfigurationsSDK (~> 1.1.9)
-  - ZendeskMessagingSDK (3.8.3):
-    - ZendeskCommonUISDK (~> 6.1.2)
-    - ZendeskMessagingAPISDK (~> 3.8.3)
-  - ZendeskSDKConfigurationsSDK (1.1.9)
-  - ZendeskSupportProvidersSDK (5.4.0):
-    - ZendeskCoreSDK (~> 2.6.0)
-  - ZendeskSupportSDK (5.4.0):
-    - ZendeskMessagingSDK (~> 3.8.3)
-    - ZendeskSupportProvidersSDK (~> 5.4.0)
+  - ZendeskMessagingAPISDK (3.8.4):
+    - ZendeskSDKConfigurationsSDK (= 1.1.10)
+  - ZendeskMessagingSDK (3.8.4):
+    - ZendeskCommonUISDK (= 6.1.3)
+    - ZendeskMessagingAPISDK (= 3.8.4)
+  - ZendeskSDKConfigurationsSDK (1.1.10)
+  - ZendeskSupportProvidersSDK (5.4.1):
+    - ZendeskCoreSDK (= 2.6.0)
+  - ZendeskSupportSDK (5.4.1):
+    - ZendeskMessagingSDK (= 3.8.4)
+    - ZendeskSupportProvidersSDK (= 5.4.1)
 
 DEPENDENCIES:
-  - ZendeskSupportSDK
+  - ZendeskSupportSDK (~> 5.4.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -27,14 +27,14 @@ SPEC REPOS:
     - ZendeskSupportSDK
 
 SPEC CHECKSUMS:
-  ZendeskCommonUISDK: 5808802951ad2bb424f0bed4259dc3c0ce9b52ec
-  ZendeskCoreSDK: 19a18e5ef2edcb18f4dbc0ea0d12bd31f515712a
-  ZendeskMessagingAPISDK: 144e0fb0e633a3c4e73149b781ab65338938d5a8
-  ZendeskMessagingSDK: 500e83d9413481e95180c37ddca0d4ef9d515600
-  ZendeskSDKConfigurationsSDK: 8371b468db0d09e9198f6c5a97818826943ee1ee
-  ZendeskSupportProvidersSDK: 2bdf8544f7cd0fd4c002546f5704b813845beb2a
-  ZendeskSupportSDK: 3a8e508ab1d9dd22dc038df6c694466414e037ba
+  ZendeskCommonUISDK: 42e8d58f8f7cea0959f1e6b653b1f956061667f7
+  ZendeskCoreSDK: 9557685ad411841f3d99e784a91f26ab26aac5f5
+  ZendeskMessagingAPISDK: ae2d979869cb99ff76215375355feb29e574c7ce
+  ZendeskMessagingSDK: 322d661c85f27970720695a069026eafe88b22da
+  ZendeskSDKConfigurationsSDK: 03dbce2a8371fb7d36882fb8b92fe94c7b2ea069
+  ZendeskSupportProvidersSDK: a126d360a9fdc6adfd3732a90630ea20eca9b721
+  ZendeskSupportSDK: 66ea625470889f6174ab2958749bdc46fb516501
 
-PODFILE CHECKSUM: 4b926eb9103d3cce4ac291192a7ad3c89e4cbb89
+PODFILE CHECKSUM: d6332fc9e95cd1d6a27d2e8c3d3220db349afb8b
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.3

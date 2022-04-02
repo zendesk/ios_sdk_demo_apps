@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2226EE1F25E6AD7100BDE104 /* ZendeskAnswerBotSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2226EE1E25E6AD7100BDE104 /* ZendeskAnswerBotSDK */; };
 		43058C36215D060A005AD098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43058C35215D060A005AD098 /* AppDelegate.swift */; };
 		43058C38215D060A005AD098 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43058C37215D060A005AD098 /* ViewController.swift */; };
 		43058C3B215D060A005AD098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43058C39215D060A005AD098 /* Main.storyboard */; };
 		43058C3D215D060B005AD098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43058C3C215D060B005AD098 /* Assets.xcassets */; };
 		43058C40215D060B005AD098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43058C3E215D060B005AD098 /* LaunchScreen.storyboard */; };
+		74EEBBF427F750DE0098A9A2 /* ZendeskAnswerBotSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 74EEBBF327F750DE0098A9A2 /* ZendeskAnswerBotSDK */; };
+		74EEBBF727F7513A0098A9A2 /* ZendeskSupportSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 74EEBBF627F7513A0098A9A2 /* ZendeskSupportSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2226EE1F25E6AD7100BDE104 /* ZendeskAnswerBotSDK in Frameworks */,
+				74EEBBF727F7513A0098A9A2 /* ZendeskSupportSDK in Frameworks */,
+				74EEBBF427F750DE0098A9A2 /* ZendeskAnswerBotSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +99,8 @@
 			);
 			name = AnswerBotSample;
 			packageProductDependencies = (
-				2226EE1E25E6AD7100BDE104 /* ZendeskAnswerBotSDK */,
+				74EEBBF327F750DE0098A9A2 /* ZendeskAnswerBotSDK */,
+				74EEBBF627F7513A0098A9A2 /* ZendeskSupportSDK */,
 			);
 			productName = AnswerBotSample;
 			productReference = 43058C32215D060A005AD098 /* AnswerBotSample.app */;
@@ -129,7 +132,8 @@
 			);
 			mainGroup = 43058C29215D060A005AD098;
 			packageReferences = (
-				2226EE1D25E6AD7100BDE104 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */,
+				74EEBBF227F750DE0098A9A2 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */,
+				74EEBBF527F7513A0098A9A2 /* XCRemoteSwiftPackageReference "support_sdk_ios" */,
 			);
 			productRefGroup = 43058C33215D060A005AD098 /* Products */;
 			projectDirPath = "";
@@ -363,21 +367,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2226EE1D25E6AD7100BDE104 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */ = {
+		74EEBBF227F750DE0098A9A2 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/zendesk/answer_bot_sdk_ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.4;
+				minimumVersion = 2.1.5;
+			};
+		};
+		74EEBBF527F7513A0098A9A2 /* XCRemoteSwiftPackageReference "support_sdk_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zendesk/support_sdk_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2226EE1E25E6AD7100BDE104 /* ZendeskAnswerBotSDK */ = {
+		74EEBBF327F750DE0098A9A2 /* ZendeskAnswerBotSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2226EE1D25E6AD7100BDE104 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */;
+			package = 74EEBBF227F750DE0098A9A2 /* XCRemoteSwiftPackageReference "answer_bot_sdk_ios" */;
 			productName = ZendeskAnswerBotSDK;
+		};
+		74EEBBF627F7513A0098A9A2 /* ZendeskSupportSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74EEBBF527F7513A0098A9A2 /* XCRemoteSwiftPackageReference "support_sdk_ios" */;
+			productName = ZendeskSupportSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
