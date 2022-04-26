@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2257BE6025E54AD600664840 /* ZendeskChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2257BE5F25E54AD600664840 /* ZendeskChatSDK */; };
-		2257BE6825E54B4A00664840 /* ZendeskSupportSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2257BE6725E54B4A00664840 /* ZendeskSupportSDK */; };
+		071D63202817E6E70061944E /* ZendeskSupportSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 071D631F2817E6E70061944E /* ZendeskSupportSDK */; };
+		071D63232817E6F80061944E /* ZendeskChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 071D63222817E6F80061944E /* ZendeskChatSDK */; };
 		22CFE20E2449C4DD00EB7391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFE20D2449C4DD00EB7391 /* AppDelegate.swift */; };
 		22CFE2102449C4DD00EB7391 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFE20F2449C4DD00EB7391 /* SceneDelegate.swift */; };
 		22CFE2122449C4DD00EB7391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CFE2112449C4DD00EB7391 /* ViewController.swift */; };
@@ -36,8 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2257BE6825E54B4A00664840 /* ZendeskSupportSDK in Frameworks */,
-				2257BE6025E54AD600664840 /* ZendeskChatSDK in Frameworks */,
+				071D63232817E6F80061944E /* ZendeskChatSDK in Frameworks */,
+				071D63202817E6E70061944E /* ZendeskSupportSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +109,8 @@
 			);
 			name = UnifiedSDK;
 			packageProductDependencies = (
-				2257BE5F25E54AD600664840 /* ZendeskChatSDK */,
-				2257BE6725E54B4A00664840 /* ZendeskSupportSDK */,
+				071D631F2817E6E70061944E /* ZendeskSupportSDK */,
+				071D63222817E6F80061944E /* ZendeskChatSDK */,
 			);
 			productName = UnifiedSDK;
 			productReference = 22CFE20A2449C4DD00EB7391 /* UnifiedSDK.app */;
@@ -141,8 +141,8 @@
 			);
 			mainGroup = 22CFE2012449C4DD00EB7391;
 			packageReferences = (
-				2257BE5E25E54AD600664840 /* XCRemoteSwiftPackageReference "chat_sdk_ios" */,
-				2257BE6625E54B4A00664840 /* XCRemoteSwiftPackageReference "support_sdk_ios" */,
+				071D631E2817E6E70061944E /* XCRemoteSwiftPackageReference "support_sdk_ios" */,
+				071D63212817E6F80061944E /* XCRemoteSwiftPackageReference "chat_sdk_ios" */,
 			);
 			productRefGroup = 22CFE20B2449C4DD00EB7391 /* Products */;
 			projectDirPath = "";
@@ -378,34 +378,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2257BE5E25E54AD600664840 /* XCRemoteSwiftPackageReference "chat_sdk_ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/zendesk/chat_sdk_ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.11.3;
-			};
-		};
-		2257BE6625E54B4A00664840 /* XCRemoteSwiftPackageReference "support_sdk_ios" */ = {
+		071D631E2817E6E70061944E /* XCRemoteSwiftPackageReference "support_sdk_ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/zendesk/support_sdk_ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.1;
+				minimumVersion = 5.0.0;
+			};
+		};
+		071D63212817E6F80061944E /* XCRemoteSwiftPackageReference "chat_sdk_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zendesk/chat_sdk_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2257BE5F25E54AD600664840 /* ZendeskChatSDK */ = {
+		071D631F2817E6E70061944E /* ZendeskSupportSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2257BE5E25E54AD600664840 /* XCRemoteSwiftPackageReference "chat_sdk_ios" */;
-			productName = ZendeskChatSDK;
-		};
-		2257BE6725E54B4A00664840 /* ZendeskSupportSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2257BE6625E54B4A00664840 /* XCRemoteSwiftPackageReference "support_sdk_ios" */;
+			package = 071D631E2817E6E70061944E /* XCRemoteSwiftPackageReference "support_sdk_ios" */;
 			productName = ZendeskSupportSDK;
+		};
+		071D63222817E6F80061944E /* ZendeskChatSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 071D63212817E6F80061944E /* XCRemoteSwiftPackageReference "chat_sdk_ios" */;
+			productName = ZendeskChatSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
