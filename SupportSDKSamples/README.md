@@ -19,4 +19,4 @@ Getting started is straightforward.
 You can then send a request with attachments, tags and Custom Fields, through providers and custom UI. Also can view previously created tickets, and Guide articles, using the Zendesk provided UI.
 
 ## Bugs
-Please submit bug reports to [Zendesk](https://support.zendesk.com/requests/new).
+Please submit bug reports to [Zendesk](https://support.zendesk.com/hc/en-us/articles/4408843597850).
