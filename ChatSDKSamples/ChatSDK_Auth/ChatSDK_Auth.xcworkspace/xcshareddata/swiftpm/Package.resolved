@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_providers_sdk_ios",
       "state" : {
-        "revision" : "06f608888c6f6feef976438d6bdd8b5acafe80e0",
-        "version" : "2.11.3"
+        "revision" : "60db4a62dd2ec0c4cbc213b869c7df199b910ab1",
+        "version" : "3.0.0"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_sdk_ios",
       "state" : {
-        "revision" : "b9a8b034a9168bf5d2b563f6de16fd9f01056114",
-        "version" : "2.11.3"
+        "revision" : "2ea105042b1dcbf5766426b2c0c6778779949ba1",
+        "version" : "3.0.0"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/commonui_sdk_ios",
       "state" : {
-        "revision" : "c7b1eaae04ad234daa72b1235393a23975e4caea",
-        "version" : "6.1.3"
+        "revision" : "d6d40302c628bde17251c24553f18b5b47551b6b",
+        "version" : "7.0.0"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/messaging_sdk_ios",
       "state" : {
-        "revision" : "a4d855a1b8f4460130d605cfb560f5641727cc88",
-        "version" : "3.8.4"
+        "revision" : "97678c795166b6bf8879ed51e3054ffaa033c883",
+        "version" : "4.0.0"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/messagingapi_sdk_ios",
       "state" : {
-        "revision" : "4027e34322954f5ef6b1cca90c346475fd251bbd",
-        "version" : "3.8.4"
+        "revision" : "503f60e2bfd8bca2b39eb515ef0ac3607bdc4d1d",
+        "version" : "4.0.0"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/sdkconfigurations_sdk_ios",
       "state" : {
-        "revision" : "9e4768ef3093bd61cbc0b64d75dcdcc92414e1f0",
-        "version" : "1.1.10"
+        "revision" : "a99da4df16e09b89ca6c4b576ca139a7d04efcf5",
+        "version" : "2.0.0"
       }
     }
   ],
