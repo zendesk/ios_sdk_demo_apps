@@ -383,7 +383,7 @@
 			repositoryURL = "https://github.com/zendesk/support_sdk_ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 6.0.0;
 			};
 		};
 		071D63212817E6F80061944E /* XCRemoteSwiftPackageReference "chat_sdk_ios" */ = {
@@ -391,7 +391,7 @@
 			repositoryURL = "https://github.com/zendesk/chat_sdk_ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
