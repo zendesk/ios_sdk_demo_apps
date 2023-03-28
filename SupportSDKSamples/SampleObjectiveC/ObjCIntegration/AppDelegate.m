@@ -17,17 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    ZDKCoreLogger.enabled = true;
+    ZDKClassicCoreLogger.enabled = true;
 
     #warning Enter your Zendesk credentials here
-    [ZDKZendesk initializeWithAppId: @"<#appId#>"
+    [ZDKClassicZendesk initializeWithAppId: @"<#appId#>"
                            clientId: @"<#clientId#>"
                          zendeskUrl: @"<#zendeskUrl#>"];
-    [ZDKSupport initializeWithZendesk: [ZDKZendesk instance]];
+    [ZDKSupport initializeWithZendesk: [ZDKClassicZendesk instance]];
 
     
     id<ZDKObjCIdentity> userIdentity = [[ZDKObjCAnonymous alloc] initWithName:@"name" email:@"name@email.com"];
-    [[ZDKZendesk instance] setIdentity:userIdentity];
+    [[ZDKClassicZendesk instance] setIdentity:userIdentity];
     
     return YES;
 }
