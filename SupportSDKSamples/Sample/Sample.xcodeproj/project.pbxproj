@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,20 +12,7 @@
 		21A3999D219F2A7E001116B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A3999B219F2A7E001116B8 /* Main.storyboard */; };
 		21A3999F219F2A7F001116B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A3999E219F2A7F001116B8 /* Assets.xcassets */; };
 		21A399A2219F2A7F001116B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A399A0219F2A7F001116B8 /* LaunchScreen.storyboard */; };
-		5E8438B8251B910200A1451A /* CommonUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AB251B90F100A1451A /* CommonUISDK.framework */; };
-		5E8438B9251B910200A1451A /* CommonUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AB251B90F100A1451A /* CommonUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E8438BA251B910200A1451A /* MessagingAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438B0251B90F500A1451A /* MessagingAPI.framework */; };
-		5E8438BB251B910200A1451A /* MessagingAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438B0251B90F500A1451A /* MessagingAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E8438BC251B910200A1451A /* MessagingSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AC251B90F200A1451A /* MessagingSDK.framework */; };
-		5E8438BD251B910200A1451A /* MessagingSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AC251B90F200A1451A /* MessagingSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E8438BE251B910200A1451A /* SDKConfigurations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AE251B90F400A1451A /* SDKConfigurations.framework */; };
-		5E8438BF251B910200A1451A /* SDKConfigurations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AE251B90F400A1451A /* SDKConfigurations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E8438C0251B910200A1451A /* SupportProvidersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */; };
-		5E8438C1251B910200A1451A /* SupportProvidersSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E8438C2251B910200A1451A /* SupportSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AD251B90F400A1451A /* SupportSDK.framework */; };
-		5E8438C3251B910200A1451A /* SupportSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AD251B90F400A1451A /* SupportSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E8438C4251B910200A1451A /* ZendeskCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */; };
-		5E8438C5251B910200A1451A /* ZendeskCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C67B1E4229D2F581003B3540 /* ZendeskSupportSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C67B1E4129D2F581003B3540 /* ZendeskSupportSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,13 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5E8438BF251B910200A1451A /* SDKConfigurations.framework in Embed Frameworks */,
-				5E8438BD251B910200A1451A /* MessagingSDK.framework in Embed Frameworks */,
-				5E8438C5251B910200A1451A /* ZendeskCoreSDK.framework in Embed Frameworks */,
-				5E8438C1251B910200A1451A /* SupportProvidersSDK.framework in Embed Frameworks */,
-				5E8438BB251B910200A1451A /* MessagingAPI.framework in Embed Frameworks */,
-				5E8438B9251B910200A1451A /* CommonUISDK.framework in Embed Frameworks */,
-				5E8438C3251B910200A1451A /* SupportSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,13 +36,6 @@
 		21A3999E219F2A7F001116B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A399A1219F2A7F001116B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21A399A3219F2A7F001116B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZendeskCoreSDK.framework; sourceTree = "<group>"; };
-		5E8438AB251B90F100A1451A /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CommonUISDK.framework; sourceTree = "<group>"; };
-		5E8438AC251B90F200A1451A /* MessagingSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessagingSDK.framework; sourceTree = "<group>"; };
-		5E8438AD251B90F400A1451A /* SupportSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportSDK.framework; sourceTree = "<group>"; };
-		5E8438AE251B90F400A1451A /* SDKConfigurations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDKConfigurations.framework; sourceTree = "<group>"; };
-		5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SupportProvidersSDK.framework; sourceTree = "<group>"; };
-		5E8438B0251B90F500A1451A /* MessagingAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessagingAPI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E8438BA251B910200A1451A /* MessagingAPI.framework in Frameworks */,
-				5E8438B8251B910200A1451A /* CommonUISDK.framework in Frameworks */,
-				5E8438C4251B910200A1451A /* ZendeskCoreSDK.framework in Frameworks */,
-				5E8438BC251B910200A1451A /* MessagingSDK.framework in Frameworks */,
-				5E8438C2251B910200A1451A /* SupportSDK.framework in Frameworks */,
-				5E8438C0251B910200A1451A /* SupportProvidersSDK.framework in Frameworks */,
-				5E8438BE251B910200A1451A /* SDKConfigurations.framework in Frameworks */,
+				C67B1E4229D2F581003B3540 /* ZendeskSupportSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +55,6 @@
 			children = (
 				21A39996219F2A7E001116B8 /* Sample */,
 				21A39995219F2A7E001116B8 /* Products */,
-				21A399AA219F2B64001116B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,20 +79,6 @@
 			path = Sample;
 			sourceTree = "<group>";
 		};
-		21A399AA219F2B64001116B8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5E8438AB251B90F100A1451A /* CommonUISDK.framework */,
-				5E8438B0251B90F500A1451A /* MessagingAPI.framework */,
-				5E8438AC251B90F200A1451A /* MessagingSDK.framework */,
-				5E8438AE251B90F400A1451A /* SDKConfigurations.framework */,
-				5E8438AF251B90F500A1451A /* SupportProvidersSDK.framework */,
-				5E8438AD251B90F400A1451A /* SupportSDK.framework */,
-				5E8438AA251B90F000A1451A /* ZendeskCoreSDK.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +96,9 @@
 			dependencies = (
 			);
 			name = Sample;
+			packageProductDependencies = (
+				C67B1E4129D2F581003B3540 /* ZendeskSupportSDK */,
+			);
 			productName = Sample;
 			productReference = 21A39994219F2A7E001116B8 /* Sample.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 21A3998B219F2A7E001116B8;
+			packageReferences = (
+				C67B1E4029D2F581003B3540 /* XCRemoteSwiftPackageReference "support_sdk_ios" */,
+			);
 			productRefGroup = 21A39995219F2A7E001116B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -415,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C67B1E4029D2F581003B3540 /* XCRemoteSwiftPackageReference "support_sdk_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zendesk/support_sdk_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C67B1E4129D2F581003B3540 /* ZendeskSupportSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C67B1E4029D2F581003B3540 /* XCRemoteSwiftPackageReference "support_sdk_ios" */;
+			productName = ZendeskSupportSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21A3998C219F2A7E001116B8 /* Project object */;
 }

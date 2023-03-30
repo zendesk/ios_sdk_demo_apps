@@ -46,8 +46,8 @@
     [ZDKChatLogger setDefaultLevel: logLevel];
 }
 
-+ (ZDKMessagingConfiguration *) messagingConfiguration {
-    ZDKMessagingConfiguration *config = [ZDKMessagingConfiguration new];
++ (ZDKClassicMessagingConfiguration *) messagingConfiguration {
+    ZDKClassicMessagingConfiguration *config = [ZDKClassicMessagingConfiguration new];
     config.name = @"Chat Bot";
     config.isMultilineResponseOptionsEnabled = YES;
     return config;
@@ -75,7 +75,7 @@
 
     NSArray<id<ZDKConfiguration>> *configs = @[[self messagingConfiguration], [self chatConfiguration]];
 
-    return [[ZDKMessaging instance] buildUIWithEngines: engines configs:configs error: &error];
+    return [[ZDKClassicMessaging instance] buildUIWithEngines: engines configs:configs error: &error];
 }
 
 @end
