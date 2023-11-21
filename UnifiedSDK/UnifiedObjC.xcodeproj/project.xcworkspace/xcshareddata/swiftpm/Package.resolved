@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_providers_sdk_ios",
       "state" : {
-        "revision" : "cd8f46c012b33fed262fe70a0bae0da88c25cbdf",
-        "version" : "5.0.0"
+        "revision" : "b28eba3c480a2c53c34f3840d0f43e8c2e8adeb8",
+        "version" : "4.0.0"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_sdk_ios",
       "state" : {
-        "revision" : "991ce07986e147a66feef7bdc3d2a1ad973a0d88",
-        "version" : "5.0.0"
+        "revision" : "fc4901b5d0594d652c66158a24a23a1d35344b21",
+        "version" : "4.0.0"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/commonui_sdk_ios",
       "state" : {
-        "revision" : "193f7daf7b7ad9788ceffa2d7cd285cd48e63e57",
-        "version" : "9.0.0"
+        "revision" : "fb58b008ebf81c209aab95fd615a7f04bd917163",
+        "version" : "8.0.0"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/messaging_sdk_ios",
       "state" : {
-        "revision" : "825cc5fcb0e7bcda5bb713089245dae31ee07ae4",
-        "version" : "6.0.0"
+        "revision" : "6149dff5446e6c5de5c6a020d3dcd67c52e75169",
+        "version" : "5.0.0"
       }
     },
     {
@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/messagingapi_sdk_ios",
       "state" : {
-        "revision" : "2f21e014a1f284edf484faf39b2b6fe377ec8c64",
-        "version" : "6.0.0"
+        "revision" : "cf9be0454a1524244ab41a4f2c0f53e80da413d6",
+        "version" : "5.0.0"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/sdkconfigurations_sdk_ios",
       "state" : {
-        "revision" : "fec7b8bf3d85cb895a0820a2f9d102f9d6ba3070",
-        "version" : "4.0.0"
+        "revision" : "25ebb9ae75aef4451a94165b0b34ab9562647680",
+        "version" : "3.0.0"
       }
     }
   ],
