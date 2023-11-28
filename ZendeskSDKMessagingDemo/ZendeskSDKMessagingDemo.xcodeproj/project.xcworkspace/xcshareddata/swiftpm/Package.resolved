@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ZendeskSDKConversationKit",
+        "repositoryURL": "https://github.com/zendesk/sdk_conversation_kit_ios",
+        "state": {
+          "branch": null,
+          "revision": "d259fe42beb82e824ce36fc53d2b01c2c3aff134",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "ZendeskSDKFayeClient",
+        "repositoryURL": "https://github.com/zendesk/sdk_faye_client_ios",
+        "state": {
+          "branch": null,
+          "revision": "c9396616ede66bb82e497cf754d2151a1ba0594e",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "ZendeskSDKHTTPClient",
+        "repositoryURL": "https://github.com/zendesk/sdk_http_client_ios",
+        "state": {
+          "branch": null,
+          "revision": "a67430a5b8c6c8a42d783f24d931c1e7da0660f0",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "ZendeskSDKLogger",
+        "repositoryURL": "https://github.com/zendesk/sdk_logger_ios",
+        "state": {
+          "branch": null,
+          "revision": "00e47364d93f433624b3071c3c7038592ce035c9",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "ZendeskSDKMessaging",
+        "repositoryURL": "https://github.com/zendesk/sdk_messaging_ios/",
+        "state": {
+          "branch": null,
+          "revision": "1267fd00001e62cc4a46e1e6703a6ee5bce61664",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "ZendeskSDKSocketClient",
+        "repositoryURL": "https://github.com/zendesk/sdk_socket_client_ios",
+        "state": {
+          "branch": null,
+          "revision": "82471688f1887dfc96f660e281807c059f5a3f8d",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "ZendeskSDKStorage",
+        "repositoryURL": "https://github.com/zendesk/sdk_storage_ios",
+        "state": {
+          "branch": null,
+          "revision": "94317178cb0fc9f33e7d8f7b514711dd147f2e9f",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "ZendeskSDKUIComponents",
+        "repositoryURL": "https://github.com/zendesk/sdk_ui_components_ios",
+        "state": {
+          "branch": null,
+          "revision": "3dfb6029c4b551c78ae093021a12ab6f49194b36",
+          "version": "0.4.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
