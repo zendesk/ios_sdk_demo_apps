@@ -1,20 +1,20 @@
 PODS:
-  - ZendeskCommonUISDK (9.0.0)
-  - ZendeskCoreSDK (5.0.0)
+  - ZendeskCommonUISDK (9.0.1)
+  - ZendeskCoreSDK (5.0.1)
   - ZendeskMessagingAPISDK (6.0.0):
     - ZendeskSDKConfigurationsSDK (~> 4.0.0)
-  - ZendeskMessagingSDK (6.0.0):
-    - ZendeskCommonUISDK (~> 9.0.0)
+  - ZendeskMessagingSDK (6.0.1):
+    - ZendeskCommonUISDK (~> 9.0.1)
     - ZendeskMessagingAPISDK (~> 6.0.0)
   - ZendeskSDKConfigurationsSDK (4.0.0)
-  - ZendeskSupportProvidersSDK (8.0.0):
-    - ZendeskCoreSDK (~> 5.0.0)
-  - ZendeskSupportSDK (8.0.0):
-    - ZendeskMessagingSDK (~> 6.0.0)
-    - ZendeskSupportProvidersSDK (~> 8.0.0)
+  - ZendeskSupportProvidersSDK (8.0.1):
+    - ZendeskCoreSDK (~> 5.0.1)
+  - ZendeskSupportSDK (8.0.1):
+    - ZendeskMessagingSDK (~> 6.0.1)
+    - ZendeskSupportProvidersSDK (~> 8.0.1)
 
 DEPENDENCIES:
-  - ZendeskSupportSDK (~> 8.0.0)
+  - ZendeskSupportSDK (~> 8.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:

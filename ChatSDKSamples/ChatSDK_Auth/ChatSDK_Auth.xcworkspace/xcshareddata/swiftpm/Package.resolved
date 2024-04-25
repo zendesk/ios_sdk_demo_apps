@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_providers_sdk_ios",
       "state" : {
-        "revision" : "cd8f46c012b33fed262fe70a0bae0da88c25cbdf",
-        "version" : "5.0.0"
+        "revision" : "b1e0bfc1523756cfeb6a914d07144bb559d652a6",
+        "version" : "5.0.1"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_sdk_ios",
       "state" : {
-        "revision" : "991ce07986e147a66feef7bdc3d2a1ad973a0d88",
-        "version" : "5.0.0"
+        "revision" : "9fd3a62c91c478ce67fbb92dd1a5003de60c2edd",
+        "version" : "5.0.1"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/commonui_sdk_ios",
       "state" : {
-        "revision" : "193f7daf7b7ad9788ceffa2d7cd285cd48e63e57",
-        "version" : "9.0.0"
+        "revision" : "8729e7f4e316b46f6d33f046e663b6eedfe9955a",
+        "version" : "9.0.1"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/messaging_sdk_ios",
       "state" : {
-        "revision" : "825cc5fcb0e7bcda5bb713089245dae31ee07ae4",
-        "version" : "6.0.0"
+        "revision" : "4dbb16d26b90452c1d41cba8e8dc81a1bcea7f1e",
+        "version" : "6.0.1"
       }
     },
     {
