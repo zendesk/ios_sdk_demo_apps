@@ -1,20 +1,20 @@
 PODS:
   - ZendeskCommonUISDK (9.0.1)
-  - ZendeskCoreSDK (5.0.1)
+  - ZendeskCoreSDK (5.0.2)
   - ZendeskMessagingAPISDK (6.0.0):
     - ZendeskSDKConfigurationsSDK (~> 4.0.0)
   - ZendeskMessagingSDK (6.0.1):
     - ZendeskCommonUISDK (~> 9.0.1)
     - ZendeskMessagingAPISDK (~> 6.0.0)
   - ZendeskSDKConfigurationsSDK (4.0.0)
-  - ZendeskSupportProvidersSDK (8.0.1):
-    - ZendeskCoreSDK (~> 5.0.1)
-  - ZendeskSupportSDK (8.0.1):
+  - ZendeskSupportProvidersSDK (8.0.2):
+    - ZendeskCoreSDK (~> 5.0.2)
+  - ZendeskSupportSDK (8.0.2):
     - ZendeskMessagingSDK (~> 6.0.1)
-    - ZendeskSupportProvidersSDK (~> 8.0.1)
+    - ZendeskSupportProvidersSDK (~> 8.0.2)
 
 DEPENDENCIES:
-  - ZendeskSupportSDK (~> 8.0.1)
+  - ZendeskSupportSDK (~> 8.0.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -27,14 +27,14 @@ SPEC REPOS:
     - ZendeskSupportSDK
 
 SPEC CHECKSUMS:
-  ZendeskCommonUISDK: b87f90874386ebcc01f4b2a0b20a28c62658987a
-  ZendeskCoreSDK: cdc814e7fd64764fb0b0acb04e596df437708faa
+  ZendeskCommonUISDK: 720e6e34eff34ddae5feb1935f788a0893eaf672
+  ZendeskCoreSDK: 43f20009b1d4e739219874e449be85e4fe7feb46
   ZendeskMessagingAPISDK: 9ce539eebcaa014fe6acc44da31262a2c52891c1
-  ZendeskMessagingSDK: ccc8dd41b774b0d2f94733505b9f1882d72184da
+  ZendeskMessagingSDK: d0f65229188cb4936a56be6707992a2511b5175b
   ZendeskSDKConfigurationsSDK: 79c444da987390456ec05657ffa2f5ca0eb54aef
-  ZendeskSupportProvidersSDK: 4aafe8114a9bba1a98dc03ca14d8fa6510cf4e70
-  ZendeskSupportSDK: 8cf921c496269bb5f53aac9320f3d002a793991d
+  ZendeskSupportProvidersSDK: e105e358a6bb7b1dc22d4b45415d54826c0d7529
+  ZendeskSupportSDK: d87fcb1cfae0ef45ede384c635cc207f18ae8431
 
-PODFILE CHECKSUM: 1a12a9618ae44efea6e48cc4c3a3d96780c066ef
+PODFILE CHECKSUM: cdc27dbf80d1c1f37932684572ae5187505da359
 
 COCOAPODS: 1.13.0

@@ -1,12 +1,13 @@
 {
+  "originHash" : "36a7053dbde7e5deac685cdc7f71151bed92daa50b094157358d2675b36c7c0d",
   "pins" : [
     {
       "identity" : "chat_providers_sdk_ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_providers_sdk_ios",
       "state" : {
-        "revision" : "b1e0bfc1523756cfeb6a914d07144bb559d652a6",
-        "version" : "5.0.1"
+        "revision" : "013b85e334240048a37483c2f4e61e2c76e67ea3",
+        "version" : "5.0.2"
       }
     },
     {
@@ -14,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_sdk_ios",
       "state" : {
-        "revision" : "9fd3a62c91c478ce67fbb92dd1a5003de60c2edd",
-        "version" : "5.0.1"
+        "revision" : "60a6ecd9c08ff24970c51cebe33b493a2ba3e1e2",
+        "version" : "5.0.2"
       }
     },
     {
@@ -55,5 +56,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

@@ -8,5 +8,5 @@ target 'CocoaPodSample' do
 
   # Pods for CocoaPodSample
 
-  pod 'ZendeskSupportSDK', '~> 8.0.1'
+  pod 'ZendeskSupportSDK', '~> 8.0.2'
 end
