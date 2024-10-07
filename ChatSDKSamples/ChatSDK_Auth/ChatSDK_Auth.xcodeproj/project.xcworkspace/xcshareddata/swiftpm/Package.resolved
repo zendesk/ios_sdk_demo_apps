@@ -1,13 +1,12 @@
 {
-  "originHash" : "36a7053dbde7e5deac685cdc7f71151bed92daa50b094157358d2675b36c7c0d",
   "pins" : [
     {
       "identity" : "chat_providers_sdk_ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_providers_sdk_ios",
       "state" : {
-        "revision" : "32e1b4c1b7e220325a7b5d8ebb51b6e9ae1e15d9",
-        "version" : "5.0.5"
+        "revision" : "3657e74ffa38be5033af74e7044a14616f06d387",
+        "version" : "5.0.3"
       }
     },
     {
@@ -15,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/chat_sdk_ios",
       "state" : {
-        "revision" : "b5afcf06d8f0602afca6716ff0894df20cabb792",
-        "version" : "5.0.5"
+        "revision" : "9953a85ab17a344a99a35435cb60bebe4553fb23",
+        "version" : "5.0.3"
       }
     },
     {
@@ -24,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/commonui_sdk_ios",
       "state" : {
-        "revision" : "cb8b971b84c596145528f3f3e107fd150fd9dff2",
-        "version" : "9.0.3"
+        "revision" : "8729e7f4e316b46f6d33f046e663b6eedfe9955a",
+        "version" : "9.0.1"
       }
     },
     {
@@ -33,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/messaging_sdk_ios",
       "state" : {
-        "revision" : "bb99e77fe0b696bf188e48c605943dad1ba66571",
-        "version" : "6.0.3"
+        "revision" : "4dbb16d26b90452c1d41cba8e8dc81a1bcea7f1e",
+        "version" : "6.0.1"
       }
     },
     {
@@ -42,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/messagingapi_sdk_ios",
       "state" : {
-        "revision" : "ae7f3169d07016893c52ec887b26fac4e247db25",
-        "version" : "6.0.2"
+        "revision" : "2f21e014a1f284edf484faf39b2b6fe377ec8c64",
+        "version" : "6.0.0"
       }
     },
     {
@@ -51,10 +50,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/zendesk/sdkconfigurations_sdk_ios",
       "state" : {
-        "revision" : "18de371f71f6a92b34f63013fe2fbe46caf0811e",
-        "version" : "4.0.1"
+        "revision" : "fec7b8bf3d85cb895a0820a2f9d102f9d6ba3070",
+        "version" : "4.0.0"
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }

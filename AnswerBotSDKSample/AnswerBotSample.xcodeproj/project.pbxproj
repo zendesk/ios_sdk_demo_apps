@@ -372,7 +372,7 @@
 			repositoryURL = "https://github.com/zendesk/answer_bot_sdk_ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.2;
+				minimumVersion = 6.0.0;
 			};
 		};
 		74EEBBF527F7513A0098A9A2 /* XCRemoteSwiftPackageReference "support_sdk_ios" */ = {
@@ -380,7 +380,7 @@
 			repositoryURL = "https://github.com/zendesk/support_sdk_ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.2;
+				minimumVersion = 9.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
