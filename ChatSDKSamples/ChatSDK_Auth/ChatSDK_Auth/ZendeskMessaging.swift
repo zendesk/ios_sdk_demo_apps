@@ -25,7 +25,7 @@ final class ZendeskMessaging: NSObject, JWTAuthenticator {
     }
 
     #warning("Please provide Chat account key")
-    let accountKey = "<#String#>"
+    let accountKey = "OXgeUeElrZ7hzQ96yrELV4xxlJC91awA"
 
     var authToken: String = "" {
         didSet {
