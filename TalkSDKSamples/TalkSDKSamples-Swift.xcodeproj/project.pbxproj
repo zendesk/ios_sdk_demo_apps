@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,8 +17,23 @@
 		1EAD380425790C93006F20E7 /* ManualCallScreensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37FF25790C93006F20E7 /* ManualCallScreensViewController.swift */; };
 		1EAD380A25790CDE006F20E7 /* ZendeskConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD380925790CDE006F20E7 /* ZendeskConfig.swift */; };
 		1EAD381625790D28006F20E7 /* CustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD37FB25790C93006F20E7 /* CustomStyle.swift */; };
-		25261C7CA618F3E3D6E4AC77 /* Pods_TalkSDKSamples_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE6B1CF23DADE6E094B82ED /* Pods_TalkSDKSamples_Swift.framework */; };
+		3F0DEB192D76173E0010C059 /* Pods_TalkSDKSamples_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE6B1CF23DADE6E094B82ED /* Pods_TalkSDKSamples_Swift.framework */; };
+		3F0DEB1A2D76173E0010C059 /* Pods_TalkSDKSamples_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE6B1CF23DADE6E094B82ED /* Pods_TalkSDKSamples_Swift.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F0DEB1B2D76173E0010C059 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F0DEB1A2D76173E0010C059 /* Pods_TalkSDKSamples_Swift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1EAD37DA25790BE6006F20E7 /* TalkSDKSamples-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TalkSDKSamples-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25261C7CA618F3E3D6E4AC77 /* Pods_TalkSDKSamples_Swift.framework in Frameworks */,
+				3F0DEB192D76173E0010C059 /* Pods_TalkSDKSamples_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +138,7 @@
 				1EAD37D725790BE6006F20E7 /* Frameworks */,
 				1EAD37D825790BE6006F20E7 /* Resources */,
 				C42DE648F992AAE950B72E67 /* [CP] Embed Pods Frameworks */,
+				3F0DEB1B2D76173E0010C059 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
