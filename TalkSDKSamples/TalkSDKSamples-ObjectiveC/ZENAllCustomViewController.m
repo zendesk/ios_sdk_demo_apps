@@ -50,12 +50,12 @@
     self.callButton.enabled = NO;
     self.ongoingCallView.hidden = YES;
 
-    [ZDKZendesk initializeWithAppId:ZENZendeskAppID clientId:ZENZendeskClientID zendeskUrl:ZENZendeskURL];
+    [ZDKClassicZendesk initializeWithAppId:ZENZendeskAppID clientId:ZENZendeskClientID zendeskUrl:ZENZendeskURL];
 
     id<ZDKObjCIdentity> userIdentity = [self makeUserIdentity];
-    [[ZDKZendesk instance] setIdentity:userIdentity];
+    [[ZDKClassicZendesk instance] setIdentity:userIdentity];
 
-    self.talk = [[ZDKTalk alloc] initWithZendesk:[ZDKZendesk instance]];
+    self.talk = [[ZDKTalk alloc] initWithZendesk:[ZDKClassicZendesk instance]];
 }
 
 - (id<ZDKObjCIdentity>)makeUserIdentity

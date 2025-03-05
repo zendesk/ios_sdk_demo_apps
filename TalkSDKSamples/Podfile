@@ -6,10 +6,10 @@ platform :ios, '12.0'
 
 target 'TalkSDKSamples-Swift' do
 	project 'TalkSDKSamples-Swift'
-  	pod 'ZendeskTalkSDK'
+  	pod 'ZendeskTalkSDK', '3.1.1'
 end
 
 target 'TalkSDKSamples-ObjectiveC' do
 	project 'TalkSDKSamples-ObjectiveC'
-  	pod 'ZendeskTalkSDK'
+  	pod 'ZendeskTalkSDK', '3.1.1'
 end
